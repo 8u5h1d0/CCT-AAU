@@ -1,0 +1,236 @@
+{
+  "main": {
+    "id": "31e2373b9d17adae",
+    "type": "split",
+    "children": [
+      {
+        "id": "58ba80d49d4f103c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "34395ccd2655dd10",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "IMPR CPH CCT1 + DC1/K13 CHP 9 - Recursion.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": false
+              },
+              "icon": "lucide-file",
+              "title": "K13 CHP 9 - Recursion"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "fa91b353c7d7607c",
+    "type": "split",
+    "children": [
+      {
+        "id": "663b8dc3a0818ed1",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "1b84cd1de1937561",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "07ddeec3d221df64",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": true,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "cc84a74912d9f926",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200,
+    "collapsed": true
+  },
+  "right": {
+    "id": "4fc6a27eb2a8e0b4",
+    "type": "split",
+    "children": [
+      {
+        "id": "6fd90d38158a5a85",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "23e7afa1b63c340e",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "!Formatting & Syntax/GLM-4.6 - Note Generation- OMD.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for GLM-4.6 - Note Generation- OMD"
+            }
+          },
+          {
+            "id": "7685317b40330967",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "INCE CPH CCT1/K10 - The LC-3 and Data Path.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from K10 - The LC-3 and Data Path"
+            }
+          },
+          {
+            "id": "515da81bdc8a1ba1",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "3f0677933aaef82a",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "!Formatting & Syntax/GLM-4.6 - Note Generation- OMD.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of GLM-4.6 - Note Generation- OMD"
+            }
+          },
+          {
+            "id": "ff6ea242bc190a4b",
+            "type": "leaf",
+            "state": {
+              "type": "mermaid-toolbar-view",
+              "state": {},
+              "icon": "trident-custom",
+              "title": "Mermaid Toolbar"
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false,
+      "templater-obsidian:Templater": false,
+      "mermaid-tools:Open Mermaid Toolbar": false
+    }
+  },
+  "active": "34395ccd2655dd10",
+  "lastOpenFiles": [
+    "INCE CPH CCT1/K1 R1 - Digital Design - 1.1-1.5.md",
+    "!Formatting & Syntax/GLM-4.6 - Note Generation- OMD.md",
+    "INCE CPH CCT1/K10 - The LC-3 and Data Path.md",
+    "INCE CPH CCT1/K9 - The von Neumann Model.md",
+    "INCE CPH CCT1/K8 R5 - 5.7 - 5.8.md",
+    "INCE CPH CCT1/K7 R5 - 5.1 - 5.5.md",
+    "INCE CPH CCT1/K5 R4 - 4.7, 4.9 - 4.11.md",
+    "IMPR CPH CCT1 + DC1/K13 CHP 9 - Recursion.md",
+    "IMPR CPH CCT1 + DC1/Originals/K13 CHP 9 - Recursion.md",
+    "!Formatting & Syntax/GLM-4.6 - Secondary Prompts.md",
+    "ZZZZ - Pictures/K13 CHP 9 - Recursion/Pasted image 20251126164324.png",
+    "ZZZZ - Pictures/K13 CHP 9 - Recursion/Pasted image 20251126170403.png",
+    "ZZZZ - Pictures/K13 CHP 9 - Recursion/Pasted image 20251126211300.png",
+    "ZZZZ - Pictures/K13 CHP 9 - Recursion/Pasted image 20251126211219.png",
+    "ZZZZ - Pictures/K13 CHP 9 - Recursion/Pasted image 20251126211114.png",
+    "ZZZZ - Pictures/K13 CHP 9 - Recursion/Pasted image 20251126211027.png",
+    "ZZZZ - Pictures/K13 CHP 9 - Recursion/Pasted image 20251126210956.png",
+    "ZZZZ - Pictures/K13 CHP 9 - Recursion/Pasted image 20251126203446.png",
+    "ZZZZ - Pictures/K13 CHP 9 - Recursion/Pasted image 20251126202827.png",
+    "ZZZZ - Pictures/K13 CHP 9 - Recursion/Pasted image 20251126202805.png",
+    "!Formatting & Syntax/GLM-4.6 - Partial-Note Generation- OMD.md",
+    "IMPR CPH CCT1 + DC1/K 9 CHP 8 - Strings.md",
+    "ZZZZ - Pictures/K13 CHP 9 - Recursion",
+    "INCE CPH CCT1/K2 R1 - Digital Design - 1.6 - 1.7.md",
+    "IMPR CPH CCT1 + DC1/CHP 3 - Top-Down Design with Functions.md",
+    "INCE CPH CCT1/K3 R2 - 2.4 - 2.6 + 2.8.md",
+    "INCE CPH CCT1/K3 R3 - 3.1 - 3.2 + 3.5.md",
+    "INCE CPH CCT1/K2 R2 - 2.1 - 2.3.md",
+    "IMPR CPH CCT1 + DC1/CHP 2 - Overview of C.md",
+    "IMPR CPH CCT1 + DC1/Originals/CHP 3 - Top-Down Design with Functions.md",
+    "IMPR CPH CCT1 + DC1/Originals/CHP 2 - Overview of C.md",
+    "Templates/IMPR - CCT1.md",
+    "IMPR CPH CCT1 + DC1/Lektion 1 - 050925.md",
+    "IMPR CPH CCT1 + DC1/K 7&8 CHP 7 - Array Pointers.md",
+    "IMPR CPH CCT1 + DC1/K 7 - Slides - Datatyper.md",
+    "IMPR CPH CCT1 + DC1/K 11 CHP 11 - Text and Binary- File Pointers.md",
+    "IMPR CPH CCT1 + DC1/CHP 6 - Pointers and Modular Programming.md",
+    "ZZZZ - Pictures/K 11 CHP 11 - Text and Binary- File Pointers",
+    "IMPR CPH CCT1 + DC1/Originals",
+    "ZZZZ - Pictures/K10 CHP 10 - Structs",
+    "!Formatting & Syntax/Outdated",
+    "INCE CPH CCT1/Originals",
+    "ZZZZ - Pictures/K9 CHP 8 - Strings",
+    "ZZZZ - Pictures/K7&8 CHP 7 - Array Pointers",
+    "ZZZZ - Pictures/Misc",
+    "ZZZZ - Pictures/K9 - The von Neumann Model"
+  ]
+}

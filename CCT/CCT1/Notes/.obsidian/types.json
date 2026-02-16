@@ -1,0 +1,12 @@
+{
+  "types": {
+    "aliases": "aliases",
+    "cssclasses": "multitext",
+    "tags": "tags",
+    "Semester": "text",
+    "Created": "text",
+    "Litteratur": "multitext",
+    "Status": "checkbox",
+    "Module": "text"
+  }
+}

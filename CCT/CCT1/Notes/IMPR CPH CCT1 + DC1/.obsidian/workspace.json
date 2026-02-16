@@ -1,0 +1,235 @@
+{
+  "main": {
+    "id": "2215cc10fd498383",
+    "type": "split",
+    "children": [
+      {
+        "id": "1b89ce05c6249f8d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "178e75dceb997a18",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "CHP 2 - Overview of C.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "CHP 2 - Overview of C"
+            }
+          },
+          {
+            "id": "cbbe382b3a7a23bf",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.11.4"
+              },
+              "icon": "lucide-book-up",
+              "title": "Release Notes 1.11.4"
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "f17da050bcf82056",
+    "type": "split",
+    "children": [
+      {
+        "id": "c7abd86dd7e9a339",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "db71786f8f0375a2",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "6da415329dedeb9c",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "c2d908ab1d177a12",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "2faf5cb745227165",
+    "type": "split",
+    "children": [
+      {
+        "id": "3315bb46fae4733f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c37d13b4803ea4f3",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "CHP 2 - Overview of C.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for CHP 2 - Overview of C"
+            }
+          },
+          {
+            "id": "84f251ce7f5e43c8",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "CHP 2 - Overview of C.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from CHP 2 - Overview of C"
+            }
+          },
+          {
+            "id": "cf70385a744e71b1",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "ad3b90da22d2e400",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "88aad63c5cdf4c4c",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "CHP 2 - Overview of C.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of CHP 2 - Overview of C"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "cbbe382b3a7a23bf",
+  "lastOpenFiles": [
+    "CHP 3 - Top-Down Design with Functions.md",
+    "Lektion 1 - 050925.md",
+    "CHP 2 - Overview of C.md",
+    "Pictures/K13 CHP 9 - Recursion/Pasted image 20251126211300.png",
+    "Pictures/K13 CHP 9 - Recursion/Pasted image 20251126211219.png",
+    "Pictures/K13 CHP 9 - Recursion/Pasted image 20251126211027.png",
+    "Pictures/K13 CHP 9 - Recursion/Pasted image 20251126210956.png",
+    "Pictures/K13 CHP 9 - Recursion/Pasted image 20251126203446.png",
+    "Pictures/K13 CHP 9 - Recursion/Pasted image 20251126202827.png",
+    "Pictures/K13 CHP 9 - Recursion/Pasted image 20251126202805.png",
+    "Pictures/K13 CHP 9 - Recursion/Pasted image 20251126201239.png",
+    "Pictures/K13 CHP 9 - Recursion/Pasted image 20251126200429.png",
+    "Pictures/K13 CHP 9 - Recursion/Pasted image 20251126200419.png",
+    "Pictures/K13 CHP 9 - Recursion",
+    "Pictures/K10 CHP 10 - Structs",
+    "Pictures/K 9 CHP 8 - Strings",
+    "Pictures/K 7&8 CHP 7 - Array Pointers",
+    "Pictures/K 11 CHP 11 - Text and Binary- File Pointers",
+    "Pictures/CHP 6 - Pointers and Modular Programming",
+    "Pictures/CHP 5 - Repetition & Loop Statements",
+    "Pictures/CHP 4 - Selection Structures - IF and Switch",
+    "Pictures/CHP 2 - Overview of C",
+    "Pictures/CHP 3 - Top-Down Design with Functions",
+    "K13 CHP 9 - Recursion.md",
+    "K10 CHP 10 - Structs.md",
+    "K 11 CHP 11 - Text and Binary- File Pointers.md",
+    "K 9 CHP 8 - Strings.md",
+    "K 7&8 CHP 7 - Array Pointers.md",
+    "K 7 - Slides - Datatyper.md",
+    "CHP 6 - Pointers and Modular Programming.md",
+    "CHP 5 - Repetition & Loop Statements.md",
+    "CHP 4 - Selection Structures - IF and Switch.md",
+    "Pasted image 20250917192209.png.md"
+  ]
+}

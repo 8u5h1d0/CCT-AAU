@@ -1,0 +1,233 @@
+{
+  "main": {
+    "id": "f87dd53aeaff3ffe",
+    "type": "split",
+    "children": [
+      {
+        "id": "bb887e1721794aab",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "5a4acdec148f502e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "AgS/AgS - K2 - SCRUM og Agile Processer.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "AgS - K2 - SCRUM og Agile Processer"
+            }
+          },
+          {
+            "id": "3a48394a01752981",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "!Formatting & Syntax/OMD - Formatting and Syntax.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "OMD - Formatting and Syntax"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "8fd0139e1baffff3",
+    "type": "split",
+    "children": [
+      {
+        "id": "f2cb5481cd6f8f47",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c9059b48a06884af",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "c23c7ffda177558d",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "3408e4a4765d0837",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "c3184f4b79a3275f",
+    "type": "split",
+    "children": [
+      {
+        "id": "8d2a463d5e489b0d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b9b0fcc84dff1282",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "AgS/AgS - K1 - Intro + Udviklingsprocesser.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for AgS - K1 - Intro + Udviklingsprocesser"
+            }
+          },
+          {
+            "id": "df7ae8898f908d23",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "AgS/AgS - K1 - Intro + Udviklingsprocesser.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from AgS - K1 - Intro + Udviklingsprocesser"
+            }
+          },
+          {
+            "id": "89c2002fdab88a03",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "f129e201f5a08ae5",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "b438d957d4dbdaee",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "AgS/AgS - K1 - Intro + Udviklingsprocesser.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of AgS - K1 - Intro + Udviklingsprocesser"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "c9059b48a06884af",
+  "lastOpenFiles": [
+    "!Formatting & Syntax/GLM-4.6 - Post-Processing - Secondary Prompts.md",
+    "AgS/AgS - K2 - SCRUM og Agile Processer.md",
+    "!Formatting & Syntax/GLM-4.6 - Partial-Note Generation - First Pass.md",
+    "!Formatting & Syntax/GLM-4.6 - Note Generation.md",
+    "AgS/Originals/AgS - K2 - SCRUM og Agile Processer.md",
+    "AgS/Picutres/AgS - K2 - SCRUM og Agile Processer/Pasted image 20260203174940.png",
+    "AgS/Picutres/AgS - K2 - SCRUM og Agile Processer/Pasted image 20260203181852.png",
+    "AgS/Picutres/AgS - K2 - SCRUM og Agile Processer/Pasted image 20260203180311.png",
+    "AgS/Picutres/AgS - K2 - SCRUM og Agile Processer/Pasted image 20260203175817.png",
+    "AgS/Picutres/AgS - K2 - SCRUM og Agile Processer",
+    "AgS/Picutres/AgS - K2 - SCRUM og Agile Processer/Pasted image 20260203175305.png",
+    "AgS/AgS - K1 - Intro + Udviklingsprocesser.md",
+    "AgS/Originals",
+    "AgS/AgS - Template 1.md",
+    "!Formatting & Syntax/OMD - Formatting and Syntax.md",
+    "AgS/AgS - Template.md",
+    "AgS/Picutres/AgS - K1 - Intro + Udviklingsprocesser/Pasted image 20260202201950.png",
+    "AgS/Picutres/AgS - K1 - Intro + Udviklingsprocesser/Pasted image 20260202202343.png",
+    "AgS/Picutres/AgS - K1 - Intro + Udviklingsprocesser/Pasted image 20260202202324.png",
+    "AgS/Picutres/AgS - K1 - Intro + Udviklingsprocesser/Pasted image 20260202202254.png",
+    "AgS/Picutres/AgS - K1 - Intro + Udviklingsprocesser/Pasted image 20260202202236.png",
+    "AgS/Picutres/AgS - K1 - Intro + Udviklingsprocesser",
+    "AgS/Picutres",
+    "OOA/Untitled.md",
+    "!Formatting & Syntax/LaTex - Formatting and Syntax.md",
+    "OOA",
+    "AgS",
+    "DS",
+    "!Formatting & Syntax/GLM-4.6 Advanced Prompt Template.md",
+    "!Formatting & Syntax/C - Formatting and Syntax.md"
+  ]
+}
