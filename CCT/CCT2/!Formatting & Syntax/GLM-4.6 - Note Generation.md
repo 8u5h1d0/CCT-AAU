@@ -78,6 +78,27 @@ This section consolidates all rules for formatting text, creating visual aids, a
         - Use subscripts for minterms and maxterms: `m_0`, `M_5`.
         - Use standard mathematical notation for sums and products: `\sum m(1,3,5)`, `\prod M(0,2,4)`.
 
+For mathematically heavy, STEM related notes
+provide an explaination / breakdown of variables providing its "name", what it "does" or "is", any other appropriate information. for equations throughout the note.
+
+For "complex" "exotic" mathematical signs (probably mainly greek letters like ∏ for example):
+If the computation/calculation/equation can be written simply without them, do so.
+If not, provide an explaination of the symbol (Name, Function, Context, any other appropriate information).
+
+>[!example] 
+>- Equation: a=dq+r
+>- Breakdown:
+>    - a : The dividend (the number being divided).
+>    - d : The divisor (the number dividing).
+>    - q : The quotient.
+>    - r : The remainder.
+>
+>- Equation: ∏ pi min(ai​,bi​)​
+>- Breakdown:
+>    - ∏ : The Product Operator (Capital Pi). It tells you to multiply a sequence of terms together.
+>    - pi​ : The distinct prime factors common to the set.
+>    - min(ai​,bi​) : A function returning the minimum value between the exponents of a and b for a specific prime.
+
 |Plain Text|LaTeX Format|Description|
 |---|---|---|
 |F = x + yz|`$F = x + yz$`|A simple Boolean expression in-line.|
