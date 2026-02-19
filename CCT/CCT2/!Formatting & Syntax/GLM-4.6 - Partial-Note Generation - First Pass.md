@@ -55,7 +55,7 @@ the **Obsidian** knowledge base. The formatting conventions are chosen to levera
     - `>[!warning]` for highlighting cautions or critical exceptions mentioned in the text.
     - `>[!example]` for examples provided in the text that illustrate important concepts. And for step-by-step examples from the text that demonstrate processes.
     - `>[!tip]` for helpful hints or practical advice from the text that provides valuable guidance.
-    - `>[!summary]` for summaries provided in the text or of a section.
+    - `>[!summary]` for summaries provided in the text or of a section. As well as mathematical definitions, theorems and corollaries.
     - `>[!question]` for questions posed in the text.
     - `>[!note]` for additional context or notes from the text that clarify important points.
     - `>[!important]` for critical information highlighted in the text.
@@ -81,6 +81,24 @@ the **Obsidian** knowledge base. The formatting conventions are chosen to levera
 - **Mathematical Notation and Equations:** Use LaTeX for all mathematical expressions as they appear in the source text.
     - **Inline Math:** Enclose LaTeX code in single dollar signs (`$`).
     - **Block Math:** Enclose LaTeX code in double dollar signs (`$$`).
+
+- Naming of Mathematical/Scientific/Technical Definitions, Theorems, etc.
+  
+  the convention/metohd of using definitions in this way is mainly if not wholely for STEM fields and topics.
+  
+- _Rule 1 (Implicit Names):_ "If no name is provided in the source text for a definition, theorem, corollary, etc., generate a concise and descriptive name for it. Or if a name already exists but is for some reason absent, use the given/coined name. in the callout/format shown below:" 
+- _Rule 2 (Error Checking):_ "If a name provided in the source text appears incorrect or misleading, flag this issue for the user." This is mainly if not wholely for STEM fields and topics.
+  
+  > [!summary] Type - "name"
+  > theorem text / explaination
+  > Proof:
+  >"proof(s)/explaination(s)"
+  
+  Example:
+  > [!summary] Theorem - "Theorem Name"
+  > Theorem Explaination
+  > Proof:
+  > Proof of theorem (if applicable)
 
 ### Images, Diagrams, and Tables
 

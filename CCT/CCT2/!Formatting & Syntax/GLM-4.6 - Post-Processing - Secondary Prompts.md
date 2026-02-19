@@ -48,3 +48,6 @@ Answer the following questions:
 
   
 Enhance the consistency of using LaTex for mathematical expressions and individual variables and numbers outside of code.
+
+Come with suggestions and reccomendations to improve the note that haven't been said before, and to fix the missing/incompelte points of the evaluation check if there are any. 
+WITHOUT! re-generating the note in its entirety before being prompted to do so.

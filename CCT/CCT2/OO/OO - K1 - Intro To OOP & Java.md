@@ -77,9 +77,13 @@ public class Main {
 - `public class Main`: Defines a class named `Main`.
 - `public static void main(String[] args)`: The standard entry point method.
 - `System.out.println()`: A command to output text to the console.
+## Object-Oriented v. Imperative
+
+![[Pasted image 20260217120707.png]]
+
+![[Pasted image 20260217120752.png]]
 
 ---
-
 ## Variables and Data Types
 
 A **variable** is a container for storing data values. In Java, you must explicitly declare the type of data a variable will hold.
