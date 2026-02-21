@@ -15,91 +15,6 @@ Litterature:
   - medium - Modularization in Software Engineering
 Created: 10/02/2026
 ---
-- - -
-# Table of Contents
-
-1. [[#Java - What is OOP?|Java - What is OOP?]]
-2. [[#Java - What are Classes and Objects?|Java - What are Classes and Objects?]]
-3. [[#class|class]]
-4. [[#objects|objects]]
-5. [[#class|class]]
-6. [[#objects|objects]]
-7. [[#Java Classes and Objects|Java Classes and Objects]]
-8. [[#Java Classes and Objects#Java Classes/Objects|Java Classes/Objects]]
-9. [[#Java Classes and Objects#Create a Class|Create a Class]]
-10. [[#Java Classes and Objects#Create an Object|Create an Object]]
-	1. [[#Create an Object#Example[Get your own Java Server](https://www.w3schools.com/java/java_server.asp "W3Schools Spaces")|Example[Get your own Java Server](https://www.w3schools.com/java/java_server.asp "W3Schools Spaces")]]
-11. [[#Java Classes and Objects#Multiple Objects|Multiple Objects]]
-	1. [[#Multiple Objects#Example|Example]]
-12. [[#Java Classes and Objects#Using Multiple Classes|Using Multiple Classes]]
-13. [[#Java Class Attributes|Java Class Attributes]]
-14. [[#Java Class Attributes#Java Class Attributes|Java Class Attributes]]
-15. [[#Java Class Attributes#Accessing Attributes|Accessing Attributes]]
-	1. [[#Accessing Attributes#Example[Get your own Java Server](https://www.w3schools.com/java/java_server.asp "W3Schools Spaces")|Example[Get your own Java Server](https://www.w3schools.com/java/java_server.asp "W3Schools Spaces")]]
-16. [[#Java Class Attributes#Modify Attributes|Modify Attributes]]
-	1. [[#Modify Attributes#Example|Example]]
-	2. [[#Modify Attributes#Example|Example]]
-	3. [[#Modify Attributes#Example|Example]]
-17. [[#Java Class Attributes#Multiple Objects|Multiple Objects]]
-	1. [[#Multiple Objects#Example|Example]]
-18. [[#Java Class Attributes#Multiple Attributes|Multiple Attributes]]
-	1. [[#Multiple Attributes#Example|Example]]
-19. [[#Java Class Methods|Java Class Methods]]
-20. [[#Java Class Methods#Java Class Methods|Java Class Methods]]
-	1. [[#Java Class Methods#Example[Get your own Java Server](https://www.w3schools.com/java/java_server.asp "W3Schools Spaces")|Example[Get your own Java Server](https://www.w3schools.com/java/java_server.asp "W3Schools Spaces")]]
-21. [[#Java Class Methods#Access Methods With an Object|Access Methods With an Object]]
-	1. [[#Access Methods With an Object#Example|Example]]
-	2. [[#Access Methods With an Object#Example explained|Example explained]]
-	3. [[#Access Methods With an Object#Remember that..|Remember that..]]
-22. [[#Java Class Methods#Using Multiple Classes|Using Multiple Classes]]
-23. [[#Java Constructors|Java Constructors]]
-24. [[#Java Constructors#Java Constructors|Java Constructors]]
-	1. [[#Java Constructors#Example[Get your own Java Server](https://www.w3schools.com/java/java_server.asp "W3Schools Spaces")|Example[Get your own Java Server](https://www.w3schools.com/java/java_server.asp "W3Schools Spaces")]]
-25. [[#Java Constructors#Constructor Parameters|Constructor Parameters]]
-	1. [[#Constructor Parameters#Example|Example]]
-	2. [[#Constructor Parameters#Example|Example]]
-26. [[#Java this|Java this]]
-27. [[#Java this#Java this Keyword|Java this Keyword]]
-28. [[#Java this#Accessing Class Attributes|Accessing Class Attributes]]
-	1. [[#Accessing Class Attributes#Example[Get your own Java Server](https://www.w3schools.com/java/java_server.asp "W3Schools Spaces")|Example[Get your own Java Server](https://www.w3schools.com/java/java_server.asp "W3Schools Spaces")]]
-29. [[#Java this#Calling a Constructor from Another Constructor|Calling a Constructor from Another Constructor]]
-	1. [[#Calling a Constructor from Another Constructor#Example|Example]]
-30. [[#Java this#When to use this?|When to use this?]]
-31. [[#Java Modifiers|Java Modifiers]]
-32. [[#Java Modifiers#Modifiers|Modifiers]]
-33. [[#Java Modifiers#Access Modifiers|Access Modifiers]]
-34. [[#Java Modifiers#Public vs. Private Example|Public vs. Private Example]]
-	1. [[#Public vs. Private Example#Example[Get your own Java Server](https://www.w3schools.com/java/java_server.asp "W3Schools Spaces")|Example[Get your own Java Server](https://www.w3schools.com/java/java_server.asp "W3Schools Spaces")]]
-	2. [[#Public vs. Private Example#Example explained|Example explained]]
-35. [[#Java Non-Access Modifiers|Java Non-Access Modifiers]]
-36. [[#Java Non-Access Modifiers#Non-Access Modifiers|Non-Access Modifiers]]
-37. [[#Java Non-Access Modifiers#Final|Final]]
-	1. [[#Final#Example[Get your own Java Server](https://www.w3schools.com/java/java_server.asp "W3Schools Spaces")|Example[Get your own Java Server](https://www.w3schools.com/java/java_server.asp "W3Schools Spaces")]]
-38. [[#Java Non-Access Modifiers#Static|Static]]
-	1. [[#Static#Example|Example]]
-39. [[#Java Non-Access Modifiers#Abstract|Abstract]]
-40. [[#Java Non-Access Modifiers#Non-Access Modifiers List|Non-Access Modifiers List]]
-41. [[#Java Encapsulation|Java Encapsulation]]
-42. [[#Java Encapsulation#Encapsulation|Encapsulation]]
-43. [[#Java Encapsulation#Get and Set|Get and Set]]
-	1. [[#Get and Set#Example[Get your own Java Server](https://www.w3schools.com/java/java_server.asp "W3Schools Spaces")|Example[Get your own Java Server](https://www.w3schools.com/java/java_server.asp "W3Schools Spaces")]]
-		1. [[#Example[Get your own Java Server](https://www.w3schools.com/java/java_server.asp "W3Schools Spaces")#Example explained|Example explained]]
-	2. [[#Get and Set#Example|Example]]
-	3. [[#Get and Set#Example|Example]]
-44. [[#Java Encapsulation#Why Encapsulation?|Why Encapsulation?]]
-45. [[#Use Case Diagram | UML (Unified Modeling Language)|Use Case Diagram | UML (Unified Modeling Language)]]
-46. [[#Use Case Diagram | UML (Unified Modeling Language)#Purpose of Use Case Diagrams|Purpose of Use Case Diagrams]]
-47. [[#Use Case Diagram | UML (Unified Modeling Language)#How to draw a Use Case diagram?|How to draw a Use Case diagram?]]
-48. [[#Use Case Diagram | UML (Unified Modeling Language)#Example of a Use Case Diagram|Example of a Use Case Diagram]]
-49. [[#Use Case Diagram | UML (Unified Modeling Language)#Important tips for drawing a Use Case diagram|Important tips for drawing a Use Case diagram]]
-50. [[#Modularization in Software Engineering|Modularization in Software Engineering]]
-51. [[#Modularization in Software Engineering#What is modularization?|What is modularization?]]
-52. [[#Modularization in Software Engineering#Benefits of modularization|Benefits of modularization]]
-53. [[#Modularization in Software Engineering#How should we decompose modules?|How should we decompose modules?]]
-54. [[#Modularization in Software Engineering#Example: Modularization on a text-to-speech application|Example: Modularization on a text-to-speech application]]
-55. [[#Modularization in Software Engineering#Get Caitlin Jee’s stories in your inbox|Get Caitlin Jee’s stories in your inbox]]
-56. [[#Modularization in Software Engineering#Conclusion|Conclusion]]
-
 ## Java - What is OOP?
 
 OOP stands for **Object-Oriented Programming**.
@@ -120,6 +35,18 @@ Object-oriented programming has several advantages over procedural programming:
 ## Java - What are Classes and Objects?
 
 Classes and objects are the two main aspects of object-oriented programming.
+
+A cookie-cutter defines a general description for a shape of a cookie, many cookies can share this form/shape. The cutter ITSELF however is not a cookie. A class is like the cutter, and objects the cookies.
+To make a cookie, we need to follow a predefined procedure, and we need to use some ingredients. The method ("function" in inperative programming) for creating an object is called a constructor.
+Constructors can have defined input parameters, they are special methods that belong to the class.
+
+Our cookies are similar in that they are all cookies, but they are still distinct entities (they might both be made from gingerbread dough, but one is the shape of a Christmas tree or a star, another a gingerbread man), regardless of how much or little they vary.
+Each individual cookie is an instance of a class called an object. 
+Each object has its own attributes. Even if the attributes of two objects are identical, they are not equal. Objects that are related to the same class share a type.
+
+Things we can do with a cookie, like decorating it, can be described as something we can do to any cookie, or as a feature of a specific cookie.
+ - We can write methods that belong to a class, which takes an object as an input `Decorate(myCookie);` 
+ - We can write methods that belong to an object, and are run in the context of said object `myCookie.Decorate();`
 
 Look at the following illustration to see the difference between class and objects:
 
@@ -167,6 +94,42 @@ Everything in Java is associated with classes and objects, along with its attrib
 
 A Class is like an object constructor, or a "blueprint" for creating objects.
 
+Classes are definitions of groups of objects with the same attributes and operations. They act as “blueprints” for the actual objects. Individual objects of a given class are called instances of that class; they can be created and subsequently destroyed. In some (rare) cases, objects of a class cannot be created; such classes are called abstract.
+
+![[Pasted image 20260221113837.png]]
+
+Example:
+a bicycle has many diffrent attributes that are share across all bicycles all bikes have and use wheels, while specific bikes have specific atributes that set is apart from other bikes mountain bike wheels a wide, and racing bike wheels slim.
+
+![[Pasted image 20260221114059.png]]
+
+UML visibility symbols – indication of who is allowed to access the specific method or attribute.
+
+| Symbol | Visibility    | Accessibility Scope                                            |
+| :----: | :------------ | :------------------------------------------------------------- |
+|  `+`   | **Public**    | Accessible by any class within the model and external systems. |
+|  `-`   | **Private**   | Accessible only within the class where it is defined.          |
+|  `#`   | **Protected** | Accessible within the class and by subclasses (inheritors).    |
+|  `~`   | **Package**   | Accessible only by classes within the same package/namespace.  |
+|        |               |                                                                |
+
+```mermaid
+classDiagram
+    class BankAccount {
+        -String accountNumber
+        -double balance
+        +BankAccount(number, initialBalance)
+        +deposit(amount)
+        +withdraw(amount)
+        #generateAuditLog()
+        ~getInternalStatus()
+    }
+```
+![[Pasted image 20260221114415.png]]
+![[Pasted image 20260221114439.png]]
+
+![[Pasted image 20260221114842.png]]
+
 ---
 
 ## Create a Class
@@ -210,6 +173,11 @@ public class Main {
 ```
 
 ---
+Objects are accessed via a reference variable. The reference variable is a pointer to the location in memory where the object, once created, is stored. In Java a new object is created by `Bicycle bicycle = new Bicycle()`
+![[Pasted image 20260221114951.png]]
+
+
+
 
 ---
 
@@ -544,6 +512,12 @@ A class must have a matching filename (`Main` and **Main.java**).
 
 ---
 
+![[Pasted image 20260221115034.png]]
+A class shares similarities with modules. It may hold (several) input and output methods. It may hold (several) functionalities. There is an intuitive relation between functionalities. Input and output can also be object references. A Person class can use a Bicycle, e.g. person.use(bicycle). A BicycleShop can return a Bicycle, e.g. Bicycle myBike = bicycleShop.buy(money). 
+It is only the references to the object that is exchanged!!. This can have some implications once your code involves concurrent (multi- threaded) activities
+	If two people share the same bicycle: they can change each other’s seat height, move it to a different location, change the gears, use it at the same time → conflict 
+	But if each person has a copy of the bicycle, no conflicts occur.
+
 ---
 
 ## Using Multiple Classes
@@ -627,6 +601,12 @@ Also note that the constructor is called when the object is created.
 All classes have constructors by default: if you do not create a class constructor yourself, Java creates one for you. However, then you are not able to set initial values for object attributes.
 
 ---
+
+The constructor is called when we initiate the object • Bicycle myBicycle = new Bicycle(); • Constructor is a method without any return value (it is implicit an object of that class) • This is a deterministic process!! • Destroying an object (cleanup) is NOT a deterministic project in Java as it depends on many different things • finalize() was meant to run when an object dies but it was deprecated in Java 9 and completely removed in Java 18 • Objects using external resources must clean up explicitly using AutoClosable() – more about this later in the cours
+
+Behind the scene, Java is keeping track of objects and how they are referenced • If nothing is referenced to an object, it means that it is not used anymore • It is cleared from memory at some point in time • Deconstructor can be made, but is a bit more complex – java mostly rely on garbage collection and after that, resources are gracefully shut down, e.g. closing files, freeing ports, …
+
+Usually, one creates an object and assigns it to a variable • Bicycle bicycle = new Bicycle() • Sometimes it is convenient to create the object later, and just declare the class type • Bicycle bicycle; • Until the constructor is called via new Bicycle(), then bicycle holds the value null – which isn’t really a value, but a reference to address 0 is not valid, and is essentially saying that bicycle has not been created • A highly common error is the dreaded null pointer exception meaning that some object was not created somewhere in the code – you have forgotten to new Bicycle() • Null pointer exceptions often happens other places than where the error is • Setting a variable to null also basically tells the garbage collector that the object is no longer needed, e.g. bicycle = null; will effectively destroy the bicycle
 
 ---
 
@@ -1057,6 +1037,44 @@ public class Main {
 ```
 
 ---
+
+When creating our classes it is important to pay careful attention to the “openness” of the code • Something may be essential to share to ’everyone’ while other things must be kept ‘secret’ … kept within the class.
+
+Data encapsulation refers to two distinct but related concepts • Bundling data with the methods that operate on the data • Restricting access to some object components, which we refer to as information hiding.
+
+Bundling data and related methods • Reduces problems stemming from external code, that would have to be concerned with the inner workings of an object • Helps in providing consistent interfaces • Helps keep things organized • Encourages decoupling
+
+Supports the integrity of objects and hinders users from manipulating parts that could lead to an invalid, inconsistent or unstable state • Makes it explicit what a user is allowed to do, which can make it less complex • Separates the concept of what something does from how it is implement
+
+Encapsulation is often very useful.
+Consider the bicycle class • bicycle.colour = 4; • bicycle.changeColour(4); • Now I don not have to recall how to translate from cadence to speed as the code is already there
+
+```java
+class Bicycle { 
+	float speed = 0; 
+	public Bicycle(){ 
+	} 
+}
+```
+
+```java
+class Bicycle { 
+	private float speed = 0; 
+	public Bicycle(){ 
+	} 
+	public void changeCadence(int rpm){ 
+		this.cadence = rpm;
+	} 
+	public float getSpeed(){ 
+		return cadence*gear;
+	} 
+}
+```
+
+But hey, is speed = cadence*gear not a bit simplistic? • Indeed, and it is easy to make such mistakes along the way • Bug, mistakes, misunderstandings, ”I had to leave early last Friday”, …. • We needed some equation with tire information and p was also somehow involved • If we have protected our state variables, we can easily improve and update functionality • Otherwise, all places where code uses speed needs to be updated
+
+This is a keyword that allows us to specify ”ourselves” as the attribute object owner.
+Words put in front of methods and attributes (but also class’es) Private: We keep methods and attributes to ourselves. Methods and attributes are not visible outside the class. Protected: We keep methods and attributes to our family. Methods and attributes are only visible to children (via inheritance) Public: We are open to all outsiders. Methods and attributes can be accessed to all who knows the class
 
 ---
 

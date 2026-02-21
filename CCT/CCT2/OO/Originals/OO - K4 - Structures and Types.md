@@ -17,6 +17,177 @@ Litterature:
 Created: 16-02-2026
 ---
 - - -
+  # Table of Contents
+
+1. [[#Java ArrayList|Java ArrayList]]
+	1. [[#Java ArrayList#Java ArrayList|Java ArrayList]]
+	2. [[#Java ArrayList#Create an ArrayList|Create an ArrayList]]
+		1. [[#Create an ArrayList#Example|Example]]
+	3. [[#Java ArrayList#Add Elements|Add Elements]]
+		1. [[#Add Elements#Example|Example]]
+		2. [[#Add Elements#Example|Example]]
+	4. [[#Java ArrayList#Access an Element|Access an Element]]
+		1. [[#Access an Element#Example|Example]]
+	5. [[#Java ArrayList#Change an Element|Change an Element]]
+		1. [[#Change an Element#Example|Example]]
+	6. [[#Java ArrayList#Remove an Element|Remove an Element]]
+		1. [[#Remove an Element#Example|Example]]
+		2. [[#Remove an Element#Example|Example]]
+	7. [[#Java ArrayList#ArrayList Size|ArrayList Size]]
+		1. [[#ArrayList Size#Example|Example]]
+	8. [[#Java ArrayList#Loop Through an ArrayList|Loop Through an ArrayList]]
+		1. [[#Loop Through an ArrayList#Example|Example]]
+		2. [[#Loop Through an ArrayList#Example|Example]]
+	9. [[#Java ArrayList#Other Types|Other Types]]
+		1. [[#Other Types#Example|Example]]
+	10. [[#Java ArrayList#Sort an ArrayList|Sort an ArrayList]]
+		1. [[#Sort an ArrayList#Example|Example]]
+		2. [[#Sort an ArrayList#Example|Example]]
+	11. [[#Java ArrayList#The var Keyword|The var Keyword]]
+		1. [[#The var Keyword#Example|Example]]
+	12. [[#Java ArrayList#The List Interface|The List Interface]]
+	13. [[#Java ArrayList#Complete ArrayList Reference|Complete ArrayList Reference]]
+2. [[#Java LinkedList|Java LinkedList]]
+	1. [[#Java LinkedList#Java LinkedList|Java LinkedList]]
+		1. [[#Java LinkedList#Example|Example]]
+	2. [[#Java LinkedList#ArrayList vs. LinkedList|ArrayList vs. LinkedList]]
+		1. [[#ArrayList vs. LinkedList#How the ArrayList works|How the ArrayList works]]
+		2. [[#ArrayList vs. LinkedList#How the LinkedList works|How the LinkedList works]]
+		3. [[#ArrayList vs. LinkedList#When To Use|When To Use]]
+	3. [[#Java LinkedList#LinkedList Methods|LinkedList Methods]]
+	4. [[#Java LinkedList#The var Keyword|The var Keyword]]
+		1. [[#The var Keyword#Example|Example]]
+	5. [[#Java LinkedList#The List Interface|The List Interface]]
+	6. [[#Java LinkedList#Complete LinkedList Reference|Complete LinkedList Reference]]
+3. [[#Java HashMap|Java HashMap]]
+	1. [[#Java HashMap#Java HashMap|Java HashMap]]
+	2. [[#Java HashMap#Create a HashMap|Create a HashMap]]
+		1. [[#Create a HashMap#Example|Example]]
+	3. [[#Java HashMap#Add Items|Add Items]]
+		1. [[#Add Items#Example|Example]]
+	4. [[#Java HashMap#Access an Item|Access an Item]]
+		1. [[#Access an Item#Example|Example]]
+	5. [[#Java HashMap#Remove an Item|Remove an Item]]
+		1. [[#Remove an Item#Example|Example]]
+		2. [[#Remove an Item#Example|Example]]
+	6. [[#Java HashMap#HashMap Size|HashMap Size]]
+		1. [[#HashMap Size#Example|Example]]
+	7. [[#Java HashMap#Loop Through a HashMap|Loop Through a HashMap]]
+		1. [[#Loop Through a HashMap#Example|Example]]
+		2. [[#Loop Through a HashMap#Example|Example]]
+		3. [[#Loop Through a HashMap#Example|Example]]
+	8. [[#Java HashMap#Other Types|Other Types]]
+		1. [[#Other Types#Example|Example]]
+	9. [[#Java HashMap#When Order Matters|When Order Matters]]
+	10. [[#Java HashMap#The var Keyword|The var Keyword]]
+		1. [[#The var Keyword#Example|Example]]
+	11. [[#Java HashMap#The Map Interface|The Map Interface]]
+	12. [[#Java HashMap#Complete HashMap Reference|Complete HashMap Reference]]
+4. [[#Vector Class in Java|Vector Class in Java]]
+	1. [[#Vector Class in Java#Hierarchy of Vector|Hierarchy of Vector]]
+	2. [[#Vector Class in Java#Constructors of Vector|Constructors of Vector]]
+		1. [[#Constructors of Vector#1. Vector()|1. Vector()]]
+		2. [[#Constructors of Vector#2. Vector(int initialCapacity)|2. Vector(int initialCapacity)]]
+		3. [[#Constructors of Vector#3. Vector(int initialCapacity, int capacityIncrement)|3. Vector(int initialCapacity, int capacityIncrement)]]
+		4. [[#Constructors of Vector#4. Vector(Collection c)|4. Vector(Collection c)]]
+		5. [[#Constructors of Vector#Vector Capacity in Java|Vector Capacity in Java]]
+	3. [[#Vector Class in Java#Different Operations of Vector Class|Different Operations of Vector Class]]
+		1. [[#Different Operations of Vector Class#1. Adding Elements|1. Adding Elements]]
+		2. [[#Different Operations of Vector Class#2. Updating Elements|2. Updating Elements]]
+		3. [[#Different Operations of Vector Class#3. Removing Elements|3. Removing Elements]]
+		4. [[#Different Operations of Vector Class#4. Iterating the Vector|4. Iterating the Vector]]
+	4. [[#Vector Class in Java#Methods of Vector Class|Methods of Vector Class]]
+5. [[#Stack Class in Java|Stack Class in Java]]
+		1. [[#Methods of Vector Class#Hierarchy of Stack class|Hierarchy of Stack class]]
+	1. [[#Stack Class in Java#Constructors of Stack in Java|Constructors of Stack in Java]]
+		1. [[#Constructors of Stack in Java#1. Stack()|1. Stack()]]
+		2. [[#Constructors of Stack in Java#2. Stack(int initialCapacity)|2. Stack(int initialCapacity)]]
+	2. [[#Stack Class in Java#Performing Different Operations on Stack Class|Performing Different Operations on Stack Class]]
+		1. [[#Performing Different Operations on Stack Class#1. Adding Elements|1. Adding Elements]]
+		2. [[#Performing Different Operations on Stack Class#2. Accessing the Element|2. Accessing the Element]]
+		3. [[#Performing Different Operations on Stack Class#3. Removing Elements|3. Removing Elements]]
+		4. [[#Performing Different Operations on Stack Class#Prioritize Use of ****Deque**** over Stack|Prioritize Use of ****Deque**** over Stack]]
+	3. [[#Stack Class in Java#****Methods in Stack Class****|****Methods in Stack Class****]]
+	4. [[#Stack Class in Java#Methods Inherited from the Vector Class|Methods Inherited from the Vector Class]]
+6. [[#PriorityQueue in Java|PriorityQueue in Java]]
+		1. [[#Methods Inherited from the Vector Class#Declaration of PriorityQueue|Declaration of PriorityQueue]]
+	1. [[#PriorityQueue in Java#Hierarchy of PriorityQueue|Hierarchy of PriorityQueue]]
+	2. [[#PriorityQueue in Java#Constructors of PriorityQueue|Constructors of PriorityQueue]]
+		1. [[#Constructors of PriorityQueue#1. PriorityQueue()|1. PriorityQueue()]]
+		2. [[#Constructors of PriorityQueue#2. PriorityQueue(int initialCapacity)|2. PriorityQueue(int initialCapacity)]]
+		3. [[#Constructors of PriorityQueue#3. PriorityQueue(Comparator<E> comparator)|3. PriorityQueue(Comparator<E> comparator)]]
+		4. [[#Constructors of PriorityQueue#4. PriorityQueue(int initialCapacity, Comparator<E> comparator)|4. PriorityQueue(int initialCapacity, Comparator<E> comparator)]]
+	3. [[#PriorityQueue in Java#Different Operations on PriorityQueue|Different Operations on PriorityQueue]]
+		1. [[#Different Operations on PriorityQueue#****1. Adding Elements****|****1. Adding Elements****]]
+		2. [[#Different Operations on PriorityQueue#2. Removing Elements|2. Removing Elements]]
+		3. [[#Different Operations on PriorityQueue#****3. Accessing the Elements****|****3. Accessing the Elements****]]
+		4. [[#Different Operations on PriorityQueue#****4. Iterating the PriorityQueue****|****4. Iterating the PriorityQueue****]]
+	4. [[#PriorityQueue in Java#Methods of PriorityQueue|Methods of PriorityQueue]]
+	5. [[#PriorityQueue in Java#Methods Declared in Interface java.util.Queue|Methods Declared in Interface java.util.Queue]]
+	6. [[#PriorityQueue in Java#Methods Declared in Class java.util.AbstractQueue|Methods Declared in Class java.util.AbstractQueue]]
+	7. [[#PriorityQueue in Java#Methods Declared in Class java.util.AbstractCollection|Methods Declared in Class java.util.AbstractCollection]]
+	8. [[#PriorityQueue in Java#Methods Declared in Interface java.util.Collection|Methods Declared in Interface java.util.Collection]]
+		1. [[#Methods Declared in Interface java.util.Collection#Applications of PriorityQueue|Applications of PriorityQueue]]
+
+  wrapper classes:
+  Lower case number types, such as int, double, float, byte are raw numbers expressed as integer (of some word length), IEEE 754 standard, byte (or word of length 8 bit) • Those can be handled just as raw numbers, and are exchanged by value • Capital case number types, such as Int, Double, Float, Byte, are Classes that carry the value of an integer, double, float or byte, adding some more methods, e.g. • parseInt(String S) – takes a string S and returns an int (if possible) • longValue() – returns the integer as a long • rotateLeft(int i, int distance) – rotate the bits to the left • These are called wrapper class objects and are object forms of primitives (or simple values) that adds object semantics
+  
+  Normally we just use basic data types as intended, such as byte, long etc. • byte a = 35; • double y =1.245; • But sometimes we need to take an input from the keyboard, using e.g. Scanner, and we then need to convert it into some special data type • Or we need to be able to handle the data type as an object
+  We can use the wrapper class object instance as if they were basic data types, e.g. • Integer x = 5; Double y = 1.234; • Printing is just as easy • System.out.println(x); • System.out.println(”Y has the value ”+y); • It is also doable to access the value via proper methods • System.out.println(x.intValue()); • System.out.println(y.doubleValue());
+  ut the real strength is in most other related methods e.g. toString() • Double x =1.234; String strX = x.toString(); • Or the other way around, if we have a string and need the data • double f = Double.parseFloat(strX); • In C we would have had to locate an appropriate function, but here we get the method with the wrapper data type that we wish to use • int y = Integer.parseInt(strX); • byte b = Byte.parseByte(strX); • In many cases, we even have more options than just to pass a string, which are suitable for the appropriate data type • If something fails, an exception is thrown (more about this later)
+  
+  Notice, double is default in Java, so if we wish to use float (lower precision), then, in Test2, we must cast 2.766 to float, e.g. • float f2 = (float) 2.766;
+  
+  ```java
+  public class Test{
+	  public static void main (String[] args){
+		  Integer myInt = 5; 
+		  Double myDouble = 5.99; 
+		  Character myChar = 'A’; 
+		  System.out.println(myInt); 
+		  System.out.println(myDouble); 
+		  System.out.println(myChar);
+	  }
+  }
+  ```
+  
+  ```java
+  public class Test2 {
+	  public static void main(String[] args){
+		  String str = "1.234"; 
+		  double f = Double.parseDouble(str); 
+		  System.out.println("Double is "+f); 
+		  Double f2 = 2.766; double f3 = f+f2; System.out.println("Result is "+f3);
+	  }
+  }
+  ```
+  
+  Wrapper classes example:
+  ```java
+  package lecture4;
+  
+  public class Temperature {
+  
+	  public Temperature(double vaulue) {
+		  this.value = value;
+	  }
+	  public double getValue() {
+		  return value;
+	  }
+	  public double toFahrenheit() {
+		  return value * 9/5 + 32;
+	  }
+	  public double toKelvin() {
+		  return value + 273.15;
+	  }
+	  
+	  @Override
+	  public String toStrung() {
+		  return value + " Deg C";
+	  }
+  }
+  ```
+  ![[Pasted image 20260221150017.png]]
 # Java ArrayList
 
 ## Java ArrayList
@@ -24,6 +195,83 @@ Created: 16-02-2026
 An `ArrayList` is like a resizable array.
 The difference between a built-in array and an `ArrayList` in Java, is that the size of an array cannot be modified (if you want to add or remove elements to/from an array, you have to create a new one). While elements can be added and removed from an `ArrayList` whenever you want.
 
+
+As in imperative languages we have a whole range of different data types here 
+• Arrays 
+• Double arrays 
+• Strings 
+• Linked lists 
+• Stack 
+• Queue 
+• Hashtable 
+• And many more
+
+For simple data types, arrays are defined and used very simply
+```java
+nt[] priceOfPen= new int[5]; 
+priceOfPen[3]=5;
+```
+![[Pasted image 20260221150920.png]]
+For complex (or just our own classes) we need to initialise these manually. The array itself is initialized bot the objects inside it do not yet exist
+![[Pasted image 20260221150936.png]]
+![[Pasted image 20260221150931.png]]
+
+ARRAY EXAMPLE CODE
+If we just print cars then we get the object reference • Yes, even an array is an object • The array class have several attributes, e.g. length, which indicates how many elements exists • This is very useful for going through the array
+```java
+public class ArrayTests { 
+	public static void main(String[] args){ 
+		String[] cars = {"Volvo", "BMW", "Ford", "Mazda"}; 
+		System.out.println(cars); for (int i=0; i<cars.length;i++){
+			System.out.println("Car "+i+” "+cars[i]);
+		}
+	}
+}
+```
+
+MULTI-DIMENSIONAL ARRAYS
+Multi-dimensional arrays can be formed as simply array(s) of array(s) • This is quite useful in many situations • Matrices • Storing data as a tabular form • Data with fast access • Maps • Jagged arrays • Arrays of arrays • Each row can have a different size • Flexible (can model irregular data) • Saves (potentially) memory
+![[Pasted image 20260221151221.png]]
+We can also initialize the arrays if needed • Notice, that each element myNumbers[x] is also an array object • Same concept for higher dimension arrays
+```java
+public class ArrayTest2 { 
+	public static void main(String[] args) { 
+		int[][] myNumbers = { {1, 2, 3, 4}, {5, 6, 7} }; 
+		for (int i = 0; i < myNumbers.length; ++i) { 
+			for(int j = 0; j < myNumbers[i].length; ++j) { 
+				System.out.println(myNumbers[i][j]); 
+			} 
+		} 
+	} 
+}
+```
+![[Pasted image 20260221151412.png]]
+
+Basically, ArrayList is a resizable array with some additional features • It implements interface List, which allows us to use stuff like • Collection.sort(myList) • Collections.sort(myList, Collections.reverseOrder()); • given that myList implements a List interface, e.g. is an ArrayList • It requires importing of the feature • import java.util.ArrayList;
+![[Pasted image 20260221151430.png]]
+
+ARRAYLIST (LIST) EXAMPLE
+Here is a small example on how to use ArrayList • Notice how we loop through the list • ArrayList is extremely versatile as it can be dynamically resized as needed • Methods are provided to add and remove array items, which makes this data type very flexible and easy to operate with
+```java
+package lecture4;
+
+import java.util.ArrayList;
+
+public cclass ArrayListExample {
+	public static void main(Sting[] args){
+		ArrayList<String> cars = new ArrayList<String>();
+		cars.add("Volvo")
+		cars.add("BMW")
+		cars.add("Ford")
+		cars.add("Mazda")
+		
+		for (String i : cars) {
+			system.out.println(i);
+		}
+	}
+}
+```
+![[Pasted image 20260221151734.png]]
 ## Create an ArrayList
 To use an `ArrayList`, you must first import it from `java.util`:
 ### Example
@@ -291,6 +539,18 @@ It works the same way, but some developers prefer this style because it gives th
 ## Java LinkedList
 
 In the previous chapter, you learned about the `ArrayList` class. The `LinkedList` class is almost identical to the `ArrayList`
+
+Another structure is the LinkedList, where we do not need to write code to use linked lists
+We still need to think complexity when using this datatype – the code behind the class is not magically efficient • Difference btw. LinkedList and ArrayList? • Efficiency between insert, delete and random-access operations • ArrayList is based on a contiguous memory approach
+
+```java
+LinkedList cars = new LinkedList(); 
+cars.add("Volvo"); 
+cars.add("BMW"); 
+cars.add("Ford
+```
+![[Pasted image 20260221152014.png]]
+![[Pasted image 20260221152019.png]]
 ### Example
 ```java
 // Import the LinkedList class
@@ -397,6 +657,42 @@ A `HashMap` can store many different combinations, such as:
 
 - `String` keys and `Integer` values
 - `String` keys and `String` values
+  
+  Hashtables offers efficient access to data • Index is the hash value of the key • The hash can be calculated in many ways e.g. index = key mod noOfStorageElements • Other types also exists, e.g. • Hashmap • LinkedHashMap • ConcurrentHashMap • HashSet
+
+```java
+Hashtable hm = new Hashtable(); 
+hm.put(1, "Geeks"); 
+hm.put(12, "forGeeks"); 
+hm.put(15, "A computer"); 
+hm.put(3, "Portal"); 
+Integer n = numbers.get(“forGeeks");
+```
+![[Pasted image 20260221152234.png]]
+
+HASHMAP EXAMPEL
+Printing the object prints all pairs • If we do not find an object with a key, we get a null • A very common source of errors!! • *.get(“Denmark”) returns Null
+
+```java
+import java.util.HashMap; 
+
+public class TestHashMap { 
+	public static void main(String[] args) { 
+		HashMap capitalCities = new HashMap(); 
+		capitalCities.put("England", "London"); 
+		capitalCities.put("Germany", "Berlin"); 
+		capitalCities.put("Norway", "Oslo"); 
+		capitalCities.put("USA", "Washington DC"); 
+		System.out.println(capitalCities); 
+		System.out.println(capitalCities.get("England")); 
+		System.out.println(capitalCities.get("Denmark")); 
+	} 
+}
+```
+![[Pasted image 20260221152348.png]]
+
+*.get(“Denmark”) returns Null • The key is not present in the map → normal situation, but you need to handle it • The key is present, but the value stored is in fact null → this is allowed! • You cannot tell these two cases apart by simply checking get()
+``
 
 ---
 
@@ -617,6 +913,26 @@ In Java, a Vector is a dynamic array that can grow or shrink in size as elements
 
 import java.util.Vector;
 
+A Vector is a flexible array, very similar to ArrayList, as both are dynamic, indexbased, resizable arrays that implement the List interface • It is a legacy class – but unlike ArrayList it is synchronized • It has some additional methods not available in ArrayList • However, is also a bit legacy
+
+```java
+Vector v = new Vector(); 
+Vector v = new 
+Vector(int size); 
+Vector v = new 
+Vector(int size, int incr); 
+Vector v = new Vector(Collection c);
+```
+```java
+Vector v = new Vector(n); 
+v.add(7); 
+v.add(9); 
+v.add(23); 
+v.ad(4); 
+v.remove(1); 
+System.out.println(“Vector: “+v);
+```
+![[Pasted image 20260221151925.png]]
 ​
 
 public class GFG{
@@ -1057,6 +1373,14 @@ Geeks For Geeks
 
 # Stack Class in Java
 In Java, a Stack is a linear data structure that follows the Last In First Out (LIFO) principle and is defined in the [java.util](https://www.geeksforgeeks.org/java/java-util-package-java/) package. Internally, it extends the Vector class.
+
+A stack is a linear and simple data structure that follows the LIFO principle • Last In, First Out (LIFO) • When to use this data type? • Whenever you have a case where you want to have a LIFO type of interaction, then you may need a stack • Shines for problems where backtracking, reversal or nesting structure handling are needed • The ctrl-z is a good example
+
+```java
+Stack stack = new Stack(); stack.push("4"); stack.push("All"); while(!stack.isEmpty()) { System.out.println(stack.pop()); }
+```
+
+![[Pasted image 20260221152057.png]]
 
 - Stack class maintains insertion order and allows duplicates and null values.
 - Grows dynamically when its capacity is exceeded.
@@ -1506,6 +1830,14 @@ Using Deque:
 # PriorityQueue in Java
 A PriorityQueue in Java is a queue where elements are ordered based on their priority, rather than the order of insertion. By default, it uses natural ordering ([min-heap](https://www.geeksforgeeks.org/dsa/introduction-to-min-heap-data-structure/)), but a custom comparator can be used to define different priorities.
 
+Also a simple datatype but one that uses FIFO • First In, First Out • Is actually a java interface • LinkedList • PriorityQueue • And some other • A Queue when the order of processing matters and the oldest item should be handled next • print jobs
+
+```java
+Queue queue = new PriorityQueue (); queue.add("apple"); queue.add("banana"); queue.add("cherry"); String front = queue.remove(); String peeked = queue.peek();
+```
+![[Pasted image 20260221152141.png]]
+
+
 - Elements are processed based on priority rather than insertion order.
 - Supports standard queue operations like add(), poll(), and peek().
 - Automatically grows as elements are added.
@@ -1841,4 +2173,36 @@ For Geeks Geeks
 - Implementing [Dijkstra's](https://www.geeksforgeeks.org/dsa/dijkstras-algorithm-for-adjacency-list-representation-greedy-algo-8/) and [Prim's](https://www.geeksforgeeks.org/dsa/prims-algorithm-using-priority_queue-stl/) algorithms.
 - [Maximize array sum after K negation](https://www.geeksforgeeks.org/dsa/maximize-array-sum-after-k-negations-using-priority-queue/)
 
+TREE STRUCTURES
+Problem: we wish to search for a specific location • Linear search through a list of Locations • Define a datatype Area which holds • Information about (sub)Areas, e.g. what types exists beneath this • Methods to check if a location is in this range • Then we may create an n-ary tree of areas and locations at the bottom • Yields more efficient searches like • What tourist attractions are nearby me • Where is the nearest railway station
+![[Pasted image 20260221152631.png]]
 
+What can we do with data tree structures? • Insert, add, remove, … • Search, update, … • Checks e.g. isLocationInRange() • So, we add and implement these methods • Keeping all household data internal • Counters, pointers, objects, hashtables, whatever we use … • Additionally, we may need nice prints • If we just print our tree, we get something like MyTree@5ccd43c2 -> what does this mean? • This is an object reference – Most useful to check our object is not null • So, we may wish to add a printNice() method or similar that prints the information we want shown
+
+he base is a model of a node, which • Has some data • Has children (for binary, left and right children) • Constructor we set the data • Maybe we also wish a nodeID and some other metadata • Tree code is centred around the TLNode class
+```java
+public class BinaryTree{ static void preorder(TLNode r) { if(r==null) return; System.out.print(r.data+" "); preorder(r.left); preorder(r.right); } static void inorder(TLNode r){ if(r==null) return; inorder(r.left); System.out.print(r.data+" "); inorder(r.right); } static void postorder(TLNode r) { if(r==null) return; postorder(r.left); postorder(r.right); System.out.print(r.data+" "); } }
+```
+```java
+class TLNode { int data; TLNode left,right; TLNode(int d){ data=d; } }
+```
+Useful for e.g. • Applications with priorities • Scheduling algorithms • Caching • Code implements a complete max-heap data structure using an array and demonstrates fundamental heap operations • Min heap and max heap • O(1) for min or max elements
+```java
+class Heap{ int heapSize; void build_max_heap(int[] a) { heapSize=a.length; for(int i=(heapSize/2);i>=0;i--) max_heapify(a,i); } void max_heapify(int[] a,int i) { int l=2*i+1; int r=2*i+2; int largest=i; if(la[largest]) largest=l; if(ra[largest]) largest=r; if(largest!=i){ int t=a[i]; a[i]=a[largest]; a[largest]=t; max_heapify(a,largest); } } }
+```
+```java
+int extract_max(int[] a){ if(heapSize<0) System.out.println("underflow"); int max=a[0]; a[0]=a[heapSize-1]; heapSize--; max_heapify(a,0); return max; } void increase_key(int[] a,int i,int key){ if(key=0 && a[(i-1)/2]
+```
+As mentioned, Heap-structures excel at managing priority queues • A max-heap ensures that “important” tasks are always first to be processed • CPU task scheduling • Print job prioritization • Event handling in GUIs • Network packet scheduling • Other examples relate to constantly receiving a data stream and wanting to keep, for instance, a list of the top-10 largest values thus far • Top-10 high score in online game • Most popular hashtags today • Highest speed-trap measurements during a Formula One race
+
+
+CUSTOM DATATYPE STRUCTURES
+Data types are not physical objects, but we treat (or can at least) them as if they are in OO • Example: what characterizes a Location? • Coordinates or or something else • A description for humans to relate (and machines) • A set of references to objects on this location • A marker how to show this graphically on a map • … and probably more/other • Maybe we have a special Location • Tourist attraction, which is located at a location • Transport point (e.g. railway station) • And ton of other options …
+![[Pasted image 20260221152458.png]]
+Using inheritance, we may treat all tourist attractions as locations, as well as other location types • Imagine a list of locations that I need to visit for various reasons • My job is on that location (work location) • I want to see the location (tourist attraction) • I need to meet someone there (a bar) • Etc. etc. • I need now to create an algorithm that gives me the optimal (least time, least fuel, etc.) order of visits • Consequently, it is useful to treat all objects as Locations and not as specialized types • When I go to the location, it is useful to treat the object as specialized location
+![[Pasted image 20260221152509.png]]
+There is a ton of different things you can do with custom datatype structure • But if we start to reuse (copy/paste) code elsewhere, then be aware • Ideally, we have specialized code in one, and only one, place • Associations may also be a type of relations, e.g. • A car has a Location (as it is a physical object)
+![[Pasted image 20260221152520.png]]
+
+THE IMPORTANT STUFF
+Primitive vs wrapper types • Understand memory (primitives -> stack, objects -> heap), behaviour, and when wrappers are needed • Know your data structures • Each has specific strengths for specific access patterns • OO principles drive Java’s type system • Encapsulation, abstraction, and interfaces matter • Data structures are behaviour + rules, not just storage • Designing your own structure requires defining behaviour, choosing representation, and enforcing invariants
