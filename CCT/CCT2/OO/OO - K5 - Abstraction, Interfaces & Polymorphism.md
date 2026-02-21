@@ -73,23 +73,23 @@ Created: 21-02-2026
 
 ## Quick Reference
 
-| Term | Definition | Key Concept |
-|---|---|---|
-| **OCP** | Open Closed Principle | Modules open for extension, closed for modification |
-| **LSP** | Liskov Substitution Principle | Derived classes must be substitutable for base classes |
-| **DIP** | Dependency Inversion Principle | Depend on abstractions, not concrete classes |
-| **ISP** | Interface Segregation Principle | Clients shouldn't depend on unused interfaces |
-| **REP** | Release Reuse Equivalency Principle | Granule of reuse = granule of release |
-| **CCP** | Common Closure Principle | Group classes that change together |
-| **CRP** | Common Reuse Principle | Don't group classes that aren't used together |
-| **ADP** | Acyclic Dependencies Principle | Package dependencies must form no cycles |
-| **SDP** | Stable Dependencies Principle | Depend in direction of stability |
-| **SAP** | Stable Abstractions Principle | Stable packages should be abstract |
-| $Ca$ | Afferent Coupling | Incoming dependencies (responsible) |
-| $Ce$ | Efferent Coupling | Outgoing dependencies (dependent) |
-| $I$ | Instability | $I = \frac{Ce}{Ce + Ca}$ |
-| $A$ | Abstractness | $A = \frac{Na}{Nc}$ |
-| $D'$ | Normalized Distance | $D' = |A + I - 1|$ |
+| Term    | Definition                          | Key Concept                                            |           |     |
+| ------- | ----------------------------------- | ------------------------------------------------------ | --------- | --- |
+| **OCP** | Open Closed Principle               | Modules open for extension, closed for modification    |           |     |
+| **LSP** | Liskov Substitution Principle       | Derived classes must be substitutable for base classes |           |     |
+| **DIP** | Dependency Inversion Principle      | Depend on abstractions, not concrete classes           |           |     |
+| **ISP** | Interface Segregation Principle     | Clients shouldn't depend on unused interfaces          |           |     |
+| **REP** | Release Reuse Equivalency Principle | Granule of reuse = granule of release                  |           |     |
+| **CCP** | Common Closure Principle            | Group classes that change together                     |           |     |
+| **CRP** | Common Reuse Principle              | Don't group classes that aren't used together          |           |     |
+| **ADP** | Acyclic Dependencies Principle      | Package dependencies must form no cycles               |           |     |
+| **SDP** | Stable Dependencies Principle       | Depend in direction of stability                       |           |     |
+| **SAP** | Stable Abstractions Principle       | Stable packages should be abstract                     |           |     |
+| $Ca$    | Afferent Coupling                   | Incoming dependencies (responsible)                    |           |     |
+| $Ce$    | Efferent Coupling                   | Outgoing dependencies (dependent)                      |           |     |
+| $I$     | Instability                         | $I = \frac{Ce}{Ce + Ca}$                               |           |     |
+| $A$     | Abstractness                        | $A = \frac{Na}{Nc}$                                    |           |     |
+| $D'$    | Normalized Distance                 | $D' =                                                  | A + I - 1 | $   |
 
 _Table 1.1: Quick reference of SOLID principles, package architecture metrics, and key terminology._
 
@@ -163,8 +163,6 @@ Software architecture is a multitiered concept that encompasses different levels
 >2. **Purpose-Related Architecture:** The middle level, which is specifically related to the purpose of the software application.
 >3. **Module and Interconnection Architecture:** The lowest level, residing within the modules and their interconnections. This is the domain of [[Design Patterns]], packages, components, and classes.
 
-This chapter focuses specifically on the lowest level: the architecture of modules and their interconnections. It is important to note that the scope of this chapter is limited, as there is much more to be said about the principles and patterns exposed here beyond what is covered.
-
 ---
 
 ## Architecture and Dependencies
@@ -202,9 +200,6 @@ There are four primary symptoms that indicate a design is rotting. While they ar
 >**Design Viscosity:** The proper way to add a feature requires creating new interfaces and following the factory pattern, taking $4$ hours. A quick hack using global variables takes $30$ minutes. Developers consistently choose the hack.
 >
 >**Environment Viscosity:** Full compilation takes $2$ hours. Developers avoid proper refactoring that would trigger full rebuilds, instead making localized patches that don't require recompilation of dependent modules.
-
->[!question] Self-Check: Identifying Design Rot
->Consider a codebase you've worked with. Can you identify which of the four symptoms (rigidity, fragility, immobility, viscosity) were present? What specific behaviors indicated these symptoms?
 
 ### Changing Requirements
 
@@ -392,9 +387,6 @@ LSP violations are often latent, discovered only when a client uses the base cla
 
 >[!warning] The Downward Spiral
 >LSP violations lead to OCP violations, which lead to rigid, fragile designs. Type-checking in client code is a strong indicator that LSP has been violated and the design is rotting.
-
->[!question] Self-Check: LSP Verification
->Given a base class interface with methods `SetValue(int x)` and `GetValue()`, what contract must be honored? If a derived class silently clamps the value to a range $[0, 100]$, does it violate LSP? Why or why not?
 
 ---
 
