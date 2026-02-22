@@ -50,6 +50,7 @@ the **Obsidian** knowledge base. The formatting conventions are chosen to levera
 
 ### Text Formatting
 
+- Conserve any headers given, at the with the same title and at the same Hx-level.
 - **Callouts:** Use callouts sparingly to highlight only the most important information that needs to stand out. Reserve callouts for:
     - `>[!info]` for defining a core concept or stating a key fact from the text that deserves special attention.
     - `>[!warning]` for highlighting cautions or critical exceptions mentioned in the text.
@@ -81,24 +82,76 @@ the **Obsidian** knowledge base. The formatting conventions are chosen to levera
 - **Mathematical Notation and Equations:** Use LaTeX for all mathematical expressions as they appear in the source text.
     - **Inline Math:** Enclose LaTeX code in single dollar signs (`$`).
     - **Block Math:** Enclose LaTeX code in double dollar signs (`$$`).
+**For mathematically heavy, STEM related notes**
+provide an explaination / breakdown of variables providing its "name", what it "does" or "is", any other appropriate information. for equations throughout the note. This breakdown should be put into the related callout of the mathematic "syntax"
 
-- Naming of Mathematical/Scientific/Technical Definitions, Theorems, etc.
-  
-  the convention/metohd of using definitions in this way is mainly if not wholely for STEM fields and topics.
-  
-- _Rule 1 (Implicit Names):_ "If no name is provided in the source text for a definition, theorem, corollary, etc., generate a concise and descriptive name for it. Or if a name already exists but is for some reason absent, use the given/coined name. in the callout/format shown below:" 
-- _Rule 2 (Error Checking):_ "If a name provided in the source text appears incorrect or misleading, flag this issue for the user." This is mainly if not wholely for STEM fields and topics.
-  
-  > [!summary] Type - "name"
-  > theorem text / explaination
-  > Proof:
-  >"proof(s)/explaination(s)"
-  
-  Example:
-  > [!summary] Theorem - "Theorem Name"
-  > Theorem Explaination
-  > Proof:
-  > Proof of theorem (if applicable)
+For "complex" "exotic" mathematical signs (probably mainly greek letters like ∏ for example):
+If the computation/calculation/equation can be written simply/without them, do so.
+If not, provide an explaination of the symbol (Name, Function, Context, any other appropriate information).
+
+The purpose of the breakdown is to both provide an overview of the variables involved and and udnerstanding of the more complicated operators to foster propper understanding of the equation and its parts and operations and operands. This breakdown should be provided along the equation before the proof, since the breakdown is most likely going to be used to understand the equation and its parts, more of than the proof of the equation.
+
+If a sign or symbol needs to be explained it should be included in the quick reference table.
+
+The structure of a theorem callout should be 
+>[!summary] theorem : title/name
+>theorem text
+>
+>**breakdown**:
+>breakdown/explaination text
+>
+>**proof**:
+>proof text
+
+examples:
+>[!example] 
+>- Equation: a=dq+r
+>- Breakdown:
+>    - a : The dividend (the number being divided).
+>    - d : The divisor (the number dividing).
+>    - q : The quotient.
+>    - r : The remainder.
+
+>[!example]   
+>- Equation: ∏ pi min(ai​,bi​)​
+>- Breakdown:
+>    - ∏ : The Product Operator (Capital Pi). It tells you to multiply a sequence of terms together.
+>    - pi​ : The distinct prime factors common to the set.
+>    - min(ai​,bi​) : A function returning the minimum value between the exponents of a and b for a specific prime.
+
+>[!example] 
+>- **Equation:** $x = \ln(y)$
+>- **Breakdown:**
+>    - **$\ln$** : The Natural Logarithm operator. It calculates the power to which the mathematical constant $e$ must be raised to equal the number inside the parentheses.
+>    - **$y$** : The argument (the number you are taking the log of). This represents the final value or result of growth.
+>    - **$e$** : Euler's number (approx. 2.718). This is the base of the natural logarithm, representing the fundamental rate of continuous growth.
+>    - **$x$** : The exponent. This represents the time or intensity required to reach value $y$ given a continuous growth rate.
+
+>[!example] 
+>- **Equation:** $\sum_{i=1}^{n} x_i$
+>- **Breakdown:**
+>    - **$\sum$** : The Summation Operator (Capital Sigma). It directs you to add a sequence of numbers together.
+>    - **$i=1$** : The lower limit and index. It defines the starting point of the sequence ($i$ starts at 1) and the variable used for iteration.
+>    - **$n$** : The upper limit. The sequence stops when the index $i$ reaches this number.
+>    - **$x_i$** : The term to be summed. It represents a specific value in the sequence that corresponds to the current index number $i$.
+
+>[!example] 
+>- **Equation:** $\int_{a}^{b} f(x) \,dx$
+>- **Breakdown:**
+>    - **$\int$** : The Integral Operator (Elongated S). It represents the accumulation of quantities or the calculation of the area under a curve.
+>    - **$a, b$** : The bounds of integration. $a$ is the starting point on the x-axis, and $b$ is the ending point.
+>    - **$f(x)$** : The integrand. This is the function defining the curve; the height of the curve at any point determines the value being accumulated.
+>    - **$dx$** : The differential. It specifies the variable of integration (along the x-axis) and represents an infinitesimally small width of the slices being summed.
+
+|Plain Text|LaTeX Format|Description|
+|---|---|---|
+|F = x + yz|`$F = x + yz$`|A simple Boolean expression in-line.|
+|x + x' = 1|`$$x + x' = 1$$`|A basic theorem displayed as a block equation.|
+|m0|`$m_0$`|A minterm with a subscript.|
+|sum of minterms (1, 3, 5)|`$\sum m(1, 3, 5)$`|Summation notation.|
+|NOT x|`$\overline{x}$`|Using an overline for complement.|
+|F = xy + x'z + w|`$F = xy + x'z + w$`|A sum of products expression.|
+|F = (x + y)(x' + z)(w)|`$F = (x + y)(x' + z)(w)$`|A product of sums expression.|
 
 ### Images, Diagrams, and Tables
 

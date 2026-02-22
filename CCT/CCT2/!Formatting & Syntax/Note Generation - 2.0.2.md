@@ -6,8 +6,8 @@ tags:
   - "#AI-instructions"
 Topic: Universal Instructions for Generating Notes
 Subject Area: Meta-Guidelines
-Created: "[[Pasted image 20251020130906.png]]"
-Last Updated: 17-11-25
+Created: 17-09-2025
+Last Updated: 21-02-2026
 ---
 # Instructions for Generating Notes
 
