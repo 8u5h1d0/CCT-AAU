@@ -9,27 +9,73 @@ Litterature:
   - Discrete Mathematics and Its Applications - 8th Ed.
 Created: 22-02-2026
 ---
+- - -
+# Table of Contents
+
+1. [[#Induction and Recursion|Induction and Recursion]]
+	1. [[#Induction and Recursion#Quick Reference|Quick Reference]]
+	2. [[#Induction and Recursion#Overview|Overview]]
+		1. [[#Overview#Recursive Definitions|Recursive Definitions]]
+		2. [[#Overview#Program Verification|Program Verification]]
+	3. [[#Induction and Recursion#Mathematical Induction|Mathematical Induction]]
+		1. [[#Mathematical Induction#The Ladder Analogy|The Ladder Analogy]]
+		2. [[#Mathematical Induction#The Principle of Mathematical Induction|The Principle of Mathematical Induction]]
+			1. [[#The Principle of Mathematical Induction#The Process of Proof|The Process of Proof]]
+			2. [[#The Principle of Mathematical Induction#Why It Works|Why It Works]]
+			3. [[#The Principle of Mathematical Induction#Ways to Remember How Mathematical Induction Works|Ways to Remember How Mathematical Induction Works]]
+		3. [[#Mathematical Induction#Why Mathematical Induction is Valid|Why Mathematical Induction is Valid]]
+		4. [[#Mathematical Induction#Choosing the Correct Basis Step|Choosing the Correct Basis Step]]
+		5. [[#Mathematical Induction#Guidelines for Proofs by Mathematical Induction|Guidelines for Proofs by Mathematical Induction]]
+		6. [[#Mathematical Induction#The Good and the Bad of Mathematical Induction|The Good and the Bad of Mathematical Induction]]
+		7. [[#Mathematical Induction#Common Mistakes in Induction Proofs|Common Mistakes in Induction Proofs]]
+		8. [[#Mathematical Induction#Examples of Proofs by Mathematical Induction|Examples of Proofs by Mathematical Induction]]
+			1. [[#Examples of Proofs by Mathematical Induction#Seeing Where the Inductive Hypothesis is Used|Seeing Where the Inductive Hypothesis is Used]]
+			2. [[#Examples of Proofs by Mathematical Induction#Proving Summation Formulae|Proving Summation Formulae]]
+			3. [[#Examples of Proofs by Mathematical Induction#Proving Inequalities|Proving Inequalities]]
+			4. [[#Examples of Proofs by Mathematical Induction#Harmonic Numbers|Harmonic Numbers]]
+			5. [[#Examples of Proofs by Mathematical Induction#Proving Divisibility Results|Proving Divisibility Results]]
+			6. [[#Examples of Proofs by Mathematical Induction#Proving Results About Sets|Proving Results About Sets]]
+			7. [[#Examples of Proofs by Mathematical Induction#Proving Results About Algorithms|Proving Results About Algorithms]]
+			8. [[#Examples of Proofs by Mathematical Induction#Creative Uses of Mathematical Induction|Creative Uses of Mathematical Induction]]
+		9. [[#Mathematical Induction#Mistaken Proofs by Mathematical Induction|Mistaken Proofs by Mathematical Induction]]
+	4. [[#Induction and Recursion#Strong Induction and Well-Ordering|Strong Induction and Well-Ordering]]
+		1. [[#Strong Induction and Well-Ordering#Introduction|Introduction]]
+		2. [[#Strong Induction and Well-Ordering#Strong Induction|Strong Induction]]
+		3. [[#Strong Induction and Well-Ordering#Choosing Between Standard and Strong Induction|Choosing Between Standard and Strong Induction]]
+		4. [[#Strong Induction and Well-Ordering#Alternative Form of Strong Induction|Alternative Form of Strong Induction]]
+		5. [[#Strong Induction and Well-Ordering#Examples of Proofs Using Strong Induction|Examples of Proofs Using Strong Induction]]
+		6. [[#Strong Induction and Well-Ordering#Strong Induction in Computational Geometry|Strong Induction in Computational Geometry]]
+			1. [[#Strong Induction in Computational Geometry#Polygons and Terminology|Polygons and Terminology]]
+			2. [[#Strong Induction in Computational Geometry#Triangulation|Triangulation]]
+		7. [[#Strong Induction and Well-Ordering#Proofs Using the Well-Ordering Property|Proofs Using the Well-Ordering Property]]
+	5. [[#Induction and Recursion#Recursively Defined Functions|Recursively Defined Functions]]
+		1. [[#Recursively Defined Functions#Defining Fundamental Operations|Defining Fundamental Operations]]
+		2. [[#Recursively Defined Functions#Fibonacci Numbers|Fibonacci Numbers]]
+		3. [[#Recursively Defined Functions#Lamé's Theorem|Lamé's Theorem]]
+			1. [[#Lamé's Theorem#Proof of Lamé's Theorem|Proof of Lamé's Theorem]]
+	6. [[#Induction and Recursion#Summary of Induction Proof Examples|Summary of Induction Proof Examples]]
+
 # Induction and Recursion
 
 ## Quick Reference
 
-| Symbol / Term | Name | Description |
-|---|---|---|
-| $P(n)$ | Propositional Function | A statement whose truth depends on the integer $n$. |
-| $P(1)$ or $P(b)$ | Basis Step | The verification that the statement holds for the starting integer. |
-| $P(k) \to P(k+1)$ | Inductive Step | The proof that if the statement holds for $k$, it holds for $k+1$. |
-| $P(k)$ | Inductive Hypothesis | The assumption that the statement is true for an arbitrary integer $k$. |
-| $[P(1) \land \dots \land P(k)] \to P(k+1)$ | Strong Inductive Step | Assumes truth for all integers from the base up to $k$ to prove $P(k+1)$. |
-| $\overset{\text{IH}}{=}$ | IH Notation | Indicates the step where the inductive hypothesis is applied. |
-| $\forall k(P(k) \to P(k+1))$ | Universal Implication | States the inductive step holds for all $k$ in the domain. |
-| Well-Ordering Property | Axiom | Every nonempty set of nonnegative integers has a least element. |
-| $n!$ | Factorial | The product $n \cdot (n-1) \cdot \dots \cdot 1$. |
-| $\sum$ | Summation (Sigma) | Operator directing addition of a sequence of terms. |
-| $\prod$ | Product (Pi) | Operator directing multiplication of a sequence of terms. |
-| $\alpha = \frac{1+\sqrt{5}}{2}$ | Golden Ratio | $\approx 1.618$; satisfies $\alpha^2 = \alpha + 1$. Used in Fibonacci analysis. |
-| $f_n$ | Fibonacci Number | Defined by $f_0=0$, $f_1=1$, $f_n = f_{n-1}+f_{n-2}$. |
-| $\gcd(a,b)$ | Greatest Common Divisor | The largest integer dividing both $a$ and $b$. |
-| $n - 2$ triangles | Triangulation Formula | A simple polygon with $n$ sides can be divided into $n-2$ triangles. |
+| Symbol / Term                              | Name                    | Description                                                                     |
+| ------------------------------------------ | ----------------------- | ------------------------------------------------------------------------------- |
+| $P(n)$                                     | Propositional Function  | A statement whose truth depends on the integer $n$.                             |
+| $P(1)$ or $P(b)$                           | Basis Step              | The verification that the statement holds for the starting integer.             |
+| $P(k) \to P(k+1)$                          | Inductive Step          | The proof that if the statement holds for $k$, it holds for $k+1$.              |
+| $P(k)$                                     | Inductive Hypothesis    | The assumption that the statement is true for an arbitrary integer $k$.         |
+| $[P(1) \land \dots \land P(k)] \to P(k+1)$ | Strong Inductive Step   | Assumes truth for all integers from the base up to $k$ to prove $P(k+1)$.       |
+| $\overset{\text{IH}}{=}$                   | IH Notation             | Indicates the step where the inductive hypothesis is applied.                   |
+| $\forall k(P(k) \to P(k+1))$               | Universal Implication   | States the inductive step holds for all $k$ in the domain.                      |
+| Well-Ordering Property                     | Axiom                   | Every nonempty set of nonnegative integers has a least element.                 |
+| $n!$                                       | Factorial               | The product $n \cdot (n-1) \cdot \dots \cdot 1$.                                |
+| $\sum$                                     | Summation (Sigma)       | Operator directing addition of a sequence of terms.                             |
+| $\prod$                                    | Product (Pi)            | Operator directing multiplication of a sequence of terms.                       |
+| $\alpha = \frac{1+\sqrt{5}}{2}$            | Golden Ratio            | $\approx 1.618$; satisfies $\alpha^2 = \alpha + 1$. Used in Fibonacci analysis. |
+| $f_n$                                      | Fibonacci Number        | Defined by $f_0=0$, $f_1=1$, $f_n = f_{n-1}+f_{n-2}$.                           |
+| $\gcd(a,b)$                                | Greatest Common Divisor | The largest integer dividing both $a$ and $b$.                                  |
+| $n - 2$ triangles                          | Triangulation Formula   | A simple polygon with $n$ sides can be divided into $n-2$ triangles.            |
 
 _Table 1.1: Quick reference of key symbols, terms, and notation used throughout this note._
 

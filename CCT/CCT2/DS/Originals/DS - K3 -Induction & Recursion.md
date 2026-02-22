@@ -10,6 +10,37 @@ Litterature:
 Created: 22-02-2026
 ---
 - - -
+# Table of Contents
+
+1. [[#Induction and Recursion|Induction and Recursion]]
+		1. [[#Recursive Definitions|Recursive Definitions]]
+		2. [[#Program Verification|Program Verification]]
+	1. [[#Induction and Recursion#Mathematical Induction|Mathematical Induction]]
+		1. [[#Mathematical Induction#Introduction|Introduction]]
+		2. [[#Mathematical Induction#Mathematical Induction|Mathematical Induction]]
+		3. [[#Mathematical Induction#Why Mathematical Induction is Valid|Why Mathematical Induction is Valid]]
+		4. [[#Mathematical Induction#Choosing the Correct Basis Step|Choosing the Correct Basis Step]]
+		5. [[#Mathematical Induction#Guidelines for Proofs by Mathematical Induction|Guidelines for Proofs by Mathematical Induction]]
+		6. [[#Mathematical Induction#The Good and the Bad of Mathematical Induction|The Good and the Bad of Mathematical Induction]]
+		7. [[#Mathematical Induction#Examples of Proofs by Mathematical Induction|Examples of Proofs by Mathematical Induction]]
+			1. [[#Examples of Proofs by Mathematical Induction#Seeing Where the Inductive Hypothesis is Used|Seeing Where the Inductive Hypothesis is Used]]
+			2. [[#Examples of Proofs by Mathematical Induction#Proving Summation Formulae|Proving Summation Formulae]]
+		8. [[#Mathematical Induction#Mistaken Proofs By Mathematical Induction|Mistaken Proofs By Mathematical Induction]]
+	2. [[#Induction and Recursion#Strong Induction and Well-Ordering|Strong Induction and Well-Ordering]]
+		1. [[#Strong Induction and Well-Ordering#Introduction|Introduction]]
+		2. [[#Strong Induction and Well-Ordering#Strong Induction|Strong Induction]]
+		3. [[#Strong Induction and Well-Ordering#Examples of Proofs Using Strong Induction|Examples of Proofs Using Strong Induction]]
+		4. [[#Strong Induction and Well-Ordering#Using Strong Induction in Computational Geometry|Using Strong Induction in Computational Geometry]]
+			1. [[#Using Strong Induction in Computational Geometry#Polygons and Terminology|Polygons and Terminology]]
+			2. [[#Using Strong Induction in Computational Geometry#Triangulation|Triangulation]]
+			3. [[#Using Strong Induction in Computational Geometry#Proof of Theorem|Proof of Theorem]]
+			4. [[#Using Strong Induction in Computational Geometry#Proof of Lemma|Proof of Lemma]]
+		5. [[#Strong Induction and Well-Ordering#Proofs Using the Well-Ordering Property|Proofs Using the Well-Ordering Property]]
+		6. [[#Strong Induction and Well-Ordering#Recursively Defined Functions|Recursively Defined Functions]]
+			1. [[#Recursively Defined Functions#Defining Fundamental Operations|Defining Fundamental Operations]]
+			2. [[#Recursively Defined Functions#Fibonacci Numbers|Fibonacci Numbers]]
+		7. [[#Strong Induction and Well-Ordering#Lamé's Theorem|Lamé's Theorem]]
+			1. [[#Lamé's Theorem#Proof of Lamé's Theorem|Proof of Lamé's Theorem]]
 
 # Induction and Recursion
 
@@ -95,7 +126,7 @@ $$ (P(1) \land \forall k (P(k) \to P(k + 1))) \to \forall n P(n) $$
 1.  **Basis Step:** Show $P(1)$ is true by replacing $n$ with 1 in the statement.
 2.  **Inductive Step:** Show that $P(k + 1)$ cannot be false when $P(k)$ is true. This is accomplished by assuming $P(k)$ is true and using that hypothesis to demonstrate $P(k + 1)$ is true.
 
-> [!info] Avoiding Circular Reasoning
+> [!warning] Avoiding Circular Reasoning
 > In a proof by mathematical induction, it is **not** assumed that $P(k)$ is true for *all* positive integers. It is only shown that *if* it is assumed $P(k)$ is true, then $P(k + 1)$ is also true. Thus, mathematical induction is not a case of begging the question or circular reasoning.
 
 **Why It Works**
@@ -180,7 +211,9 @@ Before attempting to prove a diverse collection of theorems using mathematical i
 > [!abstract] Template for Proofs by Mathematical Induction
 > 1.  **Express the Statement:** Formulate the statement to be proved as "for all $n \ge b, P(n)$" for a fixed integer $b$.
 >     - For "all positive integers," let $b = 1$.
+> 	      $n \ge b, b = 1, P(n)$
 >     - For "all nonnegative integers," let $b = 0$.
+>           $n \ge b, b = 0, P(n)$
 >     - For statements like inequalities, determine the appropriate $b$ by checking truth values for small values of $n$.
 > 2.  **Basis Step:** Write out "Basis Step." Show that $P(b)$ is true, ensuring the correct value of $b$ is used.
 > 3.  **Inductive Step:** Write out "Inductive Step." State the inductive hypothesis clearly: "Assume that $P(k)$ is true for an arbitrary fixed integer $k \ge b$."
@@ -895,7 +928,7 @@ Mathematical induction, similar to other proof techniques, presents numerous opp
 > [!example] The Consequence of Skipping Steps
 > Not completing the basis step can lead to mistaken proofs of clearly ridiculous statements.
 >
-> **Example:** A flawed inductive process might erroneously conclude that `$n = n + 1$` for every positive integer `$n$`.
+> **Example:** A flawed inductive process might erroneously conclude that $n = n + 1$ for every positive integer $n$.
 
 > [!example] Find the error in this "proof" of the clearly false claim that every set of lines in the plane, no two of which are parallel, meet in a common point.
 > 
@@ -1141,7 +1174,7 @@ This alternative form is equivalent to the standard form of strong induction. On
 
 ### Using Strong Induction in Computational Geometry
 
-[[Computational geometry]] is the branch of discrete mathematics focused on computational problems involving geometric objects. It has widespread applications in computer graphics, robotics, and scientific calculations.
+Computational geometry is the branch of discrete mathematics focused on computational problems involving geometric objects. It has widespread applications in computer graphics, robotics, and scientific calculations.
 
 #### Polygons and Terminology
 
@@ -1372,38 +1405,38 @@ The Euclidean algorithm's efficiency can be analyzed using Fibonacci numbers.
 >- **Divisions**: The number of steps (equations) in the Euclidean algorithm.
 >- **Decimal digits**: The length of the number $b$ in base 10.
 
-#### Proof of Lamé's Theorem
-
-The proof relates the remainders in the Euclidean algorithm to the Fibonacci sequence.
-
-**1. The Euclidean Algorithm Sequence:**
-When finding $\gcd(a, b)$, the algorithm generates a series of equations:
-$$ \begin{aligned} r_0 &= r_1 q_1 + r_2 \\ r_1 &= r_2 q_2 + r_3 \\ &\vdots \\ r_{n-2} &= r_{n-1} q_{n-1} + r_n \\ r_{n-1} &= r_n q_n \end{aligned} $$
-Here, $a = r_0$, $b = r_1$, and $n$ divisions are used to find $r_n = \gcd(a, b)$.
-
-**2. Relating to Fibonacci Numbers:**
-- The quotients $q_1, \dots, q_{n-1} \geq 1$.
-- The final quotient $q_n \geq 2$ (since $r_n < r_{n-1}$).
-- We can establish a lower bound for the remainders using the Fibonacci sequence:
-  - $r_n \geq 1 = f_2$
-  - $r_{n-1} \geq 2r_n \geq 2f_2 = f_3$
-  - $r_{n-2} \geq r_{n-1} + r_n \geq f_3 + f_2 = f_4$
-- Continuing this logic backward, we find that $b = r_1 \geq f_{n+1}$.
-
-**3. Applying the Fibonacci Inequality:**
-From the earlier example, we know $f_{n+1} > \alpha^{n-1}$ for $n > 2$, where $\alpha = \frac{1+\sqrt{5}}{2}$.
-Therefore:
-$$ b > \alpha^{n-1} $$
-
-**4. Logarithmic Bounds:**
-Taking the base-10 logarithm:
-$$ \log_{10} b > (n-1) \log_{10} \alpha $$
-Since $\log_{10} \alpha \approx 0.208 > \frac{1}{5}$:
-$$ \log_{10} b > \frac{n-1}{5} \implies n-1 < 5 \log_{10} b $$
-
-**5. Conclusion:**
-If $b$ has $k$ decimal digits, then $b < 10^k$, which implies $\log_{10} b < k$.
-$$ n - 1 < 5k \implies n \leq 5k $$
-Since $k$ is the number of digits in $b$, the number of divisions $n$ is at most five times the number of digits in $b$.
-
-Because the number of digits in $b$ is $\lfloor \log_{10} b \rfloor + 1$, the number of divisions is $O(\log b)$.
+>[!example] Proof of Lamé's Theorem
+>
+>The proof relates the remainders in the Euclidean algorithm to the Fibonacci sequence.
+>
+>**1. The Euclidean Algorithm Sequence:**
+>When finding $\gcd(a, b)$, the algorithm generates a series of equations:
+>$$ \begin{aligned} r_0 &= r_1 q_1 + r_2 \\ r_1 &= r_2 q_2 + r_3 \\ &\vdots \\ r_{n-2} &= r_{n-1} q_{n-1} + r_n \\ r_{n-1} &= r_n q_n \end{aligned} $$
+>Here, $a = r_0$, $b = r_1$, and $n$ divisions are used to find $r_n = \gcd(a, b)$.
+>
+>**2. Relating to Fibonacci Numbers:**
+>- The quotients $q_1, \dots, q_{n-1} \geq 1$.
+>- The final quotient $q_n \geq 2$ (since $r_n < r_{n-1}$).
+>- We can establish a lower bound for the remainders using the Fibonacci sequence:
+>  - $r_n \geq 1 = f_2$
+>  - $r_{n-1} \geq 2r_n \geq 2f_2 = f_3$
+>  - $r_{n-2} \geq r_{n-1} + r_n \geq f_3 + f_2 = f_4$
+>- Continuing this logic backward, we find that $b = r_1 \geq f_{n+1}$.
+>
+>**3. Applying the Fibonacci Inequality:**
+>From the earlier example, we know $f_{n+1} > \alpha^{n-1}$ for $n > 2$, where $\alpha = \frac{1+\sqrt{5}}{2}$.
+>Therefore:
+>$$ b > \alpha^{n-1} $$
+>
+>**4. Logarithmic Bounds:**
+>Taking the base-10 logarithm:
+>$$ \log_{10} b > (n-1) \log_{10} \alpha $$
+>Since $\log_{10} \alpha \approx 0.208 > \frac{1}{5}$:
+>$$ \log_{10} b > \frac{n-1}{5} \implies n-1 < 5 \log_{10} b $$
+>
+>**5. Conclusion:**
+>If $b$ has $k$ decimal digits, then $b < 10^k$, which implies $\log_{10} b < k$.
+>$$ n - 1 < 5k \implies n \leq 5k $$
+>Since $k$ is the number of digits in $b$, the number of divisions $n$ is at most five times the number of digits in $b$.
+>
+>Because the number of digits in $b$ is $\lfloor \log_{10} b \rfloor + 1$, the number of divisions is $O(\log b)$.
