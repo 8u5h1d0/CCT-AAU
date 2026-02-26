@@ -76,24 +76,24 @@
 
 ## Quick Reference Table
 
-| Symbol | LaTeX | Name | Category |
-|--------|-------|------|----------|
-| $\land$ | `\land` | Logical AND | Logic |
-| $\lor$ | `\lor` | Logical OR | Logic |
-| $\neg$ | `\neg` | Logical NOT | Logic |
-| $\forall$ | `\forall` | Universal Quantifier | Logic |
-| $\exists$ | `\exists` | Existential Quantifier | Logic |
-| $\in$ | `\in` | Element of | Set Theory |
-| $\subseteq$ | `\subseteq` | Subset or equal | Set Theory |
-| $\cup$ | `\cup` | Union | Set Theory |
-| $\cap$ | `\cap` | Intersection | Set Theory |
-| $\sum$ | `\sum` | Summation | Arithmetic |
-| $\prod$ | `\prod` | Product | Arithmetic |
-| $\binom{n}{k}$ | `\binom{n}{k}` | Binomial Coefficient | Combinatorics |
-| $\equiv$ | `\equiv` | Congruence/Equivalence | Relations |
-| $\Rightarrow$ | `\Rightarrow` | Implies | Logic |
-| $\Leftrightarrow$ | `\Leftrightarrow` | If and only if | Logic |
-| $O$, $\Omega$, $\Theta$ | `O`, `\Omega`, `\Theta` | Asymptotic Notation | Complexity |
+| Symbol                  | LaTeX                   | Name                   | Category      |
+| ----------------------- | ----------------------- | ---------------------- | ------------- |
+| $\land$                 | `\land`                 | Logical AND            | Logic         |
+| $\lor$                  | `\lor`                  | Logical OR             | Logic         |
+| $\neg$                  | `\neg`                  | Logical NOT            | Logic         |
+| $\forall$               | `\forall`               | Universal Quantifier   | Logic         |
+| $\exists$               | `\exists`               | Existential Quantifier | Logic         |
+| $\in$                   | `\in`                   | Element of             | Set Theory    |
+| $\subseteq$             | `\subseteq`             | Subset or equal        | Set Theory    |
+| $\cup$                  | `\cup`                  | Union                  | Set Theory    |
+| $\cap$                  | `\cap`                  | Intersection           | Set Theory    |
+| $\sum$                  | `\sum`                  | Summation              | Arithmetic    |
+| $\prod$                 | `\prod`                 | Product                | Arithmetic    |
+| $\binom{n}{k}$          | `\binom{n}{k}`          | Binomial Coefficient   | Combinatorics |
+| $\equiv$                | `\equiv`                | Congruence/Equivalence | Relations     |
+| $\Rightarrow$           | `\Rightarrow`           | Implies                | Logic         |
+| $\Leftrightarrow$       | `\Leftrightarrow`       | If and only if         | Logic         |
+| $O$, $\Omega$, $\Theta$ | `O`, `\Omega`, `\Theta` | Asymptotic Notation    | Complexity    |
 
 _Table 0.1: Quick reference of the most commonly used symbols in discrete mathematics._
 

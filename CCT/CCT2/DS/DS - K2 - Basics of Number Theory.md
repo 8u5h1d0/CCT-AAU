@@ -38,12 +38,28 @@ Created: 17-02-2026
 		11. [[#Primes and Greatest Common Divisors#GCDs as Linear Combinations|GCDs as Linear Combinations]]
 	4. [[#Number Theory and Cryptography#Solving Congruences|Solving Congruences]]
 		1. [[#Solving Congruences#Introduction|Introduction]]
-		2. [[#Solving Congruences#Linear Congruences|Linear Congruences]]
-		3. [[#Solving Congruences#The Chinese Remainder Theorem|The Chinese Remainder Theorem]]
-		4. [[#Solving Congruences#Computer Arithmetic with Large Integers|Computer Arithmetic with Large Integers]]
-		5. [[#Solving Congruences#Fermat’s Little Theorem|Fermat’s Little Theorem]]
-		6. [[#Solving Congruences#Pseudoprimes|Pseudoprimes]]
-		7. [[#Solving Congruences#Primitive Roots and Discrete Logarithms|Primitive Roots and Discrete Logarithms]]
+		2. [[#Solving Congruences#Modular Inverses|Modular Inverses]]
+		3. [[#Solving Congruences#Computing Modular Inverses|Computing Modular Inverses]]
+			1. [[#Computing Modular Inverses#Method 1: Using the Extended Euclidean Algorithm|Method 1: Using the Extended Euclidean Algorithm]]
+			2. [[#Computing Modular Inverses#Method 2: Using Fermat's Little Theorem (When Modulus is Prime)|Method 2: Using Fermat's Little Theorem (When Modulus is Prime)]]
+			3. [[#Computing Modular Inverses#Summary Table of Inverse Computation Methods|Summary Table of Inverse Computation Methods]]
+		4. [[#Solving Congruences#Linear Congruences|Linear Congruences]]
+		5. [[#Solving Congruences#The Chinese Remainder Theorem|The Chinese Remainder Theorem]]
+			1. [[#The Chinese Remainder Theorem#Constructive Proof and Algorithm|Constructive Proof and Algorithm]]
+				1. [[#Constructive Proof and Algorithm#Step 1: Compute the Total Modulus|Step 1: Compute the Total Modulus]]
+				2. [[#Constructive Proof and Algorithm#Step 2: Compute Partial Products|Step 2: Compute Partial Products]]
+				3. [[#Constructive Proof and Algorithm#Step 3: Find Multiplicative Inverses|Step 3: Find Multiplicative Inverses]]
+				4. [[#Constructive Proof and Algorithm#Step 4: Construct the Solution|Step 4: Construct the Solution]]
+			2. [[#The Chinese Remainder Theorem#Why the Formula Works|Why the Formula Works]]
+			3. [[#The Chinese Remainder Theorem#Uniqueness of the Solution|Uniqueness of the Solution]]
+			4. [[#The Chinese Remainder Theorem#Method 1: Direct Formula Application|Method 1: Direct Formula Application]]
+			5. [[#The Chinese Remainder Theorem#Method 2: Back Substitution|Method 2: Back Substitution]]
+				1. [[#Method 2: Back Substitution#Finding Modular Inverses via Extended Euclidean Algorithm|Finding Modular Inverses via Extended Euclidean Algorithm]]
+			6. [[#The Chinese Remainder Theorem#Comparison of Methods|Comparison of Methods]]
+		6. [[#Solving Congruences#Computer Arithmetic with Large Integers|Computer Arithmetic with Large Integers]]
+		7. [[#Solving Congruences#Fermat’s Little Theorem|Fermat’s Little Theorem]]
+		8. [[#Solving Congruences#Pseudoprimes|Pseudoprimes]]
+		9. [[#Solving Congruences#Primitive Roots and Discrete Logarithms|Primitive Roots and Discrete Logarithms]]
 
 # Number Theory and Cryptography
 
@@ -504,6 +520,8 @@ The largest integer that divides both of two integers is called the greatest com
 > [!summary] Definition: Greatest Common Divisor (GCD)
 > Let $a$ and $b$ be integers, not both zero. The **greatest common divisor** of $a$ and $b$, denoted $\gcd(a, b)$, is the largest integer $d$ such that $d \mid a$ and $d \mid b$.
 
+![[Pasted image 20260226180805.png]]
+
 > [!example] Finding GCD by Listing Divisors
 > **Problem:** What is $\gcd(24, 36)$?
 >
@@ -795,6 +813,210 @@ Simultaneous systems of linear congruences have been studied since ancient times
 
 ---
 
+### Modular Inverses
+
+Just as division in ordinary arithmetic can be understood as multiplication by a reciprocal, solving congruences often requires finding an analogous concept: the *modular inverse*. The modular inverse allows us to "divide" in modular arithmetic by multiplying by a special value.
+
+> [!summary] Definition: Modular Inverse
+> If $a$ and $m$ are integers with $m > 1$, an **inverse of $a$ modulo $m$** is an integer $\bar{a}$ such that:
+> $$a \cdot \bar{a} \equiv 1 \pmod{m}$$
+>
+> The inverse is also commonly denoted as $a^{-1} \pmod{m}$.
+>
+> **Breakdown:**
+> - $a$ : The integer for which we seek an inverse.
+> - $m$ : The modulus, a positive integer greater than $1$.
+> - $\bar{a}$ : The modular inverse of $a$ modulo $m$. When multiplied by $a$, the result is congruent to $1$ modulo $m$.
+> - $a \cdot \bar{a} \equiv 1 \pmod{m}$ : This equation states that $a$ and $\bar{a}$ are multiplicative inverses within the system of arithmetic modulo $m$.
+
+> [!warning] Modular Inverses Do Not Always Exist
+> Unlike in the real numbers (where every nonzero number has a reciprocal), modular inverses do not exist for all integers. The existence of an inverse depends critically on the relationship between $a$ and the modulus $m$.
+
+> [!example] Finding Simple Modular Inverses
+> **Problem:** Find the inverse of $3$ modulo $7$, if it exists.
+>
+> **Solution:** We need to find $\bar{a}$ such that $3 \cdot \bar{a} \equiv 1 \pmod{7}$.
+>
+> Testing values in $\{1, 2, 3, 4, 5, 6\}$:
+> - $3 \cdot 1 = 3 \equiv 3 \pmod{7}$ ✗
+> - $3 \cdot 2 = 6 \equiv 6 \pmod{7}$ ✗
+> - $3 \cdot 3 = 9 \equiv 2 \pmod{7}$ ✗
+> - $3 \cdot 4 = 12 \equiv 5 \pmod{7}$ ✗
+> - $3 \cdot 5 = 15 \equiv 1 \pmod{7}$ ✓
+>
+> Therefore, $\bar{3} = 5$ is the inverse of $3$ modulo $7$.
+>
+> **Verification:** $3 \cdot 5 = 15 = 2 \cdot 7 + 1 \equiv 1 \pmod{7}$ ✓
+
+> [!example] When No Inverse Exists
+> **Problem:** Find the inverse of $2$ modulo $6$, if it exists.
+>
+> **Solution:** We need to find $\bar{a}$ such that $2 \cdot \bar{a} \equiv 1 \pmod{6}$.
+>
+> Testing all values in $\{0, 1, 2, 3, 4, 5\}$:
+> - $2 \cdot 0 = 0 \equiv 0 \pmod{6}$ ✗
+> - $2 \cdot 1 = 2 \equiv 2 \pmod{6}$ ✗
+> - $2 \cdot 2 = 4 \equiv 4 \pmod{6}$ ✗
+> - $2 \cdot 3 = 6 \equiv 0 \pmod{6}$ ✗
+> - $2 \cdot 4 = 8 \equiv 2 \pmod{6}$ ✗
+> - $2 \cdot 5 = 10 \equiv 4 \pmod{6}$ ✗
+>
+> No value produces a result congruent to $1$. Therefore, **$2$ has no inverse modulo $6$**.
+>
+> **Observation:** Notice that $\gcd(2, 6) = 2 \neq 1$. The products $2 \cdot k$ cycle through only the even residues $\{0, 2, 4\}$ and can never equal $1$.
+
+The previous examples illustrate a fundamental principle: the existence of a modular inverse is determined by the greatest common divisor.
+
+> [!summary] Theorem: Existence and Uniqueness of Modular Inverses
+> If $a$ and $m$ are relatively prime integers and $m > 1$, then an inverse of $a$ modulo $m$ exists. Furthermore, this inverse is unique modulo $m$. (That is, there is a unique positive integer $\bar{a}$ less than $m$ that is an inverse of $a$ modulo $m$ and every other inverse of $a$ modulo $m$ is congruent to $\bar{a}$ modulo $m$.)
+>
+> **Breakdown:**
+> - $a$ : The integer for which an inverse is sought.
+> - $m$ : The modulus, a positive integer greater than $1$.
+> - $\bar{a}$ : The modular inverse of $a$ modulo $m$.
+> - $\gcd(a, m) = 1$ : This is the **necessary and sufficient condition** for the existence of a modular inverse.
+>
+> **Proof:**
+> By Bézout's theorem, because $\gcd(a, m) = 1$, there are integers $s$ and $t$ such that $sa + tm = 1$. This implies that $sa + tm \equiv 1 \pmod m$. Because $tm \equiv 0 \pmod m$, it follows that $sa \equiv 1 \pmod m$. Consequently, $s$ is an inverse of $a$ modulo $m$.
+>
+> **Uniqueness:** Suppose $\bar{a}$ and $\bar{a}'$ are both inverses of $a$ modulo $m$. Then $a \cdot \bar{a} \equiv 1 \pmod{m}$ and $a \cdot \bar{a}' \equiv 1 \pmod{m}$. Multiplying both sides of the first congruence by $\bar{a}'$: $\bar{a}' \cdot a \cdot \bar{a} \equiv \bar{a}' \pmod{m}$. Since $\bar{a}' \cdot a \equiv 1 \pmod{m}$, we have $\bar{a} \equiv \bar{a}' \pmod{m}$.
+
+> [!important] The Key Criterion
+> An integer $a$ has a multiplicative inverse modulo $m$ **if and only if** $\gcd(a, m) = 1$.
+>
+> This explains why:
+> - $3$ has an inverse modulo $7$ (since $\gcd(3, 7) = 1$)
+> - $2$ has no inverse modulo $6$ (since $\gcd(2, 6) = 2 \neq 1$)
+> - Every nonzero element of $\mathbb{Z}_p$ has an inverse when $p$ is prime (since $\gcd(a, p) = 1$ for $1 \le a < p$)
+
+
+---
+
+### Computing Modular Inverses
+
+While inspection works for small moduli, we need systematic methods for larger values. The key insight from the existence theorem is that Bézout's coefficients provide the inverse directly.
+
+#### Method 1: Using the Extended Euclidean Algorithm
+
+The most efficient method for computing modular inverses is to use the Extended Euclidean Algorithm, which finds integers $s$ and $t$ such that $sa + tm = \gcd(a, m)$.
+
+> [!info] Connection to Bézout's Theorem
+> If $\gcd(a, m) = 1$, then the Extended Euclidean Algorithm produces:
+> $$sa + tm = 1$$
+>
+> Reducing modulo $m$:
+> $$sa \equiv 1 \pmod{m}$$
+>
+> Therefore, $s$ (reduced modulo $m$ to get a positive representative) is the inverse of $a$ modulo $m$.
+
+> [!example] Finding an Inverse via the Extended Euclidean Algorithm
+> **Problem:** Find an inverse of $3$ modulo $7$.
+>
+> **Solution:** We apply the Extended Euclidean Algorithm to find $\gcd(3, 7)$ and express it as a linear combination.
+>
+> **Step 1: Euclidean Algorithm**
+> $$7 = 2 \cdot 3 + 1$$
+> $$3 = 3 \cdot 1 + 0$$
+>
+> The last nonzero remainder is $1$, confirming $\gcd(3, 7) = 1$, so an inverse exists.
+>
+> **Step 2: Back-Substitution**
+> From the first equation:
+> $$1 = 7 - 2 \cdot 3$$
+> $$1 = (-2) \cdot 3 + (1) \cdot 7$$
+>
+> This gives us $s = -2$ and $t = 1$, so $(-2) \cdot 3 + 1 \cdot 7 = 1$.
+>
+> **Step 3: Extract the Inverse**
+> Reducing modulo $7$:
+> $$(-2) \cdot 3 \equiv 1 \pmod{7}$$
+>
+> Since $-2 \equiv 5 \pmod{7}$, the inverse of $3$ modulo $7$ is $\bar{3} = 5$.
+>
+> **Verification:** $3 \cdot 5 = 15 = 2 \cdot 7 + 1 \equiv 1 \pmod{7}$ ✓
+
+> [!example] Finding an Inverse of a Larger Number
+> **Problem:** Find an inverse of $101$ modulo $4620$.
+>
+> **Solution:** First, use the Euclidean algorithm to verify $\gcd(101, 4620) = 1$ and find Bézout coefficients.
+>
+> **Step 1: Euclidean Algorithm**
+> - $4620 = 45 \cdot 101 + 75$
+> - $101 = 1 \cdot 75 + 26$
+> - $75 = 2 \cdot 26 + 23$
+> - $26 = 1 \cdot 23 + 3$
+> - $23 = 7 \cdot 3 + 2$
+> - $3 = 1 \cdot 2 + 1$
+> - $2 = 2 \cdot 1 + 0$
+>
+> The last nonzero remainder is $1$, so $\gcd(101, 4620) = 1$ and an inverse exists.
+>
+> **Step 2: Back-Substitution**
+> Working backwards to express $1$ as a linear combination:
+>
+> $1 = 3 - 1 \cdot 2$
+> $= 3 - 1 \cdot (23 - 7 \cdot 3) = -1 \cdot 23 + 8 \cdot 3$
+> $= -1 \cdot 23 + 8 \cdot (26 - 1 \cdot 23) = 8 \cdot 26 - 9 \cdot 23$
+> $= 8 \cdot 26 - 9 \cdot (75 - 2 \cdot 26) = -9 \cdot 75 + 26 \cdot 26$
+> $= -9 \cdot 75 + 26 \cdot (101 - 1 \cdot 75) = 26 \cdot 101 - 35 \cdot 75$
+> $= 26 \cdot 101 - 35 \cdot (4620 - 45 \cdot 101) = -35 \cdot 4620 + 1601 \cdot 101$
+>
+> **Step 3: Extract the Inverse**
+> The equation $1601 \cdot 101 + (-35) \cdot 4620 = 1$ tells us that $1601$ is an inverse of $101$ modulo $4620$.
+>
+> **Verification:** $101 \cdot 1601 = 161701 = 35 \cdot 4620 + 1 \equiv 1 \pmod{4620}$ ✓
+
+#### Method 2: Using Fermat's Little Theorem (When Modulus is Prime)
+
+When the modulus $p$ is prime, Fermat's Little Theorem provides an elegant formula for the inverse.
+
+> [!info] Inverse Formula for Prime Modulus
+> If $p$ is prime and $\gcd(a, p) = 1$, then by Fermat's Little Theorem:
+> $$a^{p-1} \equiv 1 \pmod{p}$$
+>
+> Rewriting: $a \cdot a^{p-2} \equiv 1 \pmod{p}$
+>
+> Therefore:
+> $$a^{-1} \equiv a^{p-2} \pmod{p}$$
+>
+> **Breakdown:**
+> - $a$ : The integer whose inverse is sought.
+> - $p$ : A prime modulus.
+> - $a^{p-2}$ : The inverse of $a$ modulo $p$, computed via exponentiation.
+
+> [!example] Finding an Inverse Using Fermat's Little Theorem
+> **Problem:** Find the inverse of $3$ modulo $11$.
+>
+> **Solution:** Since $11$ is prime and $\gcd(3, 11) = 1$, we can use:
+> $$3^{-1} \equiv 3^{11-2} = 3^9 \pmod{11}$$
+>
+> Computing $3^9 \bmod 11$:
+> - $3^1 = 3$
+> - $3^2 = 9$
+> - $3^4 = 81 \equiv 4 \pmod{11}$
+> - $3^8 = 4^2 = 16 \equiv 5 \pmod{11}$
+> - $3^9 = 3^8 \cdot 3^1 = 5 \cdot 3 = 15 \equiv 4 \pmod{11}$
+>
+> Therefore, $3^{-1} \equiv 4 \pmod{11}$.
+>
+> **Verification:** $3 \cdot 4 = 12 \equiv 1 \pmod{11}$ ✓
+
+> [!tip] Choosing the Right Method
+> - **Extended Euclidean Algorithm:** Works for any modulus $m$. Most general and efficient for arbitrary moduli.
+> - **Fermat's Little Theorem:** Only works when the modulus is prime. Useful when fast modular exponentiation is available.
+> - **Inspection:** Only practical for very small moduli.
+
+#### Summary Table of Inverse Computation Methods
+
+| Method | Applicable When | Complexity | Notes |
+|--------|-----------------|------------|-------|
+| Inspection | Small $m$ | $O(m)$ | Test each value in $\{1, \ldots, m-1\}$ |
+| Extended Euclidean Algorithm | Any $m$ with $\gcd(a,m)=1$ | $O(\log m)$ | Most efficient general method |
+| Fermat's Little Theorem | $m = p$ (prime) | $O(\log p)$ via fast exponentiation | Requires modular exponentiation |
+
+_Table 3.1: Comparison of methods for computing modular inverses._
+
+- - -
 ### Linear Congruences
 
 A congruence of the form $ax \equiv b \pmod m$, where $m$ is a positive integer, $a$ and $b$ are integers, and $x$ is a variable, is called a linear congruence. To solve the linear congruence $ax \equiv b \pmod m$, we use an integer $\bar{a}$ such that $\bar{a}a \equiv 1 \pmod m$, if such an integer exists. Such an integer $\bar{a}$ is said to be an inverse of $a$ modulo $m$.
@@ -867,7 +1089,7 @@ Once we have an inverse $\bar{a}$ of $a$ modulo $m$, we can solve the congruence
 
 ### The Chinese Remainder Theorem
 
-Systems of linear congruences arise in many contexts. For example, as we will see later, they are the basis for a method that can be used to perform arithmetic with large integers. Such systems can even be found as word puzzles in the writings of ancient Chinese and Hindu mathematicians.
+Systems of linear congruences arise in many contexts. For example, as we will see later, they are the basis for a method that ½can be used to perform arithmetic with large integers. Such systems can even be found as word puzzles in the writings of ancient Chinese and Hindu mathematicians.
 
 > [!example] Sun-Tsu's Ancient Puzzle
 > In the first century, the Chinese mathematician Sun-Tsu asked: *"There are certain things whose number is unknown. When divided by $3$, the remainder is $2$; when divided by $5$, the remainder is $3$; and when divided by $7$, the remainder is $2$. What will be the number of things?"*
@@ -876,8 +1098,6 @@ Systems of linear congruences arise in many contexts. For example, as we will se
 > $x \equiv 2 \pmod 3$
 > $x \equiv 3 \pmod 5$
 > $x \equiv 2 \pmod 7$?
->
-> We will solve this system later in this section.
 
 The Chinese remainder theorem, named after the Chinese heritage of problems involving systems of linear congruences, states that when the moduli of a system of linear congruences are pairwise relatively prime, there is a unique solution of the system modulo the product of the moduli.
 
@@ -960,6 +1180,460 @@ Although the construction in the Chinese Remainder Theorem provides a general me
 > - Substituting this expression for $u$ into the equation $x = 30u + 26$:
 >   $x = 30(7v + 6) + 26 = 210v + 180 + 26 = 210v + 206$.
 > - Translating this back into a congruence, we find the solution to the simultaneous congruences is $x \equiv 206 \pmod{210}$.
+
+#### Constructive Proof and Algorithm
+
+The constructive proof provides an *algorithmic method* for finding the unique solution $x$. Rather than simply proving existence, this approach gives us a formula to directly compute the answer.
+
+##### Step 1: Compute the Total Modulus
+
+First, compute the product of all moduli:
+
+$$M = m_1 \cdot m_2 \cdots m_n = \prod_{i=1}^{n} m_i$$
+
+##### Step 2: Compute Partial Products
+
+For each $k = 1, 2, \dots, n$, let $M_k = M / m_k$. That is, $M_k$ is the product of all moduli except $m_k$:
+
+$$M_k = \frac{M}{m_k} = \prod_{j=1, j \neq k}^{n} m_j$$
+
+>[!info] **Key Property of $M_k$**
+>- **Equation:** $M_k = \frac{M}{m_k}$
+>- **Breakdown:**
+>    - $M_k$ is the product of *all moduli except* $m_k$
+>    - Because $m_i$ and $m_k$ have no common factors greater than $1$ when $i \neq k$, it follows that $\gcd(m_k, M_k) = 1$
+>    - This guarantees that $M_k$ has a multiplicative inverse modulo $m_k$
+
+> [!summary]- From lecture
+> ![[Pasted image 20260226181009.png]]
+##### Step 3: Find Multiplicative Inverses
+
+By the theorem on the existence of modular inverses, there is an integer $y_k$, an inverse of $M_k$ modulo $m_k$, such that:
+
+$$M_k \cdot y_k \equiv 1 \pmod{m_k}$$
+
+>[!tip] **Finding Inverses**
+>Use the Extended Euclidean Algorithm to find $y_k$. Since $\gcd(M_k, m_k) = 1$, the inverse is guaranteed to exist.
+
+##### Step 4: Construct the Solution
+
+Form the sum:
+
+$$x = a_1 M_1 y_1 + a_2 M_2 y_2 + \cdots + a_n M_n y_n = \sum_{i=1}^{n} a_i M_i y_i$$
+
+>[!info] **The Solution Formula**
+>- **Equation:** $x = \sum_{i=1}^{n} a_i \cdot M_i \cdot y_i$
+>- **Breakdown:**
+>    - $a_i$ : The desired remainder for modulus $m_i$
+>    - $M_i$ : The partial product $\frac{M}{m_i}$
+>    - $y_i$ : The multiplicative inverse of $M_i$ modulo $m_i$
+>    - Each term $a_i M_i y_i$ contributes $a_i$ to the remainder when divided by $m_i$, and contributes $0$ when divided by any other $m_j$
+
+> [!summary]- From lecture
+> ![[Pasted image 20260226181510.png]]
+
+```mermaid
+graph TD
+    A[Start: System of Congruences] --> B{x ≡ a₁ mod m₁, ..., x ≡ aₙ mod mₙ}
+    B --> C[Calculate M = m₁ × m₂ × ... × mₙ]
+    C --> D[For each mₖ:]
+    D --> E[Calculate Mₖ = M / mₖ]
+    E --> F[Find yₖ such that Mₖ × yₖ ≡ 1 mod mₖ]
+    F --> G[Construct solution x = a₁M₁y₁ + a₂M₂y₂ + ... + aₙMₙyₙ]
+    G --> H[Final Solution: x mod M]
+```
+
+_Figure 1.1: Flowchart for constructing the solution using the Chinese Remainder Theorem._
+
+---
+
+#### Why the Formula Works
+
+>[!abstract] **The Key Insight**
+>Each term $a_i M_i y_i$ is carefully constructed so that:
+>- When reduced modulo $m_i$, it equals $a_i$
+>- When reduced modulo any other $m_j$ (where $j \neq i$), it equals $0$
+>
+>This is because $M_i$ contains $m_j$ as a factor for all $j \neq i$, making those terms vanish.
+
+For each modulus $m_k$, we verify that $x$ satisfies the $k$-th congruence:
+
+$$x \equiv a_1 M_1 y_1 + a_2 M_2 y_2 + \cdots + a_n M_n y_n \pmod{m_k}$$
+
+- For any $j \neq k$: The term $a_j M_j y_j \equiv 0 \pmod{m_k}$ because $m_k$ is a factor of $M_j$
+- For the term $a_k M_k y_k$: We have $M_k y_k \equiv 1 \pmod{m_k}$, so $a_k M_k y_k \equiv a_k \cdot 1 \equiv a_k \pmod{m_k}$
+
+Therefore:
+$$x \equiv a_k \pmod{m_k} \quad \text{for all } k = 1, 2, \dots, n$$
+
+This confirms that $x$ is a simultaneous solution to all congruences.
+
+---
+
+#### Uniqueness of the Solution
+
+>[!info] **Uniqueness Theorem**
+>The solution $x$ is unique modulo $M$.
+>
+>**Proof:**
+>Suppose $v$ is another solution. Then for each $m_i$:
+>$$x \equiv a_i \pmod{m_i} \quad \text{and} \quad v \equiv a_i \pmod{m_i}$$
+>
+>Therefore, $m_i \mid (x - v)$ for all $i$.
+>
+>Since all $m_i$ are pairwise relatively prime, their product $M$ also divides $(x - v)$:
+>$$M \mid (x - v)$$
+>
+>Thus $x \equiv v \pmod{M}$, proving uniqueness modulo $M$.
+
+---
+
+#### Method 1: Direct Formula Application
+
+>[!example] **Example: Solving Sun-Tsu's Puzzle**
+>
+>**Problem:** Solve the system of congruences:
+>$$x \equiv 2 \pmod{3}$$
+>$$x \equiv 3 \pmod{5}$$
+>$$x \equiv 2 \pmod{7}$$
+>
+>**Step 1: Verify Conditions and Compute Total Modulus**
+>
+>The moduli 3, 5, and 7 are pairwise relatively prime, so CRT applies.
+>$$M = 3 \cdot 5 \cdot 7 = 105$$
+>
+>**Step 2: Compute Partial Products**
+>
+>$$M_1 = \frac{105}{3} = 35$$
+>$$M_2 = \frac{105}{5} = 21$$
+>$$M_3 = \frac{105}{7} = 15$$
+>
+>**Step 3: Find Multiplicative Inverses**
+>
+>For $y_1$: Find inverse of $M_1 = 35$ modulo $m_1 = 3$
+>- $35 \equiv 2 \pmod{3}$
+>- Solve $2y_1 \equiv 1 \pmod{3}$
+>- Testing: $2 \cdot 2 = 4 \equiv 1 \pmod{3}$ ✓
+>- Therefore $y_1 = 2$
+>
+>For $y_2$: Find inverse of $M_2 = 21$ modulo $m_2 = 5$
+>- $21 \equiv 1 \pmod{5}$
+>- Solve $1 \cdot y_2 \equiv 1 \pmod{5}$
+>- Therefore $y_2 = 1$
+>
+>For $y_3$: Find inverse of $M_3 = 15$ modulo $m_3 = 7$
+>- $15 \equiv 1 \pmod{7}$
+>- Solve $1 \cdot y_3 \equiv 1 \pmod{7}$
+>- Therefore $y_3 = 1$
+>
+>**Step 4: Apply the Formula**
+>
+>$$x = a_1 M_1 y_1 + a_2 M_2 y_2 + a_3 M_3 y_3$$
+>$$x = 2 \cdot 35 \cdot 2 + 3 \cdot 21 \cdot 1 + 2 \cdot 15 \cdot 1$$
+>$$x = 140 + 63 + 30 = 233$$
+>
+>**Step 5: Reduce Modulo M**
+>
+>$$233 = 2 \cdot 105 + 23$$
+>$$x \equiv 23 \pmod{105}$$
+>
+>**Solution:** $x = 23$ is the smallest positive integer satisfying all three congruences.
+
+>[!example] **Example: A System with Moduli 5, 6, and 7**
+>
+>**Problem:** Find all integers $x$ such that:
+>$$x \equiv 4 \pmod{5}$$
+>$$x \equiv 2 \pmod{6}$$
+>$$x \equiv 3 \pmod{7}$$
+>
+>**Step 1: Verify Conditions and Identify Values**
+>
+>The moduli 5, 6, and 7 are pairwise relatively prime, so CRT applies.
+>- $m_1 = 5$, $m_2 = 6$, $m_3 = 7$
+>- $a_1 = 4$, $a_2 = 2$, $a_3 = 3$
+>
+>**Step 2: Compute Total Modulus**
+>
+>$$M = 5 \cdot 6 \cdot 7 = 210$$
+>
+>**Step 3: Compute Partial Products**
+>
+>$$M_1 = \frac{210}{5} = 42$$
+>$$M_2 = \frac{210}{6} = 35$$
+>$$M_3 = \frac{210}{7} = 30$$
+>
+>**Step 4: Find Multiplicative Inverses**
+>
+>For $y_1$: Find inverse of $M_1 = 42$ modulo $m_1 = 5$
+>- $42 \equiv 2 \pmod{5}$
+>- Solve $2y_1 \equiv 1 \pmod{5}$
+>- Testing: $2 \cdot 3 = 6 \equiv 1 \pmod{5}$ ✓
+>- Therefore $y_1 = 3$
+>
+>For $y_2$: Find inverse of $M_2 = 35$ modulo $m_2 = 6$
+>- $35 \equiv 5 \pmod{6}$
+>- Solve $5y_2 \equiv 1 \pmod{6}$
+>- Testing: $5 \cdot 5 = 25 \equiv 1 \pmod{6}$ ✓
+>- Therefore $y_2 = 5$
+>
+>For $y_3$: Find inverse of $M_3 = 30$ modulo $m_3 = 7$
+>- $30 \equiv 2 \pmod{7}$
+>- Solve $2y_3 \equiv 1 \pmod{7}$
+>- Testing: $2 \cdot 4 = 8 \equiv 1 \pmod{7}$ ✓
+>- Therefore $y_3 = 4$
+>
+>**Step 5: Apply the Formula**
+>
+>$$x = a_1 M_1 y_1 + a_2 M_2 y_2 + a_3 M_3 y_3$$
+>$$x = 4 \cdot 42 \cdot 3 + 2 \cdot 35 \cdot 5 + 3 \cdot 30 \cdot 4$$
+>$$x = 504 + 350 + 360 = 1214$$
+>
+>**Step 6: Reduce Modulo M**
+>
+>$$1214 = 5 \cdot 210 + 164$$
+>$$x \equiv 164 \pmod{210}$$
+>
+>**Solution:** $x = 164 + 210k$ for any integer $k$, or equivalently, $x \equiv 164 \pmod{210}$
+
+---
+
+#### Method 2: Back Substitution
+
+Although the direct formula provides a general method for solving systems of linear congruences with pairwise relatively prime moduli, it can sometimes be easier to solve a system using *back substitution*.
+
+>[!info] **Key Idea of Back Substitution**
+>Instead of computing all partial products at once, we:
+>1. Start with the first congruence and express $x$ parametrically
+>2. Substitute into the second congruence to constrain the parameter
+>3. Continue substituting and constraining until all congruences are satisfied
+
+##### Finding Modular Inverses via Extended Euclidean Algorithm
+
+Before solving by back substitution, we often need inverses of the moduli with respect to each other.
+
+>[!example] **Computing Required Inverses Using the Extended Euclidean Algorithm**
+>
+>**Inverse of 5 modulo 6:**
+>- $\gcd(5, 6) = 1$ (confirmed relatively prime)
+>- $6 = 5 \cdot 1 + 1$
+>- $1 = 6 - 5 \cdot 1$
+>- Therefore: $-1 \cdot 5 \equiv 1 \pmod{6}$
+>- Since $-1 \equiv 5 \pmod{6}$, the inverse of 5 modulo 6 is **5**
+>
+>**Inverse of 5 modulo 7:**
+>- $\gcd(5, 7) = 1$
+>- $7 = 5 \cdot 1 + 2$
+>- $5 = 2 \cdot 2 + 1$
+>- Back-substitute: $1 = 5 - 2 \cdot 2 = 5 - 2(7 - 5) = 3 \cdot 5 - 2 \cdot 7$
+>- Therefore: $3 \cdot 5 \equiv 1 \pmod{7}$
+>- The inverse of 5 modulo 7 is **3**
+>
+>**Inverse of 6 modulo 7:**
+>- $\gcd(6, 7) = 1$
+>- $7 = 6 \cdot 1 + 1$
+>- $1 = 7 - 6 \cdot 1$
+>- Therefore: $-1 \cdot 6 \equiv 1 \pmod{7}$
+>- Since $-1 \equiv 6 \pmod{7}$, the inverse of 6 modulo 7 is **6**
+
+>[!example] **Example: Solving via Back Substitution**
+>
+>**Problem:** Find all integers $x$ such that:
+>$$x \equiv 1 \pmod{5}$$
+>$$x \equiv 2 \pmod{6}$$
+>$$x \equiv 3 \pmod{7}$$
+>
+>**Step 1: Express x from the First Congruence**
+>
+>By the definition of congruence, the first congruence can be rewritten as:
+>$$x = 5t + 1 \quad \text{for some integer } t$$
+>
+>**Step 2: Substitute into Second Congruence**
+>
+>Substitute $x = 5t + 1$ into $x \equiv 2 \pmod{6}$:
+>$$5t + 1 \equiv 2 \pmod{6}$$
+>$$5t \equiv 1 \pmod{6}$$
+>
+>Since $5 \equiv -1 \pmod{6}$:
+>$$-t \equiv 1 \pmod{6}$$
+>$$t \equiv -1 \equiv 5 \pmod{6}$$
+>
+>Therefore: $t = 6u + 5$ for some integer $u$
+>
+>**Step 3: Back Substitute to Update x**
+>
+>$$x = 5t + 1 = 5(6u + 5) + 1 = 30u + 25 + 1 = 30u + 26$$
+>
+>**Step 4: Substitute into Third Congruence**
+>
+>Substitute $x = 30u + 26$ into $x \equiv 3 \pmod{7}$:
+>$$30u + 26 \equiv 3 \pmod{7}$$
+>$$30u \equiv 3 - 26 \pmod{7}$$
+>$$30u \equiv -23 \pmod{7}$$
+>
+>Since $30 \equiv 2 \pmod{7}$ and $-23 \equiv 5 \pmod{7}$:
+>$$2u \equiv 5 \pmod{7}$$
+>
+>Multiply by the inverse of 2 modulo 7 (which is 4, since $4 \cdot 2 = 8 \equiv 1$):
+>$$8u \equiv 20 \pmod{7}$$
+>$$u \equiv 6 \pmod{7}$$
+>
+>Therefore: $u = 7v + 6$ for some integer $v$
+>
+>**Step 5: Final Back Substitution**
+>
+>$$x = 30u + 26 = 30(7v + 6) + 26 = 210v + 180 + 26 = 210v + 206$$
+>
+>**Solution:** $x \equiv 206 \pmod{210}$
+
+>[!example] **Example: Another Back Substitution Problem**
+>
+>**Problem:** Find all integers $x$ such that:
+>$$x \equiv 3 \pmod{5}$$
+>$$x \equiv 2 \pmod{6}$$
+>$$x \equiv 6 \pmod{7}$$
+>
+>**Step 1: Express x from the First Congruence**
+>
+>From $x \equiv 3 \pmod{5}$:
+>$$x = 5t + 3 \quad \text{for some integer } t$$
+>
+>**Step 2: Substitute into Second Congruence**
+>
+>Substitute $x = 5t + 3$ into $x \equiv 2 \pmod{6}$:
+>$$5t + 3 \equiv 2 \pmod{6}$$
+>$$5t \equiv -1 \pmod{6}$$
+>$$5t \equiv 5 \pmod{6}$$
+>
+>Multiply both sides by the inverse of 5 modulo 6 (which is 5):
+>$$25t \equiv 25 \pmod{6}$$
+>$$t \equiv 1 \pmod{6}$$
+>
+>Therefore: $t = 6u + 1$ for some integer $u$
+>
+>**Step 3: Back Substitute to Update x**
+>
+>$$x = 5t + 3 = 5(6u + 1) + 3 = 30u + 5 + 3 = 30u + 8$$
+>
+>**Step 4: Substitute into Third Congruence**
+>
+>Substitute $x = 30u + 8$ into $x \equiv 6 \pmod{7}$:
+>$$30u + 8 \equiv 6 \pmod{7}$$
+>$$30u \equiv -2 \pmod{7}$$
+>$$2u \equiv 5 \pmod{7}$$
+>
+>(Since $30 \equiv 2 \pmod{7}$ and $-2 \equiv 5 \pmod{7}$)
+>
+>Multiply both sides by the inverse of 2 modulo 7 (which is 4):
+>$$8u \equiv 20 \pmod{7}$$
+>$$u \equiv 6 \pmod{7}$$
+>
+>Therefore: $u = 7v + 6$ for some integer $v$
+>
+>**Step 5: Final Back Substitution**
+>
+>$$x = 30u + 8 = 30(7v + 6) + 8 = 210v + 180 + 8 = 210v + 188$$
+>
+>**Solution:** $x \equiv 188 \pmod{210}$
+
+---
+
+#### Comparison of Methods
+
+| Aspect | Direct Formula Method | Back Substitution Method |
+|--------|----------------------|-------------------------|
+| **Approach** | Compute all components, then combine | Build solution iteratively |
+| **Parallelization** | Each $M_i$, $y_i$ computed independently | Sequential; each step depends on previous |
+| **Memory** | Stores all intermediate values | Only tracks current expression |
+| **Best For** | Implementation in algorithms | Manual calculation, small systems |
+| **Insight** | Shows structure of solution clearly | Shows how constraints combine |
+
+_Table 1.1: Comparison of the two methods for solving CRT systems._
+
+---
+
+>[!summary] **Summary**
+>
+>The **Chinese Remainder Theorem** guarantees that a system of simultaneous linear congruences with pairwise relatively prime moduli has a unique solution modulo the product of the moduli.
+>
+>**Two Methods for Finding Solutions:**
+>
+>**Direct Formula Method:**
+>1. Compute $M = \prod m_i$ (total modulus)
+>2. Compute $M_k = M/m_k$ (partial products)
+>3. Find $y_k$ such that $M_k y_k \equiv 1 \pmod{m_k}$ (multiplicative inverses)
+>4. Calculate $x = \sum a_k M_k y_k$ and reduce modulo $M$
+>
+>**Back Substitution Method:**
+>1. Express $x$ from the first congruence parametrically
+>2. Substitute into subsequent congruences to constrain parameters
+>3. Back-substitute to build the complete solution
+>4. Final answer is expressed modulo $M$
+>
+>Both methods yield the unique solution modulo $M$, guaranteed by the pairwise coprimality of the moduli. The direct formula is systematic and parallelizable, making it ideal for algorithmic implementation. Back substitution offers an intuitive step-by-step approach better suited for manual calculation with small systems.
+>
+>The theorem has practical applications in computer science (large integer arithmetic, cryptography) and traces its origins to ancient Chinese mathematics, as evidenced by Sun-Tsu's puzzle from the 1st century CE.
+
+>[!example] From Excercise time
+> Solve the CRT for 
+> $$x \equiv 2 \pmod 3$$
+> $$\equiv 1 \pmod 4$$
+> $$\equiv 3 \pmod 5$$
+> 
+> Any integer "t" multiplied by m=3 will be congruent to 0 modulo m, thus we add the "remainder" 2 to this to define x.
+> ![[Pasted image 20260226182205.png]]
+> 
+> Replace "x" in the 2nd congurence with the newly established definition
+> $$x = 3t+2 \equiv 1 \pmod 4$$
+> 
+> Remove the "remainder" as a step in isolating "t"
+> $3t+2-2 \equiv 1-2 \pmod 4$
+> $3t \equiv -1 \pmod 4 \equiv 3 \pmod 4$
+> 
+> Find the multiplicative inverse so $i*3\equiv1\pmod4$
+>> First check that a *unique* multiplicative inverse exists, finding GCD of (3,4) using  Euclidean Algorithm
+> $4/3 = 3*1 + 1$
+> $3 / 1 = 1*3 + 0$
+> $$\gcd(4,3) = 1$$
+> **Note:** We could have also proven this by simply acknowledging that 3 is a **prime number**, and since 4 is not a multiple of 3, they are necessarily coprime. A prime number is relatively prime to any number that isn't a multiple of it.
+> 
+> A number $\bar{a}$ exists so that $\bar{a} * a \equiv 1 \pmod 4$, since these are small numbers we'll solve this by inspection.
+> $\bar{1}*3=3\not\equiv 1 \pmod 4$
+> $\bar{2}*3=6\not\equiv 1 \pmod 4$
+> $\bar{3}*3=9\equiv 1 \pmod 4$ ($8+1\equiv1\pmod4$)
+> $3$ is its own inverse
+> $$t=\bar{3}*3=9\equiv 1 \pmod 4$$
+> 
+> Define an integer "u" so that $t=m*u+d$ $$t=4u+1$$
+> 
+> ![[Pasted image 20260226182228.png]]
+> 
+> replace "x"$\land$"t" in 3rd congurence
+> $$x = 3t+2 = 3(4u+1)+2 = 12u+3+2 = 12u+5 \equiv 3 \pmod 5$$
+> 
+>Remove the "remainder" as a step in isolating "u"
+>$12u \equiv (3-5-(-2))\pmod5 \equiv 3 \pmod 5$
+>
+>Reduce the multiplier of "u"
+>$12\mod5=2$
+>$2u\land12u\equiv3\pmod5$
+>
+>Find inverse so $i*2\equiv1\pmod5$
+>$\bar{3}*2=6\equiv1\pmod5$
+>$u=(\bar{3}*3=9)\equiv4\pmod5$
+>
+>Define an integer "V" so that $u=m*v+d$ $$u=5v+4$$
+>
+>![[Pasted image 20260226182222.png]]
+>
+>Substitute "x"$\land$"t"$\land$"v"
+>$$x = 3t+2 = 12u+5 = 12(5v+4)+5 = 60v+48+5 = 60v+53$$
+>
+>![[Pasted image 20260226182233.png]]
+>
+>for any integer "k"
+>$$x=60k+53$$
+>$$x\equiv53\pmod60$$
+>![[Pasted image 20260226182152.png]]
 
 ---
 

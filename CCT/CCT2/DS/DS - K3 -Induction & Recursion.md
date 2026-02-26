@@ -439,10 +439,9 @@ Mathematical induction is particularly well-suited for proving the validity of s
 > **Conclusion:** By mathematical induction, the formula is true for all nonnegative integers $n$.
 
 ---
-
 #### Proving Inequalities
 
->[!example]- Proving $n < 2^n$
+>[!example] Proving $n < 2^n$
 > **Show that $n < 2^n$ for all positive integers $n$.**
 >
 > **Breakdown:**
@@ -464,6 +463,9 @@ Mathematical induction is particularly well-suited for proving the validity of s
 > The key step uses the fact that $1 \le 2^k$ for any positive integer $k$.
 >
 > **Conclusion:** By mathematical induction, $n < 2^n$ for all positive integers $n$.
+
+>[!summary]- From Lecture
+>![[Pasted image 20260226181613.png]]
 
 >[!example]- Proving $2^n < n!$ for $n \ge 4$
 > **Show that $2^n < n!$ for every integer $n$ with $n \ge 4$.**
@@ -1081,12 +1083,17 @@ Recursively defined functions are **well defined** — the value for every posit
 >
 > _Table 4.1: Computed values of the recursively defined function $f$._
 
+>[!example] From Lecture
+>![[Pasted image 20260226182015.png]]
+>![[Pasted image 20260226181934.png]]
+
 ### Defining Fundamental Operations
 
 >[!example] Recursive Definition of Exponentiation
 > To define $a^n$ where $a$ is a nonzero real number:
 > - **Basis Step:** $a^0 = 1$
 > - **Recursive Step:** $a^{n+1} = a \cdot a^n$
+>   ![[Pasted image 20260226182039.png]]
 
 >[!example] Recursive Definition of Summation
 > To define $\sum_{k=0}^{n} a_k$:
