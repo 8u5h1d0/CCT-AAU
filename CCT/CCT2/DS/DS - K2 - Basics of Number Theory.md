@@ -1573,7 +1573,7 @@ _Table 1.1: Comparison of the two methods for solving CRT systems._
 >
 >The theorem has practical applications in computer science (large integer arithmetic, cryptography) and traces its origins to ancient Chinese mathematics, as evidenced by Sun-Tsu's puzzle from the 1st century CE.
 
->[!example] From Excercise time
+>[!example]- From Excercise Time
 > Solve the CRT for 
 > $$x \equiv 2 \pmod 3$$
 > $$\equiv 1 \pmod 4$$
@@ -1611,7 +1611,7 @@ _Table 1.1: Comparison of the two methods for solving CRT systems._
 > $$x = 3t+2 = 3(4u+1)+2 = 12u+3+2 = 12u+5 \equiv 3 \pmod 5$$
 > 
 >Remove the "remainder" as a step in isolating "u"
->$12u \equiv (3-5-(-2))\pmod5 \equiv 3 \pmod 5$
+>$12u \equiv (3-5=(-2))\pmod5 \equiv 3 \pmod 5$
 >
 >Reduce the multiplier of "u"
 >$12\mod5=2$
@@ -1625,14 +1625,14 @@ _Table 1.1: Comparison of the two methods for solving CRT systems._
 >
 >![[Pasted image 20260226182222.png]]
 >
->Substitute "x"$\land$"t"$\land$"v"
+>Substitute "x"$\land$"t"$\land$"u"
 >$$x = 3t+2 = 12u+5 = 12(5v+4)+5 = 60v+48+5 = 60v+53$$
 >
 >![[Pasted image 20260226182233.png]]
 >
 >for any integer "k"
 >$$x=60k+53$$
->$$x\equiv53\pmod60$$
+>$$x\equiv53\pmod{60}$$
 >![[Pasted image 20260226182152.png]]
 
 ---

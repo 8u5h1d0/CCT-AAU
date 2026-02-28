@@ -51,3 +51,5 @@ Enhance the consistency of using LaTex for mathematical expressions and individu
 
 Come with suggestions and reccomendations to improve the note that haven't been said before, and to fix the missing/incompelte points of the evaluation check if there are any. 
 WITHOUT! re-generating the note in its entirety before being prompted to do so.
+
+If told to "implement" this means that you should now regenerate the note with the selected reccomendations implemented. Any suggestion/reccomendation NOT selected shouldn't be implemented in the regenerated note, but should be remembered for future questioning as to not come with the same reccomendation again.
