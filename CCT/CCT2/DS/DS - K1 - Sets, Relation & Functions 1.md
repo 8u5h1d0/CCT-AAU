@@ -615,7 +615,7 @@ A function is called **real-valued** if its codomain is $\mathbb{R}$, and **inte
 > The image of the subset $S = \{b, c, d\}$ is the set $f(S) = \{1, 4\}$.
 
 ### 1-to-1 and "Onto" Functions
-Some functions never assign the same value to two different domain elements. These functions are said to be one-to-one.
+	Some functions never assign the same value to two different domain elements. These functions are said to be one-to-one.
 
 > [!info] Definition - Injection
 > A function $f$ is said to be **one-to-one**, or an **injection**, if and only if $f(a) = f(b)$ implies that $a = b$ for all $a$ and $b$ in the domain of $f$. A function is said to be **injective** if it is one-to-one.

@@ -1668,9 +1668,7 @@ _Table 5.1: Comparison of Static Binding and Dynamic Binding in Java._
 
 ---
 
-## Conclusion
-
-This chapter has introduced object-oriented architecture as the structure of classes and packages that maintains a software application's flexibility, robustness, reusability, and developability. The principles and patterns presented here support these architectural goals.
+## Conclusion.
 
 It is important to recognize that this has been merely an overview. There is significantly more to be said about OO architecture than can be covered in a few pages. Relying solely on this summary can be risky ("a little knowledge is a dangerous thing"). It is strongly encouraged to seek out the books and papers cited in the chapter to learn more.
 

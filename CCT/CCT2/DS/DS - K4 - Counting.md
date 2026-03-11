@@ -108,7 +108,7 @@ Counting problems arise frequently throughout mathematics and computer science. 
 > - **Requirement:** Each password must contain at least one digit.
 > - **Goal:** Determine the total number of valid passwords.
 >
-> Solving this problem and a wide variety of similar challenges requires a set of specific techniques introduced in this section.
+> Solving this problem and a wide variety of similar challenges requires a set of specific techniques.
 
 ---
 
@@ -772,6 +772,13 @@ A **permutation** of a set of distinct objects is an ordered arrangement of thes
 > How many permutations of `ABCDEFGH` contain the block `ABC`?
 > Treat `ABC` as one object → $6$ objects total → $6! = 720$.
 
+
+
+Permutations with repetitions
+
+
+
+
 ---
 
 ### Combinations
@@ -793,16 +800,19 @@ An **$r$-combination** is an unordered selection of $r$ elements — a subset of
 >
 > **Proof:**
 > Each $r$-combination can be ordered in $r!$ ways (a [[#Permutations|permutation]] of the subset). So:
-> $$P(n, r) = C(n, r) \cdot r! \implies C(n, r) = \frac{P(n, r)}{r!} = \frac{n!}{r!(n-r)!}$$
+> $$P(n, r) = C(n, r) \cdot r! \implies C(n, r) = \frac{P(n,r)}{P(r,r)} = \frac{P(n, r)}{r!} = \frac{\frac{n!}{(n-r)!}}{r!} = \frac{n!}{r!(n-r)!}$$
 
 >[!tip] Computational Shortcut
 > For large values, cancel factorials before multiplying:
-> $$C(n, r) = \frac{n(n-1)\cdots(n-r+1)}{r!}$$
+> $$C(n, r) = \frac{n(n-1)\cdots(n-r+1)}{r!} = \frac{n}{r} * \frac{n-1}{r-1} ... \frac{n-r+1}{1}$$
 > This avoids computing extremely large intermediate factorials.
 
 >[!example] Poker Hands
 > $5$-card hands from a $52$-card deck:
 > $$C(52, 5) = \frac{52 \cdot 51 \cdot 50 \cdot 49 \cdot 48}{5!} = 2{,}598{,}960$$
+> 
+> 47 cards out of 52?
+> since this is symmetrical to the 5 out of 52 example $52-5 = 47$ there's the same amount of combinations as coosing 5, as when you're choosing 5 you're also choosing NOT to choose 47
 
 >[!summary] Corollary 2
 > $$C(n, r) = C(n, n - r)$$
@@ -828,7 +838,7 @@ An **$r$-combination** is an unordered selection of $r$ elements — a subset of
 
 ## Binomial Coefficients and Identities
 
-The values $\binom{n}{r}$ are called **binomial coefficients** because they appear as coefficients in the expansion of powers of binomial expressions like $(a + b)^n$. This section explores the [[#The Binomial Theorem|Binomial Theorem]] and several important identities.
+The values $\binom{n}{r}$ are called **binomial coefficients** because they appear as coefficients in the expansion of powers of binomial expressions like $(a + b)^n$.
 
 ### The Binomial Theorem
 
@@ -840,6 +850,9 @@ The values $\binom{n}{r}$ are called **binomial coefficients** because they appe
 > - $y^3$: Choose $y$ from all $3$ → $\binom{3}{3} = 1$.
 >
 > $$(x + y)^3 = x^3 + 3x^2y + 3xy^2 + y^3$$
+> 
+> 
+> Pictures from lecture/slides about binomials
 
 >[!summary] Theorem 1: The Binomial Theorem
 > Let $x$ and $y$ be variables, and let $n$ be a nonnegative integer. Then:
@@ -852,6 +865,9 @@ The values $\binom{n}{r}$ are called **binomial coefficients** because they appe
 >
 > **Proof:**
 > The expanded product consists of terms $x^{n-j}y^j$. To produce such a term, one must choose $j$ of the $n$ factors to contribute $y$ (the rest contribute $x$). The number of ways is $\binom{n}{j}$.
+> 
+> **Proof by Induction:**
+> 
 
 >[!example] Expansion of $(x + y)^4$
 > $$(x + y)^4 = \binom{4}{0}x^4 + \binom{4}{1}x^3y + \binom{4}{2}x^2y^2 + \binom{4}{3}xy^3 + \binom{4}{4}y^4 = x^4 + 4x^3y + 6x^2y^2 + 4xy^3 + y^4$$
