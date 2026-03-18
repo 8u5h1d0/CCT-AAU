@@ -87,7 +87,6 @@ Setting up the appropriate mathematical model is only part of the solution. To c
 > An *algorithm* is a finite sequence of precise instructions for performing a computation or for solving a problem.
 
 The term *algorithm* is a corruption of the name *al-Khowarizmi*, a ninth-century mathematician whose book on Hindu numerals is the basis of modern decimal notation. With the growing interest in computing machines, the concept was given a more general meaning to include all definite procedures for solving problems, not just procedures for performing arithmetic.
-
 ### Describing Algorithms
 
 An algorithm can be described in several ways:
@@ -151,6 +150,15 @@ _Table 1.1: The seven standard properties of an algorithm._
 > - **Finiteness:** The loop runs exactly $n - 1$ times and then terminates.
 > - **Effectiveness:** Each step is either a comparison or an assignment — both executable exactly in finite time.
 > - **Generality:** Works for any finite sequence of integers.
+
+P to S to Q explanation - slides
+Algorithm Correctness - slides
+proof of partial correctness - slides
+	loop invariant to prove loops - slides
+prove correctness of MAX algo. - slides
+
+
+
 
 ---
 

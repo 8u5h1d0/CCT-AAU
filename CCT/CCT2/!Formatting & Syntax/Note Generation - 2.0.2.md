@@ -214,6 +214,7 @@ This section defines the principles for organizing content, structuring explanat
 - **Engagement:** Use `>[!question]` callouts to pose self-check questions. Add summary sections for key points. This active engagement is critical for learning.
 - **Tone:** Maintain a direct, concise, and educational tone. Prioritize precision and specificity appropriate to the subject matter.
 - **Audience:** Write as if explaining the material to a classmate. This forces clarity and ensures all necessary background is provided.
+- **Cross-Reference:** Add Cross-Reference Links Between Related Sections, ONLY within the same document.
 
 ### Subject-Specific Adaptations
 
