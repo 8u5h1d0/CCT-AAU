@@ -1,0 +1,223 @@
+{
+  "main": {
+    "id": "78b86f92545071bb",
+    "type": "split",
+    "children": [
+      {
+        "id": "dddb8a5d4c26ca5d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9adb3fc59c80cc11",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "CCT/CCT2/DS/DS - K6 - Algorimiske Run-Times.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "DS - K6 - Algorimiske Run-Times"
+            }
+          },
+          {
+            "id": "05deffe39a17ac85",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "CCT/CCT2/!Formatting & Syntax/Post-Processing - Secondary Prompts - 1.0.0.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Post-Processing - Secondary Prompts - 1.0.0"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "5299bd3a683ca401",
+    "type": "split",
+    "children": [
+      {
+        "id": "c4e8913a655e98b5",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "49e7abd424d99274",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "a23cf24959d2e848",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "b287633146faaa5f",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "e1c86dfdf6765e14",
+    "type": "split",
+    "children": [
+      {
+        "id": "767ac4ddb55dd461",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "08b55d48f762d2eb",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "CCT/CCT2/AgS/AgS - K5 - Analyse.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for AgS - K5 - Analyse"
+            }
+          },
+          {
+            "id": "4820f3a8c83e2947",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "CCT/CCT2/AgS/AgS - K5 - Analyse.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from AgS - K5 - Analyse"
+            }
+          },
+          {
+            "id": "5aa6bb1afaf523b0",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "0aa6e51ef917e1b1",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "aca1698a656bb08a",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "CCT/CCT2/AgS/AgS - K5 - Analyse.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of AgS - K5 - Analyse"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "9adb3fc59c80cc11",
+  "lastOpenFiles": [
+    "CCT/CCT2/!Formatting & Syntax/Post-Processing - Secondary Prompts - 1.0.0.md",
+    "CCT/CCT2/!Formatting & Syntax/Partial-Note Generation - First Pass - 1.0.0.md",
+    "CCT/CCT2/DS/DS - K6 - Algorimiske Run-Times.md",
+    "CCT/CCT2/AgS/AgS - K5 - Analyse.md",
+    "CCT/CCT2/AgS/AgS - K1 - Intro + Udviklingsprocesser.md",
+    "CCT/CCT2/AgS/AgS - K6 - System modeling 1.md",
+    "CCT/CCT2/AgS/AgS - K7 - Modularisering og andre arkitekturdiagrammer.md",
+    "CCT/CCT2/DS/Originals/DS - K6 - Algorimiske Run-Times.md",
+    "CCT/CCT2/!Formatting & Syntax/GLM-4.6 - Note Generation.md",
+    "CCT/CCT2/DS/Pictures/DS - K5-6 - Introduction to Algos and Correctness/Pasted image 20260321091023.png",
+    "CCT/CCT2/!Formatting & Syntax/GLM-4.6 - Partial-Note Generation - First Pass.md",
+    "CCT/CCT2/DS/Originals/DS - K5-6 - Introduction to Algos and Correctness.md",
+    "Pasted image 20260321101817.png",
+    "CCT/CCT2/DS/Pictures/DS - K5-6 - Introduction to Algos and Correctness/Pasted image 20260321101818.png",
+    "CCT/CCT2/!Formatting & Syntax/LaTex - Formatting and Syntax.md",
+    "CCT/CCT2/DS/DS - K5-6 - Introduction to Algos and Correctness.md",
+    "README.md",
+    "CCT/CCT2/DS/DS - K4 - Counting.md",
+    "CCT/CCT2/AgS/AgS - K4 - Bruger-centreret fokus, krav.md",
+    "CCT/CCT2/AgS/AgS - K2 - SCRUM og Agile Processer.md"
+  ]
+}
