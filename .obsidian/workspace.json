@@ -13,12 +13,24 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CCT/CCT2/DS/DS - K6 - Algorimiske Run-Times.md",
+                "file": "CCT/CCT2/AgS/AgS - K5 - Analyse.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "DS - K6 - Algorimiske Run-Times"
+              "title": "AgS - K5 - Analyse"
+            }
+          },
+          {
+            "id": "6e2d04184066a4bc",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.12.7"
+              },
+              "icon": "lucide-book-up",
+              "title": "Release Notes 1.12.7"
             }
           },
           {
@@ -35,7 +47,8 @@
               "title": "Post-Processing - Secondary Prompts - 1.0.0"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -197,14 +210,22 @@
       "bases:Create new base": false
     }
   },
-  "active": "9adb3fc59c80cc11",
+  "active": "6e2d04184066a4bc",
   "lastOpenFiles": [
-    "CCT/CCT2/!Formatting & Syntax/Post-Processing - Secondary Prompts - 1.0.0.md",
-    "CCT/CCT2/!Formatting & Syntax/Partial-Note Generation - First Pass - 1.0.0.md",
-    "CCT/CCT2/DS/DS - K6 - Algorimiske Run-Times.md",
+    "CCT/CCT2/AgS/AgS - K4 - Bruger-centreret fokus, krav.md",
     "CCT/CCT2/AgS/AgS - K5 - Analyse.md",
-    "CCT/CCT2/AgS/AgS - K1 - Intro + Udviklingsprocesser.md",
     "CCT/CCT2/AgS/AgS - K6 - System modeling 1.md",
+    "CCT/CCT2/P2/Claude - UML slagplan.md",
+    "CCT/CCT2/P2/Systembesrkivelse.md",
+    "CCT/CCT2/P2",
+    "CCT/CCT2/!Formatting & Syntax/Post-Processing - Secondary Prompts - 1.0.0.md",
+    "Untitled.md",
+    "Systembeskrivelse.md",
+    "CCT/CCT2/AgS/AgS - K3 - Kravspecifikation.md",
+    "CCT/CCT2/AgS/AgS - K2 - SCRUM og Agile Processer.md",
+    "CCT/CCT2/AgS/AgS - K1 - Intro + Udviklingsprocesser.md",
+    "CCT/CCT2/DS/DS - K6 - Algorimiske Run-Times.md",
+    "CCT/CCT2/!Formatting & Syntax/Partial-Note Generation - First Pass - 1.0.0.md",
     "CCT/CCT2/AgS/AgS - K7 - Modularisering og andre arkitekturdiagrammer.md",
     "CCT/CCT2/DS/Originals/DS - K6 - Algorimiske Run-Times.md",
     "CCT/CCT2/!Formatting & Syntax/GLM-4.6 - Note Generation.md",
@@ -216,8 +237,6 @@
     "CCT/CCT2/!Formatting & Syntax/LaTex - Formatting and Syntax.md",
     "CCT/CCT2/DS/DS - K5-6 - Introduction to Algos and Correctness.md",
     "README.md",
-    "CCT/CCT2/DS/DS - K4 - Counting.md",
-    "CCT/CCT2/AgS/AgS - K4 - Bruger-centreret fokus, krav.md",
-    "CCT/CCT2/AgS/AgS - K2 - SCRUM og Agile Processer.md"
+    "CCT/CCT2/DS/DS - K4 - Counting.md"
   ]
 }
