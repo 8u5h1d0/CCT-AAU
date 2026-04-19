@@ -21,7 +21,7 @@ Usually, there is no confusion in interpreting the bits if the type of represent
 The representation of the signed numbers is referred to as the signed‐magnitude convention.
 
 When arithmetic operations are implemented in a computer, it is more convenient to use a different system, referred to as the *signed‐ complement system*, for representing negative numbers.
-	In this system a *signed* negative is indicated by replacing the number with its complement [[INCE CPH CCT1/Originals/K1 R1 - Digital Design - 1.1-1.5]]. 
+	In this system a *signed* negative is indicated by replacing the number with its complement [[CCT/CCT1/Notes/INCE CPH CCT1/Originals/K1 R1 - Digital Design - 1.1-1.5]]. 
 	This system can use either r-1's or r's, however r's is most commonly used
 
 The decimal number '9' can be represented using 8 bits (2x4).
