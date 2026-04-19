@@ -8,7 +8,7 @@ Course: Diskrete strukturer
 Litterature: Discrete Mathematics and Its Applications - 8th Ed.
 Created: 05/202026
 ---
-- - -
+ - - -
 # Table of Contents
 
 1. [[#Basic Structures|Basic Structures]]

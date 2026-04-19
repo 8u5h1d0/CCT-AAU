@@ -45,7 +45,6 @@ Created: 15-03-2026
 # Algorithms and Algorithmic Analysis
 
 ---
-
 ## Quick Reference
 
 | Term / Symbol               | Description                                                                                                 |
