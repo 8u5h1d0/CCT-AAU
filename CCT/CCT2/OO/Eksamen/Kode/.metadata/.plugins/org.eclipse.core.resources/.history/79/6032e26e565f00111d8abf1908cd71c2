@@ -1,0 +1,26 @@
+package emne1KlasserGenerelt;
+
+public static void main(string[] args) {
+	EnKlassesAnatomi demo = new EnKlassesAnatomi("navn");
+	EnKlassesAnatomi.introduce();
+}
+
+class EnKlassesAnatomi {
+
+    // ATTRIBUTE
+    private String name;
+
+    // CONSTRUCTOR
+    public EnKlassesAnatomi(String name) {
+
+        // "this" keyword
+        this.name = name;
+    }
+
+    // METHOD
+    public void introduce() {
+
+        System.out.println(
+                "Hello, I'm " + name);
+    }
+}

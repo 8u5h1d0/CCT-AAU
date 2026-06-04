@@ -1,0 +1,50 @@
+package emne1KlasserGenerelt;
+
+public class EncapsulationDemo {
+
+    public static void main(String[] args) {
+
+        System.out.println("Ikke gemt");
+
+        BadBankAccount badAccount = new BadBankAccount();
+
+        // Direkte adgang til balance
+        badAccount.balance = 100;
+        badAccount.balance = -999999;
+
+        System.out.println("Bad account balance: " + badAccount.balance);
+
+
+        System.out.println("\ngemt");
+
+        GoodBankAccount goodAccount = new GoodBankAccount();
+
+       
+        goodAccount.deposit(100);
+//        goodAccount.balance = -99999;
+        goodAccount.deposit(-500); // ignored (protected)
+
+        System.out.println("Good account balance: " + goodAccount.getBalance());
+    }
+}
+
+
+class BadBankAccount {
+    double balance;
+}
+
+
+class GoodBankAccount {
+
+    private double balance;
+
+    public void deposit(double amount) {
+        if (amount > 0) {
+            balance += amount;
+        }
+    }
+
+    public double getBalance() {
+        return balance;
+    }
+}

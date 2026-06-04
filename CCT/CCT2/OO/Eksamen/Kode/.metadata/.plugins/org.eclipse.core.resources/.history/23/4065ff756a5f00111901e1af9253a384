@@ -1,0 +1,33 @@
+package emne2KlasserOgRelationer;
+
+public class SuperDemo {
+
+	public static void main(String[] args) {
+
+	        System.out.println("=== Creating Dog ===");
+	        Dog d = new Dog();
+	    }
+	}
+
+
+	// SUPERCLASS
+	class Animal {
+
+	    private String type;
+
+	    public Animal(String type) {
+	        this.type = type;
+	        System.out.println("Animal constructor: " + type);
+	    }
+	}
+
+
+	// SUBCLASS
+	class Dog extends Animal {
+
+	    // ✅ CORRECT VERSION
+	    public Dog() {
+	        super("Canine"); // must be FIRST statement
+	        System.out.println("Dog created");
+	    }
+	}

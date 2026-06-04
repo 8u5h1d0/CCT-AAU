@@ -1,0 +1,76 @@
+package emne7Threads;
+
+import java.util.concurrent.locks.ReentrantLock;
+
+public class SynchronizationDemo {
+
+    public static void main(String[] args) throws InterruptedException {
+
+        System.out.println("=== 1. SYNCHRONIZED METHOD ===");
+
+        Account acc = new Account();
+
+        Thread t1 = new Thread(() -> {
+            for (int i = 0; i < 1000; i++) {
+                acc.depositSync();
+            }
+        });
+
+        Thread t2 = new Thread(() -> {
+            for (int i = 0; i < 1000; i++) {
+                acc.depositSync();
+            }
+        });
+
+        t1.start();
+        t2.start();
+
+        t1.join();
+        t2.join();
+
+        System.out.println("Balance (synchronized): " + acc.getBalance());
+
+
+        System.out.println("\n=== 2. REENTRANTLOCK ===");
+
+        AccountLock acc2 = new AccountLock();
+
+        Thread t3 = new Thread(() -> {
+            for (int i = 0; i < 1000; i++) {
+                acc2.deposit();
+            }
+        });
+
+        Thread t4 = new Thread(() -> {
+            for (int i = 0; i < 1000; i++) {
+                acc2.deposit();
+            }
+        });
+
+        t3.start();
+        t4.start();
+
+        t3.join();
+        t4.join();
+
+        System.out.println("Balance (lock): " + acc2.getBalance());
+    }
+}
+
+// =========================
+// SYNCHRONIZED VERSION
+// =========================
+class Account {
+
+    private int balance = 0;
+
+    public synchronized void depositSync() {
+        balance++; // critical section
+    }
+
+    public int getBalance() {
+        return balance;
+    }
+}
+
+}

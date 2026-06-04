@@ -1,0 +1,51 @@
+package emne1KlasserGenerelt;
+
+public class EncapsulationDemo {
+
+    public static void main(String[] args) {
+
+        System.out.println("Ikke gemt");
+
+        BadBankAccount badAccount = new BadBankAccount();
+
+        // Direct access (bad design)
+        badAccount.balance = 100;
+        badAccount.balance = -999999; // no protection!
+
+        System.out.println("Bad account balance: " + badAccount.balance);
+
+
+        System.out.println("\ngemt");
+
+        GoodBankAccount goodAccount = new GoodBankAccount();
+
+        // Cannot access balance directly:
+        // goodAccount.balance = -999999; ❌ does NOT compile
+
+        goodAccount.deposit(100);
+        goodAccount.deposit(-500); // ignored (protected)
+
+        System.out.println("Good account balance: " + goodAccount.getBalance());
+    }
+}
+
+
+class BadBankAccount {
+    public double balance;
+}
+
+
+class GoodBankAccount {
+
+    private Double balance = new Double;
+
+    public void deposit(double amount) {
+        if (amount > 0) {
+            balance += amount;
+        }
+    }
+
+    public double getBalance() {
+        return balance;
+    }
+}

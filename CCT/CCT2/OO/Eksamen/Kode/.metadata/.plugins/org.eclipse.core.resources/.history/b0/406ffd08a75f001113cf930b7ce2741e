@@ -1,0 +1,77 @@
+package emne6StruktureretData;
+
+public class EqualityDemo {
+
+    public static void main(String[] args) {
+
+        System.out.println("1. REFERENCE EQUALITY (==)");
+
+        String a = new String("Java");
+        String b = new String("Java");
+
+        System.out.println(a == b);        // false
+        System.out.println(a.equals(b));   // true
+
+
+        System.out.println("\n2. CUSTOM OBJECT EQUALITY uden equals()");
+
+        Student s1 = new Student("Alice");
+        Student s2 = new Student("Alice");
+
+        System.out.println(s1 == s2);        // false
+        System.out.println(s1.equals(s2));   // false (default = reference)
+
+
+        System.out.println("\n3. CUSTOM OBJECT EQUALITY med equals()");
+
+        StudentWithEquals s3 = new StudentWithEquals("Alice");
+        StudentWithEquals s4 = new StudentWithEquals("Alice");
+
+        System.out.println(s3.equals(s4));   // true
+
+
+        System.out.println("\n=== 4. DOUBLE COMPARISON TRAP ===");
+
+        double a1 = 0.1 + 0.2;
+
+        System.out.println(a1 == 0.3); // false (precision error)
+
+        double tolerance = 0.000001;
+
+        if (Math.abs(a1 - 0.3) < tolerance) {
+            System.out.println("Equal enough");
+        }
+    }
+}
+
+// Uden equals()
+class Student {
+
+    String name;
+
+    Student(String name) {
+        this.name = name;
+    }
+}
+
+// Med equals()
+class StudentWithEquals {
+
+    String name;
+
+    StudentWithEquals(String name) {
+        this.name = name;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+
+        if (!(obj instanceof StudentWithEquals)) {
+            return false;
+        }
+
+        StudentWithEquals other = (StudentWithEquals) obj;
+
+        return this.name.equals(other.name);
+    }
+}

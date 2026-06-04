@@ -1,0 +1,34 @@
+package emne7Threads;
+
+public class TryCatchDemo{
+
+    public static void main(String[] args) {
+        
+        // Reference til Main thread så interrupt ved hvad den skal stoppe
+        Thread mainThread = Thread.currentThread();
+
+        // 1. Create the "Interrupt" thread
+        Thread interrupt = new Thread(() -> {
+            try {
+                Thread.sleep(1000); // Wait 1 second so Main has time to start sleeping
+                System.out.println("Interrupt: I'm going to wake up the Main thread early!");
+                Thread.sleep(2000);
+                mainThread.interrupt(); // <--- Provoke InterruptException Error
+            } catch (Exception e) {}
+        });
+        interrupt.start();
+
+        // 2. The Victim (Main Thread) tries to do its "work"
+        try {
+            System.out.println("Main: I'm going to nap");
+            Thread.sleep(10000); 
+//            throw new InterruptedException();
+            System.out.println("Main: I had a great nap!"); // Not expected to print
+        } catch (InterruptedException e) {
+            System.out.println("ERROR CAUGHT!: Something went wrong with " + e + " because "); e.printStackTrace();
+            System.out.println("Main: I was woken up too early!");
+        }       
+        
+        
+    }
+}

@@ -1,0 +1,62 @@
+package emne1KlasserGenerelt;
+
+public class StaticDemo {
+
+    public static void main(String[] args) {
+
+        System.out.println("STATIC");
+
+        // Uden objekt
+        System.out.print("Kald ''add'' \nregn 5 + 3 = ");
+        int sum = Calculator.add(5, 3);
+        System.out.println(sum);
+
+
+        System.out.println("\nINSTANCE/OBJECT");
+
+        // Objekt
+        System.out.println("Opret nyt''account1'' object");
+        BankAccount account1 = new BankAccount(0);
+        System.out.println("Opret nyt ''account2'' object");
+        BankAccount account2 = new BankAccount(0);
+        
+        System.out.println("\nTjek Balance:");
+        System.out.println("Balance = " + account1.getBalance());
+        System.out.println("Balance = " + account2.getBalance());
+        
+        System.out.println("\nbrug ''deposit'' og tjek balance igen");
+        account1.deposit(100);
+        account2.deposit(50);
+
+        System.out.println("Balance account1 = " + account1.getBalance());
+        System.out.println("Balance account2 = " + account2.getBalance());
+    }
+}
+
+
+// STATIC
+class Calculator {
+    public static int add(int a, int b) {
+        return a + b;
+    }
+}
+
+//Objekt
+class BankAccount {
+
+    private double balance;
+
+    public BankAccount(double balance) {
+        this.balance = balance;
+    }
+
+    public void deposit(double amount) {
+        if (amount > 0) {
+            balance += amount;
+        }
+    }
+
+    public double getBalance() {
+        return balance;
+    }
+}

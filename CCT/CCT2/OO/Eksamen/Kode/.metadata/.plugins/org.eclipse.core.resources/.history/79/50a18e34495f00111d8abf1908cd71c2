@@ -1,0 +1,252 @@
+package emne7Threads;
+
+public class BankAccountRaceConditionDemo {
+
+    public static void main(String[] args) throws InterruptedException {
+
+        runAsynchronizedVersion();
+
+        System.out.println("\n\n====================================================\n");
+
+        runSynchronizedVersion();
+    }
+
+
+    private static void runAsynchronizedVersion() throws InterruptedException {
+
+        System.out.println("STAGE 1 - BROKEN VERSION (RACE CONDITION)");
+        
+        BrokenAccount main = new BrokenAccount("Main", 100);
+        BrokenAccount account1 = new BrokenAccount("Account1", 0);
+        BrokenAccount account2 = new BrokenAccount("Account2", 0);
+
+        System.out.println("\nBEFORE TRANSFERS");
+        printBalances(main, account1, account2);
+
+        Thread transferToAccount1 =
+                new Thread(
+                        () -> main.transfer(account1, 100),
+                        "Transfer-To-Account1");
+
+        Thread transferToAccount2 =
+                new Thread(
+                        () -> main.transfer(account2, 100),
+                        "Transfer-To-Account2");
+
+        transferToAccount1.start();
+        transferToAccount2.start();
+
+        transferToAccount1.join();
+        transferToAccount2.join();
+
+        System.out.println("\nAFTER TRANSFERS");
+        printBalances(main, account1, account2);
+    }
+
+    // STAGE 2 - FIXED VERSION
+    private static void runSynchronizedVersion() throws InterruptedException {
+
+        System.out.println("STAGE 2 - FIXED VERSION (synchronized)");
+
+        SafeAccount main = new SafeAccount("Main", 100);
+        SafeAccount account1 = new SafeAccount("Account1", 0);
+        SafeAccount account2 = new SafeAccount("Account2", 0);
+
+        System.out.println("\nBEFORE TRANSFERS");
+        printBalances(main, account1, account2);
+
+        Thread transferToAccount1 =
+                new Thread(
+                        () -> main.transfer(account1, 100),
+                        "Transfer-To-Account1");
+
+        Thread transferToAccount2 =
+                new Thread(
+                        () -> main.transfer(account2, 100),
+                        "Transfer-To-Account2");
+
+        transferToAccount1.start();
+        transferToAccount2.start();
+
+        transferToAccount1.join();
+        transferToAccount2.join();
+
+    }
+
+
+    static class BrokenAccount {
+
+        String name;
+        int balance;
+        int s = 1500;
+
+        public BrokenAccount(String name, int balance) {
+            this.name = name;
+            this.balance = balance;
+        }
+        		//no synchronized keyword
+        public void transfer(BrokenAccount destination, int amount) {
+
+            String threadName =
+                    Thread.currentThread().getName();
+
+            System.out.println("\n" + threadName
+                    + " wants to transfer $"
+                    + amount
+                    + " from "
+                    + name
+                    + " to "
+                    + destination.name);
+
+            System.out.println(threadName
+                    + " checks Main balance = $"
+                    + balance);
+
+            if (balance >= amount) {
+            	
+                sleep(s);
+
+                System.out.println(threadName
+                        + " VERIFIED sufficient funds.");
+
+                sleep(s);
+                
+                System.out.println(threadName
+                        + " is performing transaction verification...");
+
+                sleep(s);
+
+                balance -= amount;
+                destination.balance += amount;
+
+                System.out.println(threadName
+                        + " COMPLETED transfer.");
+
+                sleep(s);
+                
+                System.out.println(threadName
+                        + " -> Main balance now = $"
+                        + balance);
+                sleep(s);
+
+                System.out.println(threadName
+                        + " -> "
+                        + destination.name
+                        + " balance now = $"
+                        + destination.balance);
+
+            } else {
+
+                System.out.println(threadName
+                        + " REJECTED (insufficient funds)");
+            }
+        }
+    }
+
+
+    static class SafeAccount {
+
+        String name;
+        int balance;
+        int s = 1500; //sleep
+
+        public SafeAccount(String name, int balance) {
+            this.name = name;
+            this.balance = balance;
+        }
+        		//synchronized keyword
+        public synchronized void transfer(
+                SafeAccount destination,
+                int amount) {
+
+            String threadName =
+                    Thread.currentThread().getName();
+
+            System.out.println("\n" + threadName
+                    + " ENTERED synchronized transfer()");
+            
+            sleep(s);
+
+            System.out.println(threadName
+                    + " checks Main balance = $"
+                    + balance);
+
+            if (balance >= amount) {
+
+                System.out.println(threadName
+                        + " VERIFIED sufficient funds.");
+                
+                sleep(s);
+
+                System.out.println(threadName
+                        + " is performing transaction verification...");
+
+                sleep(s);
+
+                balance -= amount;
+                destination.balance += amount;
+
+                System.out.println(threadName
+                        + " COMPLETED transfer.");
+                
+                sleep(s);
+                
+                System.out.println(threadName
+                        + " -> Main balance now = $"
+                        + balance);
+                
+                sleep(s);
+
+                System.out.println(threadName
+                        + " -> "
+                        + destination.name
+                        + " balance now = $"
+                        + destination.balance);
+
+            } else {
+
+                sleep(s);
+
+                System.out.println(threadName
+                        + " REJECTED (insufficient funds)");
+            }
+
+            sleep(s);
+
+            System.out.println(threadName
+                    + " EXITING synchronized transfer()");
+        }
+    }
+
+
+    private static void printBalances(
+            BrokenAccount main,
+            BrokenAccount account1,
+            BrokenAccount account2) {
+
+        System.out.println("Main     : $" + main.balance);
+        System.out.println("Account1 : $" + account1.balance);
+        System.out.println("Account2 : $" + account2.balance);
+    }
+
+    private static void printBalances(
+            SafeAccount main,
+            SafeAccount account1,
+            SafeAccount account2) {
+
+        System.out.println("Main     : $" + main.balance);
+        System.out.println("Account1 : $" + account1.balance);
+        System.out.println("Account2 : $" + account2.balance);
+    }
+
+
+    // SLEEP HELPER
+    private static void sleep(long milliseconds) {
+
+        try {
+            Thread.sleep(milliseconds);
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+        }
+    }
+}

@@ -1,0 +1,42 @@
+package emne4Polymorphism;
+
+public class ISPDemo { //Interface Segregation Principle
+
+    public static void main(String[] args) {
+
+        Workable humanWorker = new Human();
+        Workable robot = new Robot();
+//        Eatable hungryHuman = new Human();
+
+        humanWorker.work();
+        robot.work();
+        hungryHuman.eat();
+    }
+}
+
+interface Workable {
+    void work();
+}
+
+interface Eatable {
+    void eat();
+}
+
+//small focused interfaces
+class Human implements Workable, Eatable {
+
+    public void work() {
+        System.out.println("Human working");
+    }
+
+    public void eat() {
+        System.out.println("Human eating");
+    }
+}
+
+class Robot implements Workable {
+
+    public void work() {
+        System.out.println("Robot working");
+    }
+}

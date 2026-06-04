@@ -1,0 +1,8 @@
+package emne5Interfacer;
+
+public class Snippet {
+	public static void main(String[] args) {
+		emne5Interfacer
+	}
+}
+

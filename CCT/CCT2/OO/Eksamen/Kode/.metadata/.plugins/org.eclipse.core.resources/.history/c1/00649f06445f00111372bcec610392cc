@@ -1,0 +1,92 @@
+package raceCondition;
+
+public class CounterRaceConditionDemo {
+
+    // Shared counter used by all threads
+    private static int counter = 0;
+    
+    
+    
+    
+    
+    
+    
+    // Non-Synchronized increment method
+    private static void increment() {
+        counter++;
+    }
+    
+//      // Synchronized increment method
+//    private static synchronized void increment() {
+//        counter++;
+//    }
+    
+
+    
+    
+    
+    
+    
+    
+    // Configuration
+    private static final int THREAD_COUNT = 10;
+    private static final int INCREMENTS_PER_THREAD = 10;
+
+    public static void main(String[] args) throws InterruptedException { // InterruptedException because threads
+
+        Thread[] threads = new Thread[THREAD_COUNT];
+
+        for (int i = 0; i < THREAD_COUNT; i++) {
+
+            threads[i] = new Thread(() -> {
+
+                for (int j = 0; j < INCREMENTS_PER_THREAD; j++) {
+                	//Show each threads activity
+//                    System.out.println(Thread.currentThread().getName() + " is incrementing counter");
+                    
+                    increment();
+                 
+
+                    // Small pause increases the chance of threads interfering with each other.
+                    try {
+                        Thread.sleep(0, 1);
+                    } catch (InterruptedException e) {
+                        Thread.currentThread().interrupt();
+                    }
+                }
+
+            }, "Thread-" + (i + 1));
+
+            threads[i].start();
+        }
+
+        // Wait for all threads to finish
+        for (Thread t : threads) {
+            t.join();
+        }
+
+        
+
+        System.out.println("\nCOUNTER RACE CONDITION DEMO");
+        System.out.println("Threads: " + THREAD_COUNT);
+        System.out.println("Increments per thread: " + INCREMENTS_PER_THREAD);
+        System.out.println("");
+        
+        int expected =
+                THREAD_COUNT * INCREMENTS_PER_THREAD;
+
+        System.out.println("Expected final value: " + expected); //overloaded "+"
+        System.out.println("Actual final value:   " + counter);
+        System.out.println("");
+        
+        System.out.println("Difference: " + (expected - counter));
+
+        if (counter != expected) {
+            System.out.println(
+                    "\nRace condition detected! Some increments were lost.");
+        } else {
+            System.out.println(
+                    "\nThis run happened to succeed.");
+        }
+    }
+}

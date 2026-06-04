@@ -1,0 +1,21 @@
+package emne1KlasserGenerelt;
+
+class EnKlassesAnatomi {
+
+    // ATTRIBUTE
+    private String name;
+
+    // CONSTRUCTOR
+    public EnKlassesAnatomi(String name) {
+
+        // "this" refers to THIS object's field
+        this.name = name;
+    }
+
+    // METHOD (behavior)
+    public void introduce() {
+
+        System.out.println(
+                "Hello, I'm " + name);
+    }
+}

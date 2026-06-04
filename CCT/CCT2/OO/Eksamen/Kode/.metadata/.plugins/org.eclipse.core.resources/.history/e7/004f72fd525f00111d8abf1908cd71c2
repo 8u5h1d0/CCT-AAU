@@ -1,0 +1,32 @@
+package emne1KlasserGenerelt;
+
+public class BicycleDemo {
+
+    public static void main(String[] args) {
+
+        Bicycle bike1 =
+                new Bicycle("Red");
+
+        Bicycle bike2 =
+                new Bicycle("Blue");
+        
+        Bicycle bikeNull;
+
+        bike1.ringBell();
+        bike2.ringBell();
+    }
+}
+
+class Bicycle {
+
+    String color;
+
+    public Bicycle(String color) {
+        this.color = color;
+    }
+
+    public void ringBell() {
+        System.out.println(
+                color + " bicycle: Ring Ring!");
+    }
+}

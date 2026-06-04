@@ -1,0 +1,42 @@
+package emne4PolymorphismSOLID;
+
+public class LSPDemo { //Liskov Substitution Principle
+
+    public static void main(String[] args) {
+
+        Bird b1 = new Sparrow();
+        Bird b2 = new Eagle();
+
+        b1.fly();
+        b2.fly();
+
+        // Penguin er en Bird, men kan ikke fly()
+        Bird p = new Penguin();
+        p.fly();
+    }
+}
+
+class Bird {
+    public void fly() {
+        System.out.println("Bird moving...");
+    }
+}
+
+// Subclasses skal holde kontrakten underskrevet af superclasses
+class Sparrow extends Bird {
+    public void fly() {
+        System.out.println("Sparrow flying");
+    }
+}
+
+class Eagle extends Bird {
+    public void fly() {
+        System.out.println("Eagle flying");
+    }
+}
+
+class Penguin extends Bird {
+    public void fly() {
+        System.out.println("Penguin swimming");
+    }
+}

@@ -1,0 +1,38 @@
+package emne1KlasserGenerelt;
+
+public class BicycleDemo {
+
+    public static void main(String[] args) {
+
+        Bicycle bike1 =
+                new Bicycle("Red");
+
+        Bicycle bike2 =
+                new Bicycle("Blue");
+        
+        Bicycle bikeNull = new Bicycle("Null");
+
+        bike1.ringBell();
+        bike2.ringBell();
+        bikeNull.ringBell();
+    }
+}
+
+class Bicycle {
+//	Atributter (i dette tilfælde, kun en: farve)
+    String color;
+    
+// --------------------------------------------------------------------------------------------------------------
+
+//	Metoder (i dette tilfælde to, en der sætter farven og en der ringer med klokken)
+    public Bicycle(String color) {
+    //'this' keyword
+        this.color = color;
+    }
+
+    public void ringBell() {
+        System.out.println(
+        	//color står ikke i "" fordi det er atributet af objectet der kalder metoden
+                color + " bicycle: Ring Ring!");
+    }
+}

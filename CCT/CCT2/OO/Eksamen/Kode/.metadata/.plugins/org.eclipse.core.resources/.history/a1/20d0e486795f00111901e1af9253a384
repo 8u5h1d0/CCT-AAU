@@ -1,0 +1,57 @@
+package emne3ObjekterOgDatastrukturer;
+
+import java.util.LinkedList;
+
+public class LinkedListDemo {
+
+    public static void main(String[] args) {
+
+        System.out.println("Lav en linked liste");
+
+        LinkedList<String> list = new LinkedList<>();
+        
+        System.out.println("Fyld den dynamisk");
+
+        System.out.println(list);
+        list.add("A");
+        System.out.println(list);
+        list.add("B");
+        System.out.println(list);
+        list.add("C");
+        System.out.println(list);
+
+
+        System.out.println("\nHurtig INSERT i fronten");
+
+        list.addFirst("START");
+
+        System.out.println(list);
+
+
+        System.out.println("\nSamme med INSERT i enden");
+
+        list.addLast("END");
+
+        System.out.println(list);
+
+
+        System.out.println("\nFjern første element");
+
+        list.removeFirst();
+
+        System.out.println(list);
+
+
+        System.out.println("\nTilgå ved index");
+
+        System.out.println("Index 0 = " + list.get(0));
+        System.out.println("Index 2 = " + list.get(2));
+
+
+        System.out.println("\nITERATE THROUGH NODES");
+
+        for (String item : list) {
+            System.out.println(item);
+        }
+    }
+}

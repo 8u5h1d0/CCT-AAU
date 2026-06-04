@@ -1,0 +1,31 @@
+package emne3ObjekterOgDatastrukturer;
+
+public class ObjectCreationDemo {
+
+    public static void main(String[] args) {
+
+        Bicycle b = new Bicycle();
+
+        b.demo();
+        System.out.println(b);
+        
+        Bicycle[] bikes = new Bicycle[3];
+        System.out.print("Objekt-array initialiseres til: ");
+        System.out.println(bikes[0] + "\n");
+        bikes[0] = new Bicycle();
+        System.out.println("Index: 0 = " + bikes[0] + "\n");
+        
+        	// 'new'' på en eksisternde addresse overskriver objektet
+        for (int i = 0; i < bikes.length; i++) {
+            bikes[i] = new Bicycle();
+            System.out.print("Index: " + i + " ");
+            System.out.println(bikes[i]);
+        }
+    }
+}
+
+class Bicycle {
+	public void demo() {
+		System.out.print("Jeg bor på: ");
+	}
+}

@@ -1,0 +1,59 @@
+package emne6StruktureretData;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+
+public class IteratorBugVsFixDemo {
+
+    public static void main(String[] args) {
+
+        System.out.println("VERSION 1: BUGGED)");
+        runBugDemo();
+
+        System.out.println("VERSION 2: FIXED)");
+        runFixedDemo();
+    }
+
+    //BUG VERSION
+    public static void runBugDemo() {
+
+        ArrayList<String> names = new ArrayList<>();
+
+        names.add("Alice");
+        names.add("Bob");
+        names.add("Charlie");
+
+        Iterator<String> it = names.iterator();
+
+        try {
+            while (it.hasNext()) {
+
+                System.out.println("First next(): " + it.next());
+
+                //BUG: next() without checking again
+                System.out.println("Second next(): " + it.next());
+            }
+        } catch (Exception e) {
+            System.out.println("CRASH: " + e + e.getStackTrace());
+        }
+    }
+
+    // FIXED VERSION
+    public static void runFixedDemo() {
+
+        ArrayList<String> names = new ArrayList<>();
+
+        names.add("Alice");
+        names.add("Bob");
+        names.add("Charlie");
+
+        Iterator<String> it = names.iterator();
+
+        while (it.hasNext()) {
+
+            String name = it.next();
+
+            System.out.println(name);
+        }
+    }
+}

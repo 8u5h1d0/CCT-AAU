@@ -1,0 +1,69 @@
+package emne7ThreadsDemo;
+
+import java.util.LinkedList;
+import java.util.Queue;
+
+public class JoinWaitDemo {
+
+    public static void main(String[] args) throws InterruptedException {
+
+        System.out.println("=== DEMO: join() ===");
+
+        Thread worker = new Thread(() -> {
+            try {
+                System.out.println("Worker started");
+                Thread.sleep(1000);
+                System.out.println("Worker finished");
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        });
+
+        worker.start();
+
+        System.out.println("Main waiting for worker to finish...");
+        worker.join(); // main waits until worker is done
+        System.out.println("Main resumes after worker");
+
+        System.out.println("\n=== DEMO: wait()/notifyAll() ===");
+
+        Queue<Integer> queue = new LinkedList<>();
+        Object lock = new Object();
+
+        Thread producer = new Thread(() -> {
+            try {
+                Thread.sleep(500); // simulate work
+                synchronized (lock) {
+                    queue.add(42);
+                    System.out.println("Producer added data to queue");
+                    lock.notifyAll(); // wake up waiting consumer
+                }
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        });
+
+        Thread consumer = new Thread(() -> {
+            synchronized (lock) {
+                while (queue.isEmpty()) {
+                    try {
+                        System.out.println("Consumer waiting for data...");
+                        lock.wait(); // releases lock and waits
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
+                System.out.println("Consumer got data: " + queue.poll());
+            }
+        });
+
+        consumer.start();
+        producer.start();
+
+        // wait for both to finish
+        consumer.join();
+        producer.join();
+
+        System.out.println("Demo finished");
+    }
+}
