@@ -1,0 +1,74 @@
+package emne6StruktureretData;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+
+public class ComparatorDemo {
+
+    public static void main(String[] args) {
+
+        ArrayList<Student> students = new ArrayList<>();
+
+        students.add(new Student("Alice", 30));
+        students.add(new Student("Bob", 20));
+        students.add(new Student("Charlie", 25));
+        students.add(new Student("David", 20));
+
+        System.out.println("Før SORT");
+        print(students);
+
+        // 1. Sorter efter age (ascending)
+        Comparator<Student> byAge =
+                (a, b) -> a.age - b.age;
+//        Integer.compare(a.age, b.age)
+        Collections.sort(students, byAge);
+
+        System.out.println("\nEfter SORT (by age)");
+        print(students);
+
+        // 2. Sort efter navn (alfabetisk)
+        Comparator<Student> byName =
+                (a, b) -> a.name.compareTo(b.name);
+        Collections.sort(students, byName);
+
+        System.out.println("\nEfter SORT (by name)");
+        print(students);
+
+        // 3. Stable sort demonstration
+        System.out.println("\nSTABLE SORT DEMO");
+
+        students.clear();
+
+        students.add(new Student("Albert", 20));
+        students.add(new Student("Benjamin", 30));
+        students.add(new Student("Charlie", 40));
+
+        System.out.println("Before:");
+        print(students);
+
+        Collections.sort(students,
+                (a, b) -> a.age - b.age);
+
+        System.out.println("After (same age):");
+        print(students);
+    }
+
+    public static void print(ArrayList<Student> students) {
+
+        for (Student s : students) {
+            System.out.println(s.name + " " + s.age);
+        }
+    }
+}
+
+class Student {
+
+    String name;
+    int age;
+
+    Student(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+}

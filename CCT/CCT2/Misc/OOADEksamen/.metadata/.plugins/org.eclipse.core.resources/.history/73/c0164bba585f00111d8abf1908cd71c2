@@ -1,0 +1,54 @@
+package emne1KlasserGenerelt;
+
+public class VisibilityDemo {
+
+    public static void main(String[] args) {
+
+        System.out.println("=== OUTSIDE CLASS ACCESS ===");
+
+        Animal a = new Animal();
+
+        // public → OK
+        System.out.println(a.nickname);
+
+        // protected → NOT accessible here (outside package/subclass rules apply)
+        // System.out.println(a.species); // compile error
+
+        // private → NEVER accessible outside class
+        // System.out.println(a.secretName); // compile error
+
+
+        System.out.println("\n=== SUBCLASS ACCESS ===");
+
+        Dog d = new Dog();
+        d.test();
+    }
+}
+
+
+// Base Class / Super Class
+class Animal {
+
+    private String secretName = "Privat";
+
+    protected String species = "Famillie";
+
+    public String nickname = "Offentlig";
+}
+
+
+// Subclass
+class Dog extends Animal {
+
+    public void test() {
+
+        // ❌ private: not visible
+        // System.out.println(secretName);
+
+        // ✅ protected: visible in subclass
+        System.out.println(species);
+
+        // ✅ public: visible everywhere
+        System.out.println(nickname);
+    }
+}

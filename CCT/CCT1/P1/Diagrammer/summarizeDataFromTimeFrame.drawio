@@ -1,0 +1,378 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.0.3 Chrome/140.0.7339.249 Electron/38.7.0 Safari/537.36" version="29.0.3">
+  <diagram name="Page-1" id="rEoMh3L-qsSzvCLYQ8wZ">
+    <mxGraphModel dx="1884" dy="907" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="_doGcnglyVi-OQ3j0NSA-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="_doGcnglyVi-OQ3j0NSA-1" target="_doGcnglyVi-OQ3j0NSA-2" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_doGcnglyVi-OQ3j0NSA-1" value="summarizeDataFromTimeFrame" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="318" y="40" width="215" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="_doGcnglyVi-OQ3j0NSA-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="_doGcnglyVi-OQ3j0NSA-2" target="_doGcnglyVi-OQ3j0NSA-4" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_doGcnglyVi-OQ3j0NSA-2" value="Formater &quot;secondsSpan&quot; til minutter &quot;minuteSpan&quot; og rund op" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="358" y="150" width="135" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="_doGcnglyVi-OQ3j0NSA-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="_doGcnglyVi-OQ3j0NSA-4" target="_doGcnglyVi-OQ3j0NSA-6" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_doGcnglyVi-OQ3j0NSA-4" value="Lav et &quot;tm&quot; struct &quot;startTime&quot;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="365" y="270" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="_doGcnglyVi-OQ3j0NSA-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="_doGcnglyVi-OQ3j0NSA-6" target="_doGcnglyVi-OQ3j0NSA-7" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_doGcnglyVi-OQ3j0NSA-6" value="Lav en streng &quot;timeStartChar&quot;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="365" y="380" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="_doGcnglyVi-OQ3j0NSA-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="_doGcnglyVi-OQ3j0NSA-7" target="_doGcnglyVi-OQ3j0NSA-10" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_doGcnglyVi-OQ3j0NSA-7" value="Læg timeStamp&#39;et i &quot;data&quot; for det første element (index = 0) over i streng &quot;timeStartChar&quot;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="353" y="490" width="145" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="_doGcnglyVi-OQ3j0NSA-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="_doGcnglyVi-OQ3j0NSA-10" target="_doGcnglyVi-OQ3j0NSA-13" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_doGcnglyVi-OQ3j0NSA-10" value="Kald convertStringToTmTime&lt;br&gt;for &quot;timeStartChar&quot;" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="358" y="620" width="135" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="_doGcnglyVi-OQ3j0NSA-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="_doGcnglyVi-OQ3j0NSA-13" target="_doGcnglyVi-OQ3j0NSA-16" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_doGcnglyVi-OQ3j0NSA-13" value="Returnerer &quot;tm&quot; struct af timeStamp delen af &quot;data&quot; for index 0" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="533" y="730" width="126" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="_doGcnglyVi-OQ3j0NSA-50" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="_doGcnglyVi-OQ3j0NSA-16" target="_doGcnglyVi-OQ3j0NSA-40" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_doGcnglyVi-OQ3j0NSA-16" value="Gem resultatet&lt;br&gt;i &quot;startTime&quot;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="365" y="730" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="_doGcnglyVi-OQ3j0NSA-28" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="365" y="840" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="_doGcnglyVi-OQ3j0NSA-39" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="_doGcnglyVi-OQ3j0NSA-40" target="_doGcnglyVi-OQ3j0NSA-42" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_doGcnglyVi-OQ3j0NSA-40" value="Lav et &quot;tm&quot; struct &quot;endTimeMax&quot;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="365" y="840" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="_doGcnglyVi-OQ3j0NSA-41" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="_doGcnglyVi-OQ3j0NSA-42" target="_doGcnglyVi-OQ3j0NSA-44" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_doGcnglyVi-OQ3j0NSA-42" value="Lav en streng &quot;timeEndChar&quot;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="365" y="950" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="_doGcnglyVi-OQ3j0NSA-43" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="_doGcnglyVi-OQ3j0NSA-44" target="_doGcnglyVi-OQ3j0NSA-46" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_doGcnglyVi-OQ3j0NSA-44" value="Læg timeStamp&#39;et i &quot;data&quot; for det sidste element (index = &quot;arraySize&quot; - 1) over i streng &quot;timeEndChar&quot;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="353" y="1060" width="145" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="_doGcnglyVi-OQ3j0NSA-45" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="_doGcnglyVi-OQ3j0NSA-46" target="_doGcnglyVi-OQ3j0NSA-48" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_doGcnglyVi-OQ3j0NSA-46" value="Kald convertStringToTmTime&lt;br&gt;for &quot;timeEndChar&quot;" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="358" y="1190" width="135" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="_doGcnglyVi-OQ3j0NSA-47" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="_doGcnglyVi-OQ3j0NSA-48" target="_doGcnglyVi-OQ3j0NSA-49" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_doGcnglyVi-OQ3j0NSA-48" value="Returnerer &quot;tm&quot; struct af timeStamp delen af &quot;data&quot; for index 0" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="533" y="1300" width="126" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="_doGcnglyVi-OQ3j0NSA-52" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="_doGcnglyVi-OQ3j0NSA-49" target="_doGcnglyVi-OQ3j0NSA-51" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_doGcnglyVi-OQ3j0NSA-49" value="Gem resultatet&lt;br&gt;i &quot;endTimeMax&quot;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="365" y="1300" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="_doGcnglyVi-OQ3j0NSA-54" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="_doGcnglyVi-OQ3j0NSA-51" target="_doGcnglyVi-OQ3j0NSA-53" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_doGcnglyVi-OQ3j0NSA-51" value="Lav int &quot;endTimeMaxInt&quot; sat til den maksimale tid i sekunder (epoch)" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="365" y="1410" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="_doGcnglyVi-OQ3j0NSA-64" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="_doGcnglyVi-OQ3j0NSA-53" target="_doGcnglyVi-OQ3j0NSA-61" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_doGcnglyVi-OQ3j0NSA-53" value="Lav int &quot;iterations&quot; beregnet til antal minutter per iteration rundet op (gruppe)" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="363" y="1520" width="125" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="_doGcnglyVi-OQ3j0NSA-69" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="_doGcnglyVi-OQ3j0NSA-61" target="_doGcnglyVi-OQ3j0NSA-65" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_doGcnglyVi-OQ3j0NSA-71" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="_doGcnglyVi-OQ3j0NSA-61" target="_doGcnglyVi-OQ3j0NSA-70" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_doGcnglyVi-OQ3j0NSA-61" value="Er &quot;workingData&quot; &lt;br&gt;tom?" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="363" y="1640" width="125" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="_doGcnglyVi-OQ3j0NSA-62" value="Ja&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="303" y="1670" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="_doGcnglyVi-OQ3j0NSA-63" value="Nej" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="488" y="1670" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="_doGcnglyVi-OQ3j0NSA-68" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="_doGcnglyVi-OQ3j0NSA-65" target="_doGcnglyVi-OQ3j0NSA-66" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_doGcnglyVi-OQ3j0NSA-65" value="Print fejl-besked" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="243" y="1770" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="_doGcnglyVi-OQ3j0NSA-66" value="Retunerer &quot;0&quot;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="243" y="1880" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="_doGcnglyVi-OQ3j0NSA-73" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="_doGcnglyVi-OQ3j0NSA-70" target="_doGcnglyVi-OQ3j0NSA-72" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_doGcnglyVi-OQ3j0NSA-70" value="Initialiser int &quot;indexLocation&quot; sat til 0&lt;br&gt;&lt;br&gt;og kopier &quot;startTime&quot; over i et &quot;tm&quot; struct &quot;workingTime&quot;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="488" y="1770" width="142" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="_doGcnglyVi-OQ3j0NSA-77" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="_doGcnglyVi-OQ3j0NSA-72" target="_doGcnglyVi-OQ3j0NSA-74" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_doGcnglyVi-OQ3j0NSA-72" value="For hvert index &quot;i&quot; gange &quot;iterations&quot;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+          <mxGeometry x="365" y="1980" width="120" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="_doGcnglyVi-OQ3j0NSA-80" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="_doGcnglyVi-OQ3j0NSA-74" target="_doGcnglyVi-OQ3j0NSA-79" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_doGcnglyVi-OQ3j0NSA-74" value="Lav 4 ints&lt;br&gt;&quot;localIterations&quot; = 0&lt;br&gt;&quot;startingIteration&quot; = &quot;indexLocation&quot;&lt;div&gt;&quot;startingTime&quot; = &quot;workingTime&quot; i sekunder&lt;br&gt;&quot;endingTime&quot; = &quot;timeFrame&quot; i sekunder + &quot;startingTime&quot;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="272" y="2140" width="305" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="_doGcnglyVi-OQ3j0NSA-84" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="_doGcnglyVi-OQ3j0NSA-79" target="_doGcnglyVi-OQ3j0NSA-83" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_doGcnglyVi-OQ3j0NSA-90" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="_doGcnglyVi-OQ3j0NSA-79" target="_doGcnglyVi-OQ3j0NSA-85" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="526" y="2340" />
+              <mxPoint x="526" y="2450" />
+              <mxPoint x="425" y="2450" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_doGcnglyVi-OQ3j0NSA-79" value="Overstiger &lt;br&gt;&quot;endingTime&quot; &lt;br&gt;den maksimale slut tid &quot;endTimeMaxInt?" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="343" y="2260" width="163" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="_doGcnglyVi-OQ3j0NSA-81" value="Ja&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="303" y="2300" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="_doGcnglyVi-OQ3j0NSA-82" value="Nej" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="488" y="2300" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="_doGcnglyVi-OQ3j0NSA-89" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="_doGcnglyVi-OQ3j0NSA-83" target="_doGcnglyVi-OQ3j0NSA-85" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="425" y="2450" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_doGcnglyVi-OQ3j0NSA-83" value="Sæt &quot;endingTime&quot; til &quot;endTimeMaxInt&quot;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="224" y="2420" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="_doGcnglyVi-OQ3j0NSA-93" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="_doGcnglyVi-OQ3j0NSA-85" target="_doGcnglyVi-OQ3j0NSA-88" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_doGcnglyVi-OQ3j0NSA-85" value="Lav int &quot;currentTime&quot; sat til &quot;startingTime&quot;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="365" y="2520" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="_doGcnglyVi-OQ3j0NSA-95" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="_doGcnglyVi-OQ3j0NSA-88" target="_doGcnglyVi-OQ3j0NSA-94" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_doGcnglyVi-OQ3j0NSA-88" value="Lav et &quot;tm&quot; struct &quot;localTime&quot;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="365" y="2630" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="_doGcnglyVi-OQ3j0NSA-99" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="_doGcnglyVi-OQ3j0NSA-94" target="_doGcnglyVi-OQ3j0NSA-96" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_doGcnglyVi-OQ3j0NSA-94" value="Initialiser 3 doubles&lt;br&gt;&quot;top&quot;, &quot;bot&quot; og &quot;light&quot; sat til 0" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="365" y="2740" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="_doGcnglyVi-OQ3j0NSA-101" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="_doGcnglyVi-OQ3j0NSA-96" target="_doGcnglyVi-OQ3j0NSA-100" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_doGcnglyVi-OQ3j0NSA-96" value="Lav en streng &quot;localTimeChar&quot;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="365.5" y="2850" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="_doGcnglyVi-OQ3j0NSA-103" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="_doGcnglyVi-OQ3j0NSA-100" target="_doGcnglyVi-OQ3j0NSA-102" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_doGcnglyVi-OQ3j0NSA-100" value="Kopier timeStamp&#39;et i &quot;data&quot; for index &quot;indexLocation&quot; &lt;br&gt;over i streng &quot;localTimeChar&quot;" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="363" y="2960" width="125" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="_doGcnglyVi-OQ3j0NSA-109" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="_doGcnglyVi-OQ3j0NSA-102" target="_doGcnglyVi-OQ3j0NSA-104" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_doGcnglyVi-OQ3j0NSA-102" value="Mens &quot;currentTime&quot; er mindre end &quot;endingTime&quot; og &quot;indexLocation&quot; er mindre end &quot;arraySize&quot;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+          <mxGeometry x="355.5" y="3090" width="140" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="_doGcnglyVi-OQ3j0NSA-116" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="_doGcnglyVi-OQ3j0NSA-104" target="_doGcnglyVi-OQ3j0NSA-112" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_doGcnglyVi-OQ3j0NSA-104" value="Inkrement &quot;localIterations&quot;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="365.5" y="3280" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="_doGcnglyVi-OQ3j0NSA-111" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="_doGcnglyVi-OQ3j0NSA-112" target="_doGcnglyVi-OQ3j0NSA-114" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_doGcnglyVi-OQ3j0NSA-112" value="Tilføj &quot;humidityTop&quot; værdien i &quot;data&quot; for index &quot;indexLocation&quot; til &quot;top&quot;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="365.5" y="3390" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="_doGcnglyVi-OQ3j0NSA-113" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="_doGcnglyVi-OQ3j0NSA-114" target="_doGcnglyVi-OQ3j0NSA-115" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_doGcnglyVi-OQ3j0NSA-114" value="Tilføj &quot;humidityBot&quot; værdien i &quot;data&quot; for index &quot;indexLocation&quot; til &quot;bot&quot;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="365.5" y="3500" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="_doGcnglyVi-OQ3j0NSA-130" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="_doGcnglyVi-OQ3j0NSA-115" target="_doGcnglyVi-OQ3j0NSA-126" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_doGcnglyVi-OQ3j0NSA-115" value="Tilføj &quot;lightLevel&quot; værdien i &quot;data&quot; for index &quot;indexLocation&quot; til &quot;light&quot;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="365.5" y="3610" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="_doGcnglyVi-OQ3j0NSA-123" value="Kald convertStringToTmTime&lt;br&gt;for &quot;timeEndChar&quot;" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="358" y="3720" width="135" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="_doGcnglyVi-OQ3j0NSA-125" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="_doGcnglyVi-OQ3j0NSA-126" target="_doGcnglyVi-OQ3j0NSA-128" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_doGcnglyVi-OQ3j0NSA-126" value="Kald convertStringToTmTime&lt;br&gt;for &quot;localTimeChar&quot;" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="358" y="3720" width="135" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="_doGcnglyVi-OQ3j0NSA-127" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="_doGcnglyVi-OQ3j0NSA-128" target="_doGcnglyVi-OQ3j0NSA-129" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_doGcnglyVi-OQ3j0NSA-128" value="Returnerer &quot;tm&quot; struct af timeStamp delen af &quot;data&quot; for index &quot;indexLocation&quot;" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="533" y="3830" width="126" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="_doGcnglyVi-OQ3j0NSA-132" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="_doGcnglyVi-OQ3j0NSA-129" target="_doGcnglyVi-OQ3j0NSA-131" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_doGcnglyVi-OQ3j0NSA-129" value="Gem resultatet&lt;br&gt;i &quot;localTime&quot;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="365" y="3830" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="_doGcnglyVi-OQ3j0NSA-134" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="_doGcnglyVi-OQ3j0NSA-131" target="_doGcnglyVi-OQ3j0NSA-133" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_doGcnglyVi-OQ3j0NSA-131" value="Sæt &quot;currentTime&quot; til &quot;localTime&quot; i sekunder (epoch)" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="365" y="3940" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="_doGcnglyVi-OQ3j0NSA-168" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="_doGcnglyVi-OQ3j0NSA-133" target="_doGcnglyVi-OQ3j0NSA-165" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_doGcnglyVi-OQ3j0NSA-133" value="Inkrement &quot;indexLocation&quot;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="365" y="4050" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="_doGcnglyVi-OQ3j0NSA-143" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="_doGcnglyVi-OQ3j0NSA-139" target="_doGcnglyVi-OQ3j0NSA-141" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_doGcnglyVi-OQ3j0NSA-139" value="Beregn gennemsnittet af &quot;top&quot; over &quot;localIterations&quot;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="365" y="4380" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="_doGcnglyVi-OQ3j0NSA-144" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="_doGcnglyVi-OQ3j0NSA-141" target="_doGcnglyVi-OQ3j0NSA-142" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_doGcnglyVi-OQ3j0NSA-141" value="Beregn gennemsnittet af &quot;bot&quot; over &quot;localIterations&quot;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="365" y="4490" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="_doGcnglyVi-OQ3j0NSA-146" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="_doGcnglyVi-OQ3j0NSA-142" target="_doGcnglyVi-OQ3j0NSA-145" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_doGcnglyVi-OQ3j0NSA-142" value="Beregn gennemsnittet af &quot;light&quot; over &quot;localIterations&quot;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="365" y="4600" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="_doGcnglyVi-OQ3j0NSA-153" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="_doGcnglyVi-OQ3j0NSA-145" target="_doGcnglyVi-OQ3j0NSA-152" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_doGcnglyVi-OQ3j0NSA-145" value="Lav et &quot;parsed_json_t&quot; struct &quot;localIten&quot; og læg hele structen &quot;data&quot; for index &quot;startingIteration&quot;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="355" y="4710" width="140" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="_doGcnglyVi-OQ3j0NSA-155" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="_doGcnglyVi-OQ3j0NSA-152" target="_doGcnglyVi-OQ3j0NSA-154" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_doGcnglyVi-OQ3j0NSA-152" value="Læg &quot;light&quot; ind i &quot;lightLevel&quot; værdien af &quot;localItem&quot; for index &quot;startingIteration&quot;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="358" y="4840" width="135" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="_doGcnglyVi-OQ3j0NSA-157" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="_doGcnglyVi-OQ3j0NSA-154" target="_doGcnglyVi-OQ3j0NSA-156" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_doGcnglyVi-OQ3j0NSA-154" value="Læg &quot;bot&quot; ind i &quot;humidityBot&quot; værdien af &quot;localItem&quot; for index &quot;startingIteration&quot;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="354" y="4960" width="142" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="_doGcnglyVi-OQ3j0NSA-160" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="_doGcnglyVi-OQ3j0NSA-156" target="_doGcnglyVi-OQ3j0NSA-159" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_doGcnglyVi-OQ3j0NSA-156" value="Læg &quot;top&quot; ind i &quot;humidityTop&quot; værdien af &quot;localItem&quot; for index &quot;startingIteration&quot;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="354" y="5080" width="142" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="_doGcnglyVi-OQ3j0NSA-162" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="_doGcnglyVi-OQ3j0NSA-159" target="_doGcnglyVi-OQ3j0NSA-161" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_doGcnglyVi-OQ3j0NSA-159" value="Kopier hele structen af behandlet data &quot;localItem&quot; for hver index &quot;startingIteration&quot; over i &quot;workingData&quot; for index &quot;i&quot;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="346" y="5200" width="158" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="_doGcnglyVi-OQ3j0NSA-175" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="_doGcnglyVi-OQ3j0NSA-161" target="_doGcnglyVi-OQ3j0NSA-174" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_doGcnglyVi-OQ3j0NSA-161" value="Sæt &quot;workingTime&quot; til &quot;localTime&quot;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="365" y="5330" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="_doGcnglyVi-OQ3j0NSA-170" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="_doGcnglyVi-OQ3j0NSA-165" target="_doGcnglyVi-OQ3j0NSA-102" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="710" y="4240" />
+              <mxPoint x="710" y="3160" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_doGcnglyVi-OQ3j0NSA-173" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="_doGcnglyVi-OQ3j0NSA-165" target="_doGcnglyVi-OQ3j0NSA-139" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="300" y="4240" />
+              <mxPoint x="300" y="4350" />
+              <mxPoint x="425" y="4350" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_doGcnglyVi-OQ3j0NSA-165" value="Var det den sidste &lt;br&gt;index værdi, eller den sidste time værdi?" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="344" y="4160" width="163" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="_doGcnglyVi-OQ3j0NSA-166" value="Ja&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="303" y="4200" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="_doGcnglyVi-OQ3j0NSA-167" value="Nej" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="488" y="4200" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="_doGcnglyVi-OQ3j0NSA-186" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="_doGcnglyVi-OQ3j0NSA-174" target="_doGcnglyVi-OQ3j0NSA-72" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="160" y="5520" />
+              <mxPoint x="160" y="2040" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_doGcnglyVi-OQ3j0NSA-188" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="_doGcnglyVi-OQ3j0NSA-174" target="_doGcnglyVi-OQ3j0NSA-187" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_doGcnglyVi-OQ3j0NSA-174" value="Var det den sidste &lt;br&gt;&quot;iterations&quot; værdi?" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="344" y="5440" width="163" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="_doGcnglyVi-OQ3j0NSA-183" value="Nej" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="303" y="5480" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="_doGcnglyVi-OQ3j0NSA-184" value="Ja&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="485" y="5480" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="_doGcnglyVi-OQ3j0NSA-187" value="Returnerer &lt;br&gt;&quot;iterations&quot;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="507" y="5600" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,37 @@
+SPEECH CARD 5 Interfaces and Their Uses
+(Lecture 5)
+
+"Interfaces define what a class can do, without specifying how — they are the backbone of flexible, maintainable OOP design, enabling teams to work independently while guaranteeing compatibility."
+
+1. Interface = Pure Contract
+Method signatures only — no bodies, no instance fields
+Attributes = always public static final (constants)
+A class can implement multiple interfaces
+
+2. extends vs implements
+extends = ONE parent, inherits code ("is-a")
+implements = MULTIPLE interfaces, inherits contract only ("can-do")
+
+3. Abstract Class vs Interface
+Abstract class = partial implementation + contract, "is-a family"
+Interface = pure contract, "can-do capability"
+Use interface when: multiple inheritance needed, no shared state
+
+4. Interface Segregation (SOLID I)
+Don't force classes to implement methods they don't need
+Split interfaces: Shape + Circular separately
+Square implements Shape — no getRadius() needed
+
+5. Dependency Inversion (SOLID D)
+High-level modules depend on abstractions, not concrete classes
+Depend on Vehicle interface, not Bicycle class directly
+
+6. Design-by-Contract
+Agree on interfaces BEFORE coding
+Teams can work independently once interfaces are defined
+How it implemented = irrelevant, as long as contract is met
+
+7. Liskov Substitution (SOLID L)
+Subclass must be usable wherever parent is used
+Violation: Penguin.fly() throws exception
+Fix: restructure hierarchy or use interfaces

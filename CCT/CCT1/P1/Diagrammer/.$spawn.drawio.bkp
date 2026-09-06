@@ -1,0 +1,62 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.0.3 Chrome/140.0.7339.249 Electron/38.7.0 Safari/537.36" version="29.0.3">
+  <diagram name="Page-1" id="KPC_G7nlF6WWW2ZBmRpl">
+    <mxGraphModel dx="951" dy="499" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="6RxHlK_DdzaJZUPaDhn1-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="6RxHlK_DdzaJZUPaDhn1-1" target="6RxHlK_DdzaJZUPaDhn1-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6RxHlK_DdzaJZUPaDhn1-1" value="spawn.c" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="365" y="40" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6RxHlK_DdzaJZUPaDhn1-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="6RxHlK_DdzaJZUPaDhn1-2" target="6RxHlK_DdzaJZUPaDhn1-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6RxHlK_DdzaJZUPaDhn1-2" value="Alloker en streng &quot;command&quot; med en udvidet buffer" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="365" y="150" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6RxHlK_DdzaJZUPaDhn1-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="6RxHlK_DdzaJZUPaDhn1-5" target="6RxHlK_DdzaJZUPaDhn1-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6RxHlK_DdzaJZUPaDhn1-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="6RxHlK_DdzaJZUPaDhn1-5" target="6RxHlK_DdzaJZUPaDhn1-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6RxHlK_DdzaJZUPaDhn1-5" value="Er &quot;mtTwoWeeks&quot; flaget sat til true?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="360" y="260" width="130" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="6RxHlK_DdzaJZUPaDhn1-8" value="Ja" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="320" y="290" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="6RxHlK_DdzaJZUPaDhn1-9" value="Nej" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="470" y="290" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="6RxHlK_DdzaJZUPaDhn1-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="6RxHlK_DdzaJZUPaDhn1-10" target="6RxHlK_DdzaJZUPaDhn1-14">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="560" y="500" />
+              <mxPoint x="425" y="500" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6RxHlK_DdzaJZUPaDhn1-10" value="Læg en predediferet kommando med daglige tics der indstiller og kalder GNUPlot ind i &quot;command&quot;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="490" y="390" width="150" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="6RxHlK_DdzaJZUPaDhn1-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="6RxHlK_DdzaJZUPaDhn1-11" target="6RxHlK_DdzaJZUPaDhn1-14">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="290" y="500" />
+              <mxPoint x="425" y="500" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6RxHlK_DdzaJZUPaDhn1-11" value="Læg en predediferet kommando med ugentlige tics der indstiller og kalder GNUPlot in i &quot;command&quot;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="220" y="390" width="140" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="6RxHlK_DdzaJZUPaDhn1-14" value="send indholdet af &quot;command&quot; til styresystemet, der eksikvere kommandoen" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="358" y="530" width="135" height="70" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,53 @@
+package emne3ObjekterOgDatastrukturer;
+
+import java.util.HashMap;
+
+public class HashMapDemo {
+
+    public static void main(String[] args) {
+
+        System.out.println("BASIC HASHMAP");
+
+        HashMap<Integer, String> students = new HashMap<>();
+
+        students.put(1, "Alice");
+        students.put(2, "Bob");
+
+        System.out.println("Key 1 = " + students.get(1));
+        System.out.println("Key 2 = " + students.get(2));
+
+
+        System.out.println("\nMISSING KEY");
+
+        System.out.println("Key 999 = " + students.get(999));
+
+
+        System.out.println("\nNULL VALUE PROBLEM");
+
+        students.put(3, null);
+
+        System.out.println("Key 3 = " + students.get(3));
+
+
+        System.out.println("\nAMBIGUITY");
+
+        System.out.println("get(3) = " + students.get(3));
+        System.out.println("get(999) = " + students.get(999));
+
+
+        System.out.println("\nCORRECT SOLUTION (cointainsKey)");
+
+        checkKey(students, 3);
+        checkKey(students, 999);
+    }
+
+
+    public static void checkKey(HashMap<Integer, String> map, int key) {
+
+        if (map.containsKey(key)) {
+            System.out.println("Key " + key + " exists (value = " + map.get(key) + ")");
+        } else {
+            System.out.println("Key " + key + " does NOT exist");
+        }
+    }
+}

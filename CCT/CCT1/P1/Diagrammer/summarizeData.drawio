@@ -1,0 +1,423 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.0.3 Chrome/140.0.7339.249 Electron/38.7.0 Safari/537.36" version="29.0.3">
+  <diagram name="Page-1" id="5pYhp22EeeIGbV04_J3D">
+    <mxGraphModel dx="2284" dy="907" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="VdQf5ngFbDNh1bUlTCOl-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="VdQf5ngFbDNh1bUlTCOl-1" target="VdQf5ngFbDNh1bUlTCOl-2" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VdQf5ngFbDNh1bUlTCOl-1" value="summarizeData" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="365" y="40" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="VdQf5ngFbDNh1bUlTCOl-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="VdQf5ngFbDNh1bUlTCOl-2" target="VdQf5ngFbDNh1bUlTCOl-4" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VdQf5ngFbDNh1bUlTCOl-2" value="Eksisterer &lt;br&gt;&quot;data&quot; (jsonParsed), &lt;br&gt;&quot;arraySize&quot; (arraySize) og &lt;br&gt;&quot;timeFrame&quot; (timeFrame)? &lt;br&gt;Er de mere end 0?" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="325" y="140" width="200" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="VdQf5ngFbDNh1bUlTCOl-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="VdQf5ngFbDNh1bUlTCOl-4" target="VdQf5ngFbDNh1bUlTCOl-6" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VdQf5ngFbDNh1bUlTCOl-4" value="Lav et &quot;tm&quot; struct &quot;tm0&quot;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="365" y="380" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="VdQf5ngFbDNh1bUlTCOl-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="VdQf5ngFbDNh1bUlTCOl-6" target="VdQf5ngFbDNh1bUlTCOl-9" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VdQf5ngFbDNh1bUlTCOl-6" value="Kald convertStringToTmTime for første timeStamp værdi i &quot;data&quot; (index = 0)" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="348" y="480" width="155" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="VdQf5ngFbDNh1bUlTCOl-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="VdQf5ngFbDNh1bUlTCOl-9" target="VdQf5ngFbDNh1bUlTCOl-10" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VdQf5ngFbDNh1bUlTCOl-9" value="Returnerer &quot;tm&quot; struct af timeStamp delen af &quot;data&quot; for index = 0" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="539" y="600" width="126" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="VdQf5ngFbDNh1bUlTCOl-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="VdQf5ngFbDNh1bUlTCOl-10" target="VdQf5ngFbDNh1bUlTCOl-13" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VdQf5ngFbDNh1bUlTCOl-10" value="Gem resultatet&lt;br&gt;i &quot;tm0&quot;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="365" y="600" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="VdQf5ngFbDNh1bUlTCOl-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="VdQf5ngFbDNh1bUlTCOl-13" target="VdQf5ngFbDNh1bUlTCOl-15" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VdQf5ngFbDNh1bUlTCOl-13" value="Lav et &quot;tm&quot; struct &quot;tmN&quot;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="365" y="700" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="VdQf5ngFbDNh1bUlTCOl-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="VdQf5ngFbDNh1bUlTCOl-15" target="VdQf5ngFbDNh1bUlTCOl-17" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VdQf5ngFbDNh1bUlTCOl-15" value="Kald convertStringToTmTime for sidste timeStamp værdi i &quot;data&quot; &lt;br&gt;(index = &quot;arraySize&quot; - 1)" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="348" y="800" width="155" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="VdQf5ngFbDNh1bUlTCOl-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="VdQf5ngFbDNh1bUlTCOl-17" target="VdQf5ngFbDNh1bUlTCOl-18" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VdQf5ngFbDNh1bUlTCOl-17" value="Returnerer &quot;tm&quot; struct af timeStamp delen af &quot;data&quot; for index = &quot;arraySize&quot; - 1" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="539" y="920" width="126" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="VdQf5ngFbDNh1bUlTCOl-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="VdQf5ngFbDNh1bUlTCOl-18" target="VdQf5ngFbDNh1bUlTCOl-20" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VdQf5ngFbDNh1bUlTCOl-18" value="Gem resultatet&lt;br&gt;i &quot;tmN&quot;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="365" y="920" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="VdQf5ngFbDNh1bUlTCOl-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="VdQf5ngFbDNh1bUlTCOl-20" target="VdQf5ngFbDNh1bUlTCOl-22" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VdQf5ngFbDNh1bUlTCOl-20" value="Lav en &quot;time_t&quot; type &quot;start&quot; sat til &quot;tm0&quot; i sekunder (epoch)" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="365" y="1020" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="VdQf5ngFbDNh1bUlTCOl-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="VdQf5ngFbDNh1bUlTCOl-22" target="VdQf5ngFbDNh1bUlTCOl-24" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VdQf5ngFbDNh1bUlTCOl-22" value="Lav en &quot;time_t&quot; type &quot;end&quot; sat til &quot;tmN&quot; i sekunder (epoch)" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="365" y="1120" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="VdQf5ngFbDNh1bUlTCOl-27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="VdQf5ngFbDNh1bUlTCOl-24" target="VdQf5ngFbDNh1bUlTCOl-26" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VdQf5ngFbDNh1bUlTCOl-24" value="Beregn forskellen mellem &quot;end&quot; og &quot;start&quot; og gem det i en double &quot;diffSeconds&quot;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="358" y="1220" width="135" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="VdQf5ngFbDNh1bUlTCOl-33" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="VdQf5ngFbDNh1bUlTCOl-26" target="VdQf5ngFbDNh1bUlTCOl-29" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VdQf5ngFbDNh1bUlTCOl-26" value="Omregn &quot;diffSeconds&quot; til dage og gem i en int &quot;diffDays&quot;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="362" y="1330" width="127" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="VdQf5ngFbDNh1bUlTCOl-35" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="VdQf5ngFbDNh1bUlTCOl-29" target="VdQf5ngFbDNh1bUlTCOl-34" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VdQf5ngFbDNh1bUlTCOl-38" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="VdQf5ngFbDNh1bUlTCOl-29" target="VdQf5ngFbDNh1bUlTCOl-36" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="530" y="1495" />
+              <mxPoint x="530" y="1640" />
+              <mxPoint x="426" y="1640" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="VdQf5ngFbDNh1bUlTCOl-29" value="Er &quot;diffDays&quot; &lt;br&gt;større end 14?" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="363" y="1430" width="125" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="VdQf5ngFbDNh1bUlTCOl-30" value="Ja&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="320" y="1460" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="VdQf5ngFbDNh1bUlTCOl-31" value="Nej" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="470" y="1460" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="VdQf5ngFbDNh1bUlTCOl-37" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="VdQf5ngFbDNh1bUlTCOl-34" target="VdQf5ngFbDNh1bUlTCOl-36" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VdQf5ngFbDNh1bUlTCOl-34" value="Sæt &quot;*mtTwoWeeks&quot; til True" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="242" y="1560" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="VdQf5ngFbDNh1bUlTCOl-40" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="VdQf5ngFbDNh1bUlTCOl-36" target="VdQf5ngFbDNh1bUlTCOl-39" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VdQf5ngFbDNh1bUlTCOl-36" value="Formater &quot;secondsSpan&quot; til minutter &quot;minuteSpan&quot; og rund op" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="358" y="1660" width="135" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="VdQf5ngFbDNh1bUlTCOl-45" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="VdQf5ngFbDNh1bUlTCOl-39" target="VdQf5ngFbDNh1bUlTCOl-42" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VdQf5ngFbDNh1bUlTCOl-39" value="Lav int &quot;iterations&quot; beregnet til antal minutter per iteration rundet op (gruppe)" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="363" y="1770" width="125" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="VdQf5ngFbDNh1bUlTCOl-47" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="VdQf5ngFbDNh1bUlTCOl-42" target="VdQf5ngFbDNh1bUlTCOl-46" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VdQf5ngFbDNh1bUlTCOl-50" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="VdQf5ngFbDNh1bUlTCOl-42" target="VdQf5ngFbDNh1bUlTCOl-48" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="530" y="1945" />
+              <mxPoint x="530" y="2090" />
+              <mxPoint x="425" y="2090" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="VdQf5ngFbDNh1bUlTCOl-42" value="Er &quot;iterations&quot; 0?" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="363" y="1880" width="125" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="VdQf5ngFbDNh1bUlTCOl-43" value="Ja&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="320" y="1910" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="VdQf5ngFbDNh1bUlTCOl-44" value="Nej" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="470" y="1910" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="VdQf5ngFbDNh1bUlTCOl-49" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="VdQf5ngFbDNh1bUlTCOl-46" target="VdQf5ngFbDNh1bUlTCOl-48" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VdQf5ngFbDNh1bUlTCOl-46" value="Sæt &quot;iterations&quot; til 1" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="243" y="2010" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="VdQf5ngFbDNh1bUlTCOl-52" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="VdQf5ngFbDNh1bUlTCOl-48" target="VdQf5ngFbDNh1bUlTCOl-51" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VdQf5ngFbDNh1bUlTCOl-48" value="Alloker &quot;iterations&quot; antal &quot;parsed_json_t&quot; hukkomelsespladser til &quot;workingData&quot;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="365" y="2110" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="VdQf5ngFbDNh1bUlTCOl-57" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="VdQf5ngFbDNh1bUlTCOl-51" target="VdQf5ngFbDNh1bUlTCOl-55" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VdQf5ngFbDNh1bUlTCOl-59" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="VdQf5ngFbDNh1bUlTCOl-51" target="VdQf5ngFbDNh1bUlTCOl-58" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="530" y="2275" />
+              <mxPoint x="530" y="2390" />
+              <mxPoint x="425" y="2390" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="VdQf5ngFbDNh1bUlTCOl-51" value="Er &quot;workingData&quot; &lt;br&gt;tom?" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="363" y="2210" width="125" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="VdQf5ngFbDNh1bUlTCOl-53" value="Ja&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="320.5" y="2240" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="VdQf5ngFbDNh1bUlTCOl-54" value="Nej" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="470.5" y="2240" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="VdQf5ngFbDNh1bUlTCOl-55" value="&lt;font style=&quot;color: rgb(255, 14, 14);&quot;&gt;NULL&lt;/font&gt;" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="242" y="2340" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="VdQf5ngFbDNh1bUlTCOl-64" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="VdQf5ngFbDNh1bUlTCOl-58" target="VdQf5ngFbDNh1bUlTCOl-60" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VdQf5ngFbDNh1bUlTCOl-58" value="Kald summarizeDataFromTimeFrame&lt;br&gt;for &quot;workingData&quot; med summerede data, baseret på &quot;timeFrame&quot;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="333" y="2440" width="185" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="VdQf5ngFbDNh1bUlTCOl-65" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="VdQf5ngFbDNh1bUlTCOl-60" target="VdQf5ngFbDNh1bUlTCOl-62" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VdQf5ngFbDNh1bUlTCOl-60" value="Returnere &quot;iterations&quot; antal &quot;parsed_json_t&quot; grupprede data" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="580" y="2580" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="VdQf5ngFbDNh1bUlTCOl-67" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="VdQf5ngFbDNh1bUlTCOl-62" target="VdQf5ngFbDNh1bUlTCOl-66" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VdQf5ngFbDNh1bUlTCOl-62" value="Gem resultatet i int &quot;workingSize&quot;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="365" y="2580" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="VdQf5ngFbDNh1bUlTCOl-72" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="VdQf5ngFbDNh1bUlTCOl-66" target="VdQf5ngFbDNh1bUlTCOl-71" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VdQf5ngFbDNh1bUlTCOl-75" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="VdQf5ngFbDNh1bUlTCOl-66" target="VdQf5ngFbDNh1bUlTCOl-74" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="530" y="2755" />
+              <mxPoint x="530" y="2865" />
+              <mxPoint x="426" y="2865" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="VdQf5ngFbDNh1bUlTCOl-66" value="Er &quot;workingSize&quot; &lt;br&gt;tom?" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="363" y="2690" width="125" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="VdQf5ngFbDNh1bUlTCOl-69" value="Ja&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="321.5" y="2720" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="VdQf5ngFbDNh1bUlTCOl-70" value="Nej" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="471.5" y="2720" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="VdQf5ngFbDNh1bUlTCOl-71" value="&lt;font style=&quot;color: rgb(255, 14, 14);&quot;&gt;NULL&lt;/font&gt;" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="243" y="2820" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="VdQf5ngFbDNh1bUlTCOl-80" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="VdQf5ngFbDNh1bUlTCOl-74" target="VdQf5ngFbDNh1bUlTCOl-78" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VdQf5ngFbDNh1bUlTCOl-118" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="VdQf5ngFbDNh1bUlTCOl-74" target="VdQf5ngFbDNh1bUlTCOl-117" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VdQf5ngFbDNh1bUlTCOl-74" value="Er &quot;workingSize&quot;&lt;br&gt;mere end 50?" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="363" y="2910" width="125" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="VdQf5ngFbDNh1bUlTCOl-76" value="Ja&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="320" y="2940" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="VdQf5ngFbDNh1bUlTCOl-77" value="Nej" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="470" y="2940" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="VdQf5ngFbDNh1bUlTCOl-82" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="VdQf5ngFbDNh1bUlTCOl-78" target="VdQf5ngFbDNh1bUlTCOl-81" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VdQf5ngFbDNh1bUlTCOl-78" value="Initialiser en &quot;size_t&quot; type &quot;per_entry&quot; sat til 64" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="176.5" y="3030" width="128" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="VdQf5ngFbDNh1bUlTCOl-86" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="VdQf5ngFbDNh1bUlTCOl-81" target="VdQf5ngFbDNh1bUlTCOl-83" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VdQf5ngFbDNh1bUlTCOl-81" value="Ryd &quot;result&quot; og alloker 50 &quot;per_entry&quot; hukkomelsespladser" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="174.5" y="3140" width="132" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="VdQf5ngFbDNh1bUlTCOl-89" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="VdQf5ngFbDNh1bUlTCOl-83" target="VdQf5ngFbDNh1bUlTCOl-88" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VdQf5ngFbDNh1bUlTCOl-92" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="VdQf5ngFbDNh1bUlTCOl-83" target="VdQf5ngFbDNh1bUlTCOl-91" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VdQf5ngFbDNh1bUlTCOl-83" value="Eksisterer &lt;br&gt;&quot;result&quot;?" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="118" y="3260" width="125" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="VdQf5ngFbDNh1bUlTCOl-84" value="Ja&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="75.5" y="3290" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="VdQf5ngFbDNh1bUlTCOl-85" value="Nej" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="225.5" y="3290" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="VdQf5ngFbDNh1bUlTCOl-87" value="&lt;font style=&quot;color: rgb(255, 14, 14);&quot;&gt;NULL&lt;/font&gt;" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="243" y="3490" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="VdQf5ngFbDNh1bUlTCOl-90" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="VdQf5ngFbDNh1bUlTCOl-88" target="VdQf5ngFbDNh1bUlTCOl-87" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VdQf5ngFbDNh1bUlTCOl-88" value="Frigør &quot;workingData&quot;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="243" y="3390" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="VdQf5ngFbDNh1bUlTCOl-95" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="VdQf5ngFbDNh1bUlTCOl-91" target="VdQf5ngFbDNh1bUlTCOl-94" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VdQf5ngFbDNh1bUlTCOl-91" value="Kald&lt;br&gt;moreThanFiftyDatapoints&lt;br&gt;for &quot;workingSize&quot; antal &quot;workingData&quot;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-26.5" y="3390" width="144.5" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="VdQf5ngFbDNh1bUlTCOl-100" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="VdQf5ngFbDNh1bUlTCOl-93" target="VdQf5ngFbDNh1bUlTCOl-97" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VdQf5ngFbDNh1bUlTCOl-93" value="Gem resultatet i et &quot;parsed_json_t&quot; struct &quot;localData&quot;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-17.620000000000005" y="3517.5" width="126.75" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="VdQf5ngFbDNh1bUlTCOl-96" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="VdQf5ngFbDNh1bUlTCOl-94" target="VdQf5ngFbDNh1bUlTCOl-93" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VdQf5ngFbDNh1bUlTCOl-94" value="Returnere &quot;workingData&quot; skrevet ned til 50 datapunkter" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-197.5" y="3510" width="130" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="VdQf5ngFbDNh1bUlTCOl-104" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="VdQf5ngFbDNh1bUlTCOl-97" target="VdQf5ngFbDNh1bUlTCOl-101" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VdQf5ngFbDNh1bUlTCOl-108" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="VdQf5ngFbDNh1bUlTCOl-97" target="VdQf5ngFbDNh1bUlTCOl-107" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VdQf5ngFbDNh1bUlTCOl-97" value="Eksisterer &lt;br&gt;&quot;localData&quot;?" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-16.75" y="3630" width="125" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="VdQf5ngFbDNh1bUlTCOl-98" value="Ja&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="-59.25" y="3660" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="VdQf5ngFbDNh1bUlTCOl-99" value="Nej" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="90.75" y="3660" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="VdQf5ngFbDNh1bUlTCOl-105" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="VdQf5ngFbDNh1bUlTCOl-101" target="VdQf5ngFbDNh1bUlTCOl-102" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VdQf5ngFbDNh1bUlTCOl-101" value="Frigør &quot;result&quot;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="108.25" y="3760" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="VdQf5ngFbDNh1bUlTCOl-106" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="VdQf5ngFbDNh1bUlTCOl-102" target="VdQf5ngFbDNh1bUlTCOl-103" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VdQf5ngFbDNh1bUlTCOl-102" value="Frigør &quot;workingData&quot;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="108.25" y="3860" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="VdQf5ngFbDNh1bUlTCOl-103" value="&lt;font style=&quot;color: rgb(255, 14, 14);&quot;&gt;NULL&lt;/font&gt;" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="108.25" y="3960" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="VdQf5ngFbDNh1bUlTCOl-111" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="VdQf5ngFbDNh1bUlTCOl-107" target="VdQf5ngFbDNh1bUlTCOl-110" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VdQf5ngFbDNh1bUlTCOl-107" value="Kald&lt;br&gt;createStringToPass&lt;br&gt;for &quot;result&quot; baseret på &quot;localData&quot;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-146.87" y="3760" width="130.12" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="VdQf5ngFbDNh1bUlTCOl-114" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="VdQf5ngFbDNh1bUlTCOl-109" target="VdQf5ngFbDNh1bUlTCOl-113" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VdQf5ngFbDNh1bUlTCOl-109" value="Frigør &quot;localData&quot;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-146.87" y="3960" width="126.75" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="VdQf5ngFbDNh1bUlTCOl-112" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="VdQf5ngFbDNh1bUlTCOl-110" target="VdQf5ngFbDNh1bUlTCOl-109" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VdQf5ngFbDNh1bUlTCOl-110" value="createStringToPass&lt;br&gt;er en void funktion, &lt;br&gt;der omformaterer alle datapunkter af &quot;localData&quot; på hver sin linje i &quot;result&quot;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-327.5" y="3850" width="150" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="VdQf5ngFbDNh1bUlTCOl-138" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="VdQf5ngFbDNh1bUlTCOl-113" target="VdQf5ngFbDNh1bUlTCOl-115" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VdQf5ngFbDNh1bUlTCOl-113" value="Frigør &quot;workingData&quot;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-143.49" y="4050" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="VdQf5ngFbDNh1bUlTCOl-115" value="Returnerer &quot;result&quot;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="365" y="4150" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="VdQf5ngFbDNh1bUlTCOl-120" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="VdQf5ngFbDNh1bUlTCOl-117" target="VdQf5ngFbDNh1bUlTCOl-119" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VdQf5ngFbDNh1bUlTCOl-117" value="Initialiser en &quot;size_t&quot; type &quot;per_entry&quot; sat til 64" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="488" y="3040" width="128" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="VdQf5ngFbDNh1bUlTCOl-128" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="VdQf5ngFbDNh1bUlTCOl-119" target="VdQf5ngFbDNh1bUlTCOl-123" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VdQf5ngFbDNh1bUlTCOl-119" value="Ryd &quot;result&quot; og alloker &quot;workingSize&quot; antal &quot;per_entry&quot; hukkomelsespladser" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="486" y="3150" width="132" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="VdQf5ngFbDNh1bUlTCOl-122" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="VdQf5ngFbDNh1bUlTCOl-123" target="VdQf5ngFbDNh1bUlTCOl-127" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VdQf5ngFbDNh1bUlTCOl-131" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="VdQf5ngFbDNh1bUlTCOl-123" target="VdQf5ngFbDNh1bUlTCOl-130" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VdQf5ngFbDNh1bUlTCOl-123" value="Eksisterer &lt;br&gt;&quot;result&quot;?" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="971.5" y="3280" width="125" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="VdQf5ngFbDNh1bUlTCOl-124" value="Ja&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="929" y="3310" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="VdQf5ngFbDNh1bUlTCOl-125" value="Nej" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="1079" y="3310" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="VdQf5ngFbDNh1bUlTCOl-126" value="&lt;font style=&quot;color: rgb(255, 14, 14);&quot;&gt;NULL&lt;/font&gt;" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1167.5" y="3510" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="VdQf5ngFbDNh1bUlTCOl-129" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="VdQf5ngFbDNh1bUlTCOl-127" target="VdQf5ngFbDNh1bUlTCOl-126" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VdQf5ngFbDNh1bUlTCOl-127" value="Frigør &quot;workingData&quot;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1167.5" y="3410" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="VdQf5ngFbDNh1bUlTCOl-135" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="VdQf5ngFbDNh1bUlTCOl-130" target="VdQf5ngFbDNh1bUlTCOl-133" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VdQf5ngFbDNh1bUlTCOl-130" value="Kald&lt;br&gt;createStringToPass&lt;br&gt;for &quot;result&quot; baseret på &quot;localData&quot;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="850" y="3410" width="130" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="VdQf5ngFbDNh1bUlTCOl-137" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="VdQf5ngFbDNh1bUlTCOl-132" target="VdQf5ngFbDNh1bUlTCOl-134" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VdQf5ngFbDNh1bUlTCOl-132" value="Frigør &quot;localData&quot;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="844.75" y="3590" width="126.75" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="VdQf5ngFbDNh1bUlTCOl-136" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="VdQf5ngFbDNh1bUlTCOl-133" target="VdQf5ngFbDNh1bUlTCOl-132" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="VdQf5ngFbDNh1bUlTCOl-133" value="createStringToPass&lt;br&gt;er en void funktion, &lt;br&gt;der omformaterer alle datapunkter af &quot;localData&quot; på hver sin linje i &quot;result&quot;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="670" y="3492.5" width="150" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="VdQf5ngFbDNh1bUlTCOl-139" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="VdQf5ngFbDNh1bUlTCOl-134" target="VdQf5ngFbDNh1bUlTCOl-115" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="908" y="4080" />
+              <mxPoint x="425" y="4080" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="VdQf5ngFbDNh1bUlTCOl-134" value="Frigør &quot;workingData&quot;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="848.1299999999999" y="3690" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

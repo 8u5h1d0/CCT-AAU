@@ -1,0 +1,157 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.0.3 Chrome/140.0.7339.249 Electron/38.7.0 Safari/537.36" version="29.0.3">
+  <diagram name="Page-1" id="Q0lmmH1FZqa8AOzkOHWh">
+    <mxGraphModel dx="2684" dy="907" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="-qhU0tFRGGK92BsL-4HZ-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="-qhU0tFRGGK92BsL-4HZ-1" target="-qhU0tFRGGK92BsL-4HZ-2" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-qhU0tFRGGK92BsL-4HZ-1" value="selectTimeFrame" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="365" y="40" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="-qhU0tFRGGK92BsL-4HZ-6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="-qhU0tFRGGK92BsL-4HZ-2" target="-qhU0tFRGGK92BsL-4HZ-5" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-qhU0tFRGGK92BsL-4HZ-2" value="Prompt bruger om at vælge en tidsramme som data&#39;en skal gruperes efter" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="365" y="150" width="120" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="-qhU0tFRGGK92BsL-4HZ-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="-qhU0tFRGGK92BsL-4HZ-5" target="-qhU0tFRGGK92BsL-4HZ-9" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-qhU0tFRGGK92BsL-4HZ-5" value="Scan resultatet ind i en &quot;temp&quot; variable" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="365" y="260" width="120" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="-qhU0tFRGGK92BsL-4HZ-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="-qhU0tFRGGK92BsL-4HZ-9" target="-qhU0tFRGGK92BsL-4HZ-16" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-13" y="490.00000000000045" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-qhU0tFRGGK92BsL-4HZ-60" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="-qhU0tFRGGK92BsL-4HZ-9" target="-qhU0tFRGGK92BsL-4HZ-59" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-qhU0tFRGGK92BsL-4HZ-9" value="Er &quot;temp&quot; dividerbar med 1440? (minutter på en dag)" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="319" y="370" width="212" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="-qhU0tFRGGK92BsL-4HZ-12" value="Nej" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="259" y="430" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="-qhU0tFRGGK92BsL-4HZ-13" value="Ja" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="531" y="430" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="-qhU0tFRGGK92BsL-4HZ-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="-qhU0tFRGGK92BsL-4HZ-16" target="-qhU0tFRGGK92BsL-4HZ-21" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-qhU0tFRGGK92BsL-4HZ-16" value="Divider 1440 med &quot;temp&quot; og isoler brøken i &quot;dif&quot;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-30" y="590" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="-qhU0tFRGGK92BsL-4HZ-27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="-qhU0tFRGGK92BsL-4HZ-21" target="-qhU0tFRGGK92BsL-4HZ-26" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-qhU0tFRGGK92BsL-4HZ-29" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="-qhU0tFRGGK92BsL-4HZ-21" target="-qhU0tFRGGK92BsL-4HZ-28" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-qhU0tFRGGK92BsL-4HZ-21" value="Er &quot;dif&quot; mere eller mindre end 0.5?" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-70" y="730" width="200" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="-qhU0tFRGGK92BsL-4HZ-24" value="Mindre" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="-130" y="780" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="-qhU0tFRGGK92BsL-4HZ-25" value="Mere" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="130" y="780" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="-qhU0tFRGGK92BsL-4HZ-31" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="-qhU0tFRGGK92BsL-4HZ-26" target="-qhU0tFRGGK92BsL-4HZ-30" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-qhU0tFRGGK92BsL-4HZ-26" value="Lav en &quot;working&quot; værdi, så &quot;temp&quot; ikke ødelægges" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-300" y="920" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="-qhU0tFRGGK92BsL-4HZ-51" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="-qhU0tFRGGK92BsL-4HZ-28" target="-qhU0tFRGGK92BsL-4HZ-45" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-qhU0tFRGGK92BsL-4HZ-28" value="Lav en &quot;working&quot; værdi, så &quot;temp&quot; ikke ødelægges" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="246" y="920" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="-qhU0tFRGGK92BsL-4HZ-36" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="-qhU0tFRGGK92BsL-4HZ-30" target="-qhU0tFRGGK92BsL-4HZ-35" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-qhU0tFRGGK92BsL-4HZ-30" value="Inkrement &quot;working&quot;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-300" y="1060" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="-qhU0tFRGGK92BsL-4HZ-39" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="-qhU0tFRGGK92BsL-4HZ-35" target="-qhU0tFRGGK92BsL-4HZ-30" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-70" y="1310" />
+              <mxPoint x="-70" y="1090" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-qhU0tFRGGK92BsL-4HZ-41" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="-qhU0tFRGGK92BsL-4HZ-35" target="-qhU0tFRGGK92BsL-4HZ-40" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-qhU0tFRGGK92BsL-4HZ-35" value="Er &quot;working&quot; dividerbar med 1440?&amp;nbsp;" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-346" y="1200" width="212" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="-qhU0tFRGGK92BsL-4HZ-37" value="Nej" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="-134" y="1260" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="-qhU0tFRGGK92BsL-4HZ-38" value="Ja" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="-406" y="1260" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="-qhU0tFRGGK92BsL-4HZ-44" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="-qhU0tFRGGK92BsL-4HZ-40" target="-qhU0tFRGGK92BsL-4HZ-43" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-qhU0tFRGGK92BsL-4HZ-40" value="Sæt &quot;result&quot; til værdien af &quot;working&quot;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-466" y="1420" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="-qhU0tFRGGK92BsL-4HZ-43" value="Retunerer &quot;result&quot;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-466" y="1550" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="-qhU0tFRGGK92BsL-4HZ-47" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="-qhU0tFRGGK92BsL-4HZ-45" target="-qhU0tFRGGK92BsL-4HZ-46" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-qhU0tFRGGK92BsL-4HZ-45" value="Dekrement &quot;working&quot;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="246" y="1060" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="-qhU0tFRGGK92BsL-4HZ-50" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="-qhU0tFRGGK92BsL-4HZ-46" target="-qhU0tFRGGK92BsL-4HZ-45" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="130" y="1310" />
+              <mxPoint x="130" y="1090" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-qhU0tFRGGK92BsL-4HZ-58" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="-qhU0tFRGGK92BsL-4HZ-46" target="-qhU0tFRGGK92BsL-4HZ-55" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-qhU0tFRGGK92BsL-4HZ-46" value="Er &quot;working&quot; dividerbar med 1440?&amp;nbsp;" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="200" y="1200" width="212" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="-qhU0tFRGGK92BsL-4HZ-48" value="Nej" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="140" y="1260" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="-qhU0tFRGGK92BsL-4HZ-49" value="Ja" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="412" y="1260" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="-qhU0tFRGGK92BsL-4HZ-57" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="-qhU0tFRGGK92BsL-4HZ-55" target="-qhU0tFRGGK92BsL-4HZ-56" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-qhU0tFRGGK92BsL-4HZ-55" value="Sæt &quot;result&quot; til værdien af &quot;working&quot;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="411" y="1420" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="-qhU0tFRGGK92BsL-4HZ-56" value="Retunerer &quot;result&quot;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="411" y="1550" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="-qhU0tFRGGK92BsL-4HZ-62" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="-qhU0tFRGGK92BsL-4HZ-59" target="-qhU0tFRGGK92BsL-4HZ-61" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-qhU0tFRGGK92BsL-4HZ-59" value="Set &quot;result&quot; til værdien af &quot;temp&quot;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="531" y="590" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="-qhU0tFRGGK92BsL-4HZ-61" value="Retunerer &quot;result&quot;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="531" y="710" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

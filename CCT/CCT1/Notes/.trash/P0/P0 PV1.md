@@ -1,0 +1,12 @@
+- Fin problemstilling
+- behøver ikke gå TOTALT i dybten med enkelte del punket
+	- (må gerne google)
+		- slå op hvad KBH kommune selv har gang i, også selvom der måske ikke står noget konkret til toget
+- søg på AAU om boilerplate data-privacy-release
+	- 3-5 spørgsmål der er relevante, send til ham inden, kom helst a. 2 man, snak om hvordan data samles (noter, video, lyd)
+	- ikke gøre det for langt, KISS og keep to the point
+-Lære noget rent teknisk, også omkring de tekniske begrænsninger ved at bruge specifikt en arduino
+- sporvognen, busser, letbanen
+- Hvordan skal rapporten se ud
+	- start med at srkive
+

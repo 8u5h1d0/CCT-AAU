@@ -1,0 +1,62 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.0.3 Chrome/140.0.7339.249 Electron/38.7.0 Safari/537.36" version="29.0.3">
+  <diagram name="Page-1" id="Bx-MDIO-oRQ4Svb66SuO">
+    <mxGraphModel dx="1665" dy="841" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="cKBwPCXvnjmCPojEbigy-4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="cKBwPCXvnjmCPojEbigy-1" target="cKBwPCXvnjmCPojEbigy-3" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cKBwPCXvnjmCPojEbigy-1" value="writeFile" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="365" y="40" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cKBwPCXvnjmCPojEbigy-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="cKBwPCXvnjmCPojEbigy-3" target="cKBwPCXvnjmCPojEbigy-9" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cKBwPCXvnjmCPojEbigy-3" value="Opret/Åben &quot;destFileName&quot; (plant.txt)" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="365" y="160" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cKBwPCXvnjmCPojEbigy-8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="cKBwPCXvnjmCPojEbigy-9" target="cKBwPCXvnjmCPojEbigy-10" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cKBwPCXvnjmCPojEbigy-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="cKBwPCXvnjmCPojEbigy-9" target="cKBwPCXvnjmCPojEbigy-14" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="500" y="430" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="540" y="340" />
+              <mxPoint x="540" y="425" />
+              <mxPoint x="425" y="425" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cKBwPCXvnjmCPojEbigy-9" value="Er data filen tilstede?" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="368" y="280" width="113" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="cKBwPCXvnjmCPojEbigy-10" value="&lt;font style=&quot;color: rgb(255, 14, 14);&quot;&gt;fejl-besked&lt;/font&gt;" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="170" y="310" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cKBwPCXvnjmCPojEbigy-11" value="Nej" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="303" y="300" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="cKBwPCXvnjmCPojEbigy-12" value="Ja" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="483" y="300" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="cKBwPCXvnjmCPojEbigy-18" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="cKBwPCXvnjmCPojEbigy-14" target="cKBwPCXvnjmCPojEbigy-17" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cKBwPCXvnjmCPojEbigy-14" value="Skriv indholdet af &quot;content&quot; ind i filen" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="365" y="470" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cKBwPCXvnjmCPojEbigy-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="cKBwPCXvnjmCPojEbigy-17" target="cKBwPCXvnjmCPojEbigy-19" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cKBwPCXvnjmCPojEbigy-17" value="Luk filen" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="365" y="580" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cKBwPCXvnjmCPojEbigy-19" value="void funktion, så intet retuneres" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="365" y="690" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

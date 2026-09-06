@@ -1,0 +1,28 @@
+package threads;
+import java.util.ArrayList;
+import java.util.List;
+
+public class OutOfMemoryDemo {
+
+    public static void main(String[] args) {
+
+        List<byte[]> memoryHog = new ArrayList<>();
+
+        try {
+
+            while (true) {
+
+                // Allocate 10 MB at a time
+                memoryHog.add(new byte[10 * 1024 * 1024]);
+
+                System.out.println(
+                        "Allocated "
+                        + memoryHog.size() * 10
+                        + " MB");
+            }
+
+        } catch (OutOfMemoryError e) {
+            System.out.println("This is an Error, not an Exception.");
+        }
+    }
+}

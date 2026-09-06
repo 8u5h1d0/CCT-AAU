@@ -1,0 +1,47 @@
+ackage emne5Interfacer;
+
+public class SuperDemo {
+
+	public static void main(String[] args) {
+
+	        System.out.println("Creating Dog");
+	        SuperDog d = new SuperDog();
+	        System.out.println("\n");
+	        d.sound();
+	    }
+	}
+
+
+	// Superclass
+	class Animal {
+
+	    private String type;
+
+	    public Animal(String type) {
+	        this.type = type;
+	        System.out.println("Animal constructor: " + this.type + " created @");
+	        System.out.println(this + "\n");
+	    }
+	    
+	    public void sound() {
+	        System.out.println("Animal sound");
+	    }
+
+	}
+
+
+	// Subclass
+	class SuperDog extends Animal {
+
+	    public SuperDog() {
+	        super("Canine");
+	        System.out.println("Dog created @");
+	        System.out.print(this);
+	    }
+	    
+	    @Override
+	    public void sound() {
+	    	super.sound();
+	        System.out.println("Dog bark");
+	    }
+	}

@@ -1,0 +1,55 @@
+package emne3ObjekterOgDatastrukturer;
+
+import java.util.ArrayList;
+import java.util.Vector;
+
+public class ArrayListVectorDemo {
+
+    public static void main(String[] args) {
+
+        System.out.println("ArrayList");
+
+        ArrayList<String> arrayList = new ArrayList<>();
+
+        arrayList.add("Alice");
+        arrayList.add("Bob");
+
+        System.out.println("Første element: " + arrayList.get(0));
+        System.out.println("Størrelse: " + arrayList.size());
+        
+//        System.out.println("\n(i teorien) Kontinuerlig i hukkomelse");
+//        for (String item : arrayList) {
+//        	System.out.print("item: " + item + " | ");
+//        	System.out.println(
+//        		    Integer.toHexString(
+//        		        System.identityHashCode(item)
+//        		    )
+//        		);
+        }
+
+
+        System.out.println("\nVector");
+
+        Vector<String> vector = new Vector<>();
+
+        vector.add("Alice");
+        vector.add("Bob");
+
+        System.out.println("Første element: " + vector.get(0));
+        System.out.println("Størrelse: " + vector.size());
+
+        System.out.println("\nSIMILAR BEHAVIOR");
+
+        System.out.println("ArrayList[1] = " + arrayList.get(1));
+        System.out.println("Vector[1] = " + vector.get(1));
+
+
+        System.out.println("\nTYPE CHECK");
+
+        System.out.println("ArrayList class: "
+                + arrayList.getClass().getSimpleName());
+
+        System.out.println("Vector class: "
+                + vector.getClass().getSimpleName());
+    }
+}

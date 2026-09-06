@@ -1,0 +1,71 @@
+package emne4Polymorphism;
+
+public class CastingDemo {
+
+    public static void main(String[] args) {
+
+        System.out.println("=== 1. UPCASTING (SAFE) ===");
+
+        Vehicle v1 = new Bicycle(); // implicit upcast
+        v1.move();
+
+
+        System.out.println("\n=== 2. DOWNCASTING (SAFE CASE) ===");
+
+        Vehicle v2 = new Bicycle(); // actually a Bicycle
+        Bicycle b2 = (Bicycle) v2;   // explicit downcast
+
+        b2.move();
+        b2.pedal();
+
+
+        System.out.println("\n=== 3. DANGEROUS CAST ===");
+
+        Vehicle v3 = new Car(); // NOT a Bicycle
+
+        // Bicycle b3 = (Bicycle) v3; // ❌ would crash
+
+        if (v3 instanceof Bicycle) {
+            Bicycle safeBike = (Bicycle) v3;
+            safeBike.pedal();
+        } else {
+            System.out.println("v3 is NOT a Bicycle → cannot cast safely");
+        }
+    }
+}
+
+// =====================
+// SUPERCLASS
+// =====================
+class Vehicle {
+
+    public void move() {
+        System.out.println("Vehicle moving");
+    }
+}
+
+// =====================
+// SUBCLASS 1
+// =====================
+class Bicycle extends Vehicle {
+
+    @Override
+    public void move() {
+        System.out.println("Bicycle moving");
+    }
+
+    public void pedal() {
+        System.out.println("Bicycle pedaling");
+    }
+}
+
+// =====================
+// SUBCLASS 2
+// =====================
+class Car extends Vehicle {
+
+    @Override
+    public void move() {
+        System.out.println("Car driving");
+    }
+}

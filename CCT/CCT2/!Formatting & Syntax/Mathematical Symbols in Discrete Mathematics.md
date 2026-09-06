@@ -2233,33 +2233,33 @@ _Table 13.4: The Answer (Douglas Adams, The Hitchhiker's Guide to the Galaxy)._
 
 ### 14.1 Lowercase Greek Letters
 
-| Symbol | LaTeX | Name | Common Use in Discrete Math |
-|--------|-------|------|----------------------------|
-| $\alpha$ | `\alpha` | alpha | Constants, angles, significance level |
-| $\beta$ | `\beta` | beta | Constants, angles |
-| $\gamma$ | `\gamma` | gamma | Euler-Mascheroni constant, paths |
-| $\delta$ | `\delta` | delta | Small change, minimum degree |
-| $\epsilon$ | `\epsilon` | epsilon | Small positive quantity, error |
-| $\varepsilon$ | `\varepsilon` | epsilon (variant) | Small positive quantity |
-| $\zeta$ | `\zeta` | zeta | Riemann zeta function |
-| $\eta$ | `\eta` | eta | Various uses |
-| $\theta$ | `\theta` | theta | Angles |
-| $\iota$ | `\iota` | iota | Index variable |
-| $\kappa$ | `\kappa` | kappa | Vertex connectivity |
-| $\lambda$ | `\lambda` | lambda | Eigenvalues, edge connectivity |
-| $\mu$ | `\mu` | mu | Mean, Möbius function |
-| $\nu$ | `\nu` | nu | Various uses |
-| $\xi$ | `\xi` | xi | Variables |
-| $\pi$ | `\pi` | pi | $\approx 3.14159$, projections |
-| $\rho$ | `\rho` | rho | Relations, density |
-| $\sigma$ | `\sigma` | sigma | Standard deviation, permutations |
-| $\tau$ | `\tau` | tau | Divisor function |
-| $\upsilon$ | `\upsilon` | upsilon | Variables |
-| $\phi$ | `\phi` | phi | Golden ratio $\approx 1.618$, Euler's totient |
-| $\varphi$ | `\varphi` | phi (variant) | Euler's totient function $\varphi(n)$ |
-| $\chi$ | `\chi` | chi | Chromatic number $\chi(G)$ |
-| $\psi$ | `\psi` | psi | Various uses |
-| $\omega$ | `\omega` | omega | Clique number, roots of unity |
+| Symbol        | LaTeX         | Name              | Common Use in Discrete Math                   |
+| ------------- | ------------- | ----------------- | --------------------------------------------- |
+| $\alpha$      | `\alpha`      | alpha             | Constants, angles, significance level         |
+| $\beta$       | `\beta`       | beta              | Constants, angles                             |
+| $\gamma$      | `\gamma`      | gamma             | Euler-Mascheroni constant, paths              |
+| $\delta$      | `\delta`      | delta             | Small change, minimum degree                  |
+| $\epsilon$    | `\epsilon`    | epsilon           | Small positive quantity, error                |
+| $\varepsilon$ | `\varepsilon` | epsilon (variant) | Small positive quantity                       |
+| $\zeta$       | `\zeta`       | zeta              | Riemann zeta function                         |
+| $\eta$        | `\eta`        | eta               | Various uses                                  |
+| $\theta$      | `\theta`      | theta             | Angles                                        |
+| $\iota$       | `\iota`       | iota              | Index variable                                |
+| $\kappa$      | `\kappa`      | kappa             | Vertex connectivity                           |
+| $\lambda$     | `\lambda`     | lambda            | Eigenvalues, edge connectivity                |
+| $\mu$         | `\mu`         | mu                | Mean, Möbius function                         |
+| $\nu$         | `\nu`         | nu                | Various uses                                  |
+| $\xi$         | `\xi`         | xi                | Variables                                     |
+| $\pi$         | `\pi`         | pi                | $\approx 3.14159$, projections                |
+| $\rho$        | `\rho`        | rho               | Relations, density                            |
+| $\sigma$      | `\sigma`      | sigma             | Standard deviation, permutations              |
+| $\tau$        | `\tau`        | tau               | Divisor function                              |
+| $\upsilon$    | `\upsilon`    | upsilon           | Variables                                     |
+| $\phi$        | `\phi`        | phi               | Golden ratio $\approx 1.618$, Euler's totient |
+| $\varphi$     | `\varphi`     | phi (variant)     | Euler's totient function $\varphi(n)$         |
+| $\chi$        | `\chi`        | chi               | Chromatic number $\chi(G)$                    |
+| $\psi$        | `\psi`        | psi               | Various uses                                  |
+| $\omega$      | `\omega`      | omega             | Clique number, roots of unity                 |
 
 _Table 14.1: Lowercase Greek letters and their uses in discrete mathematics._
 

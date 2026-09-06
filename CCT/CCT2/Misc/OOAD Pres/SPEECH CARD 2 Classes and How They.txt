@@ -1,0 +1,37 @@
+SPEECH CARD 2 Classes and How They Relate
+(Lectures 2 + 3)
+
+Once we have classes, we need to model how they relate to each other — OOP gives us several types of relationships, each with different strength and different implications for object lifecycle.
+
+1. Use-Case Diagrams First
+Actors defined by role, not identity
+System = black box
+Nouns in requirements → candidate classes
+
+2. The Relationship Hierarchy
+Association < Aggregation < Composition (weakest → strongest)
+
+3. Inheritance — "is-a"
+extends keyword, single parent only in Java
+private NOT inherited, protected IS
+super() calls parent constructor — must be first line
+this = own members, super = parent members, sub = does NOT exist
+
+4. Association — "knows"
+Weakest relation — just a reference
+Independent lifecycles
+Cardinality: 0..1, 1..*, 0..* etc.
+
+5. Aggregation — "part of" ◇ open diamond
+Parts created outside the whole
+Parts survive if whole is removed
+Example: Bank and Employee (Employee passed in)
+
+6. Composition — "owns" ◆ filled diamond
+Parts created inside the whole
+Parts destroyed with the whole
+Example: Bank creates Employee internally
+
+7. UML Class Diagram
+Shows static structure, not dynamic behavior
++ public, - private, # protected

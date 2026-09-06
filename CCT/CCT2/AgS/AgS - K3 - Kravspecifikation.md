@@ -28,16 +28,16 @@ Created: 10/02/2026
 
 # Requirements and Acceptance Specifications
 
-| Concept | Description/Key Point |
-| :--- | :--- |
-| **Correctness** | The requirement is free from error and aligns with the actual need; can be tracked back to a source. |
-| **Ambiguity** | The quality of being open to more than one interpretation; should be avoided by defining specific values. |
-| **Completeness** | Ensuring all important system characteristics are captured, often verified against use cases. |
-| **Consistency** | Requirements do not contradict or counteract each other. |
-| **Priority** | Structuring requirements (e.g., MoSCoW) to handle trade-offs. |
-| **Verifications** | Ensuring the requirement can be checked or tested. |
-| **Changeability** | The ease with which a requirement can be modified later. |
-| **Traceability** | The ability to track a requirement back to its origin (use case) and forward to implementation. |
+| Concept           | Description/Key Point                                                                                     |
+| :---------------- | :-------------------------------------------------------------------------------------------------------- |
+| **Correctness**   | The requirement is free from error and aligns with the actual need; can be tracked back to a source.      |
+| **(Un)ambiguity** | The quality of being open to more than one interpretation; should be avoided by defining specific values. |
+| **Completeness**  | Ensuring all important system characteristics are captured, often verified against use cases.             |
+| **Consistency**   | Requirements do not contradict or counteract each other.                                                  |
+| **Priority**      | Structuring requirements (e.g., MoSCoW) to handle trade-offs.                                             |
+| **Verifications** | Ensuring the requirement can be checked or tested.                                                        |
+| **Changeability** | The ease with which a requirement can be modified later.                                                  |
+| **Traceability**  | The ability to track a requirement back to its origin (use case) and forward to implementation.           |
 
 > [!note] **Terminology Note: Traceability vs. Tractability**
 > The source text uses the term **Tractability**. In standard systems engineering (e.g., ISO/IEC standards), this property is formally known as **Traceability**.

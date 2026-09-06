@@ -1,0 +1,32 @@
+package emne7Threads;
+
+public class JoinExampleDemo {
+	
+    public static void main(String[] args) {
+        
+        // 1. Define the worker thread
+        Thread t = new Thread(() -> {
+            try { 
+                Thread.sleep(2000); // Simulating some wokr or calculation being done on the thread
+            } catch (Exception e) {
+                // This 'e' is local to the lambda
+            }
+            System.out.println("Worker: I'm finally done!");
+        });
+
+        // 2. Start the worker
+        System.out.println("Main: Starting the worker...");
+        t.start();
+
+        // 3. Wait for the worker (Join)
+        try {
+            System.out.println("Main: Waiting for worker to finish (join)...");
+            t.join(); 
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+           System.out.println("something went wrong with" + e);
+        }
+
+        System.out.println("Main: Okay, now that the worker is done, I can finish.");
+    }
+}

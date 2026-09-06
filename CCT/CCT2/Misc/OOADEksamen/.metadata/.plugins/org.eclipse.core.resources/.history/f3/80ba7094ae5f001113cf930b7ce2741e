@@ -1,0 +1,46 @@
+package emne4Polymorphism;
+
+public class SuperDemo {
+
+    public static void main(String[] args) {
+
+        System.out.println("--- Creating Dog ---");
+        SuperDog d = new SuperDog();
+        
+        System.out.println("\n--- Calling sound() ---");
+        d.sound();
+    }
+}
+
+// Superclass
+class SuperAnimal {
+
+    private String type;
+
+    public SuperAnimal(String type) {
+        this.type = type;
+        // Dette viser, hvordan superklassen bliver initialiseret før subklassen
+        System.out.println("Animal constructor: " + this.type + " @ " + this);
+    }
+    
+    public void sound() {
+        System.out.println("Animal sound");
+    }
+}
+
+// Subclass
+class SuperDog extends SuperAnimal {
+
+    public SuperDog() {
+        // super() SKAL være den første linje i constructoren
+        super("Canine");
+        System.out.println("Dog constructor: Dog created @ " + this);
+    }
+    
+    @Override
+    public void sound() {
+        // Vi bruger super.sound() til at genbruge logik fra forælderen
+        super.sound(); 
+        System.out.println("Dog bark");
+    }
+}

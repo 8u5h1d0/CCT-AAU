@@ -1,0 +1,54 @@
+package emne3ObjekterOgDatastrukturer;
+
+public class WrappersDemo {
+
+	 public static void main(String[] args) {
+
+	        System.out.println("PRIMITIVE");
+
+	        int agePrimitive = 25;
+	        System.out.println("Primitive age = " + agePrimitive);
+
+
+	        System.out.println("\nWRAPPER");
+
+	        Integer ageWrapper = 25; // autoboxing
+	        System.out.println("Wrapper age = " + ageWrapper);
+
+
+	        System.out.println("\nparseInt");
+
+	        String text = "123";
+	        System.out.println("non-Parsed = " + (text + 1));
+	        int number = Integer.parseInt(text);
+	        System.out.println("Parsed = " + (number + 1));
+
+
+	        System.out.println("\ntoString");
+
+	        Integer num = 123;
+	        String str = num.toString();
+
+	        System.out.println("String value = " + str);
+	        System.out.println("Som Integer = " + (num + 1));
+	        System.out.println("Som String = " + (str + 1));
+
+
+	        System.out.println("\ndoubleValue");
+
+	        Double value = num.doubleValue();
+	        System.out.println("Som Double value = " + value);
+
+
+	        System.out.println("\nFLOAT TRAP");
+
+	        // float f = 2.766; compile error
+
+	        float f1 = (float) 2.766; //cast
+	        float f2 = 2.766f;        //literal
+
+	        System.out.println("f1 = " + f1);
+	        System.out.println("f2 = " + f2);
+	    }
+	
+}

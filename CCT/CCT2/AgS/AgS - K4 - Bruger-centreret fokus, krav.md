@@ -35,14 +35,14 @@ Created: 18-02-2026
 
 # User Scenarios, Personas, and Prototypes
 
-| Concept | Description | Key Application/Context |
-| :--- | :--- | :--- |
-| **User Scenario** | A detailed, realistic description of a user's situation to explain context and motivation. | Designing solutions by understanding practical needs and behaviors. |
-| **Persona** | A fictional character created from research to represent a user type. | Guiding ideation and maintaining focus on user needs. |
-| **Prototype** | An early experimental model of a product used to test concepts. | Gathering feedback, mitigating risk, and refining design before development. |
-| **Fidelity** | The level of detail and functionality in a prototype (Low, Mid, High). | Selecting the appropriate stage of testing, from concept exploration to validation. |
-| **Prescriptive Scenario** | Describes what *should* happen, often derived from use cases (e.g., "sunny day"). | Defining system responses and specific interaction paths. |
-| **Evocative Scenario** | Provides motivation and back story to explain *how* and *why* users interact. | Promoting empathy and understanding of user context. |
+| Concept                   | Description                                                                                | Key Application/Context                                                             |
+| :------------------------ | :----------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------- |
+| **User Scenario**         | A detailed, realistic description of a user's situation to explain context and motivation. | Designing solutions by understanding practical needs and behaviors.                 |
+| **Persona**               | A fictional character created from research to represent a user type.                      | Guiding ideation and maintaining focus on user needs.                               |
+| **Prototype**             | An early experimental model of a product used to test concepts.                            | Gathering feedback, mitigating risk, and refining design before development.        |
+| **Fidelity**              | The level of detail and functionality in a prototype (Low, Mid, High).                     | Selecting the appropriate stage of testing, from concept exploration to validation. |
+| **Prescriptive Scenario** | Describes what *should* happen, often derived from use cases (e.g., "sunny day").          | Defining system responses and specific interaction paths.                           |
+| **Evocative Scenario**    | Provides motivation and back story to explain *how* and *why* users interact.              | Promoting empathy and understanding of user context.                                |
 
 _Table 1.1: Overview of core UX concepts, definitions, and their primary applications in the design process._
 

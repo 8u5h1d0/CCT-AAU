@@ -1,0 +1,40 @@
+package emne8AsynkronKommunikation;
+
+import javax.swing.*;
+import java.awt.event.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class EventDemo implements ActionListener {
+
+    public static void main(String[] args) {
+
+        // Create window (event source container)
+        JFrame frame = new JFrame("Event Demo");
+
+        // Create button (event source)
+        JButton button = new JButton("Click me");
+
+        // Create listener object
+        EventDemo demo = new EventDemo();
+
+        // Register listener
+        button.addActionListener(demo);
+
+        // Add button to frame
+        frame.add(button);
+
+        frame.setSize(300, 200);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setVisible(true);
+
+        System.out.println("Program started - waiting for events...");
+    }
+
+    // Event handler (called automatically)
+    @Override
+    public void actionPerformed(ActionEvent e) {
+
+        System.out.println("Button clicked!");
+    }
+}

@@ -1,0 +1,33 @@
+package emne1KlasserGenerelt;
+
+
+
+class KlassesAnatomi {
+
+    // ATTRIBUTE
+    private String name;
+    private int age;
+
+    // METHOD
+    public void introduceName() {
+
+        System.out.println(
+                "Hello, I'm " + name);
+    }
+    
+    // CONSTRUCTOR
+    public KlassesAnatomi(String name, int age) {
+
+        // "this" keyword
+        this.name = name;
+        this.age = age;
+    }
+    
+    public
+        
+    public static void main(String[] args) {
+    	KlassesAnatomi demo = new KlassesAnatomi("navn", 13);
+    	demo.introduceName();
+    	
+    }
+}

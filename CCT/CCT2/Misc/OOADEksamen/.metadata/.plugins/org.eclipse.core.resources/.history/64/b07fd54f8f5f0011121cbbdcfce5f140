@@ -1,0 +1,59 @@
+package emne7Threads;
+
+public class ThreadCreationDemo {
+
+    public static void main(String[] args) {
+
+        System.out.println("=== 1. extends Thread ===");
+        MyThread t1 = new MyThread();
+        t1.start();
+
+        System.out.println("\n=== 2. implements Runnable ===");
+        Thread t2 = new Thread(new MyTask());
+        t2.start();
+
+        System.out.println("\n=== 3. Lambda Runnable ===");
+        Thread t3 = new Thread(() -> {
+            System.out.println("Lambda running on: " +
+                    Thread.currentThread().getName());
+        });
+        t3.start();
+
+        System.out.println("\n=== 4. run() vs start() ===");
+
+        Thread t4 = new Thread(() -> {
+            System.out.println("Inside thread: " +
+                    Thread.currentThread().getName());
+        });
+
+        // ❌ wrong: no new thread
+        t4.run();
+
+        // ✅ correct: new thread
+        t4.start();
+    }
+}
+
+// =========================
+// OPTION 1: extends Thread
+// =========================
+class MyThread extends Thread {
+
+    @Override
+    public void run() {
+        System.out.println("MyThread running on: " +
+                Thread.currentThread().getName());
+    }
+}
+
+// =========================
+// OPTION 2: Runnable
+// =========================
+class MyTask implements Runnable {
+
+    @Override
+    public void run() {
+        System.out.println("MyTask running on: " +
+                Thread.currentThread().getName());
+    }
+}

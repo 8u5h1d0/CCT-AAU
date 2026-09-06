@@ -1,0 +1,47 @@
+package emne4PolymorphismSOLID;
+
+public class ISPDemo { //Interface Segregation Principle
+
+    public static void main(String[] args) {
+
+    	Workable robot = new Robot();
+    	// human bruger ikke eat() da den er Workable, ikke Human.
+    	Workable human = new Human();
+
+        human.work();
+        robot.work();
+        System.out.println();
+        
+        Human newHuman = new Human();
+        newHuman.work();
+        newHuman.eat();
+    }
+}
+
+interface Workable {
+    void work();
+}
+
+interface Eatable {
+    void eat();
+}
+
+//Små fokuserede interfaces
+//
+class Human implements Workable, Eatable {
+
+    public void work() {
+        System.out.println("Human working");
+    }
+
+    public void eat() {
+        System.out.println("Human eating");
+    }
+}
+
+class Robot implements Workable {
+
+    public void work() {
+        System.out.println("Robot working");
+    }
+}

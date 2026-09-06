@@ -1,0 +1,40 @@
+SPEECH CARD 4 Polymorphic Data
+(Lectures 4 + 5)
+
+"Polymorphism is one of the most powerful concepts in OOP — it allows different types to be used through a single interface, with the correct behavior chosen automatically at runtime."
+
+1. SOLID — Quick Summary
+S = one class, one job
+O = extend, don't modify
+L = subclass honors parent contract
+I = no unused interface methods
+D = depend on abstractions
+
+2. Abstract Classes
+Cannot instantiate directly — new Shape() = ERROR
+Has abstract methods (must override) + concrete methods (shared)
+Use when subclasses share some implementation
+
+3. Two Types of Polymorphism
+Static = overloading = compile-time = same class, different params
+Dynamic = overriding = runtime = subclass replaces parent method
+
+4. Static vs Dynamic Binding
+Bicycle b = new Bicycle() → static binding
+Vehicle v = new Bicycle() → dynamic binding
+Compile-time: checks methods on declared type (Vehicle)
+Runtime: executes method on actual type (Bicycle)
+
+5. Method Overriding
+Same name, same params, different class
+Uses @Override
+Enables true polymorphism — v.move() calls the right version
+
+6. Casting
+Upcast = implicit, always safe
+Downcast = explicit, may throw ClassCastException
+Always use instanceof before downcasting
+
+7. super() in Constructors
+Calls parent constructor — must be first line
+Avoids copy-pasting parent initialization

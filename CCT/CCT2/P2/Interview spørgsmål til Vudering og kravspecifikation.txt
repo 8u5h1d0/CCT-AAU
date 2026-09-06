@@ -1,0 +1,48 @@
+Vudering og kravspecifikation:
+- Hvordan vurderes de tekniske krav som stilles til de udvalgte maskiner?
+- Hvilke informationer er særligt interessante som ikke tilgængelig gøres nu, eller er urimeligt besværlige at finde?
+	-- Hvilken information savner I mest i dag, når I skal evaluere og sammenligne maskiner?
+- Hvilken performance-tier er maskiner normal tiltænkt? Er det en officemaskine, en development-maskine eller noget som grafisk design?
+- Hvem definerer de tekniske minimumskrav til maskiner – IT, slutbrugere eller begge i fællesskab?
+- Hvilke tekniske egenskaber er sværest at vurdere inden købet – og hvordan kompenserer I for dette?
+- Hvordan fastsætter I disse minimumskrav til hardware — tager I udgangspunkt i softwarekravene?
+	-- Hvilken rolle spiller batterilevetid i jeres valg af model — er det et aktivt krav eller noget I accepterer som en trade-off?
+
+
+Informationssamling
+- Hvordan indsamler I i dag information om specifikationer, supportbetingelser og livscyklus – og hvor er processen mest besværlig?
+	-- Er det selve indsamlingen? Sammenligning mellem forskellige modeler? "det med småt"? andet?
+- Hvor meget ekstern research (Google, leverandørkontakt) var nødvendig for at tage de forskellige beslutninger om hardware?
+- Den information i eftersøger, hvor realistiskt tror du det er, at det er noget leverandøren overhovedet besidder og kan/må dele med jeg som indkøber/kunde?
+- Hvordan foregår forhandling og konkurence leverandører imellem? Er det f.eks. altid laveste byder der vinder, "koste hvad det vil"?
+	-- Hvad er standard serviceaftalerne, når man køber laptops fra en leverandør — og hvor god en aftale kan man få i din optik?
+	-- Hvordan evaluerer I en leverandørs support, før I forpligter jer til en aftale?
+- Hvis du var absollut øverst befalende hvad ville du ændre omkring jeres procurement og research process?
+
+
+Up-to-date
+- Hvor vigtigt er det, at indkøbte maskiner er de nyeste modeller – og hvad driver et krav som dette (brugerpres, sikkerhed, performance)?
+	-- Hvilke konsekvenser oplever I, når maskiner er 1-2 generationer bagud?
+	-- Hvordan balancerer I ønsket om nyeste modeller med budgetbegrænsninger og indkøbscyklusser?
+- Hvor ofte reviderer I jeres standardmodel, og hvad er typisk den udløsende faktor — hardware-generation, brugerfeedback eller noget andet?
+- Har I et fast review-interval for jeres IT-politik, eller sker opdateringer primært reaktivt?
+
+
+Beslutning
+- Hvad er grundlaget for f.eks. valget af RAM-størrelse?
+- Hvornår giver det mening at tilkøbe features som SIM-kort eller OLED-skærm frem for at vælge fra?
+	-- Er det f.eks "frirum" i budget på den enkelte enhed, hvor man som beslutningstager kan vælge et "nice-to-have" feature til eller fra på egen autoritet? Eksempeltvis touch vs. no-touch skærm, eller IPS vs. LED.
+- Hvordan håndterer I edge cases, hvor en bruger har behov der falder uden for standardkonfigurationen?
+	-- Hvordan skelner I mellem et brugerbehov og et brugønske, når nogen beder om hardware uden for standard?
+- Bruger I et formelt beslutningsoplæg og beslutningsprocesser som MCDM, når I skal godkende indkøb af en ny standardmodel, og hvem skal godkende det?
+- Hvordan afbalancerer I hensynet til brugertilfredshed og IT-standardisering, når de to trækker i hver sin retning?
+- Har I erfaring med at skifte producent, og hvad var de vigtigste faktorer i den beslutning?
+	-- Hvis en konkurerende leverandør skulle "stjæle" jer fra jeres nuværende leverandør, hvad skulle de så give jer, eller løse af problemer? Hvad skal der til at få jer til skifte?
+	-- Hvor stor er leverandør-loyaliteten, og hvor højt vægtes forhold organisationerne imellem?
+
+
+Håndhævelse
+- Hvordan validerer I, at en maskines specifikationer faktisk lever op til de daglige arbejdsbehov i praksis?
+- Hvis et product svigter og ikke lever op til jeres krav, hvad gør i ved det? Kontaktes leverandøren?
+- Hvor meget ansvar/selv-risiko står i med, mht. f.eks svigt, skade, andet? Erstattes "ødelagte" modeler? 
+- Hvad har "recourse" skulle ene leverandør fejle med at opholde sin aftale? Ville dette påvirke leverandørens fremtidige kontrakt-chancer?

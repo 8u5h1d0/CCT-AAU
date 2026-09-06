@@ -1,0 +1,40 @@
+SPEECH CARD 9 Exceptions and I/O
+(Lecture 10)
+
+"Exceptions are not about shortcuts — they are about organisation. They let us separate where something goes wrong from where we deal with it, keeping our happy-path code clean and our error handling explicit."
+
+1. Why Exceptions Exist
+Traditional C: error codes buried in nested if/else, nothing forces handling
+Java exceptions: happy-path code is clean, errors handled separately
+Key insight: separate location of error from handling of error
+
+2. Exception Hierarchy
+Throwable → Error (JVM catastrophe, don't catch) + Exception
+Exception → Checked + RuntimeException (Unchecked)
+Checked = compiler enforces, outside your control
+Unchecked = programmer mistakes, compiler doesn't force
+
+3. Checked vs Unchecked
+Checked: IOException, FileNotFoundException, SQLException
+Unchecked: NullPointerException, ArrayIndexOutOfBounds, ClassCastException
+All unchecked exceptions are preventable with defensive coding
+
+4. Catching Order — CRITICAL
+Specific FIRST, general LAST
+Broad catch first → all specific catches are dead code!
+Never silently swallow: catch(Exception e) { } = worst practice
+
+5. Custom Exceptions
+extends Exception (checked) or RuntimeException (unchecked)
+Add domain-specific methods: getAmount(), getFileName()
+Name descriptively: InsufficientFundsException not MyException
+
+6. finally Block
+Always executes — success or exception, caught or not
+Use for: releasing locks, resetting DB state, non-AutoCloseable resources
+Modern alternative: try-with-resources (preferred)
+
+7. When NOT to Use Exceptions
+Not for control flow — don't use EOFException as a loop break
+Not for expected conditions — use containsKey() not catch
+Never silently swallow — always do something meaningful

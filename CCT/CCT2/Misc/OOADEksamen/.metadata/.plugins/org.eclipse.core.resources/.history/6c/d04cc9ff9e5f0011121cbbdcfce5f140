@@ -1,0 +1,24 @@
+package emne9IoErrorsExceptionsOgAndet;
+
+public class CustomExceptionDemo {
+
+    public static void main(String[] args) {
+
+        BankAccount account = new BankAccount(100);
+
+        System.out.println("=== CHECKED EXCEPTION ===");
+
+        try {
+            account.withdrawChecked(150);
+        } catch (InsufficientFundsException e) {
+            System.out.println("ERROR: " + e.getMessage());
+            System.out.println("Missing amount: " + e.getAmount());
+        }
+
+        System.out.println("\n=== UNCHECKED EXCEPTION ===");
+
+        account.withdrawUnchecked(200);
+
+        System.out.println("Program continues...");
+    }
+}

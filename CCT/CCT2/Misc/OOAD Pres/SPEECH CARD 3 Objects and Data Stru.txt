@@ -1,0 +1,37 @@
+SPEECH CARD 3 Objects and Data Structures
+(Lectures 2 + 4)
+
+"Java provides a rich set of built-in data structures, each designed for specific access patterns — and understanding when to use which one is a core skill in OOP design."
+
+1. Object Creation
+Bicycle b = new Bicycle();
+Reference variable on stack → object on heap
+Object array → initialises to null → must new each element
+
+2. Primitives vs Wrappers
+int → Integer, double → Double etc.
+Primitives: stack, by value. Wrappers: heap, by reference
+Key methods: parseInt(), toString(), doubleValue()
+Default float = double → cast needed: (float) 2.766
+
+3. Arrays
+Fixed size, O(1) access
+Object arrays init to null — common trap
+
+4. ArrayList vs Vector
+Both dynamic, both implement List
+ArrayList = NOT synchronized (modern)
+Vector = synchronized (legacy)
+
+5. LinkedList
+Fast insert/delete O(1) at ends
+Slow random access O(n)
+
+6. Stack (LIFO) vs Queue (FIFO)
+Stack: push(), pop(), peek() — undo, backtracking
+Queue: add(), remove(), peek() — print jobs, ordering
+
+7. HashMap
+Key→value, O(1) average
+get() returns null for missing key AND for stored null
+Use containsKey() to distinguish!

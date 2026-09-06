@@ -1,0 +1,42 @@
+SPEECH CARD 7 Multi-threading
+(Lectures 7 + 8)
+
+"Threads allow multiple tasks to run concurrently within a single program — they share memory which makes communication cheap, but also introduces race conditions and synchronization challenges that must be carefully managed."
+
+1. Process vs Thread
+Process = separate memory, isolated, expensive switch
+Thread = shared memory, cheap switch, own stack
+Each thread MUST have its own stack — architecturally necessary
+
+2. Creating Threads
+extends Thread — simpler, wastes inheritance slot
+implements Runnable — preferred, separates task from mechanism
+Lambda: new Thread(() -> { ... }).start()
+t.start() = new thread. t.run() = current thread — BIG difference!
+
+3. Thread Lifecycle
+New → Runnable → Blocked/Waiting → Terminated
+sleep(), wait(), I/O → Blocked
+notify(), time up → back to Runnable
+
+4. Race Conditions
+Shared mutable state + no synchronization = unpredictable results
+counter++ is NOT atomic — 3 operations!
+Fix: synchronized method or AtomicInteger
+
+5. Synchronization
+synchronized = one thread at a time in critical section
+Lock is on the object, not the method
+wait() releases lock and pauses
+notify() = wakes one arbitrary thread (risky)
+notifyAll() = wakes all (safe but thundering herd)
+ReentrantLock = best for multiple conditions
+
+6. Deadlock
+Thread 1 holds L1 wants L2, Thread 2 holds L2 wants L1
+Neither proceeds — both wait forever
+suspend()/resume() deprecated — causes deadlock
+
+7. join() vs wait()
+join() = wait for that specific thread to finish
+wait() = pause inside synchronized, let others update condition

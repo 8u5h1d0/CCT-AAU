@@ -1,0 +1,51 @@
+package emne8AsynkronKommunikation;
+
+import java.io.*;
+import java.net.*;
+
+public class EchoServer {
+
+    public static void main(String[] args) throws IOException {
+
+    	// Step 1
+        ServerSocket server = new ServerSocket(8080);
+        // Step 2
+        System.out.println("Server started on port 8080");
+
+        // Step 3 - // Step 8
+        while (true) {
+        	// Step 5
+            Socket client = server.accept();
+            // Step 6
+            System.out.println("Client connected: " + client.getInetAddress());
+
+            // Step 7
+            new Thread(() -> handleClient(client)).start();
+        }
+    }
+
+    private static void handleClient(Socket client) {
+
+    	// Step 9
+        try (
+            BufferedReader in = new BufferedReader(
+                    new InputStreamReader(client.getInputStream())); // byte -> char -> + buffer
+
+            PrintWriter out = new PrintWriter(
+                    client.getOutputStream(), true) // true = AUTO-FLUSH // char -> byte 
+        ) {
+
+            String line;
+
+            while ((line = in.readLine()) != null) {
+
+                System.out.println("Received: " + line);
+
+                out.println("Echo: " + line); // send back
+            }
+
+        } catch (IOException e) {
+            System.out.println("Client disconnected");
+        }
+    }
+}

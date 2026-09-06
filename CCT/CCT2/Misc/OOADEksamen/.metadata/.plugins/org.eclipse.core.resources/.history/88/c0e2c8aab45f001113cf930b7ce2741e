@@ -1,0 +1,37 @@
+package emne8AsynkronKommunikation;
+
+import java.io.*;
+import java.net.*;
+
+class TCPServer {
+
+    public static void main(String[] args) throws IOException {
+
+        ServerSocket server = new ServerSocket(8081);
+        System.out.println("Server started on port 8081");
+
+        while (true) {
+            Socket client = server.accept(); // blocks until a client connects
+            System.out.println("Client connected: " + client.getInetAddress());
+
+            // Håndter hver client i deres egen thread
+            new Thread(() -> handleClient(client)).start();
+        }
+    }
+
+    private static void handleClient(Socket client) {
+        try (
+            BufferedReader in = new BufferedReader(
+                    new InputStreamReader(client.getInputStream()));
+            PrintWriter out = new PrintWriter(client.getOutputStream(), true)
+        ) {
+            String line;
+            while ((line = in.readLine()) != null) {
+                System.out.println("Received: " + line);
+                out.print("Echo: " + line); // send back to client
+            }
+        } catch (IOException e) {
+            System.out.println("Client disconnected");
+        }
+    }
+}

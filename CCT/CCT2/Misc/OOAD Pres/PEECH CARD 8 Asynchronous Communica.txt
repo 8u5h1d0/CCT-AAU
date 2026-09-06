@@ -1,0 +1,45 @@
+PEECH CARD 8 Asynchronous Communication
+(Lectures 8 + 9)
+
+"Sequence diagrams let us model dynamic behavior over time — who communicates with whom and in what order — while Java's I/O and socket framework gives us the actual tools to implement that communication."
+
+1. Sequence Diagram Notation
+Timeline = vertical (top = earlier), messages = horizontal
+Thick arrow →► = synchronous (caller blocks)
+Thin arrow →> = asynchronous (caller continues)
+Dashed line = optional return message
+X on lifeline = participant destroyed
+Box lower = participant created mid-sequence
+
+2. Combined Fragments
+alt = if/else — mutually exclusive, ONE branch only
+opt = optional — if without else
+loop = while
+ref = reference to another diagram — reduce complexity
+
+3. MSD Best Practices
+Messages left to right
+Keep updated — obsolete = WORSE than no diagram
+Don't model every if-statement — stay at behavior level
+Fail fast, fail cheap — changes are free at design phase
+
+4. Java I/O Streams
+Byte: InputStream/OutputStream — binary
+Character: Reader/Writer — text
+Wrap for buffering: new BufferedReader(new FileReader(...))
+Try-with-resources = preferred — auto-closes resources
+
+5. TCP vs UDP
+TCP = connection-oriented, reliable, ordered
+UDP = connectionless, unreliable, possibly out-of-order
+UDP packets may arrive out of sequence — design for it!
+
+6. Socket Programming
+TCP: ServerSocket.accept() blocks until client connects
+Spawn new thread per client for multiple connections
+UDP: DatagramSocket.receive() blocks until packet arrives
+
+7. Events
+Event source fires → Event listener catches → handler runs
+No try-catch — program doesn't die on missed event
+GUI: addActionListener(this), implement actionPerformed()

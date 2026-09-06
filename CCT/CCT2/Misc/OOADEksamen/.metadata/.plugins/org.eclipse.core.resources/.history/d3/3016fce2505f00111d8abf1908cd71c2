@@ -1,0 +1,23 @@
+package emne1KlasserGenerelt;
+
+public class ImperativeDemo {
+
+    public static void main(String[] args) {
+
+    	// Først laver vi en double, og giver den værdien 100(.0)
+        double balance = 100; 
+        System.out.printf("før deposit: %d", balance);
+        System.out.println();
+
+        // Så tilføjer vi en mængde gennem deposit funktionen
+        balance = deposit(balance, 50); // balance
+        System.out.println(balance);
+    }
+
+    // deposit funktion; tager nuværende værdi af blaance, og tilføjer en givet mængde "amount"
+    public static double deposit(double balance,
+                                 double amount) {
+
+        return balance + amount;
+    }
+}

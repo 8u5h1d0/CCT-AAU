@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CCT/CCT2/P2/Buying products from whom you know, personal connections and information asymmetry in supply chain relationships.md",
+                "file": "CCT/CCT1/Notes/INCE CPH CCT1/K9 - The von Neumann Model.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Buying products from whom you know, personal connections and information asymmetry in supply chain relationships"
+              "title": "K9 - The von Neumann Model"
             }
           },
           {
@@ -70,7 +70,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": false
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-folder-closed",
               "title": "Files"
@@ -212,36 +214,36 @@
       "bases:Create new base": false
     }
   },
-  "active": "49e7abd424d99274",
+  "active": "6e2d04184066a4bc",
   "lastOpenFiles": [
-    "CCT/CCT2/P2/Systembesrkivelse.md",
-    "CCT/CCT2/P2/Overview of Existing Multi-Criteria Decision-Making (MCDM) Methods Used in Industrial Environments.md",
-    "CCT/CCT2/P2/Multi-criteria decision making approaches for supplier evaluation and selection. A literature review.md",
-    "CCT/CCT2/P2/Global B2B Buyer behavior Report.md",
-    "CCT/CCT2/P2/Buying products from whom you know, personal connections and information asymmetry in supply chain relationships.md",
-    "CCT/CCT2/P2/Claude - UML slagplan.md",
-    "CCT/CCT2/!Formatting & Syntax/Note Generation - 2.0.2.md",
-    "CCT/CCT2/DS/Originals/DS - K7 - Algo. Design - Sorting, Recursion & Greed.md",
-    "CCT/CCT2/DS/Originals/DS - K6 - Algorithm Run-Times.md",
-    "CCT/CCT2/DS/Originals/DS - K5-6 - Introduction to Algos and Correctness.md",
-    "CCT/CCT2/DS/DS - K5-6 - Introduction to Algos and Correctness.md",
-    "CCT/CCT2/DS/DS - K6 - Algorithm Run-Times.md",
+    "CCT/CCT1/Notes/INCE CPH CCT1/K8 R5 - 5.7 - 5.8.md",
+    "CCT/CCT1/Notes/INCE CPH CCT1/K5 R4 - 4.7, 4.9 - 4.11.md",
+    "CCT/CCT1/Notes/INCE CPH CCT1/K7 R5 - 5.1 - 5.5.md",
+    "CCT/CCT1/Notes/INCE CPH CCT1/K9 - The von Neumann Model.md",
+    "CCT/CCT1/Notes/INCE CPH CCT1/K3 R2 - 2.4 - 2.6 + 2.8.md",
+    "CCT/CCT1/Notes/INCE CPH CCT1/K3 R3 - 3.1 - 3.2 + 3.5.md",
+    "CCT/CCT1/Notes/INCE CPH CCT1/K4 R4 - 4.1 - 4.5.md",
+    "CCT/CCT1/Notes/INCE CPH CCT1/K1 R1 - Digital Design - 1.1-1.5.md",
+    "CCT/CCT1/Notes/INCE CPH CCT1/K2 R2 - 2.1 - 2.3.md",
+    "CCT/CCT1/Notes/INCE CPH CCT1/K2 R1 - Digital Design - 1.6 - 1.7.md",
+    "CCT/CCT2/DS/DS - K1 - Sets, Relation & Functions 1.md",
+    "CCT/CCT1/Notes/INCE CPH CCT1/K10 - The LC-3 and Data Path.md",
+    "CCT-AAU/CCT/CCT2/DS/DS - K2 - Basics of Number Theory.md",
+    "CCT-AAU/CCT/CCT2/DS/DS - K3 -Induction & Recursion.md",
+    "CCT-AAU/CCT/CCT2/DS/DS - K1 - Sets, Relation & Functions 1.md",
+    "CCT-AAU/CCT/CCT1/Notes/INCE CPH CCT1/K2 R2 - 2.1 - 2.3.md",
+    "CCT-AAU/CCT/CCT1/Notes/INCE CPH CCT1/K2 R1 - Digital Design - 1.6 - 1.7.md",
+    "CCT-AAU/CCT/CCT1/Notes/INCE CPH CCT1/K1 R1 - Digital Design - 1.1-1.5.md",
+    "CCT-AAU/CCT/CCT1/Notes/INCE CPH CCT1/K4 R4 - 4.1 - 4.5.md",
+    "CCT-AAU/CCT/CCT1/Notes/INCE CPH CCT1/K3 R3 - 3.1 - 3.2 + 3.5.md",
+    "CCT-AAU/CCT/CCT1/Notes/INCE CPH CCT1/K3 R2 - 2.4 - 2.6 + 2.8.md",
+    "CCT-AAU/CCT/CCT2/DS/DS - K5-6 - Introduction to Algos and Correctness.md",
+    "CCT-AAU/CCT/CCT1/Notes/IMPR CPH CCT1 + DC1/CHP 2 - Overview of C.md",
+    "CCT/CCT2/DS/DS - K7 - Algo Design. Sorting, Recursion & Greedy Methods.md",
+    "CCT/CCT2/DS/DS - K8 - Basic Data Structures.md",
     "CCT/CCT2/DS/DS - Template.md",
-    "CCT/CCT2/AgS/AgS - K6 - System modeling 1.md",
-    "CCT/CCT2/AgS/AgS - K7 - Modularisering og andre arkitekturdiagrammer.md",
-    "CCT/CCT2/AgS/AgS - K5 - Analyse.md",
-    "CCT/CCT2/AgS/AgS - K4 - Bruger-centreret fokus, krav.md",
-    "CCT/CCT2/AgS/AgS - K3 - Kravspecifikation.md",
-    "CCT/CCT2/AgS/AgS - K2 - SCRUM og Agile Processer.md",
     "CCT/CCT2/P2",
-    "CCT/CCT2/!Formatting & Syntax/Post-Processing - Secondary Prompts - 1.0.0.md",
-    "Untitled.md",
-    "Systembeskrivelse.md",
-    "CCT/CCT2/AgS/AgS - K1 - Intro + Udviklingsprocesser.md",
-    "CCT/CCT2/!Formatting & Syntax/Partial-Note Generation - First Pass - 1.0.0.md",
-    "CCT/CCT2/!Formatting & Syntax/GLM-4.6 - Note Generation.md",
     "CCT/CCT2/DS/Pictures/DS - K5-6 - Introduction to Algos and Correctness/Pasted image 20260321091023.png",
-    "CCT/CCT2/!Formatting & Syntax/GLM-4.6 - Partial-Note Generation - First Pass.md",
     "Pasted image 20260321101817.png",
     "CCT/CCT2/DS/Pictures/DS - K5-6 - Introduction to Algos and Correctness/Pasted image 20260321101818.png"
   ]

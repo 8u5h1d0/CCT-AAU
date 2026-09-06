@@ -1,0 +1,56 @@
+package emne3ObjekterOgDatastrukturer;
+
+import java.util.Stack;
+import java.util.Queue;
+import java.util.LinkedList;
+
+public class StackQueueDemo {
+
+    public static void main(String[] args) {
+
+        // =====================
+        // STACK (LIFO)
+        // =====================
+
+        System.out.println("=== STACK (LIFO) ===");
+
+        Stack<String> stack = new Stack<>();
+
+        stack.push("Page1");
+        stack.push("Page2");
+        stack.push("Page3");
+
+        System.out.println("Stack: " + stack);
+
+        System.out.println("\nPeek:");
+        System.out.println(stack.peek());
+
+        System.out.println("\nPop:");
+        System.out.println(stack.pop());
+
+        System.out.println("After pop: " + stack);
+
+
+        // =====================
+        // QUEUE (FIFO)
+        // =====================
+
+        System.out.println("\n=== QUEUE (FIFO) ===");
+
+        Queue<String> queue = new LinkedList<>();
+
+        queue.add("Job1");
+        queue.add("Job2");
+        queue.add("Job3");
+
+        System.out.println("Queue: " + queue);
+
+        System.out.println("\nPeek:");
+        System.out.println(queue.peek());
+
+        System.out.println("\nRemove:");
+        System.out.println(queue.remove());
+
+        System.out.println("After remove: " + queue);
+    }
+}

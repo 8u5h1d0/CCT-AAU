@@ -11,7 +11,7 @@ Litterature:
   - Digital Design, 5th ed.
 Created: 16-11-25
 ---
-- - -
+¨å- - -
 ## Table of Contents
 
 - [[#Digital Systems and Binary Numbers|Digital Systems and Binary Numbers]]

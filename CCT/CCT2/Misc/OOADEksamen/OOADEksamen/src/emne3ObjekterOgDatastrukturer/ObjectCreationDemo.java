@@ -1,0 +1,50 @@
+package emne3ObjekterOgDatastrukturer;
+
+import emne1KlasserGenerelt.BankAccount;
+
+public class ObjectCreationDemo {
+
+    public static void main(String[] args) {
+
+        Bicycle b = new Bicycle();
+
+        b.demo();
+        System.out.println(b);
+        
+        Bicycle[] bikes = new Bicycle[3];
+        System.out.println("\nObjekt-array initialiseres til: ");
+        for (int i = 0; i < bikes.length; i++) {
+            System.out.print("Index: " + i + " ");
+            System.out.println(bikes[i]);
+        }
+        
+        bikes[0] = new Bicycle();
+        String oldBike = bikes[0].toString();
+        System.out.println();
+
+        System.out.println("hvert objekt skal konstrueres individuelt:\n");
+        	// 'new'' på en eksisternde addresse overskriver objektet
+        for (int i = 0; i < bikes.length; i++) {
+        	System.out.println("Index: " + i + " " + bikes[i] + " til: ");
+            bikes[i] = new Bicycle();
+            System.out.print("Index: " + i + " ");
+            System.out.println(bikes[i] + "\n");
+        }
+        
+        System.out.println("\nEr index 0 sit tidligere jeg?");
+        if (oldBike.equals(bikes[0].toString())) {
+            System.out.println("Yeps de er det samme");
+        } else {
+            System.out.println("Nej, de er ikke det samme");
+        }
+    }
+}
+
+class Bicycle {
+	public void demo() {
+		System.out.print("Jeg bor på: ");
+	}
+}
+
+//Type           Reference    Contructor Call    Object
+//BankAccount    account =    new                BankAccount(100);

@@ -54,20 +54,20 @@ Created: 02-02-2026
 
 # System-Oriented Project Management and Development
 
-| Concept | Description |
-|---|---|
-| **System-Oriented Projects** | Projects that involve multiple components, actors, and complex interactions that must work together as a unified whole |
-| **Poka-Yoke** | Japanese concept for designing products to be fail-safe, making it impossible to put things together incorrectly |
-| **Waterfall Model** | Sequential development process with fixed phases that don't allow for returning to previous steps |
-| **Iterative Development** | Development process that allows going back steps as knowledge increases, while keeping loops as small as possible |
-| **U-Model** | Iterative development process that wraps waterfall elements in a 'U' shape, connecting requirements to acceptance tests |
-| **V-Model** | Development model illustrating the relationship between development phases and testing phases |
-| **W-Model** | Model describing the relation between time and delivery points (milestones) for synchronization |
-| **Module** | Self-contained segment of a system designed to perform a particular task while hiding implementation details |
-| **Component** | Self-contained segment of a module designed to perform a particular task while hiding implementation details |
-| **Interface** | Shared boundary between two modules or components that need to interact |
-| **Stub** | Simplified version of a module that accepts input and outputs something without full functionality |
-| **Gantt Chart** | Graphical view of the development process that shows activities, their durations, and dependencies over time |
+| Concept                      | Description                                                                                                             |
+| ---------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| **System-Oriented Projects** | Projects that involve multiple components, actors, and complex interactions that must work together as a unified whole  |
+| **Poka-Yoke**                | Japanese concept for designing products to be fail-safe, making it impossible to put things together incorrectly        |
+| **Waterfall Model**          | Sequential development process with fixed phases that don't allow for returning to previous steps                       |
+| **Iterative Development**    | Development process that allows going back steps as knowledge increases, while keeping loops as small as possible       |
+| **U-Model**                  | Iterative development process that wraps waterfall elements in a 'U' shape, connecting requirements to acceptance tests |
+| **V-Model**                  | Development model illustrating the relationship between development phases and testing phases                           |
+| **W-Model**                  | Model describing the relation between time and delivery points (milestones) for synchronization                         |
+| **Module**                   | Self-contained segment of a system designed to perform a particular task while hiding implementation details            |
+| **Component**                | Self-contained segment of a module designed to perform a particular task while hiding implementation details            |
+| **Interface**                | Shared boundary between two modules or components that need to interact                                                 |
+| **Stub**                     | Simplified version of a module that accepts input and outputs something without full functionality                      |
+| **Gantt Chart**              | Graphical view of the development process that shows activities, their durations, and dependencies over time            |
 
 ## Introduction
 
@@ -91,7 +91,7 @@ If we cannot predict problems, we also cannot plan ahead effectively in terms of
 > 
 > It is critical to train and gain knowledge of the soft skills an engineer must possess—not just technical skills, but those related to planning and executing complete product development processes.
 
-The purpose of this book is to collect useful theoretical methodologies for a structural approach to engineering and link them to real-world examples that illustrate pitfalls that seem invisible during planning but may have huge impacts on the overall product development process.
+The purpose is to collect useful theoretical methodologies for a structural approach to engineering and link them to real-world examples that illustrate pitfalls that seem invisible during planning but may have huge impacts on the overall product development process.
 
 > [!tip] **Practical Engineering**
 > 
@@ -248,7 +248,7 @@ Products have a long life after development that needs to be considered. Who wil
 
 # Project and Time Plans
 
-Planning is essential to avoid ending up with unknown work burden, hectic work hours toward deadlines, stress, and other issues. We often don't have full control over our time due to fixed appointments, courses, non-project related tasks, and private life. This chapter examines project development, its phases, and how to plan projects effectively.
+Planning is essential to avoid ending up with unknown work burden, hectic work hours toward deadlines, stress, and other issues. We often don't have full control over our time due to fixed appointments, courses, non-project related tasks, and private life.
 
 ## 2.1 The Different Phases in Product Development
 
@@ -631,10 +631,10 @@ graph TD
         P --> Q[Integration Testing]
         Q --> R[System Testing]
         R --> S[Acceptance Testing]
-        L -.-> S
-        M -.-> R
-        N -.-> Q
-        O -.-> P
+        L <-.-> S
+        M <-.-> R
+        N <-.-> Q
+        O <-.-> P
     end
     
     style Waterfall Model fill:#f9f,stroke:#333,stroke-width:2px

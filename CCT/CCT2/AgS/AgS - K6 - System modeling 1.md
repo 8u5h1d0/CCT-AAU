@@ -214,7 +214,7 @@ The boundary between a system and its environment varies in clarity:
 >[!example] **Non-Technical Boundary Decisions**
 >A system boundary may be positioned to:
 >- Allow all analysis to occur at one site
->- Avoid consulting a particularly difficult manager
+>- Avoid consulting a particularly difficult manager (rather said manager is a program/data-manager or physical person)
 >- Increase system cost so the development division must expand
 >- Align with existing organizational structures
 
@@ -380,10 +380,10 @@ _Figure 3.2: Sequence diagram showing the transfer of data to a patient record s
 
 ### Types of Structural Models
 
-| Type | Description | Purpose |
-|------|-------------|---------|
-| **Static Models** | Show the structure of the system design | Architectural design |
-| **Dynamic Models** | Show the organization of the system when executing | Runtime behavior |
+| Type               | Description                                        | Purpose              |
+| ------------------ | -------------------------------------------------- | -------------------- |
+| **Static Models**  | Show the structure of the system design            | Architectural design |
+| **Dynamic Models** | Show the organization of the system when executing | Runtime behavior     |
 
 _Table 4.1: Two types of structural models with different perspectives on system organization._
 

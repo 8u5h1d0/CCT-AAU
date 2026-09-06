@@ -1,0 +1,45 @@
+SPEECH CARD 1 Classes, Fundamentally
+(Lectures 1 + 2)
+
+Classes are the fundamental building blocks of Object-Oriented Programming — a class is a blueprint, and objects are the concrete instances created from that blueprint.
+
+1. OOP vs Imperative
+- OOP organises code around objects, which bundle data + behavior
+- Imperative focuses on sequence of instructions
+- OOP is still imperative under the hood — it's an organisational paradigm
+
+2. Class = Blueprint, Object = Instance
+- Class → cookie cutter / recipe
+- Object → the actual cookie
+- Bicycle myBike = new Bicycle();
+
+3. Anatomy of a Class
+- Attributes = state (data)
+- Methods = behavior (functions belonging to the class)
+- Constructor = same name as class, no return type, called with new
+- `this` keyword = refers to current object's own attributes
+
+4. Encapsulation — Two Concepts
+- Bundling = data + methods together in one unit
+- Information hiding = private protects internal state
+- Why: fix logic in ONE place, prevent invalid states
+
+5. Visibility Modifiers
+- private → class only
+- protected → class + subclasses
+- public → everyone
+- 
+
+6. Static Methods
+- Belong to the class, not an instance
+- Use when: no object state needed, utility function, or must run before objects exist (main())
+
+7. Java Execution
+- .java → javac → .class bytecode → JVM → output 
+- JDK = development, JRE = runtime
+- WORA = Write Once Run Anywhere via bytecode
+
+8. 
+
+Encapsulation and proper visibility control are what make OOP code maintainable — changes are localised, and the interface stays stable even when the implementation changes.
+

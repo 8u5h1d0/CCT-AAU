@@ -103,17 +103,19 @@ For example, given the matrix:
 
 $$\begin{pmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \end{pmatrix}$$
 
-- Row-major order stores it as: $\langle 1, 2, 3, 4, 5, 6 \rangle$
-- Column-major order stores it as: $\langle 1, 4, 2, 5, 3, 6 \rangle$
+- Row-major order stores it as: $\langle 1, 2, 3 \rangle$ $\langle 4, 5, 6 \rangle$ $\Rightarrow$ $\langle 1,2,3,4,5,6\rangle$ 
+$$\begin{pmatrix} 1 & 2 & 3 \\\hline 4 & 5 & 6 \end{pmatrix}$$
+- Column-major order stores it as: $\langle 1, 4 \rangle$ $\langle 2, 5 \rangle$ $\langle 3, 6 \rangle$ $\Rightarrow$ $\langle 1,4,2,5,3,6\rangle$ 
+$$\left(\begin{array}{c|c|c} 1 & 2 & 3 \\ 4 & 5 & 6 \end{array}\right)$$
 
 ### Single-Array Representation
 
 When using a single flat array, the element $M[i, j]$ (row $i$, column $j$) is located at the following index, where $s$ is the starting index:
 
-| Order | General ($s$) | 1-based ($s=1$) | 0-based ($s=0$) |
-|---|---|---|---|
-| Row-major | $s + n(i - s) + (j - s)$ | $n(i-1) + j$ | $ni + j$ |
-| Column-major | $s + m(j - s) + (i - s)$ | $i + m(j-1)$ | $i + mj$ |
+| Order        | General ($s$)            | 1-based ($s=1$) | 0-based ($s=0$) |
+| ------------ | ------------------------ | --------------- | --------------- |
+| Row-major    | $s + c(i - s) + (j - s)$ | $c(i-1) + j$    | $ci + j$        |
+| Column-major | $s + r(j - s) + (i - s)$ | $i + r(j-1)$    | $i + rj$        |
 
 _Table 1.1: Index formulas for locating element $M[i,j]$ in a flat array under row-major and column-major ordering._
 
@@ -123,8 +125,8 @@ _Table 1.1: Index formulas for locating element $M[i,j]$ in a flat array under r
 >     - **$i$** : The *row index* of the target element.
 >     - **$j$** : The *column index* of the target element.
 >     - **$s$** : The *starting index* of the array and matrix (e.g., $0$ or $1$).
->     - **$m$** : The *total number of rows* in the matrix.
->     - **$n$** : The *total number of columns* in the matrix.
+>     - **$r$ or $m$** : The *total number of rows* in the matrix.
+>     - **$c$ or $n$** : The *total number of columns* in the matrix.
 >     - **$n(i - s)$** *(row-major)*: Skips over $(i - s)$ complete rows, each of length $n$, to land at the start of the correct row.
 >     - **$m(j - s)$** *(column-major)*: Skips over $(j - s)$ complete columns, each of length $m$, to land at the start of the correct column.
 

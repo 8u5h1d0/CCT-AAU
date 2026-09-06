@@ -1,0 +1,30 @@
+package emne4PolymorphismSOLID;
+
+public class OCPDemo { //Open/Closed Principle
+
+    public static void main(String[] args) {
+
+        Shape c = new Circle();
+        Shape r = new Rectangle();
+
+        System.out.println(c.area());
+        System.out.println(r.area());
+    }
+}
+
+abstract class Shape {
+    public abstract double area();
+}
+
+//extend, ikke modify
+class Circle extends Shape {
+    public double area() {
+        return Math.PI * 10 * 10;
+    }
+}
+
+class Rectangle extends Shape {
+    public double area() {
+        return 10 * 20;
+    }
+}

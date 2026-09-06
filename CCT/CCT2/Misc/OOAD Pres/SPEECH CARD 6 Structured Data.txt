@@ -1,0 +1,39 @@
+SPEECH CARD 6 Structured Data
+(Lectures 4 + 6)
+
+"Java's collection framework is built on interfaces and inheritance — once you understand the List interface, you can work with any implementation, and iterators give us a safe, consistent way to traverse them."
+
+1. Collection Hierarchy
+Iterable → Collection → List → ArrayList, LinkedList, Vector, Stack
+List = interface — all implementations share same methods
+Learn once, use anywhere
+
+2. Iterator Pattern
+hasNext(), next(), remove()
+Safe way to traverse and remove during iteration
+Never call next() more times than hasNext() confirms
+
+3. Enhanced For-Each
+Cleaner, fewer bugs — preferred when not removing
+for (Vehicle v : train) { v.stop(); }
+Cannot safely remove during for-each
+
+4. Nested Iterator Bug
+Calling outer.next() inside inner loop → too many advances
+Fix: store outer.next() before inner loop
+Better: use enhanced for-each
+
+5. Operator Behavior
+Java does NOT allow user-defined operator overloading
+"sum: " + 1 + 2 → "sum: 12" not "sum: 3" — left to right!
+Fix: "sum: " + (1 + 2)
+
+6. Equality
+== compares references, not content
+Override equals() for meaningful comparison
+Float/double: never use == — use tolerance range
+
+7. Comparator + Collections.sort()
+Negative = a first, Zero = equal, Positive = b first
+Must be consistent: compare(a,b)==0 iff a.equals(b)
+Collections.sort() uses Timsort — O(n log n), stable

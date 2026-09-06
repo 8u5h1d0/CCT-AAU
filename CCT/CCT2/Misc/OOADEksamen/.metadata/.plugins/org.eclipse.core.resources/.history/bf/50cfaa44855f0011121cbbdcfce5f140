@@ -1,0 +1,72 @@
+package emne5Interfacer;
+
+public class InterfaceDemo {
+
+    public static void main(String[] args) {
+
+        System.out.println("=== INTERFACE POLYMORPHISM ===");
+
+        Flyable b = new Bird();
+        Flyable a = new Airplane();
+
+        b.fly();
+        a.fly();
+
+
+        System.out.println("\nMULTIPLE INTERFACES");
+
+        Duck d = new Duck();
+
+        d.fly();
+        d.swim();
+
+
+        System.out.println("\n=== INTERFACE CONSTANT ===");
+
+        System.out.println("Max speed = " + Constants.MAX_SPEED);
+    }
+}
+
+// INTERFACES
+
+interface Flyable {
+    void fly();
+}
+
+interface Swimmable {
+    void swim();
+}
+
+interface Constants {
+    int MAX_SPEED = 100; // public static final
+
+// IMPLEMENTATIONS
+
+class Bird implements Flyable {
+
+    @Override
+    public void fly() {
+        System.out.println("Bird: flapping wings");
+    }
+}
+
+class Airplane implements Flyable {
+
+    @Override
+    public void fly() {
+        System.out.println("Airplane: using engines");
+    }
+}
+
+class Duck implements Flyable, Swimmable {
+
+    @Override
+    public void fly() {
+        System.out.println("Duck: flying short distance");
+    }
+
+    @Override
+    public void swim() {
+        System.out.println("Duck: swimming on water");
+    }
+}

@@ -53,6 +53,7 @@ Created: 10/02/2026
 | **Conditional** | `if`, `else`, `switch` | Executes code blocks based on conditions. |
 | **Loops** | `for`, `while`, `do-while` | Repeats a block of code while a condition is true. |
 | **Arrays** | `type[] name` | Stores multiple values in a single variable. |
+“OOP is a programming paradigm, where software is structured around objects – small units containing both data and functionality. OOP is all about modelling the real-world using classes and objects”
 
 ---
 

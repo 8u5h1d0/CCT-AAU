@@ -1,0 +1,36 @@
+package emne8AsynkronKommunikation;
+
+import java.io.*;
+import java.net.*;
+
+// ===== CLIENT =====
+class TCPClient {
+
+    public static void main(String[] args) throws IOException {
+
+        Socket socket = new Socket("localhost", 8081);
+        System.out.println("Connected to server");
+
+        try (
+            BufferedReader in = new BufferedReader(
+                    new InputStreamReader(socket.getInputStream()));
+            PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
+            BufferedReader keyboard = new BufferedReader(
+                    new InputStreamReader(System.in))
+        ) {
+            String input;
+            while (true) {
+                System.out.print("Send: ");
+                input = keyboard.readLine();
+                if (input.equalsIgnoreCase("exit")) break;
+
+                out.println(input);
+                String response = in.readLine();
+                System.out.println("Server replied: " + response);
+            }
+        }
+
+        socket.close();
+        System.out.println("Client closed");
+    }
+}

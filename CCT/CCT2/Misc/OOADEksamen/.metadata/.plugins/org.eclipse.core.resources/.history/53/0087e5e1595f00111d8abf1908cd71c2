@@ -1,0 +1,54 @@
+package emne1KlasserGenerelt;
+
+public class VisibilityDemo {
+
+    public static void main(String[] args) {
+
+        System.out.println("Outside class kan se:");
+
+        Animal a = new Animal();
+
+        System.out.println(a.nickname); // public
+
+        // System.out.println(a.species); // protected (ikke direkte her)
+        // System.out.println(a.secretName); // private
+
+
+        System.out.println("\nSubclass kan se:");
+
+        Dog d = new Dog();
+        d.test();
+
+        System.out.println("\nAnimal method kan se:");
+
+        a.test();
+    }
+}
+
+
+// Superclass
+class Animal {
+
+    private String secretName = "Privat";
+    protected String species = "Familie";
+    public String nickname = "Offentlig";
+
+    public void test() {
+        System.out.println(secretName);
+        System.out.println(species);
+        System.out.println(nickname);
+    }
+}
+
+
+// Subclass
+class Dog extends Animal {
+
+    public void test() {
+
+        // System.out.println(secretName); // private (ikke synlig)
+
+        System.out.println(species);     // protected
+        System.out.println(nickname);    // public
+    }
+}

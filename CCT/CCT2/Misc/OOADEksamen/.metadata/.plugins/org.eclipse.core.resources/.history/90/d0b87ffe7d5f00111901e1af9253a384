@@ -1,0 +1,41 @@
+package emne4Polymorphism;
+
+public class LSPDemo {
+
+    public static void main(String[] args) {
+
+        Bird b1 = new Sparrow();
+        Bird b2 = new Eagle();
+
+        b1.move();
+        b2.move();
+
+        // Penguin is NOT used as Bird with fly()
+        Bird p = new Penguin();
+        p.move();
+    }
+}
+
+class Bird {
+    public void move() {
+        System.out.println("Bird moving...");
+    }
+}
+
+class Sparrow extends Bird {
+    public void move() {
+        System.out.println("Sparrow flying");
+    }
+}
+
+class Eagle extends Bird {
+    public void move() {
+        System.out.println("Eagle flying");
+    }
+}
+
+class Penguin extends Bird {
+    public void move() {
+        System.out.println("Penguin swimming");
+    }
+}

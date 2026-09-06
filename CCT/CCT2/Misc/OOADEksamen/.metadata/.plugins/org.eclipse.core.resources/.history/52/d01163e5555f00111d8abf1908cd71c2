@@ -1,0 +1,21 @@
+package emne1KlasserGenerelt;
+
+class Student {
+
+    // ATTRIBUTE (state)
+    private String name;
+
+    // CONSTRUCTOR
+    public Student(String name) {
+
+        // "this" refers to THIS object's field
+        this.name = name;
+    }
+
+    // METHOD (behavior)
+    public void introduce() {
+
+        System.out.println(
+                "Hello, I'm " + name);
+    }
+}

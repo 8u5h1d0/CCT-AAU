@@ -1,0 +1,55 @@
+package emne4Polymorphism;
+
+public class AbstractDemo {
+
+    public static void main(String[] args) {
+
+        // Shape s = new Shape(); ❌ not allowed (abstract)
+
+        Shape s1 = new Circle();
+        Shape s2 = new Rectangle();
+
+        System.out.println("=== Circle ===");
+        s1.printInfo();
+        System.out.println("Area = " + s1.area());
+
+        System.out.println("\n=== Rectangle ===");
+        s2.printInfo();
+        System.out.println("Area = " + s2.area());
+    }
+}
+
+// ABSTRACT CLASS
+abstract class Shape {
+
+    // abstract method (must be implemented)
+    public abstract double area();
+
+    // concrete method (shared logic)
+    public void printInfo() {
+        System.out.println("I am a shape");
+    }
+}
+
+// SUBCLASS 1
+class Circle extends Shape {
+
+    private double radius = 10;
+
+    @Override
+    public double area() {
+        return Math.PI * radius * radius;
+    }
+}
+
+// SUBCLASS 2
+class Rectangle extends Shape {
+
+    private double width = 10;
+    private double height = 20;
+
+    @Override
+    public double area() {
+        return width * height;
+    }
+}

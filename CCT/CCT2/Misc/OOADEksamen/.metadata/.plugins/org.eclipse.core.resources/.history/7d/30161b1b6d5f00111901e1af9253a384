@@ -1,0 +1,72 @@
+package emne2KlasserOgRelationer;
+
+public class CompositionDemo {
+
+    public static void main(String[] args) {
+
+        System.out.println("=== COMPOSITION ===");
+        BankWithComposition bank1 = new BankWithComposition();
+        bank1.showManager();
+
+
+        System.out.println("\n=== AGGREGATION ===");
+        Employee e = new Employee("Bob");
+        BankWithAggregation bank2 = new BankWithAggregation(e);
+
+        bank2.showManager();
+    }
+}
+
+
+// =======================
+// SHARED CLASS
+// =======================
+class Employee {
+
+    private String name;
+
+    public Employee(String name) {
+        this.name = name;
+        System.out.println("Employee created: " + name);
+    }
+
+    public String getName() {
+        return name;
+    }
+}
+
+
+// =======================
+// COMPOSITION (strong ownership)
+// Bank creates Employee itself
+// =======================
+class BankWithComposition {
+
+    private Employee manager;
+
+    public BankWithComposition() {
+        manager = new Employee("Alice"); // created inside
+    }
+
+    public void showManager() {
+        System.out.println("Bank (composition) manager = " + manager.getName());
+    }
+}
+
+
+// =======================
+// AGGREGATION (weak ownership)
+// Employee comes from outside
+// =======================
+class BankWithAggregation {
+
+    private Employee manager;
+
+    public BankWithAggregation(Employee manager) {
+        this.manager = manager; // injected from outside
+    }
+
+    public void showManager() {
+        System.out.println("Bank (aggregation) manager = " + manager.getName());
+    }
+}

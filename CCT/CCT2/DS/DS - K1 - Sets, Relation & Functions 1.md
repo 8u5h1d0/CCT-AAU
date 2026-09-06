@@ -49,7 +49,7 @@ Created: 05/202026
 | :------------------ | :------------------------------------------------- | :---------------------------------------------------------------- |
 | $\in$               | "is an element of" (e.g., $a \in A$)               | $a (1) \in A\{1, 2, 3\}$                                          |
 | $\notin$            | "is not an element of"                             | $a(4) \notin A\{1, 2, 3\}$                                        |
-| $\{ \dots \}$       | Denotes a set (Roster method)                      | $\{a, b, c, ..., z\}$                                             |
+| $\{ \dots \}$       | Denotes an obvious set or action (Roster method)   | $\{a, b, c, ..., z\}$                                             |
 | $\{ x \mid P(x) \}$ | Set builder notation (set of $x$ such that $P(x)$) | $\{x \in \mathbb{Z} \mid x > 0\}$                                 |
 | $\emptyset$         | The empty set (set with no elements)               | $\emptyset = \{\}$                                                |
 | $A \subseteq B$     | Subset (every element of $A$ is in $B$)            | $A\{1, 2\} \subseteq B\{1, 2, 3\}$                                |
@@ -262,7 +262,7 @@ Many problems involve testing all combinations of elements of a set to see if th
 
 ### Cartesian Products
 The order of elements in a collection is often important. Because sets are unordered, a different structure is needed to represent ordered collections. This is provided by ordered n-tuples.
-
+	 
 > [!info] Definition - Ordered n-tuple
 > The ordered n-tuple $(a_1, a_2, \dots , a_n)$ is the ordered collection that has $a_1$ as its first element, $a_2$ as its second element, … , and $a_n$ as its nth element.
 
@@ -346,14 +346,14 @@ _Figure 1.4: The concept of a Truth Set mapping elements from a Domain through a
 > - Truth set of $R$, $\{x \in \mathbb{Z} \mid |x| = x\}$, is $\mathbb{N}$, the set of nonnegative integers.
 
 ---
-
+ 
 ## Operations
 
 ### Intro
 Two, or more, sets can be combined in many different ways.
 
 > [!info] Definition - Union
-> Let $A$ and $B$ be sets. The union of the sets $A$ and $B$, denoted by $A \cup B$, is the set that contains those elements that are either in $A$ or in $B$, or in both.
+> Let $A$ and $B$ be sets. The union of the sets $A$ and $B$, denoted by $A \cup B$, is the set that contains those elements that are either in $A$ or in $B$, or in both, without being counted multiple times.
 > $A \cup B = \{x \mid x \in A \lor x \in B\}$.
 
 > [!example] Union
@@ -812,7 +812,7 @@ _Table 4.1: Useful Properties of the Floor and Ceiling Functions_
 ### Countable Sets
 
 > [!info] Definition - Countable
-> A set that is either finite or has the same cardinality as the set of positive integers is called **countable**. A set that is not countable is called **uncountable**. When an infinite set $S$ is countable, we denote the cardinality of $S$ by $\aleph_0$ (aleph null). We write $\mid S \mid = \aleph_0$.
+> A set that is either finite, or has the same cardinality as the set of positive integers, is called **countable**. A set that is not countable is called **uncountable**. When an infinite set $S$ is countable, we denote the cardinality of $S$ by $\aleph_0$ (aleph null). We write $\mid S \mid = \aleph_0$.
 
 > [!example] Odd Integers are Countable
 > To show that the set of odd positive integers is countable, we exhibit a one-to-one correspondence between this set and $\mathbb{Z}^+$. Consider $f(n) = 2n - 1$ from $\mathbb{Z}^+$ to the set of odd positive integers.

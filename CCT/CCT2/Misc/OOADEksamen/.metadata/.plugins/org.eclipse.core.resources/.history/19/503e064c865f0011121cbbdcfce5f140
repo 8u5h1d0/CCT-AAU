@@ -1,0 +1,44 @@
+package emne5Interfacer;
+
+public class DesignByContractDemo {
+
+    public static void main(String[] args) {
+
+        System.out.println("TEAM C (USING TEAM A & B CONTRACT)");
+
+        PaymentProcessor paypal = new PayPalProcessor();
+        PaymentProcessor stripe = new StripeProcessor();
+
+        processOrder(paypal, 100);
+        processOrder(stripe, 250);
+    }
+
+    // Team C code
+    public static void processOrder(PaymentProcessor processor, double amount) {
+        processor.processPayment(amount);
+    }
+}
+
+// CONTRACT (AGREEMENT)
+interface PaymentProcessor {
+
+    void processPayment(double amount);
+}
+
+// TEAM A IMPLEMENTATION
+class PayPalProcessor implements PaymentProcessor {
+
+    @Override
+    public void processPayment(double amount) {
+        System.out.println("PayPal processing payment: " + amount);
+    }
+}
+
+// TEAM B IMPLEMENTATION
+class StripeProcessor implements PaymentProcessor {
+
+    @Override
+    public void processPayment(double amount) {
+        System.out.println("Stripe processing payment: " + amount);
+    }
+}

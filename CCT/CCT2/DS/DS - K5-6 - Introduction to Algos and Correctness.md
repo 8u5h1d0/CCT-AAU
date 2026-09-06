@@ -129,15 +129,15 @@ To gain insight into how an algorithm works, it is useful to construct a *trace*
 
 There are several properties that algorithms generally share. These are useful to keep in mind whenever algorithms are described or evaluated:
 
-| Property | Description |
-|---|---|
-| **Input** | An algorithm has input values from a specified set. |
-| **Output** | From each set of input values, the algorithm produces output values — the solution to the problem. |
-| **Definiteness** | The steps must be defined precisely; there can be no ambiguity. |
-| **Correctness** | The algorithm should produce the correct output for each set of valid input values. |
-| **Finiteness** | The algorithm should terminate after a finite number of steps for any valid input. |
-| **Effectiveness** | Each step must be performable exactly, in a finite amount of time. |
-| **Generality** | The procedure should apply to all problems of the desired form, not just one particular input. |
+| Property          | Description                                                                                        |
+| ----------------- | -------------------------------------------------------------------------------------------------- |
+| **Input**         | An algorithm has input values from a specified set.                                                |
+| **Output**        | From each set of input values, the algorithm produces output values — the solution to the problem. |
+| **Definiteness**  | The steps must be defined precisely; there can be no ambiguity.                                    |
+| **Correctness**   | The algorithm should produce the expected output for each set of valid input values.               |
+| **Finiteness**    | The algorithm should terminate after a finite number of steps for any valid input.                 |
+| **Effectiveness** | Each step must be performable exactly, in a finite amount of time.                                 |
+| **Generality**    | The procedure should apply to all problems of the desired form, not just one particular input.     |
 
 _Table 1.1: The seven standard properties of an algorithm._
 
@@ -237,11 +237,6 @@ flowchart TD
 ```
 
 _Figure 2.1: Flowchart of the binary search algorithm, showing how the search interval $[i, j]$ is halved at each iteration until a single candidate element remains._
-
->[!question] **Self-Check: Why Is Binary Search Faster?**
-> A linear search on a list of $1{,}000{,}000$ elements may need up to $1{,}000{,}000$ comparisons. How many comparisons does binary search need in the worst case? *(Hint: each step halves the list. How many times can you halve $1{,}000{,}000$ before reaching $1$?)*
->
-> Answer: $\lfloor \log_2 1{,}000{,}000 \rfloor + 1 = 20$ comparisons.
 
 ---
 

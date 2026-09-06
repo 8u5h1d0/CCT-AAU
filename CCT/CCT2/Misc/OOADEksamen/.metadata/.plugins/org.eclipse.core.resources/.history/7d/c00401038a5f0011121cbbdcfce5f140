@@ -1,0 +1,81 @@
+package emne6StruktureretData;
+
+package emne6StruktureretData;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+
+public class ForEachIteratorDemo {
+
+    public static void main(String[] args) {
+
+        System.out.println("1. ITERATOR (SAFE + REMOVE)");
+        iteratorSafeRemove();
+
+        System.out.println("2. ENHANCED FOR-EACH (CLEAN)");
+        forEachDemo();
+
+        System.out.println("3. BUG: FOR-EACH REMOVE (CRASH)");
+        forEachBug();
+    }
+
+    // 1. ITERATOR SAFE REMOVE
+    public static void iteratorSafeRemove() {
+
+        ArrayList<String> names = new ArrayList<>();
+
+        names.add("Alice");
+        names.add("Bob");
+        names.add("Charlie");
+
+        Iterator<String> it = names.iterator();
+
+        while (it.hasNext()) {
+
+            String name = it.next();
+
+            if (name.equals("Bob")) {
+                it.remove(); // SAFE
+            }
+        }
+
+        System.out.println("After removal: " + names);
+    }
+
+    // 2. FOR-EACH NORMAL USE
+    public static void forEachDemo() {
+
+        ArrayList<String> names = new ArrayList<>();
+
+        names.add("Alice");
+        names.add("Bob");
+        names.add("Charlie");
+
+        for (String name : names) {
+            System.out.println(name);
+        }
+    }
+
+    // 3. FOR-EACH BUG
+    public static void forEachBug() {
+
+        ArrayList<String> names = new ArrayList<>();
+
+        names.add("Alice");
+        names.add("Bob");
+        names.add("Charlie");
+
+        try {
+
+            for (String name : names) {
+
+                if (name.equals("Bob")) {
+                    names.remove(name); // ❌ BAD IDEA
+                }
+            }
+
+        } catch (Exception e) {
+            System.out.println("💥 CRASH: " + e);
+        }
+    }
+}

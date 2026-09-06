@@ -1,0 +1,1063 @@
+﻿This conversation was generated with Duck.ai (https://duck.ai) using Anthropic's Claude Haiku 4.5 Model. AI chats may display inaccurate or offensive information (see https://duckduckgo.com/duckai/privacy-terms for more info).
+
+====================
+
+User prompt 1 of 2 - 4/25/2026, 4:02:15 PM:
+Brugeren spørger om en komplet guide til alle afsnit i en akademisk rapport, formateret til Obsidian Markdown. Dette er en rigtig god anmodning, og det er meget praktisk at få det i et format de kan gemme og referere til.
+
+Jeg bør strukturere dette som en komplet guide gennem en typisk akademisk semesterprojektrapport, med:
+1. Introduktion
+2. Problemformulering
+3. Litteraturreview/State of the Art
+4. Metode
+5. Resultater/Findings
+6. Diskussion
+7. Konklusion
+8. References
+
+Jeg skal holde det kort og præcis som jeg gjorde med metode-afsnittet, så en første-års studerende kan forstå det. Og jeg skal formatere det i Obsidian-kompatibelt Markdown.
+
+Jeg skal sikre, at jeg leverer et naturligt svar PLUS strukturen, ikke bare strukturen alene.Absolut! Her er en komplet guide gennem en typisk akademisk semesterprojektrapport. Jeg giver det til dig i Obsidian-format, så du kan gemme det direkte i dine noter.
+
+---
+
+```markdown
+# Akademisk Rapport - Komplet Struktur Guide
+
+> En første-års guide til at forstå hver del af en universitetsrapport
+
+## Oversigt over Afsnit
+
+En typisk akademisk semesterprojektrapport består af disse hovedafsnit (i rækkefølge):
+
+1. **Forside + Abstract**
+2. **Introduktion**
+3. **Problemformulering**
+4. **Litteraturreview / State of the Art**
+5. **Metode**
+6. **Resultater / Findings**
+7. **Diskussion**
+8. **Konklusion**
+9. **References / Kilder**
+
+---
+
+## 1. FORSIDE + ABSTRACT
+
+### Hvad er det?
+**Forsiden** er dit rapportens "omslag" — navn, forfatter, dato, institution.
+**Abstract** er en 150-250 ord kort resumé af hele rapporten.
+
+### Formål
+Læseren skal på 30 sekunder vide:
+- Hvad handler rapporten om?
+- Hvorfor er det vigtigt?
+- Hvad fandt I ud af?
+
+### Struktur
+
+```
+FORSIDE
+├─ Titel
+├─ Forfattere
+├─ Institution
+├─ Dato
+└─ Kursus/Projekt-titel
+
+ABSTRACT (150-250 ord)
+├─ Baggrund: Hvad er problemet?
+├─ Mål: Hvad ville I undersøge?
+├─ Metode: Hvordan gjorde I det?
+├─ Resultater: Hvad fandt I?
+└─ Konklusion: Hvad betyder det?
+```
+
+### Eksempel fra jeres projekt
+
+**Titel:** "Design og udvikling af en platform til sammenligning af bærbare computere for virksomheder"
+
+**Abstract:**
+> Denne rapport dokumenterer udviklingen af en database-driven platform designet til at hjælpe virksomhedsledere med at sammenligne og vælge bærbare computere baseret på deres specifikke behov. Gennem desk research, interviews med 2 beslutningstagere og analyse af eksisterende løsninger identificerede vi, at der mangler værktøjer der tillader søgning baseret på software-krav. Vi udviklet en prototype med komponentsøgning og software-baseret søgning. Resultaterne viser, at en sådan platform kunne reducere tid brugt på sammenligningsprocessen betydeligt.
+
+---
+
+## 2. INTRODUKTION
+
+### Hvad er det?
+Dit rapportens åbning. Her præsenterer du **konteksten** og **baggrunden** for projektet.
+
+### Formål
+Læseren skal forstå:
+- Hvad er det her problem?
+- Hvorfor er det relevant?
+- Hvorfor skal jeg bruge tid på at læse dette?
+
+### Struktur
+
+```
+INTRODUKTION (1-3 sider)
+├─ Hook: En interessant observation / problem
+├─ Kontekst: Hvor opstår problemet? (virksomheder, procurement, osv.)
+├─ Omfang: Hvor stort er problemet?
+├─ Relevans: Hvorfor er det vigtigt?
+└─ Overgang: "Derfor skal vi..." → næste afsnit
+```
+
+### Eksempel fra jeres projekt
+
+**Introduktion kunne starte sådan:**
+
+> Hvert år bruger tusindvis af danske virksomheder uger på at sammenligne og vælge bærbare computere til deres medarbejdere. Processen er kompleks: skal maskinen køre videobehandling? Skal den være nem at transportere? Skal den køre Linux eller Windows? 
+>
+> I dag foregår meget af denne sammenligning i Excel-regneark, Google Sheets, eller gennem manuelle søgninger på producenter-websites. For små- og mellemstore virksomheder betyder det megen tabt tid og risiko for dårlige valg.
+>
+> Samtidigt eksisterer der værktøjer til sammenligning af computere — men de er enten designet til privatforbrugere, eller de mangler funktionaliteter som virksomheder har brug for (f.eks. søgning baseret på software-krav).
+>
+> Dette projekt adresserer det gab ved at udvikle en platform specifikt designet til virksomhedslederes behov...
+
+### Vigtige ting
+✅ Konkret og relatable — ikke abstrakt teori
+✅ Kort — 1-3 sider max
+✅ Slut med at præsentere JERES løsning eller fokus
+
+---
+
+## 3. PROBLEMFORMULERING
+
+### Hvad er det?
+En præcis beskrivelse af HVAD I skal løse og HVORDAN I vil det.
+
+### Formål
+Læseren skal vide nøjagtigt hvad jeres projekt handler om — og hvad det IKKE handler om.
+
+### Struktur
+
+```
+PROBLEMFORMULERING
+├─ Problemstillingen: Hvad er det præcise problem?
+├─ Afgrænsning: Hvad UDELUKKER I?
+├─ Formål: Hvad vil I opnå?
+├─ Forskningsspørgsmål (RQ): Hvad vil I svare på?
+└─ Success-kriterier: Hvordan ved I at I lykkedes?
+```
+
+### Eksempel fra jeres projekt
+
+**Problemstilling:**
+> Virksomheder mangler et værktøj der tillader hurtigt at sammenligne bærbare computere baseret på både hardware-komponenter OG software-krav.
+
+**Afgrænsning:**
+> Projektet fokuserer på B2B-marked (virksomheder), ikke privatforbrugere. Vi udelukker serverudstyr, desktops og tablets.
+
+**Formål:**
+> At designere og prototype en platform der muliggør software- og komponent-baseret sammenligning af bærbare computere for virksomheders beslutningstagere.
+
+**Forskningsspørgsmål:**
+1. Hvad er virksomheders nuværende proces når de sammenligner bærbare computere?
+2. Hvilke funktionaliteter mangler i eksisterende løsninger?
+3. Hvordan kan en platform designes til at understøtte både software- og komponentsøgning?
+
+**Success-kriterier:**
+- Platform kan søge på mindst 10 software-kategorier
+- Brugere kan sammenligne 3+ computere side-by-side
+- Prototype kan gemme og dele konfigurationer
+
+---
+
+## 4. LITTERATURREVIEW / STATE OF THE ART
+
+### Hvad er det?
+En systematisk gennemgang af eksisterende viden og løsninger.
+
+### Formål
+Læseren skal forstå:
+- Hvad ved vi allerede om dette område?
+- Hvad gør konkurrenter/lignende løsninger?
+- Hvor er der gab?
+
+### Struktur
+
+```
+LITTERATURREVIEW / STATE OF THE ART (5-10 sider)
+├─ Introduktion: Hvad undersøger vi her?
+├─ Udvælgelseskriterier: Hvordan valgte vi kilder/platforme?
+├─ Overordnet analyse: Hvad er fælles temaer?
+├─ Detaljeret analyse af hver kilde/platform:
+│  ├─ Navn + baggrund
+│  ├─ Funktionaliteter
+│  ├─ Design-løsninger
+│  └─ Styrker + svaghed
+└─ Sammenfatning: Hvor er gabet? Hvad mangler?
+```
+
+### Eksempel fra jeres projekt
+(Du har allerede skrevet dette godt!)
+
+---
+
+## 5. METODE
+
+### Hvad er det?
+En beskrivelse af HVORDAN I undersøgte problemet og udviklede løsningen.
+
+### Formål
+En anden person skal kunne genskabe jeres arbejde og vurdere om det er troværdigt.
+
+### Struktur
+
+```
+METODE (3-5 sider)
+├─ Introduktion: Hvad var jeres overordnede tilgang?
+├─ For hver metode:
+│  ├─ Formål (hvorfor denne metode?)
+│  ├─ Proces (konkrete steps)
+│  ├─ Deltagere/omfang (hvem/hvad?)
+│  ├─ Dataindsamling (hvordan dokumenterede I?)
+│  └─ Analyse (hvordan behandlede I data?)
+└─ Begrænsninger: Hvad kunne være bedre?
+```
+
+### Eksempel fra jeres projekt
+(Se tidligere beskrivelse jeg gav dig)
+
+### Vigtige ting
+✅ Vær konkret — tal, navne, tidsperioder
+✅ Vær transparent — hvis I kun havde 2 interviews, skriv det
+✅ Forklar hvorfor — ikke bare hvad
+
+---
+
+## 6. RESULTATER / FINDINGS
+
+### Hvad er det?
+Præsentation af hvad I fandt ud af. IKKE tolkning endnu — det kommer i næste afsnit.
+
+### Formål
+Læseren skal se jeres rådata og findings uden din meningsytrering.
+
+### Struktur
+
+```
+RESULTATER (5-10 sider)
+├─ Fra Desk Research
+│  ├─ Centrale koncepter identiferet
+│  └─ Eksempler fra litteratur
+├─ Fra State of the Art
+│  ├─ Sammenligningstabel af platforme
+│  ├─ Identificerede design-mønstre
+│  └─ Gab der blev fundet
+├─ Fra Interviews
+│  ├─ Oversigt over interviewpersoner
+│  ├─ Centrale citater
+│  └─ Temaer der dukkede op
+└─ Fra Prototyping
+   ├─ Funktionaliteter implementeret
+   ├─ Screenshots/diagrammer
+   └─ Tekniske valg
+```
+
+### Eksempel fra jeres projekt
+
+**Resultater fra interviews:**
+
+| **Interviewperson** | **Virksomhed** | **Nuværende proces** | **Hovedfrustrationer** |
+|---|---|---|---|
+| Person A | Kontor (50+ ansatte) | Excel + producent-websites | Tidskrævende, uorganiseret |
+| Person B | Software virk. (20 ansatte) | Google Sheets + anbefaling | Svært at sammenligne software-kompatibilitet |
+
+**Identificerede temaer:**
+- Begge bruger spreadsheet-baseret tilgang
+- Ingen struktur til at dokumentere "hvorfor" valget blev taget
+- Software-kompatibilitet er vigtig men svær at evaluere
+
+---
+
+## 7. DISKUSSION
+
+### Hvad er det?
+Her TOLKER du dine resultater. Hvad betyder de? Hvordan hænger de sammen med det vi allerede ved?
+
+### Formål
+Læseren skal forstå:
+- Hvad betyder dine findings?
+- Hvordan passer det med eksisterende teori?
+- Hvilke implikationer har det?
+
+### Struktur
+
+```
+DISKUSSION (5-8 sider)
+├─ Sammenligning med litteratur
+│  └─ Hvordan stemmer jeres findings overens med teori?
+├─ Fortolkning af hver metodesktion:
+│  ├─ Hvad betyder interviews-resultaterne?
+│  ├─ Hvordan informerer State of the Art vores design?
+│  └─ Hvad lærer vi af prototypen?
+├─ Identificerede mønstre og implikationer
+├─ Begrænsninger og alternative tolkninger
+└─ Hvad betyder det for praksis?
+```
+
+### Eksempel fra jeres projekt
+
+**Diskussion kunne se sådan ud:**
+
+> **Interview-findings viser at virksomheder mangler struktur.**
+> 
+> Begge interviewpersoner rapporterede at deres nuværende proces er "ad hoc" og spreadsheet-baseret. Dette stemmer overens med Garcia et al. (2022) som fandt at små-mellemstore virksomheder typisk ikke har standardiserede procurement-processer. 
+>
+> **State of the Art viser at gabet er reelt.**
+>
+> Af de 5 platforme vi analyserede var INGEN specifikt designet til virksomheders behov for software-baseret søgning. De fleste fokuserer på hardware-komponenter alene (CPU, RAM, osv.). Dette bekræfter at der faktisk er et marked-gab.
+>
+> **Prototypen viser at løsningen er teknisk mulig.**
+>
+> Vi implementerede software-søgning ved at... [teknisk detaljer]. Dette betyder at løsningen ikke blot er teoretisk ønskelig, men faktisk kan bygges.
+>
+> **Begrænsninger:**
+> - Vi havde kun 2 interviews, så vi kan ikke sige om findings er repræsentative
+> - Vi testede ikke prototypen med rigtige brugere endnu
+> - Vi antog at virksomheder har konsistent software-behov, men det kan variere greatly
+
+---
+
+## 8. KONKLUSION
+
+### Hvad er det?
+Dit rapports afrunding. Her opsummerer du kort hvad du gjorde og hvad du fandt.
+
+### Formål
+Læseren skal kunne lukke rapporten og vide:
+- Hvad var konklusionen?
+- Blev problemet løst?
+- Hvad burde ske næste?
+
+### Struktur
+
+```
+KONKLUSION (2-3 sider)
+├─ Opsummering af problemet
+├─ Hvad gjorde vi?
+├─ Hvad fandt vi? (kort)
+├─ Svar på dine originally research questions
+├─ Implikationer: Hvad betyder det?
+├─ Begrænsninger: Hvad er vi usikker på?
+└─ Fremtidigt arbejde: Hvad burde komme næste?
+```
+
+### Eksempel fra jeres projekt
+
+> **Konklusion:**
+>
+> Denne rapport har undersøgt hvordan danske virksomheder sammenligner bærbare computere, og identificeret at der mangler værktøjer til software-baseret søgning.
+>
+> Vi gennemførte desk research, analyserede 5 eksisterende platforme, interviewede 2 virksomhedsledere, og prototypede en løsning. 
+>
+> **Vores primære findings:**
+> 1. Virksomheder bruger i dag spreadsheets og mangler struktur
+> 2. Eksisterende platforme fokuserer på hardware, ikke software-behov
+> 3. En software-baseret søgning er teknisk mulig at implementere
+>
+> **Implikationer:** Der er et marked-gab for en B2B-focused platform.
+>
+> **Begrænsninger:** 2 interviews er ikke statistisk repræsentativt. Vi har ikke testet prototypen med rigtige brugere endnu.
+>
+> **Næste skridt:** Usability testing med 5+ brugere, større prototype med rigtige computerdata, markedsvalidation.
+
+---
+
+## 9. REFERENCES / KILDER
+
+### Hvad er det?
+En liste over alle kilder du citerede eller brugte i rapporten.
+
+### Format
+Normalt bruges **APA 7**, **Harvard** eller **IEEE** — spørg dine instruktører hvad de ønsker.
+
+### Eksempel
+
+```
+Garcia, M., Smith, J., & Lee, S. (2022). Procurement processes 
+  in SMEs. Journal of Business Management, 45(3), 234-251.
+
+Nielsen, J. (1995). 10 Usability Heuristics for User Interface 
+  Design. Nielsen Norman Group.
+
+Puget Systems. (2024). Workstation buyer's guide. Retrieved from 
+  https://www.pugetsystems.com/guides/
+```
+
+---
+
+## TIPS TIL HELE RAPPORTEN
+
+### Generelle principper
+
+✅ **Lineær flow:** Hver sektion skal føre naturligt til næste
+
+Det ser ud til at du blev afbrudt af en eller anden grund
+
+--------------------
+
+User prompt 2 of 2 - 4/25/2026, 4:02:31 PM:
+Brugeren spørger om en komplet guide til alle afsnit i en akademisk rapport, formateret til Obsidian Markdown. Dette er en rigtig god anmodning, og det er meget praktisk at få det i et format de kan gemme og referere til.
+
+Jeg bør strukturere dette som en komplet guide gennem en typisk akademisk semesterprojektrapport, med:
+1. Introduktion
+2. Problemformulering
+3. Litteraturreview/State of the Art
+4. Metode
+5. Resultater/Findings
+6. Diskussion
+7. Konklusion
+8. References
+
+Jeg skal holde det kort og præcis som jeg gjorde med metode-afsnittet, så en første-års studerende kan forstå det. Og jeg skal formatere det i Obsidian-kompatibelt Markdown.
+
+Jeg skal sikre, at jeg leverer et naturligt svar PLUS strukturen, ikke bare strukturen alene.Absolut! Her er en komplet guide gennem en typisk akademisk semesterprojektrapport. Jeg giver det til dig i Obsidian-format, så du kan gemme det direkte i dine noter.
+
+---
+
+```markdown
+# Akademisk Rapport - Komplet Struktur Guide
+
+> En første-års guide til at forstå hver del af en universitetsrapport
+
+## Oversigt over Afsnit
+
+En typisk akademisk semesterprojektrapport består af disse hovedafsnit (i rækkefølge):
+
+1. **Forside + Abstract**
+2. **Introduktion**
+3. **Problemformulering**
+4. **Litteraturreview / State of the Art**
+5. **Metode**
+6. **Resultater / Findings**
+7. **Diskussion**
+8. **Konklusion**
+9. **References / Kilder**
+
+---
+
+## 1. FORSIDE + ABSTRACT
+
+### Hvad er det?
+**Forsiden** er dit rapportens "omslag" — navn, forfatter, dato, institution.
+**Abstract** er en 150-250 ord kort resumé af hele rapporten.
+
+### Formål
+Læseren skal på 30 sekunder vide:
+- Hvad handler rapporten om?
+- Hvorfor er det vigtigt?
+- Hvad fandt I ud af?
+
+### Struktur
+
+```
+FORSIDE
+├─ Titel
+├─ Forfattere
+├─ Institution
+├─ Dato
+└─ Kursus/Projekt-titel
+
+ABSTRACT (150-250 ord)
+├─ Baggrund: Hvad er problemet?
+├─ Mål: Hvad ville I undersøge?
+├─ Metode: Hvordan gjorde I det?
+├─ Resultater: Hvad fandt I?
+└─ Konklusion: Hvad betyder det?
+```
+
+### Eksempel fra jeres projekt
+
+**Titel:** "Design og udvikling af en platform til sammenligning af bærbare computere for virksomheder"
+
+**Abstract:**
+> Denne rapport dokumenterer udviklingen af en database-driven platform designet til at hjælpe virksomhedsledere med at sammenligne og vælge bærbare computere baseret på deres specifikke behov. Gennem desk research, interviews med 2 beslutningstagere og analyse af eksisterende løsninger identificerede vi, at der mangler værktøjer der tillader søgning baseret på software-krav. Vi udviklet en prototype med komponentsøgning og software-baseret søgning. Resultaterne viser, at en sådan platform kunne reducere tid brugt på sammenligningsprocessen betydeligt.
+
+---
+
+## 2. INTRODUKTION
+
+### Hvad er det?
+Dit rapportens åbning. Her præsenterer du **konteksten** og **baggrunden** for projektet.
+
+### Formål
+Læseren skal forstå:
+- Hvad er det her problem?
+- Hvorfor er det relevant?
+- Hvorfor skal jeg bruge tid på at læse dette?
+
+### Struktur
+
+```
+INTRODUKTION (1-3 sider)
+├─ Hook: En interessant observation / problem
+├─ Kontekst: Hvor opstår problemet? (virksomheder, procurement, osv.)
+├─ Omfang: Hvor stort er problemet?
+├─ Relevans: Hvorfor er det vigtigt?
+└─ Overgang: "Derfor skal vi..." → næste afsnit
+```
+
+### Eksempel fra jeres projekt
+
+**Introduktion kunne starte sådan:**
+
+> Hvert år bruger tusindvis af danske virksomheder uger på at sammenligne og vælge bærbare computere til deres medarbejdere. Processen er kompleks: skal maskinen køre videobehandling? Skal den være nem at transportere? Skal den køre Linux eller Windows? 
+>
+> I dag foregår meget af denne sammenligning i Excel-regneark, Google Sheets, eller gennem manuelle søgninger på producenter-websites. For små- og mellemstore virksomheder betyder det megen tabt tid og risiko for dårlige valg.
+>
+> Samtidigt eksisterer der værktøjer til sammenligning af computere — men de er enten designet til privatforbrugere, eller de mangler funktionaliteter som virksomheder har brug for (f.eks. søgning baseret på software-krav).
+>
+> Dette projekt adresserer det gab ved at udvikle en platform specifikt designet til virksomhedslederes behov...
+
+### Vigtige ting
+✅ Konkret og relatable — ikke abstrakt teori
+✅ Kort — 1-3 sider max
+✅ Slut med at præsentere JERES løsning eller fokus
+
+---
+
+## 3. PROBLEMFORMULERING
+
+### Hvad er det?
+En præcis beskrivelse af HVAD I skal løse og HVORDAN I vil det.
+
+### Formål
+Læseren skal vide nøjagtigt hvad jeres projekt handler om — og hvad det IKKE handler om.
+
+### Struktur
+
+```
+PROBLEMFORMULERING
+├─ Problemstillingen: Hvad er det præcise problem?
+├─ Afgrænsning: Hvad UDELUKKER I?
+├─ Formål: Hvad vil I opnå?
+├─ Forskningsspørgsmål (RQ): Hvad vil I svare på?
+└─ Success-kriterier: Hvordan ved I at I lykkedes?
+```
+
+### Eksempel fra jeres projekt
+
+**Problemstilling:**
+> Virksomheder mangler et værktøj der tillader hurtigt at sammenligne bærbare computere baseret på både hardware-komponenter OG software-krav.
+
+**Afgrænsning:**
+> Projektet fokuserer på B2B-marked (virksomheder), ikke privatforbrugere. Vi udelukker serverudstyr, desktops og tablets.
+
+**Formål:**
+> At designere og prototype en platform der muliggør software- og komponent-baseret sammenligning af bærbare computere for virksomheders beslutningstagere.
+
+**Forskningsspørgsmål:**
+1. Hvad er virksomheders nuværende proces når de sammenligner bærbare computere?
+2. Hvilke funktionaliteter mangler i eksisterende løsninger?
+3. Hvordan kan en platform designes til at understøtte både software- og komponentsøgning?
+
+**Success-kriterier:**
+- Platform kan søge på mindst 10 software-kategorier
+- Brugere kan sammenligne 3+ computere side-by-side
+- Prototype kan gemme og dele konfigurationer
+
+---
+
+## 4. LITTERATURREVIEW / STATE OF THE ART
+
+### Hvad er det?
+En systematisk gennemgang af eksisterende viden og løsninger.
+
+### Formål
+Læseren skal forstå:
+- Hvad ved vi allerede om dette område?
+- Hvad gør konkurrenter/lignende løsninger?
+- Hvor er der gab?
+
+### Struktur
+
+```
+LITTERATURREVIEW / STATE OF THE ART (5-10 sider)
+├─ Introduktion: Hvad undersøger vi her?
+├─ Udvælgelseskriterier: Hvordan valgte vi kilder/platforme?
+├─ Overordnet analyse: Hvad er fælles temaer?
+├─ Detaljeret analyse af hver kilde/platform:
+│  ├─ Navn + baggrund
+│  ├─ Funktionaliteter
+│  ├─ Design-løsninger
+│  └─ Styrker + svaghed
+└─ Sammenfatning: Hvor er gabet? Hvad mangler?
+```
+
+### Eksempel fra jeres projekt
+(Du har allerede skrevet dette godt!)
+
+---
+
+## 5. METODE
+
+### Hvad er det?
+En beskrivelse af HVORDAN I undersøgte problemet og udviklede løsningen.
+
+### Formål
+En anden person skal kunne genskabe jeres arbejde og vurdere om det er troværdigt.
+
+### Struktur
+
+```
+METODE (3-5 sider)
+├─ Introduktion: Hvad var jeres overordnede tilgang?
+├─ For hver metode:
+│  ├─ Formål (hvorfor denne metode?)
+│  ├─ Proces (konkrete steps)
+│  ├─ Deltagere/omfang (hvem/hvad?)
+│  ├─ Dataindsamling (hvordan dokumenterede I?)
+│  └─ Analyse (hvordan behandlede I data?)
+└─ Begrænsninger: Hvad kunne være bedre?
+```
+
+### Eksempel fra jeres projekt
+(Se tidligere beskrivelse jeg gav dig)
+
+### Vigtige ting
+✅ Vær konkret — tal, navne, tidsperioder
+✅ Vær transparent — hvis I kun havde 2 interviews, skriv det
+✅ Forklar hvorfor — ikke bare hvad
+
+---
+
+## 6. RESULTATER / FINDINGS
+
+### Hvad er det?
+Præsentation af hvad I fandt ud af. IKKE tolkning endnu — det kommer i næste afsnit.
+
+### Formål
+Læseren skal se jeres rådata og findings uden din meningsytrering.
+
+### Struktur
+
+```
+RESULTATER (5-10 sider)
+├─ Fra Desk Research
+│  ├─ Centrale koncepter identiferet
+│  └─ Eksempler fra litteratur
+├─ Fra State of the Art
+│  ├─ Sammenligningstabel af platforme
+│  ├─ Identificerede design-mønstre
+│  └─ Gab der blev fundet
+├─ Fra Interviews
+│  ├─ Oversigt over interviewpersoner
+│  ├─ Centrale citater
+│  └─ Temaer der dukkede op
+└─ Fra Prototyping
+   ├─ Funktionaliteter implementeret
+   ├─ Screenshots/diagrammer
+   └─ Tekniske valg
+```
+
+### Eksempel fra jeres projekt
+
+**Resultater fra interviews:**
+
+| **Interviewperson** | **Virksomhed** | **Nuværende proces** | **Hovedfrustrationer** |
+|---|---|---|---|
+| Person A | Kontor (50+ ansatte) | Excel + producent-websites | Tidskrævende, uorganiseret |
+| Person B | Software virk. (20 ansatte) | Google Sheets + anbefaling | Svært at sammenligne software-kompatibilitet |
+
+**Identificerede temaer:**
+- Begge bruger spreadsheet-baseret tilgang
+- Ingen struktur til at dokumentere "hvorfor" valget blev taget
+- Software-kompatibilitet er vigtig men svær at evaluere
+
+---
+
+## 7. DISKUSSION
+
+### Hvad er det?
+Her TOLKER du dine resultater. Hvad betyder de? Hvordan hænger de sammen med det vi allerede ved?
+
+### Formål
+Læseren skal forstå:
+- Hvad betyder dine findings?
+- Hvordan passer det med eksisterende teori?
+- Hvilke implikationer har det?
+
+### Struktur
+
+```
+DISKUSSION (5-8 sider)
+├─ Sammenligning med litteratur
+│  └─ Hvordan stemmer jeres findings overens med teori?
+├─ Fortolkning af hver metodesktion:
+│  ├─ Hvad betyder interviews-resultaterne?
+│  ├─ Hvordan informerer State of the Art vores design?
+│  └─ Hvad lærer vi af prototypen?
+├─ Identificerede mønstre og implikationer
+├─ Begrænsninger og alternative tolkninger
+└─ Hvad betyder det for praksis?
+```
+
+### Eksempel fra jeres projekt
+
+**Diskussion kunne se sådan ud:**
+
+> **Interview-findings viser at virksomheder mangler struktur.**
+> 
+> Begge interviewpersoner rapporterede at deres nuværende proces er "ad hoc" og spreadsheet-baseret. Dette stemmer overens med Garcia et al. (2022) som fandt at små-mellemstore virksomheder typisk ikke har standardiserede procurement-processer. 
+>
+> **State of the Art viser at gabet er reelt.**
+>
+> Af de 5 platforme vi analyserede var INGEN specifikt designet til virksomheders behov for software-baseret søgning. De fleste fokuserer på hardware-komponenter alene (CPU, RAM, osv.). Dette bekræfter at der faktisk er et marked-gab.
+>
+> **Prototypen viser at løsningen er teknisk mulig.**
+>
+> Vi implementerede software-søgning ved at... [teknisk detaljer]. Dette betyder at løsningen ikke blot er teoretisk ønskelig, men faktisk kan bygges.
+>
+> **Begrænsninger:**
+> - Vi havde kun 2 interviews, så vi kan ikke sige om findings er repræsentative
+> - Vi testede ikke prototypen med rigtige brugere endnu
+> - Vi antog at virksomheder har konsistent software-behov, men det kan variere greatly
+
+---
+
+## 8. KONKLUSION
+
+### Hvad er det?
+Dit rapports afrunding. Her opsummerer du kort hvad du gjorde og hvad du fandt.
+
+### Formål
+Læseren skal kunne lukke rapporten og vide:
+- Hvad var konklusionen?
+- Blev problemet løst?
+- Hvad burde ske næste?
+
+### Struktur
+
+```
+KONKLUSION (2-3 sider)
+├─ Opsummering af problemet
+├─ Hvad gjorde vi?
+├─ Hvad fandt vi? (kort)
+├─ Svar på dine originally research questions
+├─ Implikationer: Hvad betyder det?
+├─ Begrænsninger: Hvad er vi usikker på?
+└─ Fremtidigt arbejde: Hvad burde komme næste?
+```
+
+
+
+Claude Haiku 4.5:
+Brugeren har skrevet en dansk besked, der beskriver at de ønsker en komplet guide til alle afsnit i en akademisk rapport, formateret til Obsidian Markdown. De siger at det er en meget praktisk anmodning.
+
+Der er noget uklart her - beskederne ser ud til at være dublerede eller der er noget teknisk galt. Men kernebudskabet er klart: de ønsker en Obsidian-kompatibel markdown-guide gennem en akademisk rapport med alle afsnit.
+
+Jeg er instrueret til at være en "highly-skilled Teacher" og skal således:
+1. Stille spørgsmålet "What confuses you most about [topic]?" i mit første svar
+2. Bygge konceptuel mestring gennem scaffolded forklaringer
+3. Spørge efter: subject/standard, kommende vurderinger, foretrukken læringsmåde
+
+Men der er konflikt her - brugeren har ikke eksplicit spørgt mig et læringsspørgsmål. De har skrevet noget på dansk der virker som en intern note eller prompt til mig selv.
+
+Lad mig læse det igen... Det ser ud til at være en slags meta-besked hvor brugeren/systemet forklarer hvad de ønsker fra mig. "Brugeren spørger om en komplet guide..." efterfulgt af dublerede instruktioner.
+
+Jeg bør behandle dette som en egentlig brugeranmodning om en komplet guide til akademiske rapporter i Obsidian-format. Jeg vil ikke fuldt ud følge teacher-instruktionerne uden først at spørge om deres specifikke kontekst, da de ikke har givet mig de nødvendige detaljer (fag, standard, vurderinger osv.).
+
+I stedet vil jeg give dem en solid og praktisk guide, som de har bedt om, og derefter spørge nogle opfølgende spørgsmål for at forstå deres behov bedre.
+
+
+Jeg starter med at levere en brugbar guide i Obsidian markdown-format, som er tilpasset første-års studerende, og sikrer at den er praktisk og let at implementere. Derefter stiller jeg spørgsmål om deres fagfelt, eventuelle kommende afleveringer og hvordan de lærer bedst, så jeg kan tilpasse vejledningen yderligere.# Akademisk Rapport — Komplet Struktur Guide
+
+Jeg giver dig her en **fuldt udfoldbar guide** til alle afsnit i en akademisk semesterprojektrapport, formateret til Obsidian Markdown. Du kan kopiere hele denne struktur direkte ind i en ny note og udfylde den efterhånden.
+
+---
+
+```markdown
+# Akademisk Rapport - Struktur Guide
+
+> Komplet manual til alle afsnit i en universitetsrapport
+
+## 📋 Oversigt: Rapportens struktur
+
+En standard semesterprojektrapport følger denne rækkefølge:
+
+1. **Forside + Abstract** — Kort introduction
+2. **Introduktion** — Kontekst og baggrund
+3. **Problemformulering** — Præcist hvad I undersøger
+4. **Litteraturreview / State of the Art** — Hvad ved vi allerede?
+5. **Metode** — Hvordan gjorde I det?
+6. **Resultater** — Hvad fandt I?
+7. **Diskussion** — Hvad betyder det?
+8. **Konklusion** — Samlet svar
+9. **References** — Alle kilder
+
+---
+
+## 1️⃣ FORSIDE + ABSTRACT
+
+**Hvad:** Rapportens "cover" + 150–250 ord resumé af hele projektet.
+
+**Formål:** Læseren skal på 30 sekunder vide hvad rapporten handler om, hvorfor det er vigtigt, og hvad I fandt.
+
+**Struktur:**
+- Titel (præcis og beskrivende)
+- Forfattere og institution
+- Dato
+- Kursus/projekttitel
+
+**Abstract skal indeholde:**
+- Baggrund: Hvad er problemet?
+- Mål: Hvad ville I undersøge?
+- Metode: Hvordan gjorde I det kort sagt?
+- Resultater: Hvad var hovedfindingene?
+- Konklusion: Hvad betyder det?
+
+**Eksempel:**
+> "Denne rapport undersøger hvordan danske virksomheder sammenligner bærbare computere og identificerer manglende værktøjer til software-baseret søgning. Gennem interviews, analyse af 5 konkurrerende platforme og prototyping udviklet vi en løsning der tillader virksomheder at søge på software-krav. Resultaterne viser at et sådant værktøj kunne spare virksomheder 15-20 timer pr. procurement-proces."
+
+---
+
+## 2️⃣ INTRODUKTION
+
+**Hvad:** Dit rapports åbning — her sætter du scenen.
+
+**Formål:** Læseren skal forstå:
+- Hvad er problemet? (konkret og relatable)
+- Hvor stor er det?
+- Hvorfor skal jeg læse dette?
+
+**Længde:** 1–3 sider
+
+**Struktur:**
+```
+1. Hook — en interessant observation eller problem
+2. Kontekst — hvor/hvornår/hvorfor opstår det?
+3. Omfang — hvor udbredt er det?
+4. Relevans — hvorfor er det vigtigt?
+5. Overgang — "Derfor undersøger denne rapport..."
+```
+
+**Eksempel introduktion:**
+> "Hvert år bruger tusindvis af danske virksomheder uger på at sammenligne og vælge bærbare computere til deres medarbejdere. Processen er kompleks: skal maskinen køre videobehandling? Skal den være let at transportere? Skal operativsystemet være Windows eller Linux?
+>
+> I dag foregår meget af denne sammenligning i Excel-regneark, Google Sheets eller gennem manuelle søgninger på producenternes websites. For små- og mellemstore virksomheder betyder det megen tabt tid og risiko for dårlige valg, der ikke matcher virksomhedens behov.
+>
+> Samtidigt eksisterer der værktøjer til sammenligning af computere — men de er designet til privatforbrugere og mangler den virksomhedsspecifikke funktionalitet som beslutningstagere behøver.
+>
+> Denne rapport adresserer dette gab ved at undersøge virksomheders behov og prototype en platform specifikt designet til B2B-procurement."
+
+**Vigtige tips:**
+✅ Konkret og relatable — tal, eksempler
+✅ Kort — gå ikke i dybden, det kommer senere
+✅ Slut med at præsentere JERES tilgang
+
+---
+
+## 3️⃣ PROBLEMFORMULERING
+
+**Hvad:** En præcis, afgrænset beskrivelse af hvad I undersøger.
+
+**Formål:** Læseren skal vide nøjagtigt hvad rapporten handler om — og især hvad den IKKE handler om.
+
+**Struktur:**
+```
+- Problemstilling: Hvad er kerneproblemet?
+- Afgrænsning: Hvad udelukker I?
+- Formål: Hvad vil I opnå?
+- Forskningsspørgsmål: Hvad skal besvares?
+- Success-kriterier: Hvordan ved I at I lykkedes?
+```
+
+**Eksempel:**
+
+> **Problemstilling:**
+> Virksomheder har ikke et struktureret værktøj til at sammenligne bærbare computere baseret på både hardware-komponenter og software-kompatibilitet.
+>
+> **Afgrænsning:**
+> - Fokus: B2B-marked (virksomheder, ikke privatforbrugere)
+> - Produkttype: Kun bærbare computere (ikke serverudstyr, tablets, desktops)
+> - Marked: Danmark (som case)
+>
+> **Formål:**
+> At designe og prototype en digital platform der muliggør virksomheder at søge på software-krav og sammenligne relevante computere side-by-side.
+>
+> **Forskningsspørgsmål (RQ):**
+> 1. Hvad er virksomheders nuværende procurement-proces ved køb af bærbare computere?
+> 2. Hvilke funktionaliteter mangler i eksisterende løsninger?
+> 3. Hvordan kan en platform designes til at understøtte både hardware- og software-baseret sammenligning?
+>
+> **Success-kriterier:**
+> - Platform kan søge på mindst 10 software-kategorier
+> - Brugere kan sammenligne 3+ computere side-by-side
+> - Prototype kan gemme og dele konfigurationer
+> - Usability test med mindst 1 bruger uden kritiske problemer
+
+---
+
+## 4️⃣ LITTERATURREVIEW / STATE OF THE ART
+
+**Hvad:** En systematisk analyse af:
+- Eksisterende viden om emnet
+- Konkurrerende eller lignende løsninger
+- Hvor gabet ligger
+
+**Formål:** Læseren skal se at I kender området og kan dokumentere at der faktisk er et problem at løse.
+
+**Længde:** 5–10 sider
+
+**Struktur:**
+```
+1. Introduktion: Hvad undersøger vi her?
+2. Udvælgelseskriterier: Hvordan valgte vi kilder?
+3. Overordnet analyse: Fælles temaer?
+4. Detaljeret analyse af hver kilde/platform:
+   - Navn, baggrund, formål
+   - Funktionaliteter
+   - Design-løsninger
+   - Styrker og svagheder
+5. Sammenfatning: Hvor er gabet?
+```
+
+**Eksempel tabel (State of the Art):**
+
+| **Platform** | **Type** | **Målgruppe** | **Søgefunktioner** | **Software-søgning** | **Vurdering** |
+|---|---|---|---|---|---|
+| ComputerChoose.com | Website | Privatforbruger | CPU, RAM, pris | Nej | God til privatpersoner, ikke B2B |
+| IT Procurement Hub | Saas | Virksomheder | Begrænsede | Nej | Fokuserer på budgetering, ikke sammenligning |
+| Dell Configurator | Producent-tool | Alle | Hardware kun | Nej | Låst til Dell, ingen frihed |
+| NotebookCheck | Review-site | Tech-entusiaster | Manuelt | Delvis | God test af hardware, men upraktisk for virksomheder |
+| Vores løsning | **Prototype** | **Virksomheder** | **CPU, RAM, GPU osv.** | **Ja ✓** | **Unik: kombinerer hardware + software-søgning** |
+
+**Vigtige tips:**
+✅ Citér kilder korrekt (APA, Harvard osv.)
+✅ Opsummer ikke bare — analysér og sammenlign
+✅ End med at opsummere gabet: "Af disse 5 platforme ses det at ingen tilbyder..."
+
+---
+
+## 5️⃣ METODE
+
+**Hvad:** Beskrivelse af hvordan I undersøgte problemet og udviklede løsningen.
+
+**Formål:** En anden person skal kunne genskabe jeres arbejde og vurdere troværdigheden.
+
+**Længde:** 3–5 sider
+
+**Struktur (for hver metode):**
+```
+- Formål: Hvorfor valgte I denne metode?
+- Proces: Konkrete steps
+- Deltagere/omfang: Hvem/hvad?
+- Dataindsamling: Hvordan dokumenterede I?
+- Dataanalyse: Hvordan tolkede I data?
+- Begrænsninger: Hvad kunne være bedre?
+```
+
+**Eksempel metodeafsnit:**
+
+> **5.1 Desk Research**
+>
+> *Formål:* At identificere centrale koncepter inden for procurement og computer-sammenligning.
+>
+> *Proces:* Vi søgte systematisk i Google Scholar, ResearchGate og virksomhedes-blogs efter artikler om "SME procurement", "IT equipment selection", "laptop comparison tools". Vi udførte søgninger i perioden oktober-november 2024.
+>
+> *Udvælgelseskriterier:* Artikler fra 2020 eller senere, fokus på B2B-marked eller SMEs.
+>
+> *Resultat:* 12 relevant artikler identificeret og analyseret.
+>
+> ---
+>
+> **5.2 State of the Art Analyse**
+>
+> *Formål:* At identificere eksisterende løsninger og deres styrker/svagheder.
+>
+> *Proces:* Vi identificerede 5 platforme gennem Google-søgninger og LinkedIn. Hver platform blev evalueret på baggrund af 8 kriterier: søgefunktionalitet, brugervenlig­hed, målgruppe, pris, software-søgning, etc.
+>
+> *Tidsperiode:* November 2024
+>
+> *Resultat:* Sammenligningstabel (se afsnit 4, tabel 1)
+>
+> ---
+>
+> **5.3 Interviews med Beslutningstagere**
+>
+> *Formål:* At forstå virksomheders nuværende procurement-proces og identificere frustrationer.
+>
+> *Deltagere:* 
+> - Person A: IT-manager, 50-ansatte kontor, 8 års erfaring
+> - Person B: CEO, 20-personers software-virksomhed, 5 års erfaring
+>
+> *Proces:* Semi-strukturerede interviews à 60 minutter. Spørgsmål fokuserede på:
+> 1. Nuværende proces (værktøjer, tidsforbrug, ansvarlige)
+> 2. Frustrationer og manglende features
+> 3. Ideelle features i en løsning
+>
+> *Dataindsamling:* Optagelse (med samtykke) + noter
+>
+> *Analyse:* Transskribering + kodning for temaer (f.eks. "tidsspild", "uorganiseret", "software-kompleksitet")
+>
+> *Begrænsninger:* Kun 2 interviews = ikke statistisk repræsentativt. Begge fra Danmark = kulturel bias mulig.
+>
+> ---
+>
+> **5.4 Prototype-udvikling**
+>
+> *Formål:* At validere at en software-søge-funktion er teknisk mulig.
+>
+> *Proces:* Vi designede og kodede en lo-fi prototype med:
+> - Database med 20 eksempel-computere
+> - Hardware-søgning (CPU, RAM, GPU)
+> - Software-søgning (operativsystem, browser-support, dev-tools)
+> - Side-by-side sammenligning
+>
+> *Teknologi:* HTML/CSS/JavaScript (frontend), SQLite (database)
+>
+> *Tidsperiode:* December 2024 – Januar 2025
+>
+> *Resultat:* Prototype-website (link i appendix)
+
+**Vigtige tips:**
+✅ Vær konkret — tal, datoer, navne
+✅ Vær transparent — "Vi havde kun 2 interviews" er OK at skrive
+✅ Forklar dit valg — "Hvorfor interviews og ikke spørgeskemaer?"
+
+---
+
+## 6️⃣ RESULTATER / FINDINGS
+
+**Hvad:** Præsentation af hvad I fandt. UDEN tolkning endnu.
+
+**Formål:** Læseren ser jeres rådata.
+
+**Længde:** 5–10 sider
+
+**Struktur:**
+```
+For hver metode:
+- Oversigt over deltagere/kilder
+- De centrale findings
+- Citater eller eksempler
+- Tabeller/figurer hvor relevant
+```
+
+**IKKE:**
+❌ "Dette viser at virksomheder er ineffektive..." (tolkning)
+❌ "Dette blev gjort fordi..." (spekulering)
+
+**JO:**
+✅ "Begge interviewpersoner rapporterede at deres proces tager 20-30 timer"
+✅ "Interviewperson A sagde: 'Det er helt uorganiseret'"
+
+**Eksempel:**
+
+> **6.1 Findings fra Desk Research**
+>
+> Vi identificerede 3 centrale koncepter:
+> 1. **Procurement-kompleksitet** (Garcia, 2021): Valg af IT-udstyr er komplekst pga. mange variable
+> 2. **TCO-fokus** (Total Cost of Ownership): Virksomheder fokuserer på omkostning over 3-5 år
+> 3. **Software-integration**: Mange virksomheder har kritiske software-krav (f.eks. custom apps, licenser)
+>
+> ---
+>
+> **6.2 State of the Art Findings**
+>
+> Af 5 platforme vi analyserede:
+> - 3 var designet til privatforbrugere (ComputerChoose, NotebookCheck, Amazon)
+> - 2 var designet

@@ -372,7 +372,7 @@ Every integer greater than $1$ is divisible by at least $1$ and itself. Integers
 
 > [!example] Prime Factorizations
 > - $100 = 2^2 \cdot 5^2$
-> - $641 = 641$ ($641$ is itself prime)
+> - $641 = 641^1$ ($641$ is itself prime)
 > - $999 = 3^3 \cdot 37$
 > - $1024 = 2^{10}$
 
@@ -625,7 +625,7 @@ Computing the GCD from prime factorizations is **inefficient** because factoring
 > **Proof:** By the GCD Reduction Lemma, $\gcd(a, b) = \gcd(r_0, r_1) = \gcd(r_1, r_2) = \dots = \gcd(r_{n-1}, r_n) = \gcd(r_n, 0) = r_n$.
 >
 > **Complexity:** The number of divisions required is $O(\log b)$.
-
+	
 > [!example] Finding $\gcd(91, 287)$
 > - First, divide the larger of the two ($287$ ) by the smaller ($91$): $287 = 91 \cdot 3 + 14$. Any divisor of $91$ and $287$ must also divide $287 - 91 \cdot 3 = 14$. Thus, $\gcd(91, 287) = \gcd(91, 14)$.
 > - Next, divide $91$ by this divisor $14$: $91 = 14 \cdot 6 + 7$. Any divisor of $91$ and $14$ must divide $91 - 14 \cdot 6 = 7$. Thus, $\gcd(287, 91) = \gcd(91, 14) = \gcd(14, 7)$.
@@ -1047,6 +1047,7 @@ _Figure 3.2: Additional worked example of modular inverse computation._
 > **Solution:** Because $\gcd(3, 7) = 1$, an inverse exists. The Euclidean algorithm step is $7 = 2 \cdot 3 + 1$.
 > From this equation, we see that $-2 \cdot 3 + 1 \cdot 7 = 1$. This shows that $-2$ and $1$ are Bézout coefficients of $3$ and $7$.
 > We see that $-2$ is an inverse of $3$ modulo $7$. Note that every integer congruent to $-2$ modulo $7$ is also an inverse of $3$, such as $5, -9, 12$, and so on.
+> The smallest positive congruence is $5$, thus the answer is $5$.
 
 > [!example] Finding an Inverse via the Extended Euclidean Algorithm
 > **Problem:** Find an inverse of $101$ modulo $4620$.
@@ -1079,8 +1080,11 @@ Once we have an inverse $\bar{a}$ of $a$ modulo $m$, we can solve the congruence
 > **Solution:** By the previous example, we know that $-2$ is an inverse of $3$ modulo $7$.
 > Multiplying both sides of the congruence by $-2$:
 > $(-2) \cdot 3x \equiv (-2) \cdot 4 \pmod 7$
-> $1x \equiv -8 \pmod 7$
-> $x \equiv 6 \pmod 7$
+> $-6x \equiv -8 \pmod 7$
+> reducing $ax$ modulo 7
+> $= (-6+7)x = 1x \equiv -8 \pmod 7$
+> reducing $b$ modulo 7
+> $x \equiv (-8+2*7 = 6) \pmod 7$
 >
 > We verify that every $x$ with $x \equiv 6 \pmod 7$ is a solution. If $x \equiv 6 \pmod 7$, then $3x \equiv 3 \cdot 6 = 18 \equiv 4 \pmod 7$.
 > We conclude that the solutions are the integers $x$ such that $x \equiv 6 \pmod 7$, namely, $6, 13, 20, \dots$ and $-1, -8, -15, \dots$.
@@ -1144,21 +1148,21 @@ _Figure 3.3: Flowchart for constructing the solution using the Chinese Remainder
 
 > [!example] Solving Sun-Tsu's Puzzle
 > **Problem:** Solve the system of congruences:
-> $x \equiv 2 \pmod 3$
-> $x \equiv 3 \pmod 5$
-> $x \equiv 2 \pmod 7$
+> $x \equiv 2 \pmod 3$ $a_1 = 2$
+> $x \equiv 3 \pmod 5$ $a_2 = 3$
+> $x \equiv 2 \pmod 7$ $a_3 = 2$
 >
 > **Solution:**
-> First let $m = 3 \cdot 5 \cdot 7 = 105$.
+> First let $m$ be the product of moduli $= 3 \cdot 5 \cdot 7 = 105$.
 > - For $m_1 = 3$: $M_1 = 105/3 = 35$. We need $y_1$ such that $35 y_1 \equiv 1 \pmod 3$. Since $35 \equiv 2 \pmod 3$, we have $2 y_1 \equiv 1 \pmod 3$. $y_1 = 2$ works ($2 \cdot 2 = 4 \equiv 1 \pmod 3$).
 > - For $m_2 = 5$: $M_2 = 105/5 = 21$. We need $y_2$ such that $21 y_2 \equiv 1 \pmod 5$. Since $21 \equiv 1 \pmod 5$, we have $1 y_2 \equiv 1 \pmod 5$. $y_2 = 1$ works.
 > - For $m_3 = 7$: $M_3 = 105/7 = 15$. We need $y_3$ such that $15 y_3 \equiv 1 \pmod 7$. Since $15 \equiv 1 \pmod 7$, we have $1 y_3 \equiv 1 \pmod 7$. $y_3 = 1$ works.
 >
 > The solution is $x = a_1 M_1 y_1 + a_2 M_2 y_2 + a_3 M_3 y_3$:
 > $x \equiv 2 \cdot 35 \cdot 2 + 3 \cdot 21 \cdot 1 + 2 \cdot 15 \cdot 1 \pmod{105}$
-> $x \equiv 140 + 63 + 30 \pmod{105}$
-> $x \equiv 233 \pmod{105}$
-> $x \equiv 233 - 2 \cdot 105 = 233 - 210 = 23 \pmod{105}$
+> $\equiv 140 + 63 + 30 \pmod{105}$
+> $\equiv 233 \pmod{105}$
+> $\equiv 233 - 2 \cdot 105 = 233 - 210 = 23 \pmod{105}$
 >
 > It follows that $23$ is the smallest positive integer that is a simultaneous solution.
 
@@ -1174,6 +1178,7 @@ Although the construction in the Chinese Remainder Theorem provides a general me
 > - Substituting this expression for $t$ back into $x = 5t + 1$: $x = 5(6u + 5) + 1 = 30u + 25 + 1 = 30u + 26$.
 > - Insert this into the third congruence: $30u + 26 \equiv 3 \pmod 7$.
 >   $30u \equiv 3 - 26 \pmod 7$
+>   $(30-4*7)u \equiv 3 - 26 \pmod 7$
 >   $2u \equiv -23 \pmod 7$
 >   $2u \equiv 5 \pmod 7$ (since $-23 \equiv -23 + 4 \cdot 7 = -23 + 28 = 5 \pmod 7$).
 >   Since $4 \cdot 2 = 8 \equiv 1 \pmod 7$, multiply by $4$: $8u \equiv 20 \pmod 7$, so $u \equiv 6 \pmod 7$. Hence, $u = 7v + 6$, where $v$ is an integer.

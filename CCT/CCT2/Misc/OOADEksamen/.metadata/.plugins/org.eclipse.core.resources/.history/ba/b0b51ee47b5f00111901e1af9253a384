@@ -1,0 +1,77 @@
+package emne3ObjekterOgDatastrukturer;
+
+import java.util.Stack;
+import java.util.Queue;
+import java.util.LinkedList;
+import java.util.Deque;
+import java.util.ArrayDeque;
+
+public class StackQueueDemo {
+
+    public static void main(String[] args) {
+
+        System.out.println("STACK (LIFO)");
+
+        Stack<String> stack = new Stack<>();
+
+        stack.push("Page1");
+        stack.push("Page2");
+        stack.push("Page3");
+
+        System.out.println("Stack: " + stack);
+
+        System.out.println("peek() = " + stack.peek());
+        System.out.println("pop() = " + stack.pop());
+
+        System.out.println("After pop: " + stack);
+
+        
+        
+        
+        System.out.println("\nQUEUE (FIFO)");
+
+        Queue<String> queue = new LinkedList<>();
+
+        queue.add("Job1");
+        queue.add("Job2");
+        queue.add("Job3");
+
+        System.out.println("Queue: " + queue);
+
+        System.out.println("peek() = " + queue.peek());
+        System.out.println("remove() = " + queue.remove());
+
+        System.out.println("After remove: " + queue);
+
+        
+        
+        
+        System.out.println("\nDEQUE"); //Double-Ended Queue
+
+        Deque<String> deque = new ArrayDeque<>();
+
+        deque.addFirst("Middle");
+        deque.addFirst("Front");
+        deque.addLast("Back");
+
+        System.out.println("Deque: " + deque);
+
+        System.out.println("\npeekFirst() = "
+                + deque.peekFirst());
+
+        System.out.println("peekLast() = "
+                + deque.peekLast());
+
+        System.out.println("\nremoveFirst() = "
+                + deque.removeFirst());
+
+        System.out.println("After removeFirst: "
+                + deque);
+
+        System.out.println("\nremoveLast() = "
+                + deque.removeLast());
+
+        System.out.println("After removeLast: "
+                + deque);
+    }
+}

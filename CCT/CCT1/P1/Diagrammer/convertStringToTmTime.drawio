@@ -1,0 +1,43 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.0.3 Chrome/140.0.7339.249 Electron/38.7.0 Safari/537.36" version="29.0.3">
+  <diagram name="Page-1" id="M-ATajkJjzDavCNkjwDL">
+    <mxGraphModel dx="1645" dy="873" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="915GSaj_fIoMOm0NICFV-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="915GSaj_fIoMOm0NICFV-1" target="915GSaj_fIoMOm0NICFV-2" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="915GSaj_fIoMOm0NICFV-1" value="ConvertStringToTmTime" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="353" y="40" width="145" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="915GSaj_fIoMOm0NICFV-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="915GSaj_fIoMOm0NICFV-2" target="915GSaj_fIoMOm0NICFV-4" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="915GSaj_fIoMOm0NICFV-2" value="Lav et struct &quot;tm&quot;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="365" y="150" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="915GSaj_fIoMOm0NICFV-8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="915GSaj_fIoMOm0NICFV-4" target="915GSaj_fIoMOm0NICFV-7" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="915GSaj_fIoMOm0NICFV-4" value="Lav int for&lt;br&gt;year, month, day, hour, minute og second" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="365" y="260" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="915GSaj_fIoMOm0NICFV-10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="915GSaj_fIoMOm0NICFV-7" target="915GSaj_fIoMOm0NICFV-9" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="915GSaj_fIoMOm0NICFV-7" value="Formater inputet &quot;timeString&quot; til ISO-8601 format" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="365" y="370" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="iwqGZysDi0x_vZDXJPve-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="915GSaj_fIoMOm0NICFV-9" target="iwqGZysDi0x_vZDXJPve-1" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="915GSaj_fIoMOm0NICFV-9" value="Tildel hver af de parsede værdier til deres respektive &quot;tm&quot; struct element, i structen &quot;result&quot;" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="365" y="480" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="iwqGZysDi0x_vZDXJPve-1" value="Retunerer dette &quot;tm&quot; struct &quot;result&quot;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="365" y="610" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

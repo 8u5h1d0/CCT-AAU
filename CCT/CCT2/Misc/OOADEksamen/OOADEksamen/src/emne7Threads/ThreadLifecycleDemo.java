@@ -1,0 +1,41 @@
+package emne7Threads;
+
+public class ThreadLifecycleDemo {
+
+    public static void main(String[] args) throws InterruptedException {
+
+        System.out.println("NEW STATE");
+
+        Thread t = new Thread(() -> {
+
+            System.out.println("RUNNING ON: " + Thread.currentThread().getName());
+
+            try {
+                System.out.println("\nGOING TO TIMED_WAITING (sleep)");
+                Thread.sleep(2000); // TIMED_WAITING
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+
+            System.out.println("BACK TO RUNNING AFTER SLEEP");
+        });
+
+        System.out.println("State before start: " + t.getState());
+
+        System.out.println("\nSTARTING THREAD");
+        t.start(); // NEW → RUNNABLE
+
+        System.out.println("State after start: " + t.getState());
+
+        // lad thread enter sleep
+        Thread.sleep(100);
+
+        System.out.println("State while sleeping: " + t.getState());
+
+        // vent på at thread blir færdig
+        t.join();
+
+        System.out.println("\nTERMINATED STATE");
+        System.out.println("Final state: " + t.getState());
+    }
+}

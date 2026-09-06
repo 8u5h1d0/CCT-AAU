@@ -1,0 +1,247 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.0.3 Chrome/140.0.7339.249 Electron/38.7.0 Safari/537.36" version="29.0.3">
+  <diagram name="Page-1" id="ez_HkSvkNwAleStaihBL">
+    <mxGraphModel dx="1884" dy="907" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="0Ws-BU6X7VGfIEN6SpSC-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="0Ws-BU6X7VGfIEN6SpSC-1" target="0Ws-BU6X7VGfIEN6SpSC-2" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0Ws-BU6X7VGfIEN6SpSC-1" value="moreThanFiftyDatapoints" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="353" y="40" width="145" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="0Ws-BU6X7VGfIEN6SpSC-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="0Ws-BU6X7VGfIEN6SpSC-2" target="0Ws-BU6X7VGfIEN6SpSC-10" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0Ws-BU6X7VGfIEN6SpSC-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="0Ws-BU6X7VGfIEN6SpSC-2" target="0Ws-BU6X7VGfIEN6SpSC-12" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="280" y="250" />
+              <mxPoint x="280" y="375" />
+              <mxPoint x="426" y="375" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0Ws-BU6X7VGfIEN6SpSC-2" value="Eksisterer &lt;br&gt;&quot;target_count&quot; (&amp;lt;= 50), &lt;br&gt;&quot;data&quot; (summerede data &lt;br&gt;baseret på &quot;timeFrame&quot;) og &lt;br&gt;&quot;arraySize&quot; (array_size)? &lt;br&gt;Er de mere end 0?" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="325" y="150" width="200" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="0Ws-BU6X7VGfIEN6SpSC-6" value="Ja&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="281" y="209" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="0Ws-BU6X7VGfIEN6SpSC-7" value="Nej" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="510" y="209" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="0Ws-BU6X7VGfIEN6SpSC-10" value="&lt;font style=&quot;color: rgb(255, 14, 14);&quot;&gt;NULL&lt;/font&gt;" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="525" y="350" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="0Ws-BU6X7VGfIEN6SpSC-29" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="0Ws-BU6X7VGfIEN6SpSC-12" target="0Ws-BU6X7VGfIEN6SpSC-27" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0Ws-BU6X7VGfIEN6SpSC-12" value="Alloker &quot;target_count&quot; antal &quot;parsed_json_t&quot; hukkomelsespladser til output array &quot;out&quot;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="358" y="400" width="135" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="0Ws-BU6X7VGfIEN6SpSC-33" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="0Ws-BU6X7VGfIEN6SpSC-27" target="0Ws-BU6X7VGfIEN6SpSC-32" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0Ws-BU6X7VGfIEN6SpSC-44" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="0Ws-BU6X7VGfIEN6SpSC-27" target="0Ws-BU6X7VGfIEN6SpSC-43" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0Ws-BU6X7VGfIEN6SpSC-27" value="er &quot;out&quot; tom?" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="378" y="520" width="95" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="0Ws-BU6X7VGfIEN6SpSC-30" value="Ja&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="330" y="530" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="0Ws-BU6X7VGfIEN6SpSC-31" value="Nej" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="465" y="530" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="0Ws-BU6X7VGfIEN6SpSC-32" value="&lt;font style=&quot;color: rgb(255, 14, 14);&quot;&gt;NULL&lt;/font&gt;" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="258" y="620" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="0Ws-BU6X7VGfIEN6SpSC-40" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="0Ws-BU6X7VGfIEN6SpSC-34" target="0Ws-BU6X7VGfIEN6SpSC-39" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0Ws-BU6X7VGfIEN6SpSC-34" value="Beregn hvor mange datapunkter der skal summeres sammen, pr. iteration (gruppe) for at nå &quot;taget_count&quot; antal, gemt i int &quot;entriesPerIteration&quot;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="358" y="720" width="135" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="0Ws-BU6X7VGfIEN6SpSC-47" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="0Ws-BU6X7VGfIEN6SpSC-39" target="0Ws-BU6X7VGfIEN6SpSC-46" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0Ws-BU6X7VGfIEN6SpSC-39" value="For hvert index &quot;i&quot; i &quot;data&quot;" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="355" y="860" width="140" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="0Ws-BU6X7VGfIEN6SpSC-45" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="0Ws-BU6X7VGfIEN6SpSC-43" target="0Ws-BU6X7VGfIEN6SpSC-34" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0Ws-BU6X7VGfIEN6SpSC-43" value="Initialiser&amp;nbsp; en int &quot;indexLocation&quot; sat til 0" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="473" y="620" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="0Ws-BU6X7VGfIEN6SpSC-54" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="0Ws-BU6X7VGfIEN6SpSC-46" target="0Ws-BU6X7VGfIEN6SpSC-51" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0Ws-BU6X7VGfIEN6SpSC-57" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="0Ws-BU6X7VGfIEN6SpSC-46" target="0Ws-BU6X7VGfIEN6SpSC-52" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="550" y="1120" />
+              <mxPoint x="550" y="1245" />
+              <mxPoint x="425" y="1245" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0Ws-BU6X7VGfIEN6SpSC-46" value="Er &quot;indexLocation&quot; &lt;br&gt;større eller lig &quot;&lt;br&gt;arraySize&quot;?" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="353" y="1050" width="145" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="0Ws-BU6X7VGfIEN6SpSC-48" value="Ja&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="310" y="1080" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="0Ws-BU6X7VGfIEN6SpSC-49" value="Nej" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="490" y="1080" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="0Ws-BU6X7VGfIEN6SpSC-51" value="Sæt &quot;out&quot; for index &quot;i&quot; til værdien af &quot;data&quot; for &quot;arraySize&quot; - 1" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="219" y="1190" width="134" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="0Ws-BU6X7VGfIEN6SpSC-59" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="0Ws-BU6X7VGfIEN6SpSC-52" target="0Ws-BU6X7VGfIEN6SpSC-58" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0Ws-BU6X7VGfIEN6SpSC-52" value="Initialiser ints &quot;localIterations&quot;, &quot;taken&quot; og doubles &quot;top&quot;, &quot;bot&quot;, &quot;light&quot; sat til 0" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="356" y="1310" width="139" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="0Ws-BU6X7VGfIEN6SpSC-56" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(236, 236, 236); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;&quot;&gt;(Hvis input arrayet bliver overskredet, kopirer vi den sidste værdi)&lt;/span&gt;" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="141" y="1050" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="0Ws-BU6X7VGfIEN6SpSC-61" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="0Ws-BU6X7VGfIEN6SpSC-58" target="0Ws-BU6X7VGfIEN6SpSC-60" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0Ws-BU6X7VGfIEN6SpSC-58" value="Sæt int &quot;x&quot; til 0&lt;br&gt;&lt;br&gt;For hver &quot;indexLocation&quot; mellem &quot;x&quot; og &quot;entriesPerIteration&quot;&lt;br&gt;mens &quot;indexLocation&quot; er mindre end &quot;arraySize&quot;" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="343" y="1430" width="165" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="0Ws-BU6X7VGfIEN6SpSC-63" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="0Ws-BU6X7VGfIEN6SpSC-60" target="0Ws-BU6X7VGfIEN6SpSC-62" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0Ws-BU6X7VGfIEN6SpSC-60" value="Tilføj &quot;humidityTop&quot; værdien i &quot;data&quot; for index &quot;indexLocation&quot; til &quot;top&quot;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="365" y="1650" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="0Ws-BU6X7VGfIEN6SpSC-65" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="0Ws-BU6X7VGfIEN6SpSC-62" target="0Ws-BU6X7VGfIEN6SpSC-64" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0Ws-BU6X7VGfIEN6SpSC-62" value="Tilføj &quot;humidityBot&quot; værdien i &quot;data&quot; for index &quot;indexLocation&quot; til &quot;bot&quot;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="365" y="1760" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="0Ws-BU6X7VGfIEN6SpSC-67" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="0Ws-BU6X7VGfIEN6SpSC-64" target="0Ws-BU6X7VGfIEN6SpSC-66" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0Ws-BU6X7VGfIEN6SpSC-64" value="Tilføj &quot;lightLevel&quot; værdien i &quot;data&quot; for index &quot;indexLocation&quot; til &quot;light&quot;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="365" y="1870" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="0Ws-BU6X7VGfIEN6SpSC-70" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="0Ws-BU6X7VGfIEN6SpSC-66" target="0Ws-BU6X7VGfIEN6SpSC-69" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0Ws-BU6X7VGfIEN6SpSC-66" value="Inkrement &quot;taken&quot;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="365" y="1980" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="0Ws-BU6X7VGfIEN6SpSC-75" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="0Ws-BU6X7VGfIEN6SpSC-69" target="0Ws-BU6X7VGfIEN6SpSC-74" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0Ws-BU6X7VGfIEN6SpSC-77" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="0Ws-BU6X7VGfIEN6SpSC-69" target="0Ws-BU6X7VGfIEN6SpSC-76" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="540" y="2160" />
+              <mxPoint x="540" y="2260" />
+              <mxPoint x="425" y="2260" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0Ws-BU6X7VGfIEN6SpSC-69" value="Er &quot;taken&quot; = 0?" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="353" y="2090" width="145" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="0Ws-BU6X7VGfIEN6SpSC-71" value="Ja&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="310" y="2120" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="0Ws-BU6X7VGfIEN6SpSC-72" value="Nej" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="490" y="2120" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="0Ws-BU6X7VGfIEN6SpSC-79" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="0Ws-BU6X7VGfIEN6SpSC-74" target="0Ws-BU6X7VGfIEN6SpSC-76" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0Ws-BU6X7VGfIEN6SpSC-74" value="Sæt &quot;taken&quot; til 1" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="233" y="2230" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="0Ws-BU6X7VGfIEN6SpSC-81" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="0Ws-BU6X7VGfIEN6SpSC-76" target="0Ws-BU6X7VGfIEN6SpSC-80" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0Ws-BU6X7VGfIEN6SpSC-76" value="Lav et &quot;parsed_json_t&quot; struct &quot;localItem&quot; og importer data for index &quot;i * entriesPerIteration&quot;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="353" y="2330" width="145" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="0Ws-BU6X7VGfIEN6SpSC-83" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="0Ws-BU6X7VGfIEN6SpSC-80" target="0Ws-BU6X7VGfIEN6SpSC-82" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0Ws-BU6X7VGfIEN6SpSC-80" value="Læg værdien af &quot;top&quot; divideret med &quot;taken&quot; som en float ind i &quot;humidityTop&quot; værdien af &quot;localItem&quot;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="349" y="2450" width="152" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="0Ws-BU6X7VGfIEN6SpSC-85" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="0Ws-BU6X7VGfIEN6SpSC-82" target="0Ws-BU6X7VGfIEN6SpSC-84" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0Ws-BU6X7VGfIEN6SpSC-82" value="Læg værdien af &quot;bot&quot; divideret med &quot;taken&quot; som en float ind i &quot;humidityBot&quot; værdien af &quot;localItem&quot;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="349" y="2580" width="152" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="0Ws-BU6X7VGfIEN6SpSC-88" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="0Ws-BU6X7VGfIEN6SpSC-84" target="0Ws-BU6X7VGfIEN6SpSC-86" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0Ws-BU6X7VGfIEN6SpSC-84" value="Læg værdien af &quot;light&quot; divideret med &quot;taken&quot; som en float ind i &quot;lightLevel&quot; værdien af &quot;localItem&quot;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="349" y="2710" width="152" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="0Ws-BU6X7VGfIEN6SpSC-95" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="0Ws-BU6X7VGfIEN6SpSC-86" target="0Ws-BU6X7VGfIEN6SpSC-94" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0Ws-BU6X7VGfIEN6SpSC-97" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="0Ws-BU6X7VGfIEN6SpSC-86" target="0Ws-BU6X7VGfIEN6SpSC-93" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0Ws-BU6X7VGfIEN6SpSC-86" value="Kopier hele structen af behandlet data &quot;localItem&quot; for hver index &quot;indexLocation&quot; over i &quot;out&quot; for index &quot;i&quot;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="346" y="2845" width="158" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="0Ws-BU6X7VGfIEN6SpSC-105" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="0Ws-BU6X7VGfIEN6SpSC-93" target="0Ws-BU6X7VGfIEN6SpSC-104" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0Ws-BU6X7VGfIEN6SpSC-109" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="0Ws-BU6X7VGfIEN6SpSC-93" target="0Ws-BU6X7VGfIEN6SpSC-108" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="540" y="3055" />
+              <mxPoint x="540" y="3160" />
+              <mxPoint x="425" y="3160" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0Ws-BU6X7VGfIEN6SpSC-93" value="Er der flere index-addresser?&lt;br&gt;(&quot;i&quot; &amp;lt; arraySize)" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="353" y="2980" width="145" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="0Ws-BU6X7VGfIEN6SpSC-96" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="0Ws-BU6X7VGfIEN6SpSC-94" target="0Ws-BU6X7VGfIEN6SpSC-58" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0Ws-BU6X7VGfIEN6SpSC-94" value="Inkrement &quot;x&quot; og &quot;indexLocation&quot;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="600" y="2855" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="0Ws-BU6X7VGfIEN6SpSC-102" value="Ja&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="305" y="3020" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="0Ws-BU6X7VGfIEN6SpSC-103" value="Nej" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="485" y="3020" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="0Ws-BU6X7VGfIEN6SpSC-107" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="0Ws-BU6X7VGfIEN6SpSC-104" target="0Ws-BU6X7VGfIEN6SpSC-39" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="198" y="2950" />
+              <mxPoint x="120" y="2950" />
+              <mxPoint x="120" y="930" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0Ws-BU6X7VGfIEN6SpSC-104" value="Inkrement &quot;i&quot;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="138" y="3025" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="0Ws-BU6X7VGfIEN6SpSC-108" value="Returnerer &quot;out&quot;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="365" y="3190" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

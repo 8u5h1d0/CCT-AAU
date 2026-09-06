@@ -1,0 +1,36 @@
+package emne6StruktureretData;
+
+public class OperatorDemo {
+
+    public static void main(String[] args) {
+
+        System.out.println("1. NO OPERATOR OVERLOADING");
+
+        Money a = new Money(10);
+        Money b = new Money(20);
+
+        // ❌ Compiler error (ikke tilladt i Java)
+        // Money c = a + b;
+
+        System.out.println("Cannot do: Money c = a + b");
+
+
+        System.out.println("\n2. STRING CONCAT TRAP");
+
+        System.out.println("sum: " + 1 + 2);
+
+        System.out.println("\n3. FIXED VERSION");
+
+        System.out.println("sum: " + (1 + 2));
+    }
+}
+
+// Simple class to show concept
+class Money {
+
+    int value;
+
+    public Money(int value) {
+        this.value = value;
+    }
+}

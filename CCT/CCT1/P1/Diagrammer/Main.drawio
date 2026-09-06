@@ -1,0 +1,97 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.0.3 Chrome/140.0.7339.249 Electron/38.7.0 Safari/537.36" version="29.0.3">
+  <diagram name="Page-1" id="jNz4zoVerz5rV3BM3WIn">
+    <mxGraphModel dx="1665" dy="841" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="qvfuJ_QsZYkGPqb4ALcm-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="qvfuJ_QsZYkGPqb4ALcm-1" target="qvfuJ_QsZYkGPqb4ALcm-2" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qvfuJ_QsZYkGPqb4ALcm-1" value="Lys og vand data&lt;br&gt;(SD Kort)" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="365" y="40" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="qvfuJ_QsZYkGPqb4ALcm-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="qvfuJ_QsZYkGPqb4ALcm-2" target="qvfuJ_QsZYkGPqb4ALcm-5" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qvfuJ_QsZYkGPqb4ALcm-2" value="Deklerær kilde og destination for C programmet" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="365" y="150" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="qvfuJ_QsZYkGPqb4ALcm-51" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="qvfuJ_QsZYkGPqb4ALcm-5" target="qvfuJ_QsZYkGPqb4ALcm-50" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qvfuJ_QsZYkGPqb4ALcm-5" value="Kald {load_file}" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="365" y="260" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="qvfuJ_QsZYkGPqb4ALcm-54" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="qvfuJ_QsZYkGPqb4ALcm-50" target="qvfuJ_QsZYkGPqb4ALcm-53" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qvfuJ_QsZYkGPqb4ALcm-50" value="Retunere indholdet af data filens indhold" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="365" y="370" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="qvfuJ_QsZYkGPqb4ALcm-57" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="qvfuJ_QsZYkGPqb4ALcm-53" target="qvfuJ_QsZYkGPqb4ALcm-56" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qvfuJ_QsZYkGPqb4ALcm-53" value="Kalder {ParseJson}" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="365" y="480" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="qvfuJ_QsZYkGPqb4ALcm-60" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="qvfuJ_QsZYkGPqb4ALcm-56" target="qvfuJ_QsZYkGPqb4ALcm-59" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qvfuJ_QsZYkGPqb4ALcm-56" value="&amp;nbsp;Retunere json data&#39;et omformateret til et struct" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="365" y="590" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="qvfuJ_QsZYkGPqb4ALcm-62" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="qvfuJ_QsZYkGPqb4ALcm-59" target="qvfuJ_QsZYkGPqb4ALcm-61" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qvfuJ_QsZYkGPqb4ALcm-59" value="Kalder {selectTimeFrame}" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="365" y="700" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="qvfuJ_QsZYkGPqb4ALcm-64" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="qvfuJ_QsZYkGPqb4ALcm-61" target="qvfuJ_QsZYkGPqb4ALcm-63" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qvfuJ_QsZYkGPqb4ALcm-61" value="Retunere brugerens ønskede tidsramme data projekteres efter" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="365" y="810" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="qvfuJ_QsZYkGPqb4ALcm-66" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="qvfuJ_QsZYkGPqb4ALcm-63" target="qvfuJ_QsZYkGPqb4ALcm-65" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qvfuJ_QsZYkGPqb4ALcm-63" value="Kalder {summarizeData}" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="365" y="920" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="qvfuJ_QsZYkGPqb4ALcm-68" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="qvfuJ_QsZYkGPqb4ALcm-65" target="qvfuJ_QsZYkGPqb4ALcm-67" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qvfuJ_QsZYkGPqb4ALcm-65" value="Retunere et behandlet struct der indeholder data&#39;et grupperet efter brugerens specifikation" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="365" y="1030" width="120" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="qvfuJ_QsZYkGPqb4ALcm-70" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="qvfuJ_QsZYkGPqb4ALcm-67" target="qvfuJ_QsZYkGPqb4ALcm-69" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qvfuJ_QsZYkGPqb4ALcm-67" value="Skriver dette data ned i en fil, på en måde der er læsbar for gnuplot" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="365" y="1180" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="qvfuJ_QsZYkGPqb4ALcm-73" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="qvfuJ_QsZYkGPqb4ALcm-69" target="qvfuJ_QsZYkGPqb4ALcm-72" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qvfuJ_QsZYkGPqb4ALcm-69" value="Kalder {spawnGnuplot}" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="365" y="1290" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="qvfuJ_QsZYkGPqb4ALcm-75" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="qvfuJ_QsZYkGPqb4ALcm-72" target="qvfuJ_QsZYkGPqb4ALcm-74" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qvfuJ_QsZYkGPqb4ALcm-72" value="Finder den givede fil og kører det passende sæt gnuplot indstillinger" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="365" y="1400" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="9oGpNmmhUGPE7m9HitDI-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="qvfuJ_QsZYkGPqb4ALcm-74" target="9oGpNmmhUGPE7m9HitDI-1" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qvfuJ_QsZYkGPqb4ALcm-74" value="Printer graf" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="365" y="1510" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="9oGpNmmhUGPE7m9HitDI-1" value="Retunerer 0" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="365" y="1620" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
