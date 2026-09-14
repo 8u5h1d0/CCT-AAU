@@ -10,6 +10,51 @@ Litterature:
   - "Introduction to Computing Systems: From Bits & Gates to C/C++ & Beyond, 3rd edition"
 Created: 13-09-2026
 ---
+# Table of Contents
+
+1. [[#Arduino UNO R3 / ATmega328 Architecture & LC-3 I/O Systems|Arduino UNO R3 / ATmega328 Architecture & LC-3 I/O Systems]]
+	1. [[#Arduino UNO R3 / ATmega328 Architecture & LC-3 I/O Systems#Quick Reference|Quick Reference]]
+2. [[#PART I — Arduino UNO R3 & ATmega328 Microcontroller|PART I — Arduino UNO R3 & ATmega328 Microcontroller]]
+	1. [[#PART I — Arduino UNO R3 & ATmega328 Microcontroller#1. ATmega328 Hardware Features|1. ATmega328 Hardware Features]]
+		1. [[#1. ATmega328 Hardware Features#1.1 ATmega328 Memory|1.1 ATmega328 Memory]]
+			1. [[#1.1 ATmega328 Memory#Flash EEPROM (In-System Programmable)|Flash EEPROM (In-System Programmable)]]
+			2. [[#1.1 ATmega328 Memory#Byte-Addressable EEPROM|Byte-Addressable EEPROM]]
+			3. [[#1.1 ATmega328 Memory#Static RAM (SRAM)|Static RAM (SRAM)]]
+		2. [[#1. ATmega328 Hardware Features#1.2 ATmega328 Port System|1.2 ATmega328 Port System]]
+		3. [[#1. ATmega328 Hardware Features#1.3 ATmega328 Internal Systems|1.3 ATmega328 Internal Systems]]
+			1. [[#1.3 ATmega328 Internal Systems#Time Base|Time Base]]
+			2. [[#1.3 ATmega328 Internal Systems#Timing Subsystem (Timers & PWM)|Timing Subsystem (Timers & PWM)]]
+			3. [[#1.3 ATmega328 Internal Systems#Serial Communications|Serial Communications]]
+			4. [[#1.3 ATmega328 Internal Systems#Analog-to-Digital Converter (ADC)|Analog-to-Digital Converter (ADC)]]
+			5. [[#1.3 ATmega328 Internal Systems#Interrupts|Interrupts]]
+	2. [[#PART I — Arduino UNO R3 & ATmega328 Microcontroller#2. Arduino UNO R3 Open Source Schematic|2. Arduino UNO R3 Open Source Schematic]]
+	3. [[#PART I — Arduino UNO R3 & ATmega328 Microcontroller#3. Arduino Mega 2560 R3 Processing Board|3. Arduino Mega 2560 R3 Processing Board]]
+3. [[#PART II — LC-3 Input/Output Systems|PART II — LC-3 Input/Output Systems]]
+	1. [[#PART II — LC-3 Input/Output Systems#4. LC-3 I/O Fundamentals|4. LC-3 I/O Fundamentals]]
+		1. [[#4. LC-3 I/O Fundamentals#4.1 Privilege, Priority, and Memory Address Space|4.1 Privilege, Priority, and Memory Address Space]]
+			1. [[#4.1 Privilege, Priority, and Memory Address Space#Privilege|Privilege]]
+			2. [[#4.1 Privilege, Priority, and Memory Address Space#Priority|Priority]]
+			3. [[#4.1 Privilege, Priority, and Memory Address Space#Orthogonality of Privilege and Priority|Orthogonality of Privilege and Priority]]
+			4. [[#4.1 Privilege, Priority, and Memory Address Space#The Processor Status Register (PSR)|The Processor Status Register (PSR)]]
+		2. [[#4. LC-3 I/O Fundamentals#4.2 Organization of Memory|4.2 Organization of Memory]]
+		3. [[#4. LC-3 I/O Fundamentals#4.3 I/O Device Fundamentals|4.3 I/O Device Fundamentals]]
+			1. [[#4.3 I/O Device Fundamentals#Memory-Mapped I/O vs. Special I/O Instructions|Memory-Mapped I/O vs. Special I/O Instructions]]
+			2. [[#4.3 I/O Device Fundamentals#Asynchronous vs. Synchronous I/O|Asynchronous vs. Synchronous I/O]]
+			3. [[#4.3 I/O Device Fundamentals#Interrupt-Driven vs. Polling|Interrupt-Driven vs. Polling]]
+		4. [[#4. LC-3 I/O Fundamentals#4.4 Input from the Keyboard|4.4 Input from the Keyboard]]
+			1. [[#4.4 Input from the Keyboard#Keyboard Device Registers|Keyboard Device Registers]]
+			2. [[#4.4 Input from the Keyboard#Polling-Based Input Routine|Polling-Based Input Routine]]
+			3. [[#4.4 Input from the Keyboard#Polling Loop Flowchart|Polling Loop Flowchart]]
+			4. [[#4.4 Input from the Keyboard#Memory-Mapped Input Data Path|Memory-Mapped Input Data Path]]
+		5. [[#4. LC-3 I/O Fundamentals#4.5 Output to the Monitor|4.5 Output to the Monitor]]
+			1. [[#4.5 Output to the Monitor#Monitor Device Registers|Monitor Device Registers]]
+			2. [[#4.5 Output to the Monitor#Polling-Based Output Routine|Polling-Based Output Routine]]
+			3. [[#4.5 Output to the Monitor#Memory-Mapped Output Data Path|Memory-Mapped Output Data Path]]
+			4. [[#4.5 Output to the Monitor#Combined Example: Keyboard Echo|Combined Example: Keyboard Echo]]
+		6. [[#4. LC-3 I/O Fundamentals#4.6 A More Sophisticated Input Routine|4.6 A More Sophisticated Input Routine]]
+		7. [[#4. LC-3 I/O Fundamentals#4.7 Memory-Mapped I/O Data Path (Complete)|4.7 Memory-Mapped I/O Data Path (Complete)]]
+		8. [[#4. LC-3 I/O Fundamentals#4.8 Comparison: ATmega328 vs. LC-3 I/O Philosophies|4.8 Comparison: ATmega328 vs. LC-3 I/O Philosophies]]
+
 # Arduino UNO R3 / ATmega328 Architecture & LC-3 I/O Systems
 
 ---
