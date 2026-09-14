@@ -134,7 +134,7 @@ _Figure 1.2: Hierarchical overview of the three ATmega328 memory types and their
 
 ![[Pasted image 20260913175441.png]]
 
-_Figure 1.3: Detailed memory map showing the address allocation for Flash, EEPROM, and SRAM regions._
+_Figure 1.3: 328 Pin-diagram
 
 #### Flash EEPROM (In-System Programmable)
 
