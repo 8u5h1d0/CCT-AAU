@@ -1292,8 +1292,6 @@ _Figure 15.2: Foreground/background processing hardware demonstration on the Ard
 >- **Foreground Tasks:** Polling keypad/card reader inputs, generating PWM motor drive signals for normal open/close cycles.
 >- **Background Tasks (Interrupt-Driven):** Monitoring optical pinch-guard sensors, motor stall current detectors, and obstruction limit switches via hardware interrupts to immediately halt door movement upon hazard detection.
 
----
-
 ### Foreground/Background Demonstration Code (Arduino)
 
 ```c
