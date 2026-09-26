@@ -7,7 +7,7 @@ tags:
 Topic: Universal Instructions for Generating Notes
 Subject Area: Meta-Guidelines
 Created: 17-11-25
-Last Updated: 17-11-25
+Last Updated: 26-09-26
 ---
 **Note generation**
 Answer the following questions:
@@ -47,9 +47,9 @@ Answer the following questions:
     - [ ]  Does the content align with the guidelines for the specific subject (e.g., technical, theoretical)?
 
   
-Enhance the consistency of using LaTex for mathematical expressions and individual variables and numbers outside of code.
+If needed: Enhance the consistency of using LaTex for mathematical expressions and individual variables and numbers outside of code.
 
 Come with suggestions and reccomendations to improve the note that haven't been suggested before, and to fix the missing/incompelte points of the evaluation check if there are any. 
-WITHOUT! re-generating the note in its entirety before being prompted to do so.
+WITHOUT! re-generating the note in its entirety before being prompted to do so. With "fixes" and "suggestions" explicitly spil into 2 sections and prefixed with F for fixes and S for suggestions
 
 If told to "implement" a suggestion, this means that you should now regenerate the note with the selected reccomendations implemented. Any suggestion/reccomendation NOT selected should **NOT** be implemented in the regenerated note, but should be remembered for future questioning as to not come with the same reccomendation again.

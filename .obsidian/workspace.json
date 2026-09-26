@@ -4,24 +4,53 @@
     "type": "split",
     "children": [
       {
-        "id": "dddb8a5d4c26ca5d",
+        "id": "f9e66e7ca1e1b160",
         "type": "tabs",
         "children": [
           {
-            "id": "9adb3fc59c80cc11",
+            "id": "e7f4bcdf96511de1",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CCT/CCT3/Indl. Sys/InS - K2 - Microcontroller Systems & Processor IO Fundamentals.md",
+                "file": "CCT/CCT3/Lin. Alg/K1 - Lineære ligningssystemer , deres (in)konsistens og løsningsmetoder..md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "InS - K2 - Microcontroller Systems & Processor IO Fundamentals"
+              "title": "K1 - Lineære ligningssystemer , deres (in)konsistens og løsningsmetoder."
+            }
+          },
+          {
+            "id": "f84d6c9f800d5974",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "CCT/CCT3/!Formatting & Syntax/Partial-Note Generation - First Pass - 1.0.0.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Partial-Note Generation - First Pass - 1.0.0"
+            }
+          },
+          {
+            "id": "a99c9f7bcbbd1ae4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "CCT/CCT3/Lin. Alg/K3 - Lineær (u)afhængighed & transformaioner.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "K3 - Lineær (u)afhængighed & transformaioner"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -80,8 +109,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "e1c86dfdf6765e14",
@@ -186,8 +214,25 @@
       "bases:Create new base": false
     }
   },
-  "active": "9adb3fc59c80cc11",
+  "active": "a99c9f7bcbbd1ae4",
   "lastOpenFiles": [
+    "CCT/CCT3/Lin. Alg/Originals/K3 - Lineær (u)afhængighed & transformaioner.md",
+    "CCT/CCT3/Lin. Alg/Lin. Alg. - K1 - Lineære ligningssystemer , deres (in)konsistens og løsningsmetoder..md",
+    "CCT/CCT3/Lin. Alg/Lin. Alg. - K2 -Linearkombinationer.md",
+    "CCT/CCT3/Lin. Alg/Originals/Lin. Alg. - K1 - Lineære ligningssystemer , deres (in)konsistens og løsningsmetoder..md",
+    "CCT/CCT3/Lin. Alg/K3 - Lineær (u)afhængighed & transformaioner.md",
+    "CCT/CCT3/!Formatting & Syntax/Post-Processing - Secondary Prompts - 1.1.md",
+    "CCT/CCT3/Lin. Alg/Lin. Alg. - Template.md",
+    "CCT/CCT3/!Formatting & Syntax/Note Generation - Agent Mode - 2.1.1.md",
+    "CCT/CCT3/Lin. Alg/K1 - Lineære ligningssystemer , deres (in)konsistens og løsningsmetoder..md",
+    "CCT/CCT3/!Formatting & Syntax/Note Generation - Text Mode - 2.0.2.md",
+    "CCT/CCT3/!Formatting & Syntax/Partial-Note Generation - First Pass - 1.0.0.md",
+    "CCT/CCT3/Lin. Alg/Originals/K1 - Lineære ligningssystemer , deres (in)konsistens og løsningsmetoder..md",
+    "CCT/CCT3/instructions-for-generating-notes-v2.1.md",
+    "CCT/instructions-for-generating-notes-v2.1.md",
+    "instructions-for-generating-notes-v2.1.md",
+    "CCT/CCT3/!Formatting & Syntax/OMD - Formatting and Syntax.md",
+    "CCT/CCT3/Indl. Sys/InS - K2 - Microcontroller Systems & Processor IO Fundamentals.md",
     "CCT/CCT2/AgS/AgS - K5 - Analyse.md",
     "CCT/CCT2/!Formatting & Syntax/Post-Processing - Secondary Prompts - 1.0.0.md",
     "CCT/CCT1/Notes/INCE CPH CCT1/K9 - The von Neumann Model.md",
@@ -197,23 +242,6 @@
     "CCT/CCT1/Notes/INCE CPH CCT1/K3 R2 - 2.4 - 2.6 + 2.8.md",
     "CCT/CCT1/Notes/INCE CPH CCT1/K3 R3 - 3.1 - 3.2 + 3.5.md",
     "CCT/CCT1/Notes/INCE CPH CCT1/K4 R4 - 4.1 - 4.5.md",
-    "CCT/CCT1/Notes/INCE CPH CCT1/K1 R1 - Digital Design - 1.1-1.5.md",
-    "CCT/CCT1/Notes/INCE CPH CCT1/K2 R2 - 2.1 - 2.3.md",
-    "CCT/CCT1/Notes/INCE CPH CCT1/K2 R1 - Digital Design - 1.6 - 1.7.md",
-    "CCT/CCT2/DS/DS - K1 - Sets, Relation & Functions 1.md",
-    "CCT/CCT1/Notes/INCE CPH CCT1/K10 - The LC-3 and Data Path.md",
-    "CCT-AAU/CCT/CCT2/DS/DS - K2 - Basics of Number Theory.md",
-    "CCT-AAU/CCT/CCT2/DS/DS - K3 -Induction & Recursion.md",
-    "CCT-AAU/CCT/CCT2/DS/DS - K1 - Sets, Relation & Functions 1.md",
-    "CCT-AAU/CCT/CCT1/Notes/INCE CPH CCT1/K2 R2 - 2.1 - 2.3.md",
-    "CCT-AAU/CCT/CCT1/Notes/INCE CPH CCT1/K2 R1 - Digital Design - 1.6 - 1.7.md",
-    "CCT-AAU/CCT/CCT1/Notes/INCE CPH CCT1/K1 R1 - Digital Design - 1.1-1.5.md",
-    "CCT-AAU/CCT/CCT1/Notes/INCE CPH CCT1/K4 R4 - 4.1 - 4.5.md",
-    "CCT-AAU/CCT/CCT1/Notes/INCE CPH CCT1/K3 R3 - 3.1 - 3.2 + 3.5.md",
-    "CCT-AAU/CCT/CCT1/Notes/INCE CPH CCT1/K3 R2 - 2.4 - 2.6 + 2.8.md",
-    "CCT-AAU/CCT/CCT2/DS/DS - K5-6 - Introduction to Algos and Correctness.md",
-    "CCT-AAU/CCT/CCT1/Notes/IMPR CPH CCT1 + DC1/CHP 2 - Overview of C.md",
-    "CCT/CCT2/DS/DS - K7 - Algo Design. Sorting, Recursion & Greedy Methods.md",
     "CCT/CCT2/P2",
     "CCT/CCT2/DS/Pictures/DS - K5-6 - Introduction to Algos and Correctness/Pasted image 20260321091023.png",
     "Pasted image 20260321101817.png",
