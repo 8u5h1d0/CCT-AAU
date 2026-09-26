@@ -8,17 +8,17 @@
         "type": "tabs",
         "children": [
           {
-            "id": "e7f4bcdf96511de1",
+            "id": "adaad0a755a86cbe",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CCT/CCT3/Lin. Alg/K1 - Lineære ligningssystemer , deres (in)konsistens og løsningsmetoder..md",
+                "file": "CCT/CCT3/Lin. Alg/K4 - Matrixoperationer, -multiplikation, inverse matricer 1.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "K1 - Lineære ligningssystemer , deres (in)konsistens og løsningsmetoder."
+              "title": "K4 - Matrixoperationer, -multiplikation, inverse matricer 1"
             }
           },
           {
@@ -27,7 +27,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CCT/CCT3/!Formatting & Syntax/Partial-Note Generation - First Pass - 1.0.0.md",
+                "file": "CCT/!Formatting & Syntax/Partial-Note Generation - First Pass - 1.0.0.md",
                 "mode": "source",
                 "source": false
               },
@@ -36,21 +36,48 @@
             }
           },
           {
+            "id": "e7f4bcdf96511de1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "CCT/!Formatting & Syntax/Note Generation - Agent Mode - 2.1.1.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Note Generation - Agent Mode - 2.1.1"
+            }
+          },
+          {
+            "id": "4046597772a9e2c1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "CCT/CCT3/Lin. Alg/K4 - Matrixoperationer, -multiplikation, inverse matricer 1.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "K4 - Matrixoperationer, -multiplikation, inverse matricer 1"
+            }
+          },
+          {
             "id": "a99c9f7bcbbd1ae4",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CCT/CCT3/Lin. Alg/K3 - Lineær (u)afhængighed & transformaioner.md",
+                "file": "CCT/!Formatting & Syntax/Post-Processing - Secondary Prompts - 1.1.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "K3 - Lineær (u)afhængighed & transformaioner"
+              "title": "Post-Processing - Secondary Prompts - 1.1"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -214,37 +241,46 @@
       "bases:Create new base": false
     }
   },
-  "active": "a99c9f7bcbbd1ae4",
+  "active": "adaad0a755a86cbe",
   "lastOpenFiles": [
+    "CCT/CCT3/Lin. Alg/K4 - Matrixoperationer, -multiplikation, inverse matricer 2.md",
+    "CCT/CCT3/Lin. Alg/K4 - Matrixoperationer, -multiplikation, inverse matricer 1.md",
+    "CCT/CCT3/Lin. Alg/Unconfirmed 433091.crdownload",
+    "CCT/!Formatting & Syntax/Post-Processing - Secondary Prompts - 1.1.md",
+    "CCT/CCT3/Lin. Alg/Originals/K4 - Matrixoperationer, -multiplikation, inverse matricer.md",
+    "CCT/!Formatting & Syntax/Note Generation - Text Mode - 2.0.2.md",
+    "CCT/!Formatting & Syntax/Note Generation - Agent Mode - 2.1.1.md",
     "CCT/CCT3/Lin. Alg/Originals/K3 - Lineær (u)afhængighed & transformaioner.md",
+    "CCT/CCT3/Lin. Alg/Pictures/K4 - Matrixoperationer, -multiplikation, inverse matricer/Pasted image 20260926125731.png",
+    "CCT/CCT3/Lin. Alg/Pictures/K4 - Matrixoperationer, -multiplikation, inverse matricer",
+    "CCT/CCT3/Lin. Alg/Pictures/K4 - Matrixoperationer, -multiplikation, inverse matricer/Pasted image 20260926131710.png",
+    "CCT/CCT3/Lin. Alg/Pictures/K4 - Matrixoperationer, -multiplikation, inverse matricer/Pasted image 20260926131604.png",
+    "CCT/CCT3/Lin. Alg/Pictures/K4 - Matrixoperationer, -multiplikation, inverse matricer/Pasted image 20260926131538.png",
+    "CCT/CCT3/Lin. Alg/Pictures/K4 - Matrixoperationer, -multiplikation, inverse matricer/Pasted image 20260926131444.png",
+    "CCT/CCT3/Lin. Alg/Pictures/K4 - Matrixoperationer, -multiplikation, inverse matricer/Pasted image 20260926131243.png",
+    "CCT/CCT3/Lin. Alg/Pictures/K4 - Matrixoperationer, -multiplikation, inverse matricer/Pasted image 20260926131202.png",
+    "CCT/CCT3/Lin. Alg/Pictures/K4 - Matrixoperationer, -multiplikation, inverse matricer/Pasted image 20260926131122.png",
+    "CCT/CCT3/Lin. Alg/Pictures/K4 - Matrixoperationer, -multiplikation, inverse matricer/Pasted image 20260926131100.png",
+    "CCT/CCT3/Lin. Alg/Originals/K2 -Linearkombinationer.md",
+    "CCT/CCT3/Lin. Alg/K1 - Lineære ligningssystemer , deres (in)konsistens og løsningsmetoder..md",
+    "CCT/!Formatting & Syntax/Partial-Note Generation - First Pass - 1.0.0.md",
+    "CCT/CCT3/Lin. Alg/K3 - Lineær (u)afhængighed & transformaioner.md",
+    "CCT/CCT3/Lin. Alg/Lin. Alg. - Template.md",
+    "CCT/CCT3/Indl. Sys/Originals/InS - K2 - Microcontroller Systems & Processor IO Fundamentals.md",
+    "CCT/CCT3/Indl. Sys/InS - Template 1.md",
+    "CCT/CCT3/Indl. Sys/InS - K2 - Microcontroller Systems & Processor IO Fundamentals.md",
     "CCT/CCT3/Lin. Alg/Lin. Alg. - K1 - Lineære ligningssystemer , deres (in)konsistens og løsningsmetoder..md",
     "CCT/CCT3/Lin. Alg/Lin. Alg. - K2 -Linearkombinationer.md",
     "CCT/CCT3/Lin. Alg/Originals/Lin. Alg. - K1 - Lineære ligningssystemer , deres (in)konsistens og løsningsmetoder..md",
-    "CCT/CCT3/Lin. Alg/K3 - Lineær (u)afhængighed & transformaioner.md",
-    "CCT/CCT3/!Formatting & Syntax/Post-Processing - Secondary Prompts - 1.1.md",
-    "CCT/CCT3/Lin. Alg/Lin. Alg. - Template.md",
-    "CCT/CCT3/!Formatting & Syntax/Note Generation - Agent Mode - 2.1.1.md",
-    "CCT/CCT3/Lin. Alg/K1 - Lineære ligningssystemer , deres (in)konsistens og løsningsmetoder..md",
-    "CCT/CCT3/!Formatting & Syntax/Note Generation - Text Mode - 2.0.2.md",
-    "CCT/CCT3/!Formatting & Syntax/Partial-Note Generation - First Pass - 1.0.0.md",
     "CCT/CCT3/Lin. Alg/Originals/K1 - Lineære ligningssystemer , deres (in)konsistens og løsningsmetoder..md",
     "CCT/CCT3/instructions-for-generating-notes-v2.1.md",
     "CCT/instructions-for-generating-notes-v2.1.md",
     "instructions-for-generating-notes-v2.1.md",
-    "CCT/CCT3/!Formatting & Syntax/OMD - Formatting and Syntax.md",
-    "CCT/CCT3/Indl. Sys/InS - K2 - Microcontroller Systems & Processor IO Fundamentals.md",
+    "CCT/!Formatting & Syntax/OMD - Formatting and Syntax.md",
     "CCT/CCT2/AgS/AgS - K5 - Analyse.md",
     "CCT/CCT2/!Formatting & Syntax/Post-Processing - Secondary Prompts - 1.0.0.md",
     "CCT/CCT1/Notes/INCE CPH CCT1/K9 - The von Neumann Model.md",
-    "CCT/CCT1/Notes/INCE CPH CCT1/K8 R5 - 5.7 - 5.8.md",
-    "CCT/CCT1/Notes/INCE CPH CCT1/K5 R4 - 4.7, 4.9 - 4.11.md",
-    "CCT/CCT1/Notes/INCE CPH CCT1/K7 R5 - 5.1 - 5.5.md",
-    "CCT/CCT1/Notes/INCE CPH CCT1/K3 R2 - 2.4 - 2.6 + 2.8.md",
-    "CCT/CCT1/Notes/INCE CPH CCT1/K3 R3 - 3.1 - 3.2 + 3.5.md",
-    "CCT/CCT1/Notes/INCE CPH CCT1/K4 R4 - 4.1 - 4.5.md",
     "CCT/CCT2/P2",
-    "CCT/CCT2/DS/Pictures/DS - K5-6 - Introduction to Algos and Correctness/Pasted image 20260321091023.png",
-    "Pasted image 20260321101817.png",
-    "CCT/CCT2/DS/Pictures/DS - K5-6 - Introduction to Algos and Correctness/Pasted image 20260321101818.png"
+    "CCT/CCT2/DS/Pictures/DS - K5-6 - Introduction to Algos and Correctness/Pasted image 20260321091023.png"
   ]
 }

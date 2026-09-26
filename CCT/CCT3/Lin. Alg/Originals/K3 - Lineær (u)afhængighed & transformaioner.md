@@ -6,7 +6,8 @@ Topic:
 Semester: CCT3
 Course: Linær Algebra
 Litterature:
-Created:
+  - Linear Algebra and Its Applications, Global Edition, 6ed
+Created: 20-09-2026
 ---
 # Table of Contents
 
