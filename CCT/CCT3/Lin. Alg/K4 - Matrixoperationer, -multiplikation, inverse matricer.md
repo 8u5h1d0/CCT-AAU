@@ -1,3 +1,14 @@
+---
+tags:
+  - CCT3
+  - Lin_Algebra
+Topic: Marix-operationer, Matrix-multiplikation, Inverse matricer
+Semester: CCT3
+Course: Linær Algebra
+Litterature:
+  - Linear Algebra and Its Applications, Global Edition, 6ed
+Created: 06-09-2026
+---
 ## Table of Contents
 
 1. [[#4. Matrix Operations, Matrix Multiplication, and Inverse Matrices|4. Matrix Operations, Matrix Multiplication, and Inverse Matrices]]
@@ -1045,7 +1056,7 @@ The practical consequences are summarized below.
 
 _Table 4.4: Practical comparison of solving a system directly, forming an explicit inverse, and extracting single columns of an inverse._
 
-Every strategy in the table produces the same exact answer in theory, $(A^{-1})\mathbf{b} = $ the unique solution of $A\mathbf{x} = \mathbf{b}$ ✓ (Theorem 5); they differ only in arithmetic cost and in how much round-off error they accumulate.
+Every strategy in the table produces the same exact answer in theory, $(A^{-1})\mathbf{b} =$ the unique solution of $A\mathbf{x} = \mathbf{b}$ ✓ (Theorem 5); they differ only in arithmetic cost and in how much round-off error they accumulate.
 
 ---
 
