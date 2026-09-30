@@ -63,7 +63,8 @@ For square matrices and systems of $n$ linear equations in $n$ unknowns, fundame
 >    - $(d) \implies (c)$: If $A\mathbf{x} = \mathbf{0}$ has only the trivial solution, there are no free variables in the system, which requires a pivot position in every column (totaling $n$ pivots).
 >    - $(c) \implies (b)$: An $n \times n$ matrix with $n$ pivots must have those pivots along the main diagonal, so its reduced echelon form is $I_n$.
 >    - $(b) \implies (a)$: If $A$ is row equivalent to $I_n$, it can be reduced to $I_n$ by elementary row operations, proving $A$ is invertible.
-> 
+> ![[Pasted image 20260929121414.png]]
+> FIGURE 1.1 relaions between a, j, d, c, b
 > 2. **Linking the Remaining Statements:**
 >    - $(a) \implies (k)$: If $A$ is invertible, setting $D = A^{-1}$ satisfies $AD = I$.
 >    - $(k) \implies (g)$: If $AD = I$, then for any $\mathbf{b} \in \mathbb{R}^n$, choosing $\mathbf{x} = D\mathbf{b}$ gives $A\mathbf{x} = A(D\mathbf{b}) = (AD)\mathbf{b} = I\mathbf{b} = \mathbf{b}$, guaranteeing at least one solution.
@@ -71,6 +72,8 @@ For square matrices and systems of $n$ linear equations in $n$ unknowns, fundame
 >    - $(g) \iff (h) \iff (i)$: For any matrix transformation, having a solution for every $\mathbf{b}$ is equivalent to the columns spanning $\mathbb{R}^n$, which is equivalent to mapping onto $\mathbb{R}^n$.
 >    - $(d) \iff (e) \iff (f)$: Having only the trivial solution is equivalent to linear independence of the columns, which is equivalent to the transformation being one-to-one.
 >    - $(a) \iff (l)$: A matrix $A$ is invertible if and only if its transpose $A^T$ is invertible, with $(A^T)^{-1} = (A^{-1})^T$.
+>    ![[Pasted image 20260929121508.png]]
+>     FIGURE 1.2 remaining relations
 
 ### Key Implications and Properties
 
@@ -107,6 +110,9 @@ The negation of any statement describes a property of a singular matrix. For ins
 ### Invertible Linear Transformations
 
 Matrix multiplication corresponds to the composition of linear transformations. When a matrix $A$ is invertible, the relation $A^{-1}A\mathbf{x} = \mathbf{x}$ describes a transformation being undone: multiplying an input vector $\mathbf{x}$ by $A$ transforms it into $A\mathbf{x}$, and multiplying by $A^{-1}$ transforms $A\mathbf{x}$ back into $\mathbf{x}$.
+
+![[Pasted image 20260929121554.png]]
+FIGURE 2 A 1 transforms Ax back to x
 
 A linear transformation $T: \mathbb{R}^n \to \mathbb{R}^n$ is said to be _invertible_ if there exists a function $S: \mathbb{R}^n \to \mathbb{R}^n$ such that:
 
@@ -178,6 +184,8 @@ Subspaces are specialized sets of vectors in $\mathbb{R}^n$ that are closed unde
 > - **Closure Property** : Applying vector addition or scalar multiplication to any element(s) of $H$ always yields a vector that remains inside $H$.
 
 Geometrically, a subspace must always pass through the origin due to the zero-vector requirement. For example, a line or a plane in $\mathbb{R}^3$ represents a subspace if and only if it passes through the origin.
+![[Pasted image 20260929121637.png]]
+FIGURE 1 Span fv1; v2g as a plane through the origin.
 
 > [!example] Spans as Subspaces
 > Let $\mathbf{v}_1, \mathbf{v}_2, \dots, \mathbf{v}_p$ be vectors in $\mathbb{R}^n$, and let $H = \text{Span}\{\mathbf{v}_1, \mathbf{v}_2, \dots, \mathbf{v}_p\}$. The set $H$ is a subspace of $\mathbb{R}^n$:
@@ -208,6 +216,10 @@ Geometrically, a subspace must always pass through the origin due to the zero-ve
 > - It does not contain the zero vector ($\mathbf{0} \notin L$).
 > - Adding two vectors $\mathbf{u}, \mathbf{v}$ whose tips lie on $L$ produces a resultant vector $\mathbf{u} + \mathbf{v}$ that points away from $L$.
 > - Multiplying a vector $\mathbf{w}$ on $L$ by a scalar (such as $2$ or $0$) yields a vector ($2\mathbf{w}$ or $\mathbf{0}$) that does not lie on $L$.
+>   ![[Pasted image 20260929121744.png]]
+>   FIGURE 2 colinear span of V1 and v2
+>   ![[Pasted image 20260929121700.png]]
+>   FIGURE 2 u + v not on L
 
 ### Special Extreme Subspaces
 
@@ -227,6 +239,9 @@ Subspaces in linear algebra commonly arise from matrices in two primary ways: as
 > - $\mathbf{a}_1, \dots, \mathbf{a}_n$ : The $n$ column vectors of $A$, each residing in $\mathbb{R}^m$.
 > - $\text{Col } A$ : The resulting subspace of $\mathbb{R}^m$.
 > - $\text{Span}\{\dots\}$ : The set of all linear combinations of the column vectors.
+>   
+>   ![[Pasted image 20260929121836.png]]
+>   figure 3
 
 Because each column of an $m \times n$ matrix $A$ has $m$ entries, $\text{Col } A$ is a subspace of $\mathbb{R}^m$. The column space $\text{Col } A$ equals all of $\mathbb{R}^m$ if and only if the columns of $A$ span $\mathbb{R}^m$; otherwise, it is a proper subspace of $\mathbb{R}^m$. 
 
@@ -289,6 +304,8 @@ Because a subspace typically contains an infinite number of vectors, working wit
 > - $\mathcal{B} = \{\mathbf{b}_1, \mathbf{b}_2, \dots, \mathbf{b}_p\}$ : An ordered set of vectors in $H$.
 > - **Linearly Independent** : $c_1\mathbf{b}_1 + c_2\mathbf{b}_2 + \dots + c_p\mathbf{b}_p = \mathbf{0}$ holds only when all scalars $c_1 = c_2 = \dots = c_p = 0$.
 > - **Spanning Set** : Every vector in $H$ can be written as a linear combination of $\{\mathbf{b}_1, \dots, \mathbf{b}_p\}$, so $\text{Span}\{\mathbf{b}_1, \dots, \mathbf{b}_p\} = H$.
+>   ![[Pasted image 20260929121905.png]]
+>   FIGURE 3 The standard basis for R3 .
 
 The columns of any invertible $n \times n$ matrix form a basis for all of $\mathbb{R}^n$ because they are linearly independent and span $\mathbb{R}^n$. A primary example is the set of columns of the $n \times n$ identity matrix $I_n$, denoted by $\mathbf{e}_1, \mathbf{e}_2, \dots, \mathbf{e}_n$:
 

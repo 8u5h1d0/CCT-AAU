@@ -9,1294 +9,1127 @@ Litterature:
   - Linear Algebra and Its Applications, Global Edition, 6ed
 Created: 29-09-2026
 ---
+
+---
 ## Table of Contents
 
-1. [[#2.1 Characterizations of Invertible Matrices|2.1 Characterizations of Invertible Matrices]]
-	1. [[#2.1 Characterizations of Invertible Matrices#Key Implications and Properties|Key Implications and Properties]]
-	2. [[#2.1 Characterizations of Invertible Matrices#Classification of Square Matrices|Classification of Square Matrices]]
-	3. [[#2.1 Characterizations of Invertible Matrices#Invertible Linear Transformations|Invertible Linear Transformations]]
-	4. [[#2.1 Characterizations of Invertible Matrices#Numerical Notes|Numerical Notes]]
-2. [[#2.2 Subspaces of $\mathbb{R}^n$|2.2 Subspaces of $\mathbb{R}^n$]]
-	1. [[#2.2 Subspaces of $\mathbb{R}^n$#Geometric Interpretations and Counterexamples|Geometric Interpretations and Counterexamples]]
-	2. [[#2.2 Subspaces of $\mathbb{R}^n$#Special Extreme Subspaces|Special Extreme Subspaces]]
-	3. [[#2.2 Subspaces of $\mathbb{R}^n$#Column Space and Null Space of a Matrix|Column Space and Null Space of a Matrix]]
-	4. [[#2.2 Subspaces of $\mathbb{R}^n$#Implicit versus Explicit Descriptions of Subspaces|Implicit versus Explicit Descriptions of Subspaces]]
-	5. [[#2.2 Subspaces of $\mathbb{R}^n$#Basis for a Subspace|Basis for a Subspace]]
-	6. [[#2.2 Subspaces of $\mathbb{R}^n$#Finding a Basis for the Null Space|Finding a Basis for the Null Space]]
-	7. [[#2.2 Subspaces of $\mathbb{R}^n$#Finding a Basis for the Column Space|Finding a Basis for the Column Space]]
-	8. [[#2.2 Subspaces of $\mathbb{R}^n$#Where the Two Halves Meet|Where the Two Halves Meet]]
+1. [[#1. Characterization of Invertible Matrices and Subspaces of $\mathbb{R}^n$|1. Characterization of Invertible Matrices and Subspaces of $\mathbb{R}^n$]]
+	1. [[#1. Characterization of Invertible Matrices and Subspaces of $\mathbb{R}^n$#1.1 The Invertible Matrix Theorem|1.1 The Invertible Matrix Theorem]]
+	2. [[#1. Characterization of Invertible Matrices and Subspaces of $\mathbb{R}^n$#1.2 Key Implications and Properties|1.2 Key Implications and Properties]]
+	3. [[#1. Characterization of Invertible Matrices and Subspaces of $\mathbb{R}^n$#1.3 Classification of Square Matrices|1.3 Classification of Square Matrices]]
+	4. [[#1. Characterization of Invertible Matrices and Subspaces of $\mathbb{R}^n$#1.4 Invertible Linear Transformations|1.4 Invertible Linear Transformations]]
+	5. [[#1. Characterization of Invertible Matrices and Subspaces of $\mathbb{R}^n$#1.5 Numerical Notes|1.5 Numerical Notes]]
+	6. [[#1. Characterization of Invertible Matrices and Subspaces of $\mathbb{R}^n$#1.6 Subspaces of $\mathbb{R}^n$|1.6 Subspaces of $\mathbb{R}^n$]]
+		1. [[#1.6 Subspaces of $\mathbb{R}^n$#1.6.1 Geometric Interpretations and Counterexamples|1.6.1 Geometric Interpretations and Counterexamples]]
+		2. [[#1.6 Subspaces of $\mathbb{R}^n$#1.6.2 The Extreme Subspaces|1.6.2 The Extreme Subspaces]]
+		3. [[#1.6 Subspaces of $\mathbb{R}^n$#1.6.3 Column Space and Null Space|1.6.3 Column Space and Null Space]]
+		4. [[#1.6 Subspaces of $\mathbb{R}^n$#1.6.4 Implicit versus Explicit Descriptions of Subspaces|1.6.4 Implicit versus Explicit Descriptions of Subspaces]]
+		5. [[#1.6 Subspaces of $\mathbb{R}^n$#1.6.5 Basis for a Subspace|1.6.5 Basis for a Subspace]]
+		6. [[#1.6 Subspaces of $\mathbb{R}^n$#1.6.6 Finding a Basis for the Null Space|1.6.6 Finding a Basis for the Null Space]]
+		7. [[#1.6 Subspaces of $\mathbb{R}^n$#1.6.7 Finding a Basis for the Column Space|1.6.7 Finding a Basis for the Column Space]]
 
-# 2. Characterizations of Invertible Matrices and Subspaces
+# 1. Characterization of Invertible Matrices and Subspaces of $\mathbb{R}^n$
 
-| Symbol or term | Meaning |
-|---|---|
-| $A$, an $n \times n$ matrix | A square matrix: $n$ rows and $n$ columns. In general an $m \times n$ matrix has $m$ rows and $n$ columns. |
-| $A$, an $m \times n$ matrix | A rectangular matrix whose columns have $m$ entries each, so its column space lives in $\mathbb{R}^m$. |
-| $I$ or $I_n$ | The identity matrix: ones on the main diagonal, zeros elsewhere; the matrix version of the number $1$. |
-| $A^{-1}$ | The inverse of $A$: the unique matrix with $A^{-1}A = AA^{-1} = I$. |
-| $A^T$ | The transpose of $A$: rows and columns interchanged. |
-| $C$, $D$ | A left inverse ($CA = I$) and a right inverse ($AD = I$) of $A$. |
-| IMT | Abbreviation used throughout this note for the **Invertible Matrix Theorem** (Theorem 1). |
-| Invertible (nonsingular) | $A$ has an inverse; equivalently, all twelve statements of Theorem 1 hold for $A$. |
-| Singular (noninvertible) | $A$ has no inverse; equivalently, every statement of Theorem 1 fails for $A$. |
-| Elementary row operations | The three legal moves on a matrix: swap two rows; multiply a row by a nonzero scalar; add a multiple of one row to another. They never change the solution set of a system. |
-| Row equivalence, $A \sim B$ | $B$ is obtained from $A$ by elementary row operations. |
-| Echelon form | A row-reduction stop in which leading entries stair-step to the right with zeros below each pivot; not unique. |
-| Reduced echelon form, RREF | The unique echelon form in which every pivot is $1$ and every other entry of a pivot column is $0$. |
-| Pivot position (pivot) | The location of a leading entry in an echelon form of $A$; there are $n$ of them exactly when $A$ is invertible. |
-| Pivot column | A column of $A$ whose position matches a column containing a pivot in an echelon form of $A$. |
-| Basic variable | A variable whose column contains a pivot; it is expressed in terms of the free variables when solving. |
-| Free variable | A variable whose column contains no pivot; solutions are parameterized by the free variables. |
-| Homogeneous system | A system of the form $A\mathbf{x} = \mathbf{0}$; always consistent, since $\mathbf{x} = \mathbf{0}$ is a solution. |
-| $\mathbb{R}^n$ | The set of all $n$-tuples of real numbers, read "$R$ to the $n$": $n$-dimensional Euclidean space. |
-| $\mathbb{R}^m$ | The space of all $m$-entry columns; the output space of an $m \times n$ matrix. |
-| Input space / output space | Informal names for $\mathbb{R}^n$ (where $\mathbf{x}$ lives) and $\mathbb{R}^m$ (where $A\mathbf{x}$ and $\mathbf{b}$ live). Keeping them apart avoids the most common confusion in this module. |
-| $\mathbf{x}, \mathbf{b}, \mathbf{u}, \mathbf{v}, \mathbf{w}$ | Vectors, written as bold lowercase letters; each has $n$ entries when it lives in $\mathbb{R}^n$. |
-| $\mathbf{0}$ | The zero vector: every entry is zero. |
-| $\mathbf{a}_1, \dots, \mathbf{a}_n$ | The column vectors of the matrix $A = [\mathbf{a}_1 \; \mathbf{a}_2 \; \cdots \; \mathbf{a}_n]$. |
-| $\mathbf{e}_1, \dots, \mathbf{e}_n$ | The standard basis vectors: the columns of $I_n$. |
-| $c$ | A scalar, that is, a real number. |
-| $\theta$, $\varepsilon$ | The rotation angle and the perturbation used in the two examples of the Numerical Notes. |
-| $\mathbf{x} \mapsto A\mathbf{x}$ | The linear transformation defined by matrix multiplication with $A$ (read "$\mathbf{x}$ maps to $A\mathbf{x}$"). |
-| $T$, $S$, $T^{-1}$ | A linear transformation, its inverse function, and the standard notation for that inverse. |
-| $\implies$, $\iff$ | "Implies", and "if and only if" (logical equivalence). |
-| One-to-one | Every $\mathbf{b}$ is the image of at most one $\mathbf{x}$; for a matrix transformation this means $\text{Nul } A = \{\mathbf{0}\}$. |
-| Onto | Every $\mathbf{b}$ in the codomain is the image of some $\mathbf{x}$; for a matrix transformation this means $\text{Col } A$ is the whole codomain. |
-| $H$ | A subset of $\mathbb{R}^n$; in this note usually a subspace. |
-| Subspace | A set $H \subseteq \mathbb{R}^n$ that contains $\mathbf{0}$ and is closed under addition and scalar multiplication. |
-| $\text{Span}\{\mathbf{v}_1, \dots, \mathbf{v}_p\}$ | The set of all linear combinations $c_1\mathbf{v}_1 + \dots + c_p\mathbf{v}_p$. |
-| $\text{Col } A$ | The column space of $A$: the span of its columns, a subspace of $\mathbb{R}^m$. |
-| $\text{Nul } A$ | The null space of $A$: the set of all solutions of $A\mathbf{x} = \mathbf{0}$, a subspace of $\mathbb{R}^n$. |
-| $\mid$ | "Such that": in a set-builder description, everything after the bar is the condition the elements must satisfy. |
-| Linearly independent set | A set whose only linear combination equal to $\mathbf{0}$ is the trivial one, with all coefficients $0$. |
-| Linearly dependent set | A set that is not independent: some nontrivial combination of its vectors is $\mathbf{0}$, so at least one vector is a combination of the others. |
-| Basis $\mathcal{B} = \{\mathbf{b}_1, \dots, \mathbf{b}_p\}$ | A linearly independent set that also spans $H$: the smallest spanning set a subspace can have. |
-| Roundoff error | The small inaccuracy introduced when a computer rounds the result of an arithmetic operation to a fixed number of digits. |
-| Condition number | A number reported by software that measures how close a matrix is to singular: $1$ for $I$, large for an ill-conditioned matrix, $\infty$ for a singular matrix. |
-| Ill-conditioned | Invertible in exact arithmetic but nearly singular, so computed answers carry little reliability. |
-
-_Table 2.1: Quick reference for every symbol, term, and abbreviation defined in this note._
+| Symbol / term | Meaning | Where |
+|---|---|---|
+| $A$ | A coefficient matrix; $m \times n$ in general, $n \times n$ (square) in the first half of this note | [[#1.1 The Invertible Matrix Theorem]] |
+| $I_n$ (or $I$) | The $n \times n$ **identity matrix**: ones on the main diagonal, zeros elsewhere | [[#1.1 The Invertible Matrix Theorem]] |
+| $A^{-1}$ | The **inverse** of $A$: the matrix with $A^{-1}A = AA^{-1} = I$ | [[#1.2 Key Implications and Properties]] |
+| $A^{T}$ | The **transpose** of $A$: rows and columns interchanged | [[#1.1 The Invertible Matrix Theorem]] |
+| $\det A$ | The **determinant** of $A$; $A$ is invertible exactly when $\det A \neq 0$ | [[#1.3 Classification of Square Matrices]] |
+| $\text{rank } A$ | The **rank** of $A$: the number of pivot columns | [[#1.6.3 Column Space and Null Space]] |
+| $\dim H$ | The **dimension** of a subspace: the number of vectors in any basis of $H$ | [[#1.6.5 Basis for a Subspace]] |
+| $C$, $D$ | A **left inverse** ($CA = I$) and a **right inverse** ($AD = I$) of $A$ | [[#1.1 The Invertible Matrix Theorem]] |
+| $\mathbf{x}, \mathbf{b}$ | Vectors in $\mathbb{R}^n$; $\mathbf{x}$ is the unknown, $\mathbf{b}$ the target | [[#1.1 The Invertible Matrix Theorem]] |
+| $\mathbf{0}$ | The **zero vector**, all entries equal to $0$ | Section 1.6 |
+| $\mathbb{R}^n$ | $n$-dimensional Euclidean space: all $n$-tuples of real numbers | Section 1.6 |
+| $\mathbf{x} \mapsto A\mathbf{x}$ | "$\mathbf{x}$ maps to $A\mathbf{x}$": the **matrix transformation** defined by $A$ | [[#1.4 Invertible Linear Transformations]] |
+| $T$, $S$ | A linear transformation and its candidate inverse, both $\mathbb{R}^n \to \mathbb{R}^n$ | [[#1.4 Invertible Linear Transformations]] |
+| $T^{-1}$ | The **inverse transformation** of $T$, undoing what $T$ did | [[#1.4 Invertible Linear Transformations]] |
+| $\sim$ | **Row equivalence**: the matrix on the left row-reduces to the one on the right | [[#1.1 The Invertible Matrix Theorem]] |
+| $\text{Span}\{\mathbf{v}_1, \dots, \mathbf{v}_p\}$ | The set of **all** linear combinations $c_1\mathbf{v}_1 + \dots + c_p\mathbf{v}_p$ | Section 1.6 |
+| $H$ | A **subspace**: a subset of $\mathbb{R}^n$ closed under addition and scalar multiplication | Section 1.6 |
+| $\mathbf{a}_1, \dots, \mathbf{a}_n$ | The column vectors of $A$; each $\mathbf{a}_j$ lives in $\mathbb{R}^m$ | [[#1.6.3 Column Space and Null Space]] |
+| $\text{Col } A$ | The **column space** of $A$: the span of its columns, a subspace of $\mathbb{R}^m$ | [[#1.6.3 Column Space and Null Space]] |
+| $\text{Nul } A$ | The **null space** of $A$: all solutions of $A\mathbf{x} = \mathbf{0}$, a subspace of $\mathbb{R}^n$ | [[#1.6.3 Column Space and Null Space]] |
+| $\mathcal{B} = \{\mathbf{b}_1, \dots, \mathbf{b}_p\}$ | A **basis**: a linearly independent spanning set for a subspace | [[#1.6.5 Basis for a Subspace]] |
+| $\mathbf{e}_1, \dots, \mathbf{e}_n$ | The **standard basis** vectors of $\mathbb{R}^n$ (the columns of $I_n$) | [[#1.6.5 Basis for a Subspace]] |
+| $\implies$ | "Implies": if the statement on the left holds, the one on the right must hold | [[#1.1 The Invertible Matrix Theorem]] |
+| $\iff$ | "If and only if": the two statements are equivalent, each implying the other | [[#1.1 The Invertible Matrix Theorem]] |
+| $\neq$ / $\notin$ | "Is not equal to" / "is not an element of" | [[#1.6 Subspaces of $\mathbb{R}^n$]] |
+| $\cdot$ | The multiplication dot: $c \cdot \mathbf{u}$ is the scalar multiple of $\mathbf{u}$ by $c$ | [[#1.6 Subspaces of $\mathbb{R}^n$]] |
+| $\vdots$ | Vertical ellipsis: "continue the same pattern down the column" | [[#1.6.5 Basis for a Subspace]] |
+| $\in$ / $\mid$ | Set-builder symbols: "is an element of" / "such that" | [[#1.6.3 Column Space and Null Space]] |
+| IMT | **Invertible Matrix Theorem (IMT)** — the equivalence theorem of Section 1.1 | [[#1.1 The Invertible Matrix Theorem]] |
+| RREF | **Reduced row echelon form (RREF)** — the fully reduced output of Gauss–Jordan elimination | [[#1.6.6 Finding a Basis for the Null Space]] |
 
 ---
 
-This note joins the two halves of module B2 K1. The first half is the ***Invertible Matrix Theorem
-(IMT)***: twelve statements about a square matrix that stand or fall together, so one computation
-settles all of them at once. The second half zooms out from single systems to whole sets of vectors,
-the ***subspaces of $\mathbb{R}^n$ ***, and to the two subspaces every matrix produces for free, its
-column space $\text{Col } A$ and its null space $\text{Nul } A$. The halves meet at the end, and
-the meeting is not a coincidence: for a square matrix $A$, the columns of $A$ span $\mathbb{R}^n$
-exactly when $A$ is invertible (statement (h) of the theorem), and $\text{Nul } A = \{\mathbf{0}\}$
-exactly when $A$ is invertible (statement (d)). Matrices and subspaces are two descriptions of one
-structure, and this note moves between them in both directions.
+## 1.1 The Invertible Matrix Theorem
 
-> [!note] How this note maps to the course book
-> The book is Lay, *Linear Algebra and Its Applications*, Global Edition, 6th edition. Its Theorems
-> 8 and 9 of §2.3 are Theorems 1 and 2 here, and its Theorems 12 and 13 of §2.8 are Theorems 3 and
-> 4. The lettering (a)–(l) of Theorem 1 is the book's own. In this note, §2.3 and §2.8 are the
-> book's sections, while Section 2.1 and Section 2.2 are the two halves of the note.
+For a square matrix, invertibility is not an isolated property that you test and then file away. It
+is a hub. A dozen apparently unrelated questions — about pivots, about solutions, about spanning and
+independence, about the geometry of a transformation — all turn out to have the same answer, and
+that answer is exactly the invertibility of $A$. This is what the **Invertible Matrix Theorem
+(IMT)** records, and it is the single most-used result in the first half of a linear algebra course.
 
----
+The practical payoff is leverage. Suppose you have already row-reduced a matrix and counted its
+pivots. Without any further computation you now know whether its columns are linearly independent,
+whether $A\mathbf{x} = \mathbf{b}$ is solvable for every $\mathbf{b}$, whether the associated
+transformation is one-to-one, whether a one-sided inverse exists, and whether $A^T$ is invertible.
+One row reduction answers $12$ questions.
+> [!abstract] The IMT as a Single Circuit
+> Think of the $12$ statements as lamps wired to one circuit. Light any single lamp and the circuit is live, so every other lamp lights with it. Prove any single lamp dark and the circuit is dead, so every other lamp is dark too. That is why you never work through all $12$: one decisive test settles the lot, and the pivot count is simply the easiest test to perform.
 
-## 2.1 Characterizations of Invertible Matrices
+It is worth pausing on how unusual this is. In most of mathematics, "does a solution exist?" and "is
+the solution unique?" are separate questions with separate answers. For square matrices the IMT says
+they are the *same* question: existence forces uniqueness and uniqueness forces existence. That
+collapse is a special feature of the square case, and Section 1.3 shows precisely where it breaks.
 
-You already know how to answer the question "is this square matrix invertible?" by computing: invert
-the matrix, or row reduce it and count pivots. Computing an answer works, but it gives no insight
-into *why* the answer is what it is, and it does not carry over to statements about other objects.
-This section replaces the computation with a *characterization*: a list of statements that all mean
-exactly the same thing, so that proving any one of them proves all the others, and finding any one
-of them false disproves all the others. That is a more economical arrangement than it sounds.
-Instead of learning twelve theorems you learn one theorem with twelve faces, and you use whichever
-face fits the problem in front of you.
-
-The word *characterization* is worth taking literally. A characterization of a property is a list of
-conditions that are individually different and jointly interchangeable: each can be checked without
-reference to the others, and each is true exactly when the property is true. Mathematics is full of
-them, and they are valued for a practical reason — a characterization lets you choose the test that
-fits the tools in your hand. Here the property is invertibility, and the twelve tests range from
-algebraic (an equation has only the trivial solution) through computational (count the pivot
-positions) to geometric (the map covers the whole space and never merges two inputs). All twelve
-will be used later in the course, and none of them is the "real" definition of invertibility — that
-is the point of collecting them together.
-
-The list below is the book's Theorem 8 of §2.3; the lettering (a)–(l) is kept identical to the book
-so that you can read along without translating anything. Two conventions in the statement are worth
-unpacking before you read it, because the whole list depends on them. Row equivalence to $I_n$ means
-that $A$ can be carried to the identity matrix by elementary row operations — row swaps, scaling a
-row by a nonzero number, and adding a multiple of one row to another — which changes the system's
-appearance but never its solution set. And the phrase "the linear transformation
-$\mathbf{x} \mapsto A\mathbf{x}$ " refers to the map that sends each vector $\mathbf{x}$ to the
-product $A\mathbf{x}$; statements about that map and statements about the matrix $A$ are two ways
-of saying the same thing, which is precisely why they can be listed in one theorem.
-
-The two viewpoints in the list are worth naming, because later chapters lean on both. Statements (a)
-through (e) and (j) through (l) are about the matrix: the array of numbers, its pivots, its columns,
-its inverse, its transpose. Statements (f), (g) and (i) are about the map
-$\mathbf{x} \mapsto A\mathbf{x}$: whether it merges inputs (one-to-one), whether it misses outputs
-(onto), and whether every output can be produced (solvability for every $\mathbf{b}$). The theorem
-says the two viewpoints can never disagree for a square matrix. Whenever a problem is phrased
-geometrically — "does this map miss anything?" — you may answer with a pivot count, and whenever a
-problem is phrased algebraically you may answer with a picture.
-
-For square matrices and systems of $n$ linear equations in $n$ unknowns, fundamental concepts such
-as matrix invertibility, linear independence, spanning, and solutions to linear systems are
-interconnected.
+A word on how the proof works, because the structure is reusable. To prove $12$ statements
+equivalent, you do not need $12 \times 11 = 132$ implications. It suffices to arrange a subset in a
+closed **circle** of implications — then every statement on the circle implies every other — and
+afterwards to hook each remaining statement onto that circle with a single equivalence. The circle
+used here is $(a) \to (j) \to (d) \to (c) \to (b) \to (a)$.
 
 > [!summary] Theorem 1: The Invertible Matrix Theorem
-> Let $A$ be a square $n \times n$ matrix. Then the following statements are equivalent (for a given
-> $A$, they are either all true or all false):
+> Let $A$ be a square $n \times n$ matrix. Then the following statements are **equivalent** — for a given $A$ they are either all true or all false:
+>
 > a. $A$ is an invertible matrix.
 > b. $A$ is row equivalent to the $n \times n$ identity matrix $I_n$.
 > c. $A$ has $n$ pivot positions.
 > d. The equation $A\mathbf{x} = \mathbf{0}$ has only the trivial solution.
 > e. The columns of $A$ form a linearly independent set.
 > f. The linear transformation $\mathbf{x} \mapsto A\mathbf{x}$ is one-to-one.
-> g. The equation $A\mathbf{x} = \mathbf{b}$ has at least one solution for each $\mathbf{b}$ in
->    $\mathbb{R}^n$.
+> g. The equation $A\mathbf{x} = \mathbf{b}$ has at least one solution for each $\mathbf{b}$ in $\mathbb{R}^n$.
 > h. The columns of $A$ span $\mathbb{R}^n$.
-> i. The linear transformation $\mathbf{x} \mapsto A\mathbf{x}$ maps $\mathbb{R}^n$ onto
->    $\mathbb{R}^n$.
+> i. The linear transformation $\mathbf{x} \mapsto A\mathbf{x}$ maps $\mathbb{R}^n$ onto $\mathbb{R}^n$.
 > j. There is an $n \times n$ matrix $C$ such that $CA = I$.
 > k. There is an $n \times n$ matrix $D$ such that $AD = I$.
 > l. $A^T$ is an invertible matrix.
 >
 > **Breakdown:**
-> - $A$: the square coefficient matrix of $n$ equations in $n$ unknowns; $I_n$: the identity
->   matrix, the target of the row reduction in (b); $C$, $D$: a left and a right inverse, which
->   for square matrices coincide with $A^{-1}$.
-> - $A^T$: the transpose, with $(A^T)^{-1} = (A^{-1})^T$.
+> - $A$ : An $n \times n$ square coefficient matrix.
+> - $I_n$ (or $I$) : The $n \times n$ identity matrix, with ones along the main diagonal and zeros elsewhere.
+> - $A^T$ : The transpose of $A$, obtained by interchanging its rows and columns.
+> - $C, D$ : A left inverse and a right inverse for $A$, respectively.
+> - $\mathbf{x} \mapsto A\mathbf{x}$ : The linear transformation defined by multiplying an input vector by $A$.
+> - **Equivalence** : If any one of these statements is established as true for a square matrix $A$, all the others are automatically true. If any one is false, all are false.
 >
 > **Proof:**
-> - **Core chain:** $(a) \implies (j)$: take $C = A^{-1}$. $(j) \implies (d)$: if $CA = I$ and
->   $A\mathbf{x} = \mathbf{0}$, then
->   $\mathbf{x} = I\mathbf{x} = C(A\mathbf{x}) = C\mathbf{0} = \mathbf{0}$. $(d) \implies (c)$: no
->   free variables means $n$ pivots. $(c) \implies (b)$: $n$ pivots in an $n \times n$ matrix lie
->   on the main diagonal, so the reduced echelon form is $I_n$. $(b) \implies (a)$: reducing $A$
->   to $I_n$ proves invertibility.
-> - **Second route:** $(a) \implies (k)$: take $D = A^{-1}$. $(k) \implies (g)$:
->   $\mathbf{x} = D\mathbf{b}$ gives $A\mathbf{x} = A(D\mathbf{b}) = (AD)\mathbf{b} = \mathbf{b}$.
->   $(g) \implies (a)$: a solution for every $\mathbf{b}$ forces a pivot in every row, hence $n$
->   pivots.
-> - **Clusters:** $(g) \iff (h) \iff (i)$: solvable for every $\mathbf{b}$ means the columns span
->   $\mathbb{R}^n$, which means onto. $(d) \iff (e) \iff (f)$: only the trivial solution means
->   independent columns, which means one-to-one.
-
-The theorem is best read as a menu, not as a list of separate results. When you must decide whether
-a square matrix is invertible, you are free to check whichever of the twelve statements is cheapest
-for the matrix in front of you; when you must prove that a matrix is *not* invertible, you are free
-to exhibit whichever failure is easiest to display. Row reduction serves all of these purposes at
-once. If the reduction produces $n$ pivots, statement (c) is true and everything else follows; if it
-produces fewer, the same reduction has already shown that $A\mathbf{x} = \mathbf{0}$ has a
-nontrivial solution (so (d) fails), that the columns are linearly dependent (so (e) fails), and that
-some vector $\mathbf{b}$ cannot be reached (so (g) fails). Nothing has to be checked twice, and no
-statement can be true in isolation.
-
-Choosing a statement is therefore a practical skill, and it is worth naming the shortcuts that pay
-off most often. If the matrix is small and obviously singular — two equal rows, two equal columns, a
-column of zeros — then quote the failure directly: a dependent column set (e) or a nontrivial switch
-(h) needs no computation at all. If you are handed a candidate inverse $B$, check one product $AB$
-and invoke (j) or (k); do not verify $BA$ as well. If the question is phrased about solutions —
-"does $A\mathbf{x} = \mathbf{b}$ always have a solution?" — answer through (g), and if it is phrased
-about maps — "is this transformation one-to-one?" — answer through (f). If the question is phrased
-about a determinant, a rank, or a span, translate it into whichever of (a)–(l) it matches and then
-read off the rest. What you should never do is re-derive the equivalence from scratch: the theorem
-exists so that one fact about $A$, whichever you can get most cheaply, unlocks all eleven others.
-
-The proof has a shape worth remembering, because the same shape reappears whenever equivalences are
-chained together. Five statements form a closed loop,
-$(a) \implies (j) \implies (d) \implies (c) \implies (b) \implies (a)$, and a second short route
-$(a) \implies (k) \implies (g) \implies (a)$ joins the loop. Because the loop returns to its
-starting point, every arrow in it reverses: the chain proves not only that (a) forces (b), but also
-that (b) forces (a), and so on around the circle. The remaining statements are then attached in
-equivalent clusters: (g), (h) and (i) all say "nothing is unreachable" — solvability, spanning and
-being onto — while (d), (e) and (f) all say "nothing collapses" — trivial null space, independence
-and being one-to-one. Finally (a) is paired with (l), because transposing a matrix does not change
-whether it can be inverted.
+> The equivalence is established by building a circular chain of implications among core statements, then attaching the remaining statements to that chain:
+>
+> 1. **Core circular chain:**
+>    - $(a) \implies (j)$: If $A$ is invertible, its inverse $A^{-1}$ exists. Setting $C = A^{-1}$ yields $CA = A^{-1}A = I$.
+>    - $(j) \implies (d)$: If $CA = I$ and $A\mathbf{x} = \mathbf{0}$, then multiplying both sides by $C$ gives $\mathbf{x} = I\mathbf{x} = C(A\mathbf{x}) = C\mathbf{0} = \mathbf{0}$, so only the trivial solution exists.
+>    - $(d) \implies (c)$: If $A\mathbf{x} = \mathbf{0}$ has only the trivial solution, the system has no free variables, which requires a pivot in every column — $n$ pivots in total.
+>    - $(c) \implies (b)$: An $n \times n$ matrix with $n$ pivots must have those pivots on the main diagonal, so its reduced echelon form is $I_n$.
+>    - $(b) \implies (a)$: If $A$ is row equivalent to $I_n$, it can be reduced to $I_n$ by elementary row operations, which proves $A$ is invertible.
+> 2. **Linking the remaining statements:**
+>    - $(a) \implies (k)$: If $A$ is invertible, setting $D = A^{-1}$ satisfies $AD = I$.
+>    - $(k) \implies (g)$: If $AD = I$, then for any $\mathbf{b} \in \mathbb{R}^n$, choosing $\mathbf{x} = D\mathbf{b}$ gives $A\mathbf{x} = A(D\mathbf{b}) = (AD)\mathbf{b} = I\mathbf{b} = \mathbf{b}$, guaranteeing at least one solution.
+>    - $(g) \implies (a)$: If $A\mathbf{x} = \mathbf{b}$ has a solution for every $\mathbf{b}$, then $A$ must have a pivot in every row ($n$ pivots), which links back to invertibility.
+>    - $(g) \iff (h) \iff (i)$: For any matrix transformation, "solvable for every $\mathbf{b}$", "the columns span $\mathbb{R}^n$", and "maps $\mathbb{R}^n$ onto $\mathbb{R}^n$" are three ways of saying the same thing.
+>    - $(d) \iff (e) \iff (f)$: "Only the trivial solution", "the columns are linearly independent", and "the transformation is one-to-one" are likewise equivalent.
+>    - $(a) \iff (l)$: $A$ is invertible if and only if $A^T$ is invertible, with $(A^T)^{-1} = (A^{-1})^T$.
 
 ```mermaid
-flowchart LR
-  a["(a) A is invertible"] --> j["(j) CA = I for some C"]
-  j --> d["(d) Ax = 0 has only the trivial solution"]
-  d --> c["(c) A has n pivot positions"]
-  c --> b["(b) A is row equivalent to I_n"]
-  b --> a
-  a --> k["(k) AD = I for some D"]
-  k --> g["(g) Ax = b is solvable for every b"]
-  g --> a
-  g <--> h["(h) the columns of A span R^n"]
-  h <--> i["(i) T is onto R^n"]
-  d <--> e["(e) the columns of A are linearly independent"]
-  e <--> f["(f) T is one-to-one"]
-  a <--> l["(l) A^T is invertible"]
+flowchart TD
+    a["(a) A is invertible"] --> j["(j) CA = I for some C"]
+    j --> d["(d) Ax = 0 has only x = 0"]
+    d --> c["(c) A has n pivot positions"]
+    c --> b["(b) A is row equivalent to I_n"]
+    b --> a
+    a --> k["(k) AD = I for some D"]
+    k --> g["(g) Ax = b is solvable for every b"]
+    g --> a
+    d <--> e["(e) columns are linearly independent"]
+    e <--> f["(f) x -> Ax is one-to-one"]
+    g <--> h["(h) the columns span R^n"]
+    h <--> i["(i) x -> Ax maps R^n onto R^n"]
+    a <--> l["(l) A^T is invertible"]
 ```
 
-_Figure 2.1: The implication cycle used in the proof of Theorem 1. The solid arrows form the two loops (a) → (j) → (d) → (c) → (b) → (a) and (a) → (k) → (g) → (a); the double-headed links attach the equivalent clusters (g)–(h)–(i), (d)–(e)–(f), and the pair (a)–(l)._
+_Figure 1.1: The implication structure of the Invertible Matrix Theorem — the core cycle $(a) \to (j) \to (d) \to (c) \to (b) \to (a)$ closes the loop, while the remaining statements attach to it in equivalent pairs and triples._
 
-Because the proof is an argument about *implications*, it is worth reading it once in words rather
-than in symbols, since that is the form in which you will later reconstruct it. The step
-$(a) \implies (j)$ says that the second half of an inverse is easy: if a full inverse exists, then
-it is in particular a left inverse. The step $(j) \implies (d)$ is the workhorse of the chain:
-multiplying by $C$ is legitimate precisely because matrix multiplication distributes over sums, so a
-solution of $A\mathbf{x} = \mathbf{0}$ gets trapped — anything $A$ sends to zero must already be
-zero, and the only such vector is the trivial one. The step $(d) \implies (c)$ translates a fact
-about solutions into a fact about the shape of the matrix: "no nontrivial solution" means "no free
-variable" means "a pivot in every column", and since there are only $n$ columns, the count of pivots
-is forced. The step $(c) \implies (b)$ finishes the desk work: with $n$ pivots in an $n \times n$
-matrix, every row and every column contains one, so the reduced echelon form (RREF — the unique
-echelon form in which every pivot is $1$ and every other pivot-column entry is $0$) has leading
-ones down the diagonal, and the identity matrix is the only possibility. Finally $(b) \implies (a)$
-closes the loop by reminding you what row equivalence to $I_n$ means: the row operations that
-produce $I_n$ are exactly the reduction that produces the inverse. Once the loop is closed, the
-second route $(a) \implies (k) \implies (g) \implies (a)$ can be read the same way: half an inverse
-comes free with a full one; the step $(k) \implies (g)$ is constructive and does not merely claim
-solvability but exhibits the solution $\mathbf{x} = D\mathbf{b}$; and $(g) \implies (a)$ reads the
-guarantee backwards, since a solution for every right-hand side leaves no row of the echelon form
-without a pivot, which is statement (c) in disguise. The clusters need no proof at all: (g), (h),
-(i) are one statement seen through the equation, through the columns, and through the
-transformation, and the same is true of (d), (e), (f).
+![[Pasted image 20260929121414.png]]
 
-Read this way, the two clusters are not two facts but two pictures of the same map. The cluster (d),
-(e), (f) says that nothing collapses: no nonzero input is squashed to zero, no column is redundant,
-and no two inputs share an output. The cluster (g), (h), (i) says that nothing is missed: every
-target is reachable, the columns stretch to fill the whole space, and no output is left without a
-preimage. For a square matrix the two failures are linked by counting. An $n \times n$ matrix has
-$n$ pivot positions to distribute over $n$ rows and $n$ columns, so either every row and every
-column gets one — nothing collapses and nothing is missed — or some row or some column goes without,
-and then at least one direction is destroyed and at least one target is unreachable. There is no
-intermediate case, and that absence of a middle ground is the whole content of the theorem.
+_Figure 1.2: The relations between statements (a), (j), (d), (c) and (b) — the core circular chain of implications that anchors the proof._
 
-> [!example] Deciding Invertibility with Pivot Positions
-> Use the Invertible Matrix Theorem to decide whether $A$ is invertible:
-> $$A = \begin{bmatrix} 1 & 0 & -2 \\ -3 & 1 & -2 \\ -5 & 1 & 9 \end{bmatrix}$$
-> **Solution:** Row reduce $A$ and count pivot positions. Adding 3 times row 1 to row 2 and 5 times
-> row 1 to row 3 gives
-> $$A \sim \begin{bmatrix} 1 & 0 & -2 \\ 0 & 1 & -8 \\ 0 & 1 & -1 \end{bmatrix} \sim \begin{bmatrix} 1 & 0 & -2 \\ 0 & 1 & -8 \\ 0 & 0 & 7 \end{bmatrix}$$
-> Each row operation can be checked by direct substitution: $\text{row}_2 + 3\,\text{row}_1$ is
-> $(-3+3,\;1+0,\;-2-6) = (0,1,-8)$ ✓, and $\text{row}_3 + 5\,\text{row}_1$ is
-> $(-5+5,\;1+0,\;9-10) = (0,1,-1)$ ✓. Subtracting row 2 from row 3 gives $(0,0,7)$ ✓. The matrix $A$
-> has three pivot positions, a pivot in every row and every column. By statement (c) of the
-> Invertible Matrix Theorem, $A$ is invertible — and the same count makes (a), (b) and (d)–(l) true
-> at the same time.
+![[Pasted image 20260929121508.png]]
 
-> [!warning] Correction: The row reduction in the source example
-> The source note-set displayed the intermediate matrices
-> $\begin{bmatrix} 1 & 0 & -2 \\ 0 & 1 & 4 \\ 0 & 1 & 1 \end{bmatrix}$ and
-> $\begin{bmatrix} 1 & 0 & -2 \\ 0 & 1 & 4 \\ 0 & 0 & 3 \end{bmatrix}$, which are not the results
-> of the displayed operations: the correct second rows are $(0,1,-8)$ and $(0,1,-1)$, and the final
-> subtraction gives $(0,0,7)$. The verdict is unaffected — three pivots, $A$ invertible, reduced
-> echelon form $I_3$ — and the arithmetic has been corrected above.
+_Figure 1.3: The remaining relations — how statements (e), (f), (g), (h), (i), (k) and (l) attach to the core chain._
 
-Two habits make a row reduction like this one safe to do under time pressure. First, name the
-operation before performing it — "row 3 plus five times row 1" — because the name of the operation
-is also its check: the same phrase tells you which arithmetic to verify if the final count looks
-wrong. Second, remember what the verdict depends on: only the count of pivots decides invertibility,
-not the values in the nonzero entries, so a slip in the intermediate arithmetic rarely changes the
-answer, but it will change every later conclusion drawn from those entries. That is exactly what
-happened in the source example above — the arithmetic was off, the verdict was still right, and the
-note records the correction anyway, because a study note that keeps a wrong intermediate step
-teaches the wrong step.
+$12$ statements are hard to memorise as a flat list but easy to retain once grouped. They fall
+into four families:
 
-### Key Implications and Properties
+- **Algebraic invertibility — (a), (j), (k), (l).** $A$ has a genuine two-sided inverse; some $C$
+  satisfies $CA = I$; some $D$ satisfies $AD = I$; the transpose $A^T$ is invertible.
+- **Pivot structure — (b), (c).** Row reduction reaches $I_n$; there are $n$ pivot positions.
+- **Uniqueness — (d), (e), (f).** The homogeneous equation $A\mathbf{x} = \mathbf{0}$ has only the
+trivial solution; the columns are linearly independent; the transformation $\mathbf{x} \mapsto A\mathbf{x}$ is one-to-one.
+- **Existence — (g), (h), (i).** $A\mathbf{x} = \mathbf{b}$ is solvable for every $\mathbf{b}$; the
+  columns span $\mathbb{R}^n$; the transformation maps $\mathbb{R}^n$ onto $\mathbb{R}^n$.
 
-Two consequences of the theorem are worth isolating, because they are used constantly in exercises,
-and both of them sharpen a statement rather than add a new one.
+The symmetry between the last two families is the conceptual heart of the theorem. Three statements
+are about *uniqueness* and three are about *existence*, and the IMT asserts that for a square matrix
+they stand or fall together. Independent columns (uniqueness) force spanning columns (existence),
+and conversely. Nothing in the definitions makes this obvious — it is the theorem's content, and it
+is exactly what fails for rectangular matrices.
 
-The first is that existence becomes uniqueness. An invertible matrix has $n$ pivot positions and
-therefore no free variables, so statement (g) can be strengthened: the equation
-$A\mathbf{x} = \mathbf{b}$ has a ***unique*** solution for each $\mathbf{b}$ in $\mathbb{R}^n$, not
-merely "at least one". The argument is two lines long and you should be able to reproduce it: if
-$\mathbf{x}$ and $\mathbf{y}$ are both solutions, then
-$A(\mathbf{x} - \mathbf{y}) = A\mathbf{x} - A\mathbf{y} = \mathbf{b} - \mathbf{b} = \mathbf{0}$, so
-$\mathbf{x} - \mathbf{y}$ lies in the null space of $A$; statement (d) says the only vector in that
-null space is $\mathbf{0}$, hence $\mathbf{x} = \mathbf{y}$. Notice what this argument uses: not
-the inverse, not a computation, only the two statements (d) and (g) that the theorem says are
-equivalent. For square matrices, "a solution always exists" and "the solution is always unique" are
-two halves of one property, and the Invertible Matrix Theorem is the bridge between them.
+Held against the four families, statement (c) is the natural entry point:
 
-The second is that a one-sided inverse is automatically two-sided:
+- It is the only family member you can *compute* directly, by row reduction.
+- Once you know the number of pivots, the whole theorem is decided.
+- Statements (d) through (l) then follow for free, with no extra work.
 
-$$\text{If } AB = I \text{ for square } n \times n \text{ matrices } A, B,\; \text{then both are invertible, with } B = A^{-1} \text{ and } A = B^{-1}.$$
+Two of the statements deserve individual comment because students routinely overlook them:
 
-This is why statements (j) and (k) can appear in the theorem at all. Each of them supplies only half
-of the inverse relation — one product equal to $I$ — yet in the square case half is enough, and the
-missing half comes for free. In practice it means that verifying a single matrix product such as
-$AB = I$ already proves both $A^{-1} = B$ and $B^{-1} = A$, so a candidate inverse never has to be
-checked twice. For rectangular matrices the statement fails completely, and the failure is
-instructive; the example at the end of [[#Invertible Linear Transformations]] shows a matrix that
-has one one-sided inverse and cannot have the other. These two facts are also the first entries in
-the dictionary assembled in [[#Where the Two Halves Meet]] , where the same statements reappear in
-the language of subspaces.
+- **(j) and (k) are deliberately separate.** For a general matrix, a left inverse and a right
+  inverse are different animals, and having one does not guarantee the other. The IMT says that in
+the square case the distinction evaporates — which is the content of [[#1.2 Key Implications and Properties]].
+- **(l) is not obvious.** Row operations on $A$ and on $A^T$ have no visible connection, yet a
+matrix is invertible precisely when its transpose is. One way to see it is that $\det(A^T) = \det A$, since transposition leaves a determinant unchanged, and invertibility is equivalent to having
+  nonzero determinant. The explicit inverse is $(A^T)^{-1} = (A^{-1})^T$: transpose and invert
+  commute.
 
-Both facts are worth carrying forward as a reflex. When a problem presents a square matrix and asks
-for a solution of $A\mathbf{x} = \mathbf{b}$, the first question to settle is not "what is the
-solution?" but "which case is this?". If $A$ is invertible, a solution exists for every right-hand
-side and is unique, so the remaining work is pure arithmetic. If $A$ is singular, the answer
-reverses: existence depends on $\mathbf{b}$, and whenever a solution exists there are infinitely
-many, parameterized by the free variables. A large share of exam questions are disguised versions of
-this dichotomy, and the two-line argument above is the tool that turns it into something you can
-quote.
+In practice the workflow is always the same, and it is short:
 
-Uniqueness is what makes an inverse worth computing. If $A$ is invertible and you have obtained an
-inverse by any route — row reduction on $\begin{bmatrix} A & I \end{bmatrix}$, a formula, or a
-candidate handed to you in a problem — then that inverse is *the* inverse, and the solution of any
-system with coefficient matrix $A$ is $\mathbf{x} = A^{-1}\mathbf{b}$, with no further checking of
-consistency or free variables. This is why later chapters care how expensive finding an inverse is,
-and why the one-sided criterion matters so much: it turns the search for an inverse into a search
-for any single matrix whose product with $A$ is $I$.
+1. Row-reduce $A$ once, to echelon form — reduced echelon form is not required, since pivots are
+   visible in either.
+2. Count the pivot positions.
+3. If you find $n$ pivots, every statement in the IMT is true. If you find fewer than $n$, every
+   statement is false.
+4. No further test is ever needed. In particular, you never need to compute $A^{-1}$ merely to
+   decide whether $A^{-1}$ exists.
 
-> [!example] One Product Certifies Both Matrices
-> Let $A = \begin{bmatrix} 2 & 1 \\ 1 & 1 \end{bmatrix}$ and
-> $B = \begin{bmatrix} 1 & -1 \\ -1 & 2 \end{bmatrix}$. Compute
-> $$AB = \begin{bmatrix} 2(1) + 1(-1) & 2(-1) + 1(2) \\ 1(1) + 1(-1) & 1(-1) + 1(2) \end{bmatrix} = \begin{bmatrix} 1 & 0 \\ 0 & 1 \end{bmatrix} = I.$$
-> Since $A$ and $B$ are square and $AB = I$, the implication above applies immediately:
-> $B = A^{-1}$ and $A = B^{-1}$. There is no need to compute $BA$ at all — but it is reassuring
-> that the other product agrees:
-> $BA = \begin{bmatrix} 1(2) + (-1)(1) & 1(1) + (-1)(1) \\ -1(2) + 2(1) & -1(1) + 2(1) \end{bmatrix} = \begin{bmatrix} 1 & 0 \\ 0 & 1 \end{bmatrix}$
-> ✓, exactly as the theorem promises.
+Three habits make the theorem reliable under exam conditions:
 
-### Classification of Square Matrices
-
-The Invertible Matrix Theorem divides all $n \times n$ matrices into two disjoint classes, and every
-square matrix you ever meet lands in exactly one of them:
-
-1. **Invertible (nonsingular) matrices:** matrices that satisfy every equivalent condition in the
-   theorem.
-2. **Noninvertible (singular) matrices:** matrices that satisfy none of the conditions.
-
-> [!info] Definition: Invertible and Singular Matrices
-> A square matrix $A$ is ***invertible***, or ***nonsingular***, if $A^{-1}$ exists — equivalently,
-> if any one statement of the IMT holds for $A$. It is ***singular***, or ***noninvertible***, if
-> no inverse exists — equivalently, if every statement of the IMT fails for $A$.
->
-> **Breakdown:**
-> - ***Invertible***: the matrix can be undone, so no information is lost; twelve equivalent tests
->   are available.
-> - ***Singular***: the matrix collapses at least one nonzero direction to $\mathbf{0}$, so it can
->   never be undone.
-> - **Nonsingular / noninvertible:** the two alternative names; exam questions alternate between
->   them freely, so know all four words.
-
-The second class is worth stating in its own right, because in practice you usually meet a singular
-matrix through one of its symptoms rather than through a failed inversion. Negating any single
-statement of the theorem gives a property of every singular matrix: a singular $n \times n$ matrix
-is *not* row equivalent to $I_n$, it has *fewer* than $n$ pivot positions, its columns are linearly
-dependent — some nontrivial combination of them is $\mathbf{0}$ — and the equation
-$A\mathbf{x} = \mathbf{0}$ has a nontrivial solution, while $A\mathbf{x} = \mathbf{b}$ fails to have
-a solution for some $\mathbf{b}$. Because the statements are equivalent, each of these symptoms is
-a complete diagnosis: demonstrate any one of them and you have proved that the matrix is singular,
-with all the others following automatically.
-
-It helps to picture what those symptoms have in common. An invertible $n \times n$ matrix is a
-transformation that loses no information: every vector of $\mathbb{R}^n$ is produced by exactly one
-input, so the matrix can be undone. A singular matrix is a transformation that collapses at least
-one direction to nothing — some nonzero vector is sent to $\mathbf{0}$ — and once a direction is
-collapsed, information about it can never be recovered, which is why no inverse can exist. In
-geometric language, a singular square matrix squashes all of $\mathbb{R}^n$ onto a lower-dimensional
-region: a plane, a line, or even the single point $\mathbf{0}$. That region is the column space,
-and the collapsed direction is the null space, both of which return in Section 2.2 as the two
-natural subspaces of a matrix.
-
-Spotting the failure is often faster than computing it. A square matrix is singular as soon as two
-rows are equal, or one row is a multiple of another, or a row or a column is entirely zero, or two
-columns coincide — each of these is a visible linear dependence among the columns, which is
-statement (e) failing. The visible cases cover most exam questions; for the rest, a single row
-reduction settles it, because the moment fewer than $n$ pivots appear, the same reduction has also
-exhibited a nontrivial solution of $A\mathbf{x} = \mathbf{0}$. What you should not expect to find
-is a matrix that is "half invertible": the collapse is an all-or-nothing property of the whole
-matrix, and that is precisely why the theorem can list twelve equivalent statements instead of
-twelve independent ones.
-
-The classification also supplies the vocabulary for everything that follows. Whenever a theorem says
-"for an invertible matrix" or "provided $A$ is nonsingular", it is stating which side of the divide
-the matrix must lie on, and the contrapositive is usually the useful reading: statements proven for
-singular matrices describe exactly what can go wrong when a system misbehaves. In the second half of
-this note the same divide reappears geometrically — an invertible matrix has the smallest possible
-null space and the largest possible column space — and the two descriptions may be used
-interchangeably.
-
-> [!example] Two $2 \times 2$ Matrices, Classified
-> Row reduce $A = \begin{bmatrix} 1 & 2 \\ 2 & 5 \end{bmatrix}$: subtracting twice row 1 from row 2
-> gives $\begin{bmatrix} 1 & 2 \\ 0 & 1 \end{bmatrix}$, which reduces further to $I_2$; so $A$ has
-> two pivot positions and, by statement (c), is invertible (nonsingular). Now row reduce
-> $B = \begin{bmatrix} 1 & 2 \\ 2 & 4 \end{bmatrix}$: the same subtraction gives
-> $\begin{bmatrix} 1 & 2 \\ 0 & 0 \end{bmatrix}$, with a single pivot. Its columns are dependent,
-> since the second column is twice the first,
-> $2\begin{bmatrix} 1 \\ 2 \end{bmatrix} = \begin{bmatrix} 2 \\ 4 \end{bmatrix}$ ✓; and
-> $B\begin{bmatrix} -2 \\ 1 \end{bmatrix} = \begin{bmatrix} 1(-2) + 2(1) \\ 2(-2) + 4(1) \end{bmatrix} = \begin{bmatrix} 0 \\ 0 \end{bmatrix}$
-> ✓, so $B\mathbf{x} = \mathbf{0}$ has a nontrivial solution. Statement (e) fails, statement (d)
-> fails, and $B$ is singular — for a square matrix, one failure drags all twelve statements down
-> with it.
-
-### Invertible Linear Transformations
-
-Matrix multiplication is not only a way of combining arrays of numbers; it is composition of linear
-transformations, the same operation seen from the other side. From that point of view, an invertible
-matrix is the matrix of a transformation that can be undone. The relation
-$A^{-1}A\mathbf{x} = \mathbf{x}$ says exactly that: multiplying an input $\mathbf{x}$ by $A$
-transforms it into $A\mathbf{x}$, and multiplying by $A^{-1}$ transforms $A\mathbf{x}$ back into
-$\mathbf{x}$. Thinking this way is not merely a change of vocabulary. It explains why the
-Invertible Matrix Theorem speaks about one-to-one and onto at all — those are properties of
-transformations, not of arrays — and it makes several of the twelve statements obvious: a
-transformation can be undone precisely when it never merges two inputs and never misses an output.
-
-> [!info] Definition: Invertible Linear Transformation
-> A linear transformation $T: \mathbb{R}^n \to \mathbb{R}^n$ is ***invertible*** if there exists a
-> function $S: \mathbb{R}^n \to \mathbb{R}^n$ such that
-> $$S(T(\mathbf{x})) = \mathbf{x} \quad \text{and} \quad T(S(\mathbf{x})) = \mathbf{x} \quad \text{for all } \mathbf{x} \text{ in } \mathbb{R}^n.$$
-> If such an $S$ exists, it is unique and it is automatically a linear transformation; it is called
-> the ***inverse*** of $T$ and is written $T^{-1}$.
->
-> **Breakdown:**
-> - $T$: the transformation being inverted; $S$ (later $T^{-1}$): the function that undoes it.
-> - The two identities: $T$ and $S$ undo each other from either side; requiring both is what makes
->   the inverse unique and linear.
-
-The definition asks for both compositions because one direction alone is too weak: a function could
-undo everything $T$ produces and still fail to be a genuine inverse. Demanding both recovers the
-matrix situation exactly, and the next theorem makes the dictionary between a transformation and its
-standard matrix precise. It is the book's Theorem 9 of §2.3.
-
-Composition is also the reason matrix multiplication is defined the way it is. If $S$ has standard
-matrix $B$ and $T$ has standard matrix $A$, then applying first $S$ and then $T$ gives
-$(T \circ S)(\mathbf{x}) = A(B\mathbf{x}) = (AB)\mathbf{x}$, so the product of matrices is the
-algebra of doing one transformation after another. An inverse is then a composition that returns
-every vector to its starting point, in either order: $T^{-1} \circ T$ and $T \circ T^{-1}$ are both
-the identity map, whose standard matrix is $I$. Seen this way, the two identities in the definition
-are one requirement written twice — once for the input side and once for the output side — and the
-matrix relation $A^{-1}A = AA^{-1} = I$ is their algebraic shadow.
-
-The geometric content of the definition is exactly bijectivity. An invertible map pairs every input
-with a distinct output and, conversely, every output with exactly one input: nothing is merged,
-nothing is missed, so the map can be run backwards without ambiguity. The two examples show how
-differently the failures can look. A rotation moves the plane rigidly, so it is one-to-one and onto,
-and its inverse is the rotation back. A projection that flattens the plane onto a line merges whole
-directions into single points and is therefore not one-to-one — and no inverse can exist, because
-the information about where in a direction you started was destroyed by the map itself.
-
-> [!summary] Theorem 2: Invertibility of Linear Transformations
-> Let $T: \mathbb{R}^n \to \mathbb{R}^n$ be a linear transformation with standard matrix $A$. Then
-> $T$ is invertible if and only if $A$ is invertible, and in that case
-> $S(\mathbf{x}) = A^{-1}\mathbf{x}$ is the unique map with $S(T(\mathbf{x})) = \mathbf{x}$ and
-> $T(S(\mathbf{x})) = \mathbf{x}$ for all $\mathbf{x}$.
->
-> **Breakdown:**
-> - $T$: the transformation; $A$: its $n \times n$ standard matrix, so
->   $T(\mathbf{x}) = A\mathbf{x}$; $S$ or $T^{-1}$: the inverse map, with standard matrix $A^{-1}$
->   .
->
-> **Proof:**
-> - ** $T$ invertible $\implies$ $A$ invertible:** $T(S(\mathbf{x})) = \mathbf{x}$ makes $T$ onto,
->   which is statement (i); the IMT then makes $A$ invertible.
-> - ** $A$ invertible $\implies$ $T$ invertible:** $S(\mathbf{x}) = A^{-1}\mathbf{x}$ is linear, and
->   $S(T(\mathbf{x})) = (A^{-1}A)\mathbf{x} = \mathbf{x}$,
->   $T(S(\mathbf{x})) = (AA^{-1})\mathbf{x} = \mathbf{x}$ ✓, so $S = T^{-1}$.
-
-Read in words, the two directions of the proof are the two halves of the dictionary between maps and
-matrices. The forward direction says that if the transformation can be undone, then it must already
-map onto its codomain, because undoing a vector requires it to have been produced in the first
-place; onto-ness hands the conclusion straight to the IMT, which supplies invertibility of $A$. The
-reverse direction constructs the inverse rather than assuming it: multiplication by $A^{-1}$ is
-linear, and the two composition identities for it are just the associativity of matrix
-multiplication. Nothing else is needed, and this is a good example of a proof where the hard work
-was done in advance by a theorem — the pair (a) and (i) of the Invertible Matrix Theorem is what
-makes the whole argument short.
-
-> [!example] Rotations Are Invertible, Projections Are Not
-> Let $T: \mathbb{R}^2 \to \mathbb{R}^2$ rotate every vector counterclockwise by an angle $\theta$,
-> with standard matrix
-> $R_\theta = \begin{bmatrix} \cos\theta & -\sin\theta \\ \sin\theta & \cos\theta \end{bmatrix}$.
-> Intuitively, the way to undo a rotation is to rotate back, so the inverse should be
-> $R_{-\theta} = \begin{bmatrix} \cos\theta & \sin\theta \\ -\sin\theta & \cos\theta \end{bmatrix}$
-> . Theorem 2 confirms it, because
-> $$R_\theta R_{-\theta} = \begin{bmatrix} \cos^2\theta + \sin^2\theta & \cos\theta\sin\theta - \sin\theta\cos\theta \\ \sin\theta\cos\theta - \cos\theta\sin\theta & \sin^2\theta + \cos^2\theta \end{bmatrix} = \begin{bmatrix} 1 & 0 \\ 0 & 1 \end{bmatrix} ✓$$
-> using the identity $\cos^2\theta + \sin^2\theta = 1$. Since the rotation matrix is square and
-> this one product is $I$, the matrix is invertible and $R_\theta^{-1} = R_{-\theta}$.
-> For contrast, consider the projection $P$ onto the $x$ -axis, $P(x, y) = (x, 0)$, with standard
-> matrix $\begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix}$. It maps both $(0,1)$ and $(0,0)$ to
-> $\mathbf{0}$, so it is not one-to-one; by statement (f) of the Invertible Matrix Theorem its
-> matrix is not invertible, and indeed $P$ has no inverse — no function can recover the $y$
-> -coordinate that the projection threw away.
-
-> [!example] One-to-One Transformations on $\mathbb{R}^n$
-> **Problem:** What can be deduced about a one-to-one linear transformation
-> $T: \mathbb{R}^n \to \mathbb{R}^n$ ?
-> **Solution:** If $T$ is one-to-one, the columns of its standard matrix $A$ are linearly
-> independent, so statement (e) of the Invertible Matrix Theorem holds. Because $A$ is square, every
-> other statement holds with it:
-> 1. $A$ is invertible;
-> 2. $T$ maps $\mathbb{R}^n$ onto $\mathbb{R}^n$ (statement (i));
-> 3. $T$ is an invertible linear transformation, with $T^{-1}(\mathbf{x}) = A^{-1}\mathbf{x}$ by
->    Theorem 2.
-> The moral is that for square matrices there is no such thing as "one-to-one but not onto": a
-> transformation from $\mathbb{R}^n$ to itself is one-to-one exactly when it is onto, because both
-> conditions collapse into the invertibility of the standard matrix ✓.
-
-> [!warning] The Theorem Applies Strictly to Square Matrices
-> Nothing above applies to rectangular matrices ($m \times n$ with $m \neq n$). The twelve
-> statements are equivalent only because $A$ is square; for a rectangular matrix, "the columns are
-> independent" and "the columns span the output space" are genuinely different conditions. The
-> columns of a $4 \times 3$ matrix can be independent, and yet $A\mathbf{x} = \mathbf{b}$ still
-> fails for some $\mathbf{b}$ in $\mathbb{R}^4$: three independent columns span at most a
-> 3-dimensional subspace of a 4-dimensional space. The next example shows the same asymmetry through
-> one-sided inverses.
-
-> [!example] One Rectangular Matrix, Half an Inverse
-> Take $A = \begin{bmatrix} 1 & 0 \\ 0 & 1 \\ 0 & 0 \end{bmatrix}$, a $3 \times 2$ matrix whose two
-> columns are independent, and let $C = \begin{bmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \end{bmatrix}$. The
-> product
-> $$CA = \begin{bmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \end{bmatrix}\begin{bmatrix} 1 & 0 \\ 0 & 1 \\ 0 & 0 \end{bmatrix} = \begin{bmatrix} 1 & 0 \\ 0 & 1 \end{bmatrix} = I_2 ✓$$
-> shows that $C$ is a left inverse of $A$. No right inverse can exist, however: for any
-> $3 \times 2$ matrix $D$, the product $AD$ is a $3 \times 3$ matrix whose third row is a
-> combination of the third row of $A$ — a row of zeros — so the third row of $AD$ is always zero and
-> can never equal the third row $(0,0,1)$ of $I_3$. Half an inverse exists, and the other half does
-> not: the guarantee that one-sided inverses are two-sided genuinely requires a square matrix.
-
-### Numerical Notes
-
-Everything above is exact arithmetic; computation is not. Roundoff error — the small inaccuracy a
-computer introduces when it rounds the result of each arithmetic operation to a fixed number of
-digits — turns invertibility into a delicate question. In practice an invertible matrix can be
-*nearly singular*, or ***ill-conditioned***, in the sense that slight perturbations of its entries
-can turn it into a singular matrix, and roundoff error is then dangerous in both directions. During
-row reduction of an ill-conditioned matrix, arithmetic noise may hide a genuine pivot and make an
-invertible matrix appear singular; in the other direction, noise can create tiny nonzero values
-where zeros belong, making a singular matrix appear invertible. Neither failure is visible from the
-row reduction alone, because the row reduction is exactly the place where the noise enters.
-
-To quantify the danger, computational software reports a **condition number** for a square matrix;
-the next definition states how it behaves and what it is used for.
-
-> [!info] Definition: Condition Number
-> The ***condition number*** of a square matrix is a measure, computed by software, of how sensitive
-> its inversion is to perturbations of its entries. It is $1$ for the identity matrix (the optimal
-> baseline), finite but large for an ill-conditioned matrix, and infinite for a singular matrix.
->
-> **Breakdown:**
-> - **Small** condition number: the matrix is far from singular and computed results can be trusted.
->   **Large**: high sensitivity to roundoff error and severe loss of precision.
-> - **Infinite**: the exact signature of a singular matrix; when the computed value is extremely
->   large, software may be unable to tell the last two cases apart.
-
-What should you do with this in practice? Treat the condition number as a health warning attached to
-the answer, not to the matrix. A small condition number means the report can be trusted; a huge one
-means the verdict may flip under tiny changes in the data, so check the result by an independent
-route — for instance by substituting the computed solution back into the original system and
-measuring the residual. In the language of [[#Classification of Square Matrices]] , ill-conditioning
-means the matrix is invertible but sits extremely close to the wall between the two classes, and the
-example below shows how thin that wall can be.
-
-It is worth seeing how ill-conditioning appears inside a row reduction, because the symptom is easy
-to mistake for a mistake. A nearly singular matrix produces a pivot that is tiny relative to the
-entries around it; dividing the rows below by that pivot multiplies their arithmetic noise by
-roughly the reciprocal of its size, so the trustworthy digits of the answer disappear one by one. A
-pivot of size $10^{-8}$ reached from entries of size $10$ costs about eight digits of accuracy in
-every later step — and at sixteen digits of working precision there is very little left. The same
-phenomenon, read backwards, explains why professional software interchanges rows: choosing the
-largest available entry as the pivot keeps the multipliers small and the computation stable.
-
-Practical advice follows. When a computed answer depends on inverting or row reducing a matrix, ask
-two questions before trusting it: how large was the condition number, and does the answer survive a
-substitution check? If the condition number is close to the working precision, the honest conclusion
-is not that the matrix is singular but that this computation cannot decide — a distinction that
-matters in applications such as model fitting, where a nearly singular system is the shape of a
-model whose parameters are not really determined by the data. And when a matrix has entries at
-wildly different scales, rescaling its rows (and the matching right-hand sides) before computing can
-lower the condition number while leaving the exact solution unchanged, since scaling an equation by
-a nonzero number does not change its solution set.
-
-> [!example] How Close Can an Invertible Matrix Be to Singular?
-> Take $A_\varepsilon = \begin{bmatrix} 1 & 1 \\ 1 & 1 + \varepsilon \end{bmatrix}$ with
-> $\varepsilon = 10^{-4}$. Its inverse is
-> $$A_\varepsilon^{-1} = \frac{1}{\varepsilon}\begin{bmatrix} 1 + \varepsilon & -1 \\ -1 & 1 \end{bmatrix} = \begin{bmatrix} 10001 & -10000 \\ -10000 & 10000 \end{bmatrix},$$
-> which can be checked directly: the first row of $A_\varepsilon A_\varepsilon^{-1}$ is
-> $(1 \cdot 10001 + 1 \cdot (-10000),\; 1 \cdot (-10000) + 1 \cdot 10000) = (1, 0)$ ✓, and the
-> second is
-> $(1 \cdot 10001 + 1.0001 \cdot (-10000),\; 1 \cdot (-10000) + 1.0001 \cdot 10000) = (0, 1)$ ✓. So
-> $A_\varepsilon$ is genuinely invertible. Yet changing a single entry by $10^{-4}$ turns it into
-> the singular matrix $\begin{bmatrix} 1 & 1 \\ 1 & 1 \end{bmatrix}$, whose two columns are
-> identical and which therefore fails every statement of the Invertible Matrix Theorem. The
-> perturbation is tiny compared with the entries of $A_\varepsilon^{-1}$, which are of size $10^4$
-> ; the condition number here is about $4 \times 10^4$, so a computer working at ordinary precision
-> cannot be trusted to distinguish $A_\varepsilon$ from its singular neighbour.
-
-The computations in this note are exact because the entries are small integers, and it is worth
-knowing when that stops being true. For matrices with integer entries, compute the pivot count
-exactly, by hand or with fractions: a computer working in decimals may report a pivot where none
-exists, or miss one that does — the ill-conditioned example above is precisely the boundary case.
-And never decide invertibility from a determinant that comes out as a tiny rounded number such as
-$10^{-12}$: in exact arithmetic the determinant is either zero or it is not, and a floating-point
-value that small cannot distinguish "singular" from "nearly singular" by itself.
+- **Name the statement you are using.** Writing "by (c)" or "by (h)" takes a second and makes your
+  reasoning checkable.
+- **Check squareness first.** Before invoking any statement, confirm that $A$ really is $n \times n$
+  — most lost marks in this topic come from applying the IMT to a rectangular matrix.
+- **Prefer pivots to determinants.** Counting pivots costs one row reduction and works for any size,
+  whereas a determinant is slower and tells you nothing about *which* statements fail.
 
 ---
 
-## 2.2 Subspaces of $\mathbb{R}^n$
+## 1.2 Key Implications and Properties
 
-The Invertible Matrix Theorem studied a single system $A\mathbf{x} = \mathbf{b}$ and a single
-matrix. The next step is to study whole *sets* of vectors at once, and to ask which sets behave like
-smaller copies of $\mathbb{R}^n$ inside $\mathbb{R}^n$. Subspaces are exactly those sets, and they
-arise from the most ordinary objects in the subject: the solution set of a homogeneous system, the
-collection of vectors a matrix can produce, the lines and planes through the origin. The gain from
-naming them is not decorative. Once a set is known to be a subspace, it can be described by a finite
-list of spanning vectors, tested by two closure rules, and compared with other subspaces — which is
-exactly what makes the matrix statements of Section 2.1 expressible in geometric language, and
-geometric intuitions expressible as algebra.
+The IMT pays two immediate dividends, and both recur constantly in later chapters.
 
-The three closure rules are what make a subspace a world of its own. If $H$ is a subspace and you
-take any two of its vectors, then their sum, their difference, and every multiple of each are again
-in $H$; consequently every linear combination of any finite list of vectors of $H$ is in $H$ as
-well, and every equation you can set up among those vectors can be solved within $H$. That
-self-containment is why subspaces, rather than arbitrary subsets, are the right setting for the
-questions of this section: a question asked inside a subspace can be answered inside it.
+**Uniqueness is free.** Because an invertible $n \times n$ matrix has $n$ pivot positions, it has a
+pivot in every column and therefore **no free variables**. Non-uniqueness of solutions can only come
+from free variables: if a solution exists and there is a free variable, you can vary it and obtain
+infinitely many solutions. With no free variables there is nothing left to vary, so statement (g)
+can be strengthened from "at least one solution" to "**exactly one** solution": the equation
+$A\mathbf{x} = \mathbf{b}$ has a *unique* solution for each $\mathbf{b}$ in $\mathbb{R}^n$.
+Combining this with existence, an invertible matrix gives a unique solution for *every* right-hand
+side — which is why the formula $\mathbf{x} = A^{-1}\mathbf{b}$ is so powerful.
 
-Testing a candidate subset is therefore a routine with a fixed order. First look for the zero
-vector: if $\mathbf{0} \notin H$, stop, because no amount of further checking can rescue the set —
-this one test disqualifies every line and plane that misses the origin, and every solution set of an
-inhomogeneous system. Then test closure, and test it for *symbolic* vectors rather than examples:
-take two general vectors of $H$, written in whatever form $H$ is described, and perform the
-addition or the scaling in that notation. Using specific numbers instead is the most common mistake
-in this material, because one passing example proves nothing, while one failing example is enough to
-show that a set is not a subspace. If $H$ is described parametrically, closure tests are usually one
-line of algebra; if it is described by a condition, the closure tests run through the condition.
+**One-sided inverses are automatically two-sided.** This is the more surprising consequence, and it
+is worth understanding why it should be surprising. For functions between arbitrary sets, a left
+inverse exists exactly when the function is injective and a right inverse exists exactly when it is
+surjective; neither condition implies the other. Matrices behave differently — but only because they
+are square.
 
-> [!info] Definition: Subspace of $\mathbb{R}^n$
-> A ***subspace*** of $\mathbb{R}^n$ is any subset $H$ of $\mathbb{R}^n$ satisfying three
-> properties:
-> 1. The zero vector $\mathbf{0}$ is in $H$.
-> 2. For each $\mathbf{u}$ and $\mathbf{v}$ in $H$, the sum $\mathbf{u} + \mathbf{v}$ is in $H$
->    (*closed under addition*).
-> 3. For each $\mathbf{u}$ in $H$ and each scalar $c$, the vector $c\mathbf{u}$ is in $H$ (*closed
->    under scalar multiplication*).
+> [!summary] Theorem 2: Two-Sided Invertibility of Square Products
+> Let $A$ and $B$ be square $n \times n$ matrices. If $AB = I$, then both $A$ and $B$ are invertible, with:
+> $$B = A^{-1} \quad \text{and} \quad A = B^{-1}$$
 >
 > **Breakdown:**
-> - $H$: the subset tested, all three properties must hold; $\mathbf{0}$: the zero vector, which
->   pulls every subspace through the origin.
-> - $\mathbf{u}, \mathbf{v}$: arbitrary vectors from $H$; $c$: an arbitrary scalar. **Closed
->   under:** the operation never takes you out of $H$.
-
-Reading the three conditions as a list of technical requirements hides what they are really doing.
-Condition 1 fixes where the set sits: every subspace passes through the origin. Conditions 2 and 3
-fix how the set is shaped: it must be flat, in the sense that it contains every combination you can
-build from its own vectors — sums, differences, multiples, and therefore every linear combination.
-Together the three conditions say that a subspace absorbs the whole arithmetic of $\mathbb{R}^n$
-without ever leaving itself, which is why anything you can do in $\mathbb{R}^n$ (solve equations,
-take combinations, reason about dimension) can also be done inside a subspace. Notice also how the
-conditions interact: once conditions 2 and 3 hold, taking the combination $0\mathbf{u}$ produces
-$\mathbf{0}$, so a nonempty closed set automatically contains the zero vector — condition 1 is
-stated separately because the empty set would otherwise qualify, and because the origin is the
-quickest test of whether a candidate set is plausible. In geometric terms the effect of all three is
-"flat object through the origin": a line or a plane in $\mathbb{R}^3$ is a subspace exactly when it
-passes through the origin, and shifting such a line even slightly away from the origin already
-violates condition 1.
-
-> [!example] Spans Are Always Subspaces
-> Let $\mathbf{v}_1, \mathbf{v}_2, \dots, \mathbf{v}_p$ be vectors in $\mathbb{R}^n$ and let
-> $H = \text{Span}\{\mathbf{v}_1, \mathbf{v}_2, \dots, \mathbf{v}_p\}$. Then $H$ is a subspace of
-> $\mathbb{R}^n$:
-> 1. **Zero vector.** $\mathbf{0} = 0\mathbf{v}_1 + 0\mathbf{v}_2 + \dots + 0\mathbf{v}_p$ is a
->    linear combination with all coefficients zero ✓, so $\mathbf{0} \in H$.
-> 2. **Closure under addition.** For $\mathbf{u} = s_1\mathbf{v}_1 + \dots + s_p\mathbf{v}_p$ and
->    $\mathbf{v} = t_1\mathbf{v}_1 + \dots + t_p\mathbf{v}_p$, the sum is
->    $\mathbf{u} + \mathbf{v} = (s_1 + t_1)\mathbf{v}_1 + \dots + (s_p + t_p)\mathbf{v}_p$, again a
->    linear combination ✓, so $\mathbf{u} + \mathbf{v} \in H$.
-> 3. **Closure under scalar multiplication.** For any scalar $c$,
->    $c\mathbf{u} = (cs_1)\mathbf{v}_1 + \dots + (cs_p)\mathbf{v}_p$, once more a linear
->    combination ✓, so $c\mathbf{u} \in H$.
-> All three properties hold, so $H$ is a subspace. It is called the ***subspace spanned (or
-> generated) by*** $\mathbf{v}_1, \dots, \mathbf{v}_p$.
-
-This example is the workhorse of the section. It shows that every span is automatically a subspace,
-and it also explains why spans make such good descriptions: a span is a *small* piece of information
-— a finite list of vectors — that pins down a set which may contain infinitely many vectors. The
-traffic then runs in both directions. Every subspace you meet will be presented as a span, and the
-practical question will never be "is it a subspace?" but "which vectors span it?" That question is
-answered by bases, and the two matrix subspaces of this section are where the answer matters most.
-
-There is a second way to read the span example that is worth keeping:
-$\text{Span}\{\mathbf{v}_1, \dots, \mathbf{v}_p\}$ is not merely *a* subspace, it is the *smallest*
-subspace containing all the given vectors. Any subspace that contains the $\mathbf{v}_i$ must
-contain every combination of them, by the two closure rules, so it must contain their span; the span
-therefore sits inside every other candidate and is the most economical description of the set those
-vectors generate. That minimality is why span language keeps appearing: the column space is the span
-of the columns, the null space will be described by a span, and a basis will be the shortest span
-that still covers everything.
-
-### Geometric Interpretations and Counterexamples
-
-- **Lines through the origin:** if $\mathbf{v}_1 \neq \mathbf{0}$ and $\mathbf{v}_2 = k\mathbf{v}_1$
-  for some scalar $k$, then $\text{Span}\{\mathbf{v}_1, \mathbf{v}_2\}$ is a straight line through
-  the origin, a 1-dimensional subspace.
-- **Planes through the origin:** if $\mathbf{v}_1$ and $\mathbf{v}_2$ are non-collinear vectors,
-  then $\text{Span}\{\mathbf{v}_1, \mathbf{v}_2\}$ is a plane passing through the origin, a
-  2-dimensional subspace.
-
-These two cases exhaust everything you can picture in $\mathbb{R}^3$: lines and planes through the
-origin, plus the two extreme cases of the next subsection. The pattern behind them is worth stating
-explicitly, because it explains the word "dimension" before the course formally defines it. The span
-of $p$ vectors is generated by $p$ directions; if those vectors are genuinely independent, the span
-is $p$ -dimensional, and as soon as one vector is redundant — a multiple of another, or a
-combination of the others — the span collapses to fewer dimensions. A line is the span of one
-direction, a plane the span of two, and a span of three vectors in $\mathbb{R}^3$ either fills all
-of $\mathbb{R}^3$ (if the three are independent) or collapses to a plane or a line (if they are
-not). Nothing else can happen, and that rigidity is the first sign of how much structure the three
-closure conditions impose.
-
-Counterexamples matter as much as examples, because most sets are not subspaces and the habit of
-testing the three conditions is what separates guessing from proving.
-
-> [!example] Lines That Are Not Subspaces, and a Set That Almost Is
-> A line $L$ not passing through the origin cannot be a subspace, and it fails all three conditions
-> at once. Take $L$ in $\mathbb{R}^2$ given by $y = x + 1$:
-> - **Zero vector:** $\mathbf{0} = (0,0)$ has $0 \neq 0 + 1$, so $\mathbf{0} \notin L$ ✓ (failure
->   already).
-> - **Addition:** $(0,1)$ and $(1,2)$ lie on $L$, but $(0,1) + (1,2) = (1,3)$ has $3 \neq 1 + 1$,
->   so the sum points away from $L$ ✓.
-> - **Scalar multiplication:** $(1,2) \in L$, but $2(1,2) = (2,4)$ has $4 \neq 2 + 1$, and
->   $0 \cdot (1,2) = \mathbf{0} \notin L$ ✓.
-> A subtler non-example is the first quadrant of $\mathbb{R}^2$, the set of all
-> $\begin{bmatrix} x \\ y \end{bmatrix}$ with $x \geq 0$ and $y \geq 0$. It contains $\mathbf{0}$
-> and is closed under addition (
-> $\begin{bmatrix} 1 \\ 2 \end{bmatrix} + \begin{bmatrix} 3 \\ 1 \end{bmatrix} = \begin{bmatrix} 4 \\ 3 \end{bmatrix}$
-> ✓ stays in the quadrant), but it fails closure under scalar multiplication:
-> $\begin{bmatrix} 1 \\ 1 \end{bmatrix}$ is in the set while
-> $-1 \cdot \begin{bmatrix} 1 \\ 1 \end{bmatrix} = \begin{bmatrix} -1 \\ -1 \end{bmatrix}$ is not ✓.
-> One failed condition is enough to disqualify a set, which is why a candidate subspace is often
-> killed by the cheapest possible counterexample — here, by a single negative scalar.
-
-### Special Extreme Subspaces
-
-Every $\mathbb{R}^n$ contains two boundary cases of subspaces, one as large as possible and one as
-small as possible:
-
-1. **The full space $\mathbb{R}^n$:** $\mathbb{R}^n$ is a subspace of itself, since it contains
-   $\mathbf{0}$ and is closed under addition and scalar multiplication — those operations were
-   defined on all of $\mathbb{R}^n$ to begin with.
-2. **The zero subspace $\{\mathbf{0}\}$:** the set containing only the zero vector satisfies all
-   three conditions trivially, because $\mathbf{0} + \mathbf{0} = \mathbf{0}$ and
-   $c\mathbf{0} = \mathbf{0}$ for every scalar $c$.
-
-These two cases are not curiosities; they are the endpoints of a scale, and the Invertible Matrix
-Theorem is a statement about landing at the endpoints. The smallest a null space can be is
-$\{\mathbf{0}\}$, and the largest a column space can be is the whole of the output space; statement
-(d) of Theorem 1 says that a square matrix is invertible exactly when its null space is minimal, and
-statement (h) says it is invertible exactly when its column space is maximal. Being able to say
-"minimal" and "maximal" in the language of subspaces is what makes those two statements geometric
-rather than merely algebraic, and it is the first reason subspaces are worth the trouble.
-
-> [!example] The Smallest, the Largest, and One in Between
-> In $\mathbb{R}^2$: the zero subspace is the single point at the origin,
-> $\{\mathbf{0}\} = \text{Span}\{\mathbf{0}\}$; the full space is
-> $\mathbb{R}^2 = \text{Span}\{\mathbf{e}_1, \mathbf{e}_2\}$, spanned by the standard basis vectors
-> $\mathbf{e}_1 = \begin{bmatrix} 1 \\ 0 \end{bmatrix}$ and
-> $\mathbf{e}_2 = \begin{bmatrix} 0 \\ 1 \end{bmatrix}$; and in between there are the lines through
-> the origin, such as $M = \text{Span}\left\{\begin{bmatrix} 1 \\ 2 \end{bmatrix}\right\}$. The
-> line is closed under both operations for a one-line reason: every element of $M$ has the form
-> $c\begin{bmatrix} 1 \\ 2 \end{bmatrix}$, and
-> $c_1\begin{bmatrix} 1 \\ 2 \end{bmatrix} + c_2\begin{bmatrix} 1 \\ 2 \end{bmatrix} = (c_1 + c_2)\begin{bmatrix} 1 \\ 2 \end{bmatrix}$
-> ✓ stays in $M$, while
-> $c\left(c_1\begin{bmatrix} 1 \\ 2 \end{bmatrix}\right) = (cc_1)\begin{bmatrix} 1 \\ 2 \end{bmatrix}$
-> ✓ stays in $M$ as well. These three kinds of set — the origin, the lines through it, and the whole
-> plane — are the only subspaces of $\mathbb{R}^2$, which is a useful sanity check on any candidate
-> subspace in the plane.
-
-### Column Space and Null Space of a Matrix
-
-Subspaces in linear algebra most often arise from matrices, in exactly two ways: as the set of all
-linear combinations of the columns of a matrix, or as the set of all solutions of a homogeneous
-linear system — homogeneous meaning that the right-hand side is $\mathbf{0}$. The two constructions
-ask opposite questions about the same matrix. The first asks what the matrix can *produce*: which
-target vectors $\mathbf{b}$ are hit by the mapping $\mathbf{x} \mapsto A\mathbf{x}$. The second
-asks what the matrix *destroys*: which input vectors $\mathbf{x}$ are collapsed to zero by that same
-mapping. Both answers are subspaces, and both live in the space where their vectors naturally sit.
-Since the two spaces are so easily confused, it pays to fix the vocabulary now: for an $m \times n$
-matrix, the input space is $\mathbb{R}^n$, the space of $n$ -entry columns where $\mathbf{x}$
-lives, and the output space is $\mathbb{R}^m$, the space of $m$ -entry columns where $A\mathbf{x}$
-and $\mathbf{b}$ live.
-
-> [!info] Definition: Column Space
-> The ***column space*** of an $m \times n$ matrix $A$, written $\text{Col } A$, is the set of all
-> linear combinations of the columns of $A$:
-> $$\text{Col } A = \text{Span}\{\mathbf{a}_1, \mathbf{a}_2, \dots, \mathbf{a}_n\} \quad \text{where } A = \begin{bmatrix} \mathbf{a}_1 & \mathbf{a}_2 & \dots & \mathbf{a}_n \end{bmatrix}.$$
->
-> **Breakdown:**
-> - $A$: an $m \times n$ matrix; $\mathbf{a}_1, \dots, \mathbf{a}_n$: its columns, each with $m$
->   entries, so each lies in $\mathbb{R}^m$; $\text{Col } A$: their span, a subspace of
->   $\mathbb{R}^m$.
-
-Because each column of $A$ has $m$ entries, $\text{Col } A$ is a subspace of $\mathbb{R}^m$ — of the
-output space, not the input space. It equals all of $\mathbb{R}^m$ if and only if the columns of $A$
-span $\mathbb{R}^m$; otherwise it is a proper subspace of $\mathbb{R}^m$, thinner than the whole
-output space. In the context of the system $A\mathbf{x} = \mathbf{b}$, the column space is
-precisely the set of target vectors $\mathbf{b}$ for which the system has at least one solution,
-because the matrix-vector product $A\mathbf{x}$ is by construction the linear combination that
-$\mathbf{x}$ builds out of the columns of $A$. This is the same content as statement (h) of the
-Invertible Matrix Theorem in the square case, seen from the subspace side rather than the equation
-side; see [[#2.1 Characterizations of Invertible Matrices]] .
-
-A picture is worth carrying here. For a $3 \times 2$ matrix whose two columns point in different
-directions, the column space is the plane through the origin spanned by those two arrows: every
-combination of the columns lands on that plane, and no combination can leave it. The equation
-$A\mathbf{x} = \mathbf{b}$ therefore asks whether the target $\mathbf{b}$ lies on the plane — if it
-does, the system is consistent; if the target pokes out of the plane, no solution exists. For a
-square matrix the same picture explains the IMT: the columns reach all of $\mathbb{R}^n$ exactly
-when their span is not a proper plane or line, which is exactly when the columns are independent.
-
-> [!example] Is a Vector in the Column Space?
-> Let $A = \begin{bmatrix} 1 & -3 & -4 \\ -4 & 6 & -2 \\ -3 & 7 & 6 \end{bmatrix}$ and
-> $\mathbf{b} = \begin{bmatrix} 3 \\ 3 \\ -4 \end{bmatrix}$. Determine whether $\mathbf{b}$ lies in
-> $\text{Col } A$.
-> **Solution:** The vector $\mathbf{b}$ is in $\text{Col } A$ if and only if it can be written as a
-> linear combination of the columns of $A$, which happens exactly when $A\mathbf{x} = \mathbf{b}$
-> has a solution. Row reduce the augmented matrix:
-> $$\begin{bmatrix} A & \mathbf{b} \end{bmatrix} = \begin{bmatrix} 1 & -3 & -4 & 3 \\ -4 & 6 & -2 & 3 \\ -3 & 7 & 6 & -4 \end{bmatrix} \sim \begin{bmatrix} 1 & -3 & -4 & 3 \\ 0 & -6 & -18 & 15 \\ 0 & -2 & -6 & 5 \end{bmatrix} \sim \begin{bmatrix} 1 & -3 & -4 & 3 \\ 0 & -6 & -18 & 15 \\ 0 & 0 & 0 & 0 \end{bmatrix}$$
-> Each step is a checkable combination: $\text{row}_2 + 4\,\text{row}_1$ gives
-> $(-4+4,\;6-12,\;-2-16,\;3+12) = (0,-6,-18,15)$ ✓ and $\text{row}_3 + 3\,\text{row}_1$ gives
-> $(-3+3,\;7-9,\;6-12,\;-4+9) = (0,-2,-6,5)$ ✓; then $\text{row}_3 - \frac{1}{3}\,\text{row}_2$
-> gives $(0,0,0,0)$ ✓. There is no row of the form $\begin{bmatrix} 0 & 0 & 0 & c \end{bmatrix}$
-> with $c \neq 0$, so the system is consistent and $\mathbf{b} \in \text{Col } A$.
-> It is worth writing the solution down, since the reduced system is small: the equations are
-> $x_1 - 3x_2 - 4x_3 = 3$ and $-6x_2 - 18x_3 = 15$, so taking the free variable $x_3 = 0$ gives
-> $x_2 = -\frac{5}{2}$ and $x_1 = -\frac{9}{2}$. Substituting into the original equation,
-> $A\left(-\frac{9}{2}, -\frac{5}{2}, 0\right) = \left(-\frac{9}{2} + \frac{15}{2},\; 18 - 15,\; \frac{27}{2} - \frac{35}{2}\right) = (3, 3, -4) = \mathbf{b}$
-> ✓. So $\mathbf{b} = -\frac{9}{2}\mathbf{a}_1 - \frac{5}{2}\mathbf{a}_2$, an explicit linear
-> combination of the columns.
-
-> [!info] Definition: Null Space
-> The ***null space*** of an $m \times n$ matrix $A$, written $\text{Nul } A$, is the set of all
-> solutions of the homogeneous equation $A\mathbf{x} = \mathbf{0}$:
-> $$\text{Nul } A = \{\mathbf{x} \in \mathbb{R}^n \mid A\mathbf{x} = \mathbf{0}\}.$$
->
-> **Breakdown:**
-> - $A$: an $m \times n$ matrix; $\mathbf{x}$: a candidate solution with $n$ entries, so
->   $\mathbf{x} \in \mathbb{R}^n$; $\mathbf{0}$: the zero vector of $\mathbb{R}^m$, where the
->   products $A\mathbf{x}$ live.
-> - $\mid$: "such that". The next theorem proves this solution set is a subspace.
-
-The null space collects the directions the matrix cannot see: nonzero vectors that are mapped to
-$\mathbf{0}$ are inputs whose information is lost, and no amount of post-processing can recover
-them. Statement (d) of the Invertible Matrix Theorem was already a statement about the null space —
-for a square matrix, invertibility means the null space is as small as a subspace can be, namely
-$\{\mathbf{0}\}$ — and that is why an invertible matrix loses no information and can be undone. For
-a singular matrix the null space is genuinely larger, and its size measures exactly how much is
-lost.
-
-Notice one contrast that these definitions make permanent: the solution set of a homogeneous system
-is a subspace, but the solution set of an inhomogeneous system $A\mathbf{x} = \mathbf{b}$ with
-$\mathbf{b} \neq \mathbf{0}$ is never a subspace, because it does not contain $\mathbf{0}$. The
-difference is structural, not stylistic: homogeneous solutions can be added and scaled freely, while
-inhomogeneous solutions cannot even be added to each other, since
-$A(\mathbf{x} + \mathbf{y}) = \mathbf{b} + \mathbf{b} = 2\mathbf{b} \neq \mathbf{b}$. Whenever a
-problem asks you to show that a solution set *is* a subspace, this is the first thing to check: the
-system must be homogeneous, or at least the set must contain the zero vector.
-
-Geometrically the null space is the set of directions the matrix flattens. A $2 \times 2$ singular
-matrix collapses the plane onto a line; the null space is the line of vectors squashed to the single
-point $\mathbf{0}$, and the column space is the line onto which everything is squashed. Both pass
-through the origin and both are subspaces, and their sizes are complementary in the sense that the
-collapse and the reach describe the same event from opposite sides. Reading a singular matrix is
-therefore largely a matter of finding those two subspaces — which is exactly what the two basis
-algorithms at the end of this note produce. The next theorem makes the promised subspace structure
-official; it is the book's Theorem 12 of §2.8.
-
-> [!summary] Theorem 3: Null Space as a Subspace
-> The null space of an $m \times n$ matrix $A$ is a subspace of $\mathbb{R}^n$. Equivalently, the
-> solution set of $m$ homogeneous equations in $n$ unknowns is a subspace of $\mathbb{R}^n$.
->
-> **Breakdown:**
-> - $A$: an $m \times n$ matrix ($m$ equations, $n$ unknowns); $\text{Nul } A$: the solution
->   vectors in $\mathbb{R}^n$, whose size measures how much of the input $A$ collapses to zero.
+> - $A, B$ : Square $n \times n$ matrices; $B$ acts as a right inverse of $A$, and $A$ as a left inverse of $B$.
+> - $I$ : The $n \times n$ identity matrix, so $AB = I$ says the product is the identity.
 >
 > **Proof:**
-> - $A\mathbf{0} = \mathbf{0}$ ✓, so $\mathbf{0} \in \text{Nul } A$. If
->   $A\mathbf{u} = A\mathbf{v} = \mathbf{0}$, then
->   $A(\mathbf{u} + \mathbf{v}) = \mathbf{0} + \mathbf{0} = \mathbf{0}$ ✓. And if
->   $A\mathbf{u} = \mathbf{0}$, then $A(c\mathbf{u}) = c\mathbf{0} = \mathbf{0}$ ✓. All three
->   conditions hold.
+> Since $AB = I$, statement (k) of the IMT holds for $A$ (take $D = B$), so $A$ is invertible. Multiplying $AB = I$ on the left by $A^{-1}$ gives $A^{-1}(AB) = A^{-1}I$, hence $B = A^{-1}$. Because $A^{-1}$ is itself invertible with inverse $A$, it follows that $B^{-1} = (A^{-1})^{-1} = A$.
 
-The proof is short because it is really a statement about matrix multiplication rather than about
-solutions: distributivity, $A(\mathbf{u} + \mathbf{v}) = A\mathbf{u} + A\mathbf{v}$, and
-homogeneity, $A(c\mathbf{u}) = c(A\mathbf{u})$, are exactly the two properties needed, and
-linearity is what makes them true. The same two properties also explain why the *column* space is a
-subspace: it is a span, and the span example showed that closure for spans is just regrouping
-coefficients. So the two matrix subspaces of this section are subspaces for the same reason in the
-end — because matrix multiplication is linear.
+> [!example] One Product Is Enough for Square Matrices
+> Let
+> $$A = \begin{bmatrix} 1 & 1 \\ 0 & 1 \end{bmatrix}, \qquad B = \begin{bmatrix} 1 & -1 \\ 0 & 1 \end{bmatrix}$$
+> Compute the single product
+> $$AB = \begin{bmatrix} 1 & 1 \\ 0 & 1 \end{bmatrix}\begin{bmatrix} 1 & -1 \\ 0 & 1 \end{bmatrix} = \begin{bmatrix} 1 & 0 \\ 0 & 1 \end{bmatrix} = I$$
+> Both matrices are square $2 \times 2$, so Theorem 2 applies: $A$ and $B$ are invertible with $B = A^{-1}$ and $A = B^{-1}$. In particular $BA = I$, even though we never computed it.
+>
+> **Check:** $BA = \begin{bmatrix} 1 & -1 \\ 0 & 1 \end{bmatrix}\begin{bmatrix} 1 & 1 \\ 0 & 1 \end{bmatrix} = \begin{bmatrix} 1 & 1 - 1 \\ 0 & 1 \end{bmatrix} = \begin{bmatrix} 1 & 0 \\ 0 & 1 \end{bmatrix} = I$ ✓
 
-> [!example] A Null Space That Is a Line
-> Take $B = \begin{bmatrix} 1 & 2 \\ 2 & 4 \end{bmatrix}$ from the classification example earlier.
-> Both columns are multiples of $\begin{bmatrix} 1 \\ 2 \end{bmatrix}$, and
-> $B\mathbf{x} = \mathbf{0}$ means $x_1 + 2x_2 = 0$, that is, $x_1 = -2x_2$. Hence
-> $$\text{Nul } B = \left\{ x_2\begin{bmatrix} -2 \\ 1 \end{bmatrix} : x_2 \text{ any real number} \right\} = \text{Span}\left\{\begin{bmatrix} -2 \\ 1 \end{bmatrix}\right\},$$
-> a line through the origin, exactly the kind of subspace Theorem 3 describes. Two spot checks
-> confirm the description:
-> $B\begin{bmatrix} -2 \\ 1 \end{bmatrix} = \begin{bmatrix} 0 \\ 0 \end{bmatrix}$ ✓, while
-> $B\begin{bmatrix} 1 \\ 1 \end{bmatrix} = \begin{bmatrix} 3 \\ 6 \end{bmatrix} \neq \mathbf{0}$ ✓,
-> so $\begin{bmatrix} 1 \\ 1 \end{bmatrix}$ really is outside the null space. The singular matrix of
-> the earlier example now has a geometric fingerprint: it annihilates a whole line, not just the
-> single point $\mathbf{0}$, and that line is the direction of information the matrix destroys.
+What makes this work is worth isolating, because the same three steps recur:
 
-### Implicit versus Explicit Descriptions of Subspaces
+- $AB = I$ says $B$ is a **right** inverse of $A$ — that is statement (k) of the IMT.
+- The IMT converts statement (k) into invertibility of $A$, and this is the only place squareness is
+  used.
+- Once $A^{-1}$ is known to exist, $B = A^{-1}$ follows from one multiplication, and $BA = I$ is
+  then automatic.
 
-The two matrix subspaces are described in opposite styles, and knowing which style you are facing
-tells you immediately how to work with the subspace. A subspace described by a condition is called
-*implicit*: you are given a test, not a list. A subspace described by a generating rule is called
-*explicit*: you are given the list, and everything else about the set must be derived from it. The
-distinction sounds pedantic until you need to answer a question about the set, at which point it
-decides which computation you perform.
+This is a genuine shortcut in both directions. If you are handed two square matrices and asked to
+prove them inverse to each other, checking the single product $AB = I$ suffices — you never need to
+compute $BA$ as well. And if you are asked whether a candidate $B$ really is $A^{-1}$, one
+multiplication settles it.
 
-- **The null space $\text{Nul } A$ is defined *implicitly*,** by a condition that must be verified.
-  To test whether an individual vector $\mathbf{v}$ belongs to $\text{Nul } A$, you simply evaluate
-  $A\mathbf{v}$ and check whether it is $\mathbf{0}$ — one matrix-vector product, no solving. To
-  obtain an explicit description of the whole space, you solve the homogeneous system and rewrite
-  the solution in parametric vector form, as in [[#Finding a Basis for the Null Space]] below.
-- **The column space $\text{Col } A$ is defined *explicitly*,** by a generating rule: its vectors
-  are built directly as linear combinations of the columns of $A$. To decide whether an arbitrary
-  vector belongs to $\text{Col } A$, you must solve $A\mathbf{x} = \mathbf{b}$ and check the system
-  for consistency — membership is not free.
+It is worth being explicit about what fails once the square hypothesis is dropped:
 
-| Question | Null space (implicit) | Column space (explicit) |
+- A matrix of size $m \times n$ with $m > n$ can have a **left** inverse ($CA = I_n$) when its
+  columns are independent, but no right inverse.
+- A matrix with $m < n$ can have a **right** inverse ($AD = I_m$) when its columns span
+  $\mathbb{R}^m$, but no left inverse.
+- Only when $m = n$ do the two notions coincide, and only then does $AB = I$ license the conclusion
+  $BA = I$.
+
+Notice where squareness enters the proof: it enters through statement (k), which is part of the IMT
+and therefore available only for square matrices. **Theorem 2 fails outright for rectangular
+matrices.** If $A$ is $m \times n$ with $m \neq n$, a matrix $B$ with $AB = I_m$ does not make $A$
+and $B$ inverse to each other, because neither can be invertible in the two-sided sense. Always
+confirm that both matrices are square *and* of matching size before invoking either the IMT or
+Theorem 2.
+
+---
+
+## 1.3 Classification of Square Matrices
+
+The IMT is more than a list of equivalences — it is a **classification**. It splits the set of all
+$n \times n$ matrices into two disjoint classes, with no middle ground:
+
+1. **Invertible (nonsingular) matrices** — those satisfying all $12$ equivalent conditions.
+2. **Noninvertible (singular) matrices** — those satisfying none of them.
+
+There is no such thing as a matrix that satisfies half the IMT. This is what gives the theorem its
+teeth: a single verified condition exonerates the matrix completely, and a single failed condition
+condemns it completely. You never have to check more than one statement, and you never have to check
+all $12$.
+
+Because the two classes are exhaustive and complementary, the negation of any one statement
+automatically describes a property of every singular matrix. Negating the list gives the full
+profile of the singular case:
+
+- $A$ is **not** invertible, so $A^{-1}$ does not exist.
+- $A$ is **not** row equivalent to $I_n$; row reduction stalls with at least one zero row.
+- $A$ has **fewer than** $n$ pivot positions, hence at least one free variable.
+- $A\mathbf{x} = \mathbf{0}$ has **nontrivial** solutions — indeed infinitely many of them.
+- The columns of $A$ are **linearly dependent**.
+- The transformation $\mathbf{x} \mapsto A\mathbf{x}$ is **not** one-to-one.
+- The columns **do not span** $\mathbb{R}^n$, so the transformation is not onto.
+- There is **some** $\mathbf{b} \in \mathbb{R}^n$ for which $A\mathbf{x} = \mathbf{b}$ is
+  inconsistent.
+- $A^T$ is **not** invertible.
+
+Two practical consequences follow from having the full negation list:
+
+- **To prove a matrix invertible**, verify any single statement — usually (c) by row reduction, or
+  (d) by showing $A\mathbf{x} = \mathbf{0}$ has only the trivial solution.
+- **To prove a matrix singular**, disprove any single statement — usually (d) by exhibiting one
+  nonzero solution of $A\mathbf{x} = \mathbf{0}$, or (g) by exhibiting a $\mathbf{b}$ for which the
+  system is inconsistent.
+
+Each of these is a usable test, and in an exam setting the cheapest is almost always the pivot
+count: row-reduce once and compare the number of pivots with $n$.
+
+> [!example] Determining Invertibility via Pivot Positions
+> Use the Invertible Matrix Theorem to decide whether $A$ is invertible:
+> $$A = \begin{bmatrix} 1 & 0 & -2 \\ -3 & 1 & -2 \\ -5 & 1 & 9 \end{bmatrix}$$
+>
+> **Solution:**
+> Row-reduce $A$ to locate its pivot positions. Clear the first column with $R_2 \leftarrow R_2 + 3R_1$ and $R_3 \leftarrow R_3 + 5R_1$:
+> $$A \sim \begin{bmatrix} 1 & 0 & -2 \\ 0 & 1 & -8 \\ 0 & 1 & -1 \end{bmatrix}$$
+> Then clear the second column with $R_3 \leftarrow R_3 - R_2$:
+> $$A \sim \begin{bmatrix} 1 & 0 & -2 \\ 0 & 1 & -8 \\ 0 & 0 & 7 \end{bmatrix}$$
+> The echelon form has $3$ nonzero pivots ($1$, $1$, $7$), so $A$ has $3$ pivot positions — a pivot in every row and every column. By statement (c) of the IMT, $A$ is invertible.
+>
+> **Check:** an echelon form with $3$ pivots reduces further to $I_3$, and the determinant of the echelon form is $1 \cdot 1 \cdot 7 = 7 \neq 0$, agreeing with $\det A = 7$ ✓
+
+> [!warning] Correction: Intermediate Matrices in the Pivot-Count Example
+> The source note-set displayed this row reduction as $A \sim \begin{bmatrix} 1 & 0 & -2 \\ 0 & 1 & 4 \\ 0 & 1 & 1 \end{bmatrix} \sim \begin{bmatrix} 1 & 0 & -2 \\ 0 & 1 & 4 \\ 0 & 0 & 3 \end{bmatrix}$. Those intermediate matrices cannot be reached from the stated $A$ by row operations: their determinants are $-3$ and $3$, whereas $\det A = 7$, and the row operations used here preserve the determinant. The errors are sign slips in the third column — the correct results are $R_2 + 3R_1 = \begin{bmatrix} 0 & 1 & -8 \end{bmatrix}$ (not $\begin{bmatrix} 0 & 1 & 4 \end{bmatrix}$) and $R_3 + 5R_1 = \begin{bmatrix} 0 & 1 & -1 \end{bmatrix}$ (not $\begin{bmatrix} 0 & 1 & 1 \end{bmatrix}$), giving a final pivot of $7$ rather than $3$. The **conclusion is unaffected**: $A$ still has $3$ pivots and is invertible.
+
+A companion example on the singular side makes the "all or nothing" behaviour concrete, and shows
+how much information a single row reduction yields.
+
+> [!example] A Singular Matrix Fails Every Statement
+> Classify $A = \begin{bmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \\ 7 & 8 & 9 \end{bmatrix}$ using the IMT.
+>
+> **Solution:**
+> Row-reduce: $R_2 \leftarrow R_2 - 4R_1$ gives $\begin{bmatrix} 0 & -3 & -6 \end{bmatrix}$ and $R_3 \leftarrow R_3 - 7R_1$ gives $\begin{bmatrix} 0 & -6 & -12 \end{bmatrix}$, so
+> $$A \sim \begin{bmatrix} 1 & 2 & 3 \\ 0 & -3 & -6 \\ 0 & -6 & -12 \end{bmatrix} \sim \begin{bmatrix} 1 & 2 & 3 \\ 0 & -3 & -6 \\ 0 & 0 & 0 \end{bmatrix}$$
+> There are only $2$ pivot positions, so statement (c) fails and $A$ is singular. By the classification, **every** IMT statement now fails: $A\mathbf{x} = \mathbf{0}$ has nontrivial solutions, the columns are linearly dependent, they do not span $\mathbb{R}^3$, the transformation is neither one-to-one nor onto, and $A^T$ is not invertible.
+>
+> **Check:** $R_3 - 2R_2 = \begin{bmatrix} 0 & -6 & -12 \end{bmatrix} - \begin{bmatrix} 0 & -6 & -12 \end{bmatrix} = \begin{bmatrix} 0 & 0 & 0 \end{bmatrix}$, confirming the zero row, and $\det A = 1(45 - 48) - 2(36 - 42) + 3(32 - 35) = -3 + 12 - 9 = 0$ ✓
+
+> [!warning] Strict Restriction to Square Matrices
+> The IMT applies **strictly to square matrices** ($n \times n$). It cannot be used for rectangular matrices ($m \times n$ with $m \neq n$).
+>
+> Concretely: if the columns of a $4 \times 3$ matrix are linearly independent, this does **not** imply that $A\mathbf{x} = \mathbf{b}$ has a solution for every $\mathbf{b}$ in $\mathbb{R}^4$. Three independent vectors in $\mathbb{R}^4$ span only a $3$-dimensional subspace, so most targets $\mathbf{b}$ are unreachable. Independence (uniqueness) simply does not force spanning (existence) once the matrix is not square.
+
+> [!example] Independent Columns Do Not Force Spanning
+> Take the $4 \times 3$ matrix
+> $$A = \begin{bmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \\ 1 & 1 & 1 \end{bmatrix}, \qquad \mathbf{b} = \begin{bmatrix} 0 \\ 0 \\ 0 \\ 1 \end{bmatrix}$$
+> The columns are linearly independent — the top $3$ rows form $I_3$, giving a pivot in every column — yet $A\mathbf{x} = \mathbf{b}$ has no solution:
+> $$\begin{bmatrix} A & \mathbf{b} \end{bmatrix} = \begin{bmatrix} 1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 1 & 1 & 1 & 1 \end{bmatrix} \sim \begin{bmatrix} 1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1 \end{bmatrix}$$
+> The final row is $\begin{bmatrix} 0 & 0 & 0 & 1 \end{bmatrix}$ — a pivot in the augmented column — so the system is inconsistent and $\mathbf{b} \notin \text{Col } A$.
+>
+> **Check:** $A$ has rank $3$, so $\dim \text{Col } A = 3 < 4$ and $\text{Col } A \neq \mathbb{R}^4$. Explicitly, $\text{Col } A = \{(b_1, b_2, b_3, b_1 + b_2 + b_3)\}$; the target $\mathbf{b}$ above has $b_4 = 1 \neq 0 + 0 + 0$ ✓
+
+Two lessons are worth extracting from this example:
+
+- Independence of the columns is a statement about **uniqueness**: at most one $\mathbf{x}$ can
+  solve $A\mathbf{x} = \mathbf{b}$.
+- Spanning is a statement about **existence**: some $\mathbf{b}$ admits no solution at all.
+- With $m > n$ the first can hold while the second fails. The IMT is what fuses the two, and it is
+  precisely what is unavailable here.
+
+That warning is not a technical footnote — it is the boundary of the entire theorem. Every statement
+in the IMT concerns a matrix that maps $\mathbb{R}^n$ to $\mathbb{R}^n$, i.e. a transformation from
+a space to *itself*. The moment domain and codomain have different dimensions, existence and
+uniqueness decouple and the $12$ statements split into independent groups. When you meet a
+rectangular matrix, you must reason about existence and uniqueness separately.
+
+---
+
+## 1.4 Invertible Linear Transformations
+
+Matrix multiplication is not an arbitrary operation on arrays of numbers — it corresponds to the
+**composition** of linear transformations. This correspondence is what makes the inverse geometric
+rather than merely algebraic. When $A$ is invertible, the relation $A^{-1}A\mathbf{x} = \mathbf{x}$
+describes one transformation undoing another: multiplying an input $\mathbf{x}$ by $A$ carries it to
+$A\mathbf{x}$, and multiplying by $A^{-1}$ carries $A\mathbf{x}$ straight back to $\mathbf{x}$, with
+nothing lost along the way.
+
+The inverse is not merely a left inverse. Both orders must return the original input, because matrix
+multiplication is not commutative and a one-sided inverse would leave open the possibility that
+information was discarded in one direction. Invertibility means the transformation is a perfect,
+reversible relabelling of the space.
+
+![[Pasted image 20260929121554.png]]
+
+_Figure 1.4: The transformation $\mathbf{x} \mapsto A\mathbf{x}$ followed by $A^{-1}$, which sends $A\mathbf{x}$ back to the original vector $\mathbf{x}$._
+
+> [!info] Definition: Invertible Linear Transformation
+> A linear transformation $T: \mathbb{R}^n \to \mathbb{R}^n$ is **invertible** if there exists a function $S: \mathbb{R}^n \to \mathbb{R}^n$ such that:
+> $$S(T(\mathbf{x})) = \mathbf{x} \quad \text{for all } \mathbf{x} \text{ in } \mathbb{R}^n$$
+> $$T(S(\mathbf{x})) = \mathbf{x} \quad \text{for all } \mathbf{x} \text{ in } \mathbb{R}^n$$
+>
+> **Breakdown:**
+> - $T$ : The linear transformation being inverted.
+> - $S$ : The candidate reverse map; both compositions must return the original input.
+> - $\mathbf{x}$ : An arbitrary vector in $\mathbb{R}^n$ — the conditions must hold for *every* $\mathbf{x}$, not merely for some.
+>
+> If such an $S$ exists it is unique and is guaranteed to be a linear transformation. This unique function is called the **inverse** of $T$, written $T^{-1}$.
+
+Both halves of that definition matter, and it is instructive to see what each one alone would give.
+If only $S(T(\mathbf{x})) = \mathbf{x}$ held, then $T$ would be one-to-one — distinct inputs could
+not collide, since $S$ would separate them again — but $T$ might still fail to reach all of
+$\mathbb{R}^n$. If only $T(S(\mathbf{x})) = \mathbf{x}$ held, then $T$ would be onto but possibly
+many-to-one. Requiring both is exactly the transformation-level mirror of Theorem 2, and it mirrors
+the IMT's identification of one-to-one with onto.
+
+> [!summary] Theorem 3: Invertibility of Linear Transformations (Lay, Theorem 9)
+> Let $T: \mathbb{R}^n \to \mathbb{R}^n$ be a linear transformation and let $A$ be the standard matrix for $T$. Then $T$ is invertible if and only if $A$ is an invertible matrix. In that case, the linear transformation $S$ given by $S(\mathbf{x}) = A^{-1}\mathbf{x}$ is the unique function satisfying $S(T(\mathbf{x})) = \mathbf{x}$ and $T(S(\mathbf{x})) = \mathbf{x}$ for all $\mathbf{x} \in \mathbb{R}^n$.
+>
+> **Breakdown:**
+> - $T$ : A linear transformation mapping $\mathbb{R}^n$ to $\mathbb{R}^n$.
+> - $A$ : The $n \times n$ standard matrix of $T$, defined by $T(\mathbf{x}) = A\mathbf{x}$.
+> - $S$ (or $T^{-1}$) : The inverse transformation, mapping $\mathbb{R}^n$ back to $\mathbb{R}^n$.
+> - $A^{-1}$ : The matrix inverse of $A$.
+> - $\mathbf{x}$ : An arbitrary vector in $\mathbb{R}^n$.
+>
+> **Proof:**
+> 1. **Forward direction ($T$ invertible $\implies A$ invertible):** Suppose $T$ is invertible. Then $T(S(\mathbf{x})) = \mathbf{x}$ implies $T$ maps $\mathbb{R}^n$ *onto* $\mathbb{R}^n$: given any $\mathbf{b} \in \mathbb{R}^n$, set $\mathbf{x} = S(\mathbf{b})$ to obtain $T(\mathbf{x}) = T(S(\mathbf{b})) = \mathbf{b}$. Since $T$ is onto, statement (i) of the IMT holds, so its standard matrix $A$ is invertible.
+> 2. **Reverse direction ($A$ invertible $\implies T$ invertible):** Suppose $A$ is invertible and define $S(\mathbf{x}) = A^{-1}\mathbf{x}$. Because matrix multiplication is a linear operation, $S$ is a linear transformation. Verifying the two composition equations:
+>    $$S(T(\mathbf{x})) = S(A\mathbf{x}) = A^{-1}(A\mathbf{x}) = (A^{-1}A)\mathbf{x} = I\mathbf{x} = \mathbf{x}$$
+>    $$T(S(\mathbf{x})) = T(A^{-1}\mathbf{x}) = A(A^{-1}\mathbf{x}) = (AA^{-1})\mathbf{x} = I\mathbf{x} = \mathbf{x}$$
+>    Thus $T$ is invertible and $S = T^{-1}$.
+
+Theorem 3 is the bridge that lets you answer geometric questions with matrix arithmetic and vice
+versa. Anything the IMT tells you about $A$ transfers immediately to $T$: if the columns of $A$ are
+independent then $T$ is one-to-one; if they span $\mathbb{R}^n$ then $T$ is onto; if $A$ is
+invertible then $T$ can be run backwards by the single formula $T^{-1}(\mathbf{x}) = A^{-1}\mathbf{x}$. In the other direction, a geometric observation about $T$ — for instance that it
+squashes $\mathbb{R}^n$ onto a lower-dimensional subset — tells you immediately that $A$ is
+singular.
+
+In working terms, Theorem 3 licenses these translations:
+
+- $T$ is one-to-one $\iff$ the columns of $A$ are linearly independent $\iff$ $A\mathbf{x} = \mathbf{0}$ has only the trivial solution.
+- $T$ maps $\mathbb{R}^n$ onto $\mathbb{R}^n$ $\iff$ the columns of $A$ span $\mathbb{R}^n$ $\iff$
+  $A\mathbf{x} = \mathbf{b}$ is solvable for every $\mathbf{b}$.
+- $T$ is invertible $\iff$ $A$ is invertible, in which case the standard matrix of $T^{-1}$ is
+  exactly $A^{-1}$.
+- $T$ compresses $\mathbb{R}^n$ into a lower-dimensional subset $\iff$ $A$ is singular $\iff$ $A$
+  has fewer than $n$ pivots.
+
+> [!example] One-to-One Transformations on $\mathbb{R}^n$
+> **Problem:** What can be deduced about a one-to-one linear transformation $T: \mathbb{R}^n \to \mathbb{R}^n$?
+>
+> **Solution:**
+> If $T$ is one-to-one, statement (f) of the IMT holds, so the columns of its standard matrix $A$ are linearly independent by statement (e). Because $A$ is *square* ($n \times n$), the full IMT now applies and yields all three conclusions at once:
+> 1. $A$ is invertible.
+> 2. $T$ maps $\mathbb{R}^n$ onto $\mathbb{R}^n$.
+> 3. $T$ is an invertible linear transformation, with $T^{-1}(\mathbf{x}) = A^{-1}\mathbf{x}$.
+>
+> **Check:** the deduction "one-to-one $\implies$ onto" uses squareness essentially; see [[#1.3 Classification of Square Matrices]] for the rectangular counterexample ✓
+
+The step from "one-to-one" to "onto" in that example is valid **only** because $T$ maps
+$\mathbb{R}^n$ to $\mathbb{R}^n$ with equal domain and codomain dimension. A linear transformation
+$T: \mathbb{R}^3 \to \mathbb{R}^4$ whose columns are independent is one-to-one but emphatically not
+onto — its range is a $3$-dimensional subspace sitting inside a $4$-dimensional space. Conversely a
+map
+$T: \mathbb{R}^4 \to \mathbb{R}^3$ can be onto without being one-to-one. Only the square case lets
+you transfer one property to the other.
+
+The dimensional bookkeeping behind this is simple and worth internalising:
+
+- Into a **larger** space ($n < m$): a transformation can be one-to-one but never onto.
+- Into a **smaller** space ($n > m$): a transformation can be onto but never one-to-one.
+- Into the **same** space ($n = m$): one-to-one and onto are equivalent, and both are equivalent to
+  invertibility.
+
+---
+
+## 1.5 Numerical Notes
+
+Everything above has been exact arithmetic over the real numbers. Real computation is not exact, and
+for invertibility in particular the gap between theory and practice matters a great deal.
+
+In practical computation an invertible matrix may be *nearly singular*, or **ill-conditioned**,
+meaning that a slight perturbation of its entries — sometimes in the tenth decimal place — can make
+it genuinely singular. Ill-conditioning is not a defect of the matrix; it is a property of the
+problem. The matrix $\begin{bmatrix} 1 & 1 \\ 1 & 1.0000001 \end{bmatrix}$ is perfectly invertible,
+yet it sits a hair's breadth from the singular matrix $\begin{bmatrix} 1 & 1 \\ 1 & 1 \end{bmatrix}$, and no numerical procedure can be expected to tell them apart reliably.
+
+Because computers round every intermediate result, two distinct failure modes appear in row
+reduction:
+
+- Row reduction on an ill-conditioned matrix may fail to identify all $n$ pivot positions,
+  incorrectly making an invertible matrix appear singular. A pivot that should be $10^{-9}$ can be
+  swamped by roundoff and read as zero.
+- Roundoff error can introduce tiny nonzero values where exact zeros belong, making a singular
+  matrix appear invertible. A pivot that should be exactly $0$ comes out as $10^{-16}$, and the
+  algorithm happily continues.
+
+The practical guidance that follows is standard:
+
+- Treat any computed pivot that is tiny relative to the largest entry of the matrix with suspicion.
+- Report invertibility questions in terms of conditioning rather than a bare "singular" or
+  "nonsingular".
+- Prefer numerically stable algorithms (QR or SVD based) over textbook Gauss–Jordan when accuracy
+  matters.
+- Remember that a matrix can be invertible in exact arithmetic and still be useless in floating
+  point.
+
+> [!note] Matrix Condition Number
+> Computational software measures the numerical stability of a square matrix with a **condition number**:
+> - **Identity Matrix:** Has a condition number of $1$ (the optimal baseline).
+> - **Ill-Conditioned Matrix:** Has a large condition number, signalling high sensitivity to roundoff errors and severe precision loss during computations.
+> - **Singular Matrix:** Has an infinite condition number.
+>
+> When the condition number is extremely large, computational software may not be able to reliably distinguish between a singular matrix and an ill-conditioned one.
+
+> [!tip] Never Judge Invertibility by a Near-Zero Determinant Alone
+> A determinant of $10^{-12}$ computed in floating point is not evidence of singularity: roundoff in a perfectly invertible matrix can produce exactly that. When a matrix behaves suspiciously, ask your software for the condition number (in Python, `numpy.linalg.cond(A)`) rather than trusting the determinant. A condition number of about $10^{k}$ means you should expect to lose roughly $k$ significant digits of accuracy.
+
+---
+
+## 1.6 Subspaces of $\mathbb{R}^n$
+
+> [!note] Source and Reading
+> This block covers **§2.8 "Subspaces of $\mathbb{R}^n$"** of Lay, *Linear Algebra and Its Applications*, Global Edition, 6th ed. The two theorems below keep their textbook numbers in parentheses — Theorem 12 and Theorem 13 — so you can cross-check against the book.
+
+The second half of this note changes the object of study. Instead of asking questions about one
+matrix — is it invertible, how many pivots does it have — we ask which *sets of vectors* behave like
+vector spaces in their own right. These sets are called subspaces, and they arise constantly when
+analysing coefficient matrices and the solution sets of systems $A\mathbf{x} = \mathbf{b}$.
+
+The idea behind the definition is "a vector space in miniature". Rather than re-verifying all eight
+vector-space axioms, it turns out that for a subset of $\mathbb{R}^n$ only three properties need
+checking, because the remaining axioms — commutativity, associativity, distributivity and so on —
+are inherited automatically from $\mathbb{R}^n$.
+
+> [!info] Definition: Subspace of $\mathbb{R}^n$
+> A **subspace** of $\mathbb{R}^n$ is any subset $H$ of $\mathbb{R}^n$ satisfying three properties:
+> 1. The zero vector $\mathbf{0}$ is in $H$.
+> 2. For each $\mathbf{u}$ and $\mathbf{v}$ in $H$, the sum $\mathbf{u} + \mathbf{v}$ is in $H$ (*closed under addition*).
+> 3. For each $\mathbf{u}$ in $H$ and each scalar $c$, the vector $c\mathbf{u}$ is in $H$ (*closed under scalar multiplication*).
+>
+> **Breakdown:**
+> - $H$ : A subset of vectors residing in $\mathbb{R}^n$.
+> - $\mathbb{R}^n$ : $n$-dimensional Euclidean space, consisting of all $n$-tuples of real numbers.
+> - $\mathbf{0}$ : The zero vector in $\mathbb{R}^n$, all of whose entries are zero.
+> - $\mathbf{u}, \mathbf{v}$ : Arbitrary vectors belonging to $H$.
+> - $c$ : An arbitrary real scalar.
+> - **Closure property** : Applying vector addition or scalar multiplication to elements of $H$ always produces a vector that is still inside $H$.
+
+> [!abstract] A Subspace Is a Sealed Room
+> Picture a subspace as a room inside $\mathbb{R}^n$ with no doors. Add any $2$ vectors already in the room and you are still in the room; stretch any vector by any scalar and you are still in the room. A line or a plane that misses the origin is not a room at all — it is a ledge, and scaling by $0$ drops you straight off it.
+
+**Closure** is the operative word: a subspace is a set you cannot escape by adding or scaling.
+Conditions $2$ and 3 say exactly that no sequence of vector-space operations can take you outside
+$H$,
+which is why $H$ inherits the full vector-space structure from $\mathbb{R}^n$.
+
+The three conditions are not three independent ornaments. Condition $1$ is logically what condition
+$3$
+gives you at $c = 0$, so strictly speaking it is redundant. It is listed separately for a purely
+practical reason: it is by far the fastest way to disqualify a candidate set. Checking "does $H$
+contain $\mathbf{0}$?" takes seconds and settles most textbook problems outright.
+
+Geometrically, a subspace must always pass through the origin — precisely because of the zero-vector
+requirement. A line or a plane in $\mathbb{R}^3$ is a subspace **if and only if** it passes through
+the origin. Shift it by even one unit and it stops being a subspace, no matter how much it still
+looks like a line or a plane. This single geometric fact eliminates most incorrect candidates on
+sight.
+
+Typical non-examples, and the condition each one violates:
+
+- A line or plane **not** through the origin — fails condition $1$ (no zero vector), and usually
+  conditions $2$ and 3 as well.
+- The first quadrant of $\mathbb{R}^2$ — fails condition $3$, since $-1 \cdot \begin{bmatrix} 1 \\ 1 \end{bmatrix}$ leaves the set.
+- A closed ball of radius $1$ around the origin — fails condition $3$, since scaling by $2$ leaves
+  the
+  ball.
+- The union of two distinct lines through the origin — fails condition $2$, since the sum of a
+  vector
+  from each line lands between them.
+- The set of vectors with integer entries — fails condition $3$, since $\tfrac{1}{2}\mathbf{u}$ need
+  not have integer entries.
+
+![[Pasted image 20260929121637.png]]
+
+_Figure 1.5: $\text{Span}\{\mathbf{v}_1, \mathbf{v}_2\}$ drawn as a plane through the origin — the prototypical $2$-dimensional subspace of $\mathbb{R}^3$._
+
+> [!example] Spans as Subspaces
+> Let $\mathbf{v}_1, \mathbf{v}_2, \dots, \mathbf{v}_p$ be vectors in $\mathbb{R}^n$ and let $H = \text{Span}\{\mathbf{v}_1, \mathbf{v}_2, \dots, \mathbf{v}_p\}$. Show that $H$ is a subspace of $\mathbb{R}^n$.
+>
+> **Solution:** Verify the three defining properties.
+>
+> 1. **Zero vector:**
+>    $$\mathbf{0} = 0\mathbf{v}_1 + 0\mathbf{v}_2 + \dots + 0\mathbf{v}_p$$
+>    Since $\mathbf{0}$ is a linear combination of the vectors, $\mathbf{0} \in H$.
+> 2. **Closure under addition:** Take any $2$ vectors in $H$, say $\mathbf{u} = s_1\mathbf{v}_1 + \dots + s_p\mathbf{v}_p$ and $\mathbf{v} = t_1\mathbf{v}_1 + \dots + t_p\mathbf{v}_p$. Then
+>    $$\mathbf{u} + \mathbf{v} = (s_1 + t_1)\mathbf{v}_1 + \dots + (s_p + t_p)\mathbf{v}_p$$
+>    which is again a linear combination of the spanning set, so $\mathbf{u} + \mathbf{v} \in H$.
+> 3. **Closure under scalar multiplication:** For any scalar $c$,
+>    $$c\mathbf{u} = c(s_1\mathbf{v}_1 + \dots + s_p\mathbf{v}_p) = (cs_1)\mathbf{v}_1 + \dots + (cs_p)\mathbf{v}_p$$
+>    which is again a linear combination of the spanning set, so $c\mathbf{u} \in H$.
+>
+> The set $\text{Span}\{\mathbf{v}_1, \dots, \mathbf{v}_p\}$ is called the **subspace spanned (or generated) by** $\mathbf{v}_1, \dots, \mathbf{v}_p$.
+>
+> **Check:** each of the three verifications reduces to the single observation that a linear combination of linear combinations is again a linear combination of the same generators, which is exactly closure ✓
+
+This example is the workhorse of the whole section. Nearly every subspace encountered in this course
+is presented as a span, and the argument above guarantees that **every span is automatically a
+subspace** — no further checking required. Whenever you are shown a set defined as "all linear
+combinations of …", you may immediately treat it as a subspace.
+
+That is not to say every subspace is *described* as a span. The null space of a matrix is not, at
+least not at first; it is described by a condition instead. Converting such implicit descriptions
+into explicit span descriptions is exactly the task of [[#1.6.6 Finding a Basis for the Null Space]].
+
+The practical procedure for an arbitrary candidate set $H$ is therefore:
+
+1. Check whether $\mathbf{0} \in H$. If not, stop — $H$ is not a subspace.
+2. Check closure under addition for *arbitrary* $\mathbf{u}, \mathbf{v} \in H$, not for two
+   particular vectors you happen to like.
+3. Check closure under scalar multiplication for *arbitrary* scalars $c$, not just for $c = 2$.
+
+A single counterexample to any of the three disqualifies $H$; verifying all three for arbitrary
+elements proves it.
+
+When you disprove closure, exhibit a concrete counterexample rather than arguing in general:
+
+- To refute closure under addition, name specific $\mathbf{u}, \mathbf{v} \in H$ with $\mathbf{u} + \mathbf{v} \notin H$.
+- To refute closure under scalar multiplication, name a specific $\mathbf{u} \in H$ and scalar $c$
+  with $c\mathbf{u} \notin H$.
+- To refute the zero-vector condition, simply observe $\mathbf{0} \notin H$ — no computation needed.
+
+### 1.6.1 Geometric Interpretations and Counterexamples
+
+The dimension of a span is determined by how many of the generating vectors point in genuinely new
+directions. Redundant generators contribute nothing, and this is visible geometrically:
+
+- **Lines through the origin:** If $\mathbf{v}_1 \neq \mathbf{0}$ and $\mathbf{v}_2 = k\mathbf{v}_1$
+  for some scalar $k$, then $\text{Span}\{\mathbf{v}_1, \mathbf{v}_2\}$ is just a straight line
+  through the origin — a $1$-dimensional subspace. The second vector added no new direction, so the
+  span collapsed from a plane to a line.
+- **Planes through the origin:** If $\mathbf{v}_1$ and $\mathbf{v}_2$ are non-collinear,
+  $\text{Span}\{\mathbf{v}_1, \mathbf{v}_2\}$ is a plane through the origin — a $2$-dimensional
+  subspace.
+
+The pattern generalises: the dimension of a span equals the number of linearly independent vectors
+among the generators, which is why counting pivots keeps reappearing. Three independent vectors in
+$\mathbb{R}^3$ span all of $\mathbb{R}^3$; $3$ vectors in $\mathbb{R}^3$ with one dependent on the
+other two span only a plane.
+
+The dimension count is the organising principle:
+
+- $p$ vectors can span a subspace of dimension at most $p$.
+- The span has dimension exactly $p$ precisely when the $p$ vectors are linearly independent.
+- Dependence among the generators lowers the dimension but leaves the subspace itself unchanged.
+- In $\mathbb{R}^n$, no subspace can have dimension greater than $n$.
+
+> [!example] Non-Subspace: Lines Not Containing the Origin
+> Show that a line $L$ not passing through the origin cannot be a subspace.
+>
+> **Solution:** Such a line violates all three defining criteria at once:
+> - It does not contain the zero vector: $\mathbf{0} \notin L$.
+> - Adding $2$ vectors $\mathbf{u}, \mathbf{v}$ whose tips lie on $L$ produces a resultant $\mathbf{u} + \mathbf{v}$ that points away from $L$.
+> - Multiplying a vector $\mathbf{w}$ on $L$ by a scalar such as $2$ or $0$ yields $2\mathbf{w}$ or $\mathbf{0}$, neither of which lies on $L$.
+>
+> **Check:** the single failure $\mathbf{0} \notin L$ already suffices by property 1; the other two are listed to show how thoroughly closure breaks down ✓
+
+![[Pasted image 20260929121744.png]]
+
+_Figure 1.6: A collinear pair $\mathbf{v}_1, \mathbf{v}_2$ — the span collapses to a single line through the origin rather than a plane._
+
+![[Pasted image 20260929121700.png]]
+
+_Figure 1.7: The sum $\mathbf{u} + \mathbf{v}$ of $2$ vectors on a line $L$ that misses the origin — the resultant leaves $L$ entirely, so $L$ is not closed under addition._
+
+Because the origin test is so decisive, it is worth having the full decision procedure collected in
+one place. Note the logical shape: a single "no" disqualifies $H$, and only three consecutive "yes"s
+prove it.
+
+```mermaid
+flowchart TD
+    start["Given a subset H of R^n"] --> z{"Is the zero vector 0 in H?"}
+    z -- No --> no["H is NOT a subspace"]
+    z -- Yes --> add{"For all u, v in H, is u + v in H?"}
+    add -- No --> no
+    add -- Yes --> sm{"For all u in H and scalars c, is cu in H?"}
+    sm -- No --> no
+    sm -- Yes --> yes["H IS a subspace of R^n"]
+```
+
+_Figure 1.8: The subspace test as a decision tree — a single "no" at any stage disqualifies $H$, and in practice the zero-vector question settles most cases immediately._
+
+### 1.6.2 The Extreme Subspaces
+
+Every $\mathbb{R}^n$ contains two boundary cases, and both are worth memorising because they are the
+degenerate answers to "how small, or how large, can a subspace be?"
+
+1. **The full space ($\mathbb{R}^n$):** $\mathbb{R}^n$ is a subspace of itself. It trivially
+   contains $\mathbf{0}$ and is closed under all vector addition and scalar multiplication, since
+   those operations can never produce anything outside $\mathbb{R}^n$.
+2. **The zero subspace ($\{\mathbf{0}\}$):** the set containing only the zero vector. It satisfies
+all three conditions, because $\mathbf{0} + \mathbf{0} = \mathbf{0}$ and $c\mathbf{0} = \mathbf{0}$
+for every scalar $c$.
+
+In $\mathbb{R}^3$ the complete list of subspaces is therefore short: the origin $\{\mathbf{0}\}$,
+every line through the origin, every plane through the origin, and $\mathbb{R}^3$ itself. Nothing
+else qualifies — not a line or plane shifted off the origin, not a solid ball, not a ray, not a
+half-space, not the union of two lines through the origin. Each of these fails one of the three
+conditions, and most fail the zero-vector test immediately.
+
+Why the usual non-candidates fail, condition by condition:
+
+- A line or plane off the origin — lacks $\mathbf{0}$, so condition $1$ fails.
+- A ray from the origin — not closed under negative scalars, so condition $3$ fails.
+- A solid ball — not closed under large scalars, so condition $3$ fails.
+- A half-space — not closed under negative scalars, so condition $3$ fails.
+- The union of two distinct lines through the origin — not closed under addition, so condition $2$
+  fails.
+
+The zero subspace is easy to overlook but important: it is the null space of any matrix whose
+columns are linearly independent, and by statement (d) of the IMT that is exactly the invertible
+case.
+
+### 1.6.3 Column Space and Null Space
+
+Two subspaces are attached to every matrix, and between them they carry most of the structural
+information a matrix holds about the system $A\mathbf{x} = \mathbf{b}$. They arise in fundamentally
+different ways: one is built from the *columns* of the matrix, the other from the *solutions* of a
+homogeneous system. Learning to keep them apart is the main skill of this section.
+
+> [!info] Definition: Column Space
+> The **column space** of an $m \times n$ matrix $A$, denoted $\text{Col } A$, is the set of all linear combinations of the columns of $A$. If $A = \begin{bmatrix} \mathbf{a}_1 & \mathbf{a}_2 & \dots & \mathbf{a}_n \end{bmatrix}$, then:
+> $$\text{Col } A = \text{Span}\{\mathbf{a}_1, \mathbf{a}_2, \dots, \mathbf{a}_n\}$$
+>
+> **Breakdown:**
+> - $A$ : An $m \times n$ matrix with real entries.
+> - $\mathbf{a}_1, \dots, \mathbf{a}_n$ : The $n$ column vectors of $A$, each living in $\mathbb{R}^m$.
+> - $\text{Col } A$ : The resulting subspace of $\mathbb{R}^m$.
+
+![[Pasted image 20260929121836.png]]
+
+_Figure 1.9: The column space of a matrix, viewed as the span of its column vectors._
+
+Since every column of an $m \times n$ matrix has $m$ entries, $\text{Col } A$ is a subspace of
+$\mathbb{R}^m$. Watch the index: the column space lives in the space determined by the number of
+**rows**, not columns. It equals all of $\mathbb{R}^m$ exactly when the columns span $\mathbb{R}^m$;
+otherwise it is a proper subspace of smaller dimension.
+
+The system-level interpretation is the one to internalise. In the linear system $A\mathbf{x} = \mathbf{b}$, the product $A\mathbf{x}$ *is* a linear combination of the columns of $A$, with the
+entries of $\mathbf{x}$ as the weights:
+
+$$A\mathbf{x} = x_1\mathbf{a}_1 + x_2\mathbf{a}_2 + \dots + x_n\mathbf{a}_n$$
+
+> [!info] Breakdown: The Column Expansion of $A\mathbf{x}$
+> - $\mathbf{x}$ : The input vector, whose entries act as weights.
+> - $x_1, \dots, x_n$ : The weights, one per column of $A$; all are real scalars.
+> - $\mathbf{a}_1, \dots, \mathbf{a}_n$ : The columns of $A$, each living in $\mathbb{R}^m$.
+> - $A\mathbf{x}$ : The resulting linear combination, necessarily a vector of $\text{Col } A \subseteq \mathbb{R}^m$.
+
+So asking whether $A\mathbf{x} = \mathbf{b}$ has a solution is literally asking whether $\mathbf{b}$
+can be written as a linear combination of the columns of $A$. In other words, $\text{Col } A$ is
+precisely the set of all target vectors $\mathbf{b}$ for which the system is consistent:
+$A\mathbf{x} = \mathbf{b}$ is solvable **if and only if** $\mathbf{b} \in \text{Col } A$.
+
+Three facts about $\text{Col } A$ are worth memorising:
+
+- $\text{Col } A$ is a subspace of $\mathbb{R}^m$, so its vectors have $m$ entries.
+- $A\mathbf{x} = \mathbf{b}$ is consistent $\iff$ $\mathbf{b} \in \text{Col } A$.
+- $\text{Col } A = \mathbb{R}^m$ $\iff$ $A$ has a pivot in every row $\iff$ $A\mathbf{x} = \mathbf{b}$ is consistent for every $\mathbf{b} \in \mathbb{R}^m$.
+
+> [!example] Determining if a Vector is in the Column Space
+> Let $A = \begin{bmatrix} 1 & -3 & -4 \\ -4 & 6 & -2 \\ -3 & 7 & 6 \end{bmatrix}$ and $\mathbf{b} = \begin{bmatrix} 3 \\ 3 \\ -4 \end{bmatrix}$. Determine whether $\mathbf{b} \in \text{Col } A$.
+>
+> **Solution:**
+> The vector $\mathbf{b}$ lies in $\text{Col } A$ if and only if it can be written as a linear combination of the columns of $A$, which is equivalent to $A\mathbf{x} = \mathbf{b}$ having a solution. Row-reduce the augmented matrix:
+> $$\begin{bmatrix} 1 & -3 & -4 & 3 \\ -4 & 6 & -2 & 3 \\ -3 & 7 & 6 & -4 \end{bmatrix} \sim \begin{bmatrix} 1 & -3 & -4 & 3 \\ 0 & -6 & -18 & 15 \\ 0 & -2 & -6 & 5 \end{bmatrix} \sim \begin{bmatrix} 1 & -3 & -4 & 3 \\ 0 & -6 & -18 & 15 \\ 0 & 0 & 0 & 0 \end{bmatrix}$$
+> The system is consistent: there is no row of the form $\begin{bmatrix} 0 & 0 & 0 & c \end{bmatrix}$ with $c \neq 0$. Hence $A\mathbf{x} = \mathbf{b}$ has a solution and $\mathbf{b} \in \text{Col } A$.
+>
+> **Check:** the echelon system gives $x_2 = -\tfrac{5}{2} - 3x_3$ and $x_1 = -\tfrac{9}{2} - 5x_3$. Taking $x_3 = 0$ gives $\mathbf{x} = \begin{bmatrix} -9/2 \\ -5/2 \\ 0 \end{bmatrix}$, and $A\mathbf{x} = \begin{bmatrix} -\tfrac{9}{2} + \tfrac{15}{2} \\ 18 - 15 \\ \tfrac{27}{2} - \tfrac{35}{2} \end{bmatrix} = \begin{bmatrix} 3 \\ 3 \\ -4 \end{bmatrix} = \mathbf{b}$ ✓
+
+> [!info] Definition: Null Space
+> The **null space** of an $m \times n$ matrix $A$, denoted $\text{Nul } A$, is the set of all solutions of the homogeneous equation $A\mathbf{x} = \mathbf{0}$:
+> $$\text{Nul } A = \{\mathbf{x} \in \mathbb{R}^n \mid A\mathbf{x} = \mathbf{0}\}$$
+>
+> **Breakdown:**
+> - $\mathbf{x}$ : A solution vector in $\mathbb{R}^n$.
+> - $\mathbf{0}$ : The zero vector in $\mathbb{R}^m$ on the right-hand side (and, in $\mathbf{x} \in \mathbb{R}^n$, the origin of the domain).
+> - $\text{Nul } A$ : The solution set, forming a subset of $\mathbb{R}^n$.
+
+> [!example] Testing Membership in $\text{Nul } A$
+> Let $A = \begin{bmatrix} 1 & -3 \\ -2 & 6 \end{bmatrix}$. Is $\mathbf{v} = \begin{bmatrix} 3 \\ 1 \end{bmatrix}$ in $\text{Nul } A$? Is $\mathbf{w} = \begin{bmatrix} 1 \\ 0 \end{bmatrix}$?
+>
+> **Solution:** The definition is implicit, so each test is a single multiplication:
+> $$A\mathbf{v} = \begin{bmatrix} 3 - 3 \\ -6 + 6 \end{bmatrix} = \begin{bmatrix} 0 \\ 0 \end{bmatrix} \implies \mathbf{v} \in \text{Nul } A$$
+> $$A\mathbf{w} = \begin{bmatrix} 1 - 0 \\ -2 + 0 \end{bmatrix} = \begin{bmatrix} 1 \\ -2 \end{bmatrix} \neq \mathbf{0} \implies \mathbf{w} \notin \text{Nul } A$$
+>
+> **Check:** the second row of $A$ is $-2$ times the first, so $A$ has rank $1$ and $A\mathbf{x} = \mathbf{0}$ reduces to the single equation $x_1 - 3x_2 = 0$, which $\mathbf{v}$ satisfies ($3 - 3 \cdot 1 = 0$) and $\mathbf{w}$ does not ($1 - 3 \cdot 0 = 1$) ✓
+
+Notice how cheap that test was: membership in $\text{Nul } A$ is settled by one matrix–vector
+product, with no row reduction and no system to solve.
+
+> [!summary] Theorem 4: The Null Space Is a Subspace (Lay, Theorem 12)
+> The null space of an $m \times n$ matrix $A$ is a subspace of $\mathbb{R}^n$. Equivalently, the solution set of a system $A\mathbf{x} = \mathbf{0}$ of $m$ homogeneous linear equations in $n$ unknowns is a subspace of $\mathbb{R}^n$.
+>
+> **Breakdown:**
+> - $m$ : The number of equations (and rows).
+> - $n$ : The number of unknowns (and columns).
+> - $\text{Nul } A$ : The subspace of $\mathbb{R}^n$ comprising all solution vectors $\mathbf{x}$.
+>
+> **Proof:**
+> 1. **Zero vector:** $A\mathbf{0} = \mathbf{0}$ for any matrix $A$, so $\mathbf{0} \in \text{Nul } A$.
+> 2. **Closure under addition:** Let $\mathbf{u}, \mathbf{v} \in \text{Nul } A$, so $A\mathbf{u} = \mathbf{0}$ and $A\mathbf{v} = \mathbf{0}$. By the distributive property of matrix multiplication,
+>    $$A(\mathbf{u} + \mathbf{v}) = A\mathbf{u} + A\mathbf{v} = \mathbf{0} + \mathbf{0} = \mathbf{0}$$
+>    Hence $\mathbf{u} + \mathbf{v} \in \text{Nul } A$.
+> 3. **Closure under scalar multiplication:** For $\mathbf{u} \in \text{Nul } A$ and any scalar $c$,
+>    $$A(c\mathbf{u}) = c(A\mathbf{u}) = c(\mathbf{0}) = \mathbf{0}$$
+>    Hence $c\mathbf{u} \in \text{Nul } A$.
+>
+> All three properties hold, so $\text{Nul } A$ is a subspace of $\mathbb{R}^n$.
+
+The word *homogeneous* is doing real work in Theorem 4, and it is the most common source of
+confusion here. The solution set of $A\mathbf{x} = \mathbf{b}$ with $\mathbf{b} \neq \mathbf{0}$ is
+**not** a subspace: it does not contain $\mathbf{0}$, since $A\mathbf{0} = \mathbf{0} \neq \mathbf{b}$. What it is, instead, is a *translate* of $\text{Nul } A$: if $\mathbf{p}$ is one
+particular solution of $A\mathbf{x} = \mathbf{b}$, then the full solution set is $\mathbf{p} + \text{Nul } A$. Geometrically this is a line or plane shifted off the origin — an affine set, not a
+subspace.
+
+Three parallel facts about $\text{Nul } A$:
+
+- $\text{Nul } A$ is a subspace of $\mathbb{R}^n$, so its vectors have $n$ entries.
+- $\text{Nul } A = \{\mathbf{0}\}$ exactly when $A$ has a pivot in every column, i.e. when the
+  columns are independent.
+- $\text{Nul } A$ contains nonzero vectors exactly when $A\mathbf{x} = \mathbf{0}$ has free
+  variables.
+
+The two subspaces are also linked by a count. Every column of $A$ is either a pivot column or a
+free-variable column, so:
+
+$$\dim \text{Col } A + \dim \text{Nul } A = \text{rank } A + (n - \text{rank } A) = n$$
+
+> [!info] Breakdown: The Rank–Nullity Relation
+> - $\dim \text{Col } A$ : Dimension of the column space; equals the number of pivot columns.
+> - $\dim \text{Nul } A$ : Dimension of the null space; equals the number of free variables.
+> - $\text{rank } A$ : The number of pivot columns of $A$.
+> - $n$ : The total number of columns of $A$, each one either a pivot column or a free-variable column.
+
+In words: the number of pivot
+columns plus the number of free variables equals the total number of columns. This is the
+rank–nullity relation, and it is a useful arithmetic check on any basis computation — if your bases
+have the wrong total number of vectors, something went wrong.
+
+Read the identity as a budget:
+
+- Each of the $n$ columns is spent either as a pivot column or as a free-variable column.
+- Pivot columns build $\text{Col } A$; free-variable columns build $\text{Nul } A$.
+- The two counts always add up to $n$, whatever the shape of $A$.
+
+| | $\text{Col } A$ | $\text{Nul } A$ |
 |---|---|---|
-| How is it defined? | By a condition: all $\mathbf{x}$ with $A\mathbf{x} = \mathbf{0}$. | By a rule: all combinations of the columns of $A$. |
-| Testing a single vector | Compute $A\mathbf{v}$: the vector is in exactly when $A\mathbf{v} = \mathbf{0}$. | Solve $A\mathbf{x} = \mathbf{v}$: the vector is in exactly when the system is consistent. |
-| Describing the whole set | Solve the homogeneous system, then use parametric vector form. | Nothing to do — the columns generate it; a basis comes from the pivot columns. |
-| Where it lives | A subspace of $\mathbb{R}^n$, the input space. | A subspace of $\mathbb{R}^m$, the output space. |
+| Built from | Linear combinations of the **columns** of $A$ | Solutions $\mathbf{x}$ of the **homogeneous** system $A\mathbf{x} = \mathbf{0}$ |
+| Lives in | $\mathbb{R}^m$ (number of **rows** of $A$) | $\mathbb{R}^n$ (number of **columns** of $A$) |
+| Dimension | Number of pivot columns = rank of $A$ | Number of free variables = $n - \text{rank } A$ |
+| System meaning | The set of $\mathbf{b}$ for which $A\mathbf{x} = \mathbf{b}$ is consistent | The solutions added to any particular solution of $A\mathbf{x} = \mathbf{b}$ |
+| Found by | Take the pivot columns of the **original** $A$ | Solve $A\mathbf{x} = \mathbf{0}$; read off parametric vector form |
 
-_Table 2.2: The two descriptions side by side: how each subspace is defined, and what you must compute to test membership or to describe the whole set._
+_Table 1.1: Column space versus null space at a glance — the two fundamental subspaces of a matrix and how they differ._
 
-The practical lesson is to pick the description that matches the question. "Is this particular
-vector in the null space?" is a multiplication; "is this particular vector in the column space?" is
-a linear system. "What does the null space look like?" requires a full solve; "what does the column
-space look like?" is answered by naming the pivot columns — which is why the last two subsections of
-this note are devoted to exactly those two computations, and why the two algorithms look so
-different even though they start from the same row reduction.
+> [!warning] The Two Subspaces Live in Different Spaces
+> The most common exam error in this section is mixing up where these subspaces live. For an $m \times n$ matrix, $\text{Col } A$ is a subspace of $\mathbb{R}^m$ while $\text{Nul } A$ is a subspace of $\mathbb{R}^n$. A vector in $\text{Col } A$ has $m$ entries; a vector in $\text{Nul } A$ has $n$ entries. When $m \neq n$ they are not even subsets of the same space, so their vectors can never be compared, added, or intersected. Always ask first: "how many entries should a vector in this subspace have?"
 
-The two descriptions also differ in what they let you *construct*, not just what they let you test.
-To exhibit a vector in $\text{Nul } A$ you demonstrate the implicit condition: any solution you can
-write down is already a member. To exhibit a vector *outside* $\text{Col } A$ — the sharper form of
-"does this set fail to span?" — you reduce the augmented matrix
-$\begin{bmatrix} A & \mathbf{b} \end{bmatrix}$ and look for an inconsistent row, of the form
-$\begin{bmatrix} 0 & \dots & 0 & c \end{bmatrix}$ with $c \neq 0$. Producing such a $\mathbf{b}$ is
-the standard way to prove that a given set of vectors does not span the output space, and it is the
-same computation as the consistency test in disguise.
+### 1.6.4 Implicit versus Explicit Descriptions of Subspaces
 
-> [!example] Testing the Two Descriptions on One Matrix
-> With $B = \begin{bmatrix} 1 & 2 \\ 2 & 4 \end{bmatrix}$ again, the implicit test for the null
-> space is a single product: is $\begin{bmatrix} -2 \\ 1 \end{bmatrix}$ in $\text{Nul } B$ ? Compute
-> $B\begin{bmatrix} -2 \\ 1 \end{bmatrix} = \begin{bmatrix} 0 \\ 0 \end{bmatrix}$ ✓ — yes, with no
-> solving required. On the explicit side, every vector in $\text{Col } B$ has the form
-> $c_1\begin{bmatrix} 1 \\ 2 \end{bmatrix} + c_2\begin{bmatrix} 2 \\ 4 \end{bmatrix} = (c_1 + 2c_2)\begin{bmatrix} 1 \\ 2 \end{bmatrix}$
-> , so the whole column space is the line
-> $\text{Span}\left\{\begin{bmatrix} 1 \\ 2 \end{bmatrix}\right\}$ ✓, written down without any
-> computation. Notice that the null space and the column space of this matrix are different lines —
-> one in $\mathbb{R}^2$ as input space, one in $\mathbb{R}^2$ as output space — and that they happen
-> to be perpendicular on the page only because of this example, a coincidence you should not expect
-> in general.
+Beyond living in different spaces, the two subspaces differ in the *kind* of description each
+provides — and knowing which kind you have tells you immediately which question will be easy and
+which will be awkward.
 
-### Basis for a Subspace
+An **explicit** description hands you a generating rule: it tells you how to *produce* members of
+the set. An **implicit** description hands you a condition: it tells you how to *test* candidates.
+Each is convenient for one task and inconvenient for the other.
+> [!abstract] A Recipe Versus a Bouncer's List
+> An **explicit** description is a recipe: follow it and you produce a member of the subspace. An **implicit** description is a bouncer's list: hand it a candidate and it answers yes or no. Recipes are good for generating, lists are good for testing — and no single description is convenient at both jobs.
 
-A subspace usually contains infinitely many vectors, so listing its elements is hopeless. What can
-be done instead is to work with a small, finite generating set, and among all sets that span a given
-subspace the most efficient one is the smallest. A spanning set is smallest exactly when it contains
-no redundant vector, meaning no vector in it can be written as a combination of the others; and that
-condition has a name you already know, because it is precisely linear independence. A spanning set
-that is also linearly independent is called a basis, and it plays for a subspace the role that a
-coordinate system plays for the plane: it gives every vector in the subspace a unique address.
+> [!info] Definition: Parametric Vector Form
+> The **parametric vector form** of the solution set of $A\mathbf{x} = \mathbf{0}$ expresses the general solution as a linear combination of fixed vectors, using the free variables as coefficients:
+> $$\mathbf{x} = s\,\mathbf{u} + t\,\mathbf{v} + \dots$$
+>
+> **Breakdown:**
+> - $\mathbf{x}$ : The general solution vector; every solution arises from some choice of the parameters.
+> - $s, t, \dots$ : The **parameters** — the free variables, each free to take any real value.
+> - $\mathbf{u}, \mathbf{v}, \dots$ : Fixed vectors; they span the solution set and are linearly independent.
+
+Each parameter contributes exactly one vector to the combination, which is why the number of free
+variables equals the dimension of $\text{Nul } A$.
+
+> [!example] Reading a Parametric Vector Form
+> Let $A = \begin{bmatrix} 1 & 0 & 2 \\ 2 & 0 & 4 \end{bmatrix}$. Row reduction gives the single equation $x_1 + 2x_3 = 0$, with $x_2$ and $x_3$ free, so
+> $$\mathbf{x} = \begin{bmatrix} -2x_3 \\ x_2 \\ x_3 \end{bmatrix} = x_2 \begin{bmatrix} 0 \\ 1 \\ 0 \end{bmatrix} + x_3 \begin{bmatrix} -2 \\ 0 \\ 1 \end{bmatrix}$$
+> There are $2$ parameters ($x_2$ and $x_3$) and therefore $2$ vectors, so $\dim \text{Nul } A = 2$.
+>
+> **Check:** $A\begin{bmatrix} 0 \\ 1 \\ 0 \end{bmatrix} = \begin{bmatrix} 0 \\ 0 \end{bmatrix}$ and $A\begin{bmatrix} -2 \\ 0 \\ 1 \end{bmatrix} = \begin{bmatrix} -2 + 2 \\ -4 + 4 \end{bmatrix} = \begin{bmatrix} 0 \\ 0 \end{bmatrix}$, so both vectors lie in $\text{Nul } A$ ✓
+
+- **Null space ($\text{Nul } A$):** defined **implicitly**, by a condition every member must
+  satisfy. To test whether a given vector $\mathbf{v}$ belongs to $\text{Nul } A$, compute
+  $A\mathbf{v}$ and check whether it equals $\mathbf{0}$ — a single matrix multiplication settles
+  it. But *producing* all of $\text{Nul } A$ requires work: you must solve the homogeneous system
+  $A\mathbf{x} = \mathbf{0}$ and write the solution in parametric vector form.
+- **Column space ($\text{Col } A$):** defined **explicitly**, by a generating rule. Vectors in
+  $\text{Col } A$ are built directly as linear combinations of the columns of $A$, so producing
+  members is trivial. But *testing* whether an arbitrary vector belongs requires solving
+  $A\mathbf{x} = \mathbf{b}$ to check consistency — the harder question.
+
+| Subspace | Type | Testing membership | Producing all members |
+|---|---|---|---|
+| $\text{Nul } A$ | **Implicit** (a condition $A\mathbf{x} = \mathbf{0}$ to verify) | Easy: compute $A\mathbf{v}$, compare with $\mathbf{0}$ | Solve $A\mathbf{x} = \mathbf{0}$; write parametric vector form |
+| $\text{Col } A$ | **Explicit** (a generating rule: the columns) | Solve $A\mathbf{x} = \mathbf{b}$; test consistency | Easy: take linear combinations of the columns of $A$ |
+
+_Table 1.2: Implicit versus explicit descriptions — each subspace is easy for one task and awkward for the other._
+
+This complementarity explains why the two subspaces are always paired in practice. To find a basis
+for $\text{Nul } A$ you must convert an implicit description into an explicit one, by solving the
+system. To find a basis for $\text{Col } A$ you already hold an explicit spanning set and only need
+to discard the redundant columns. Those are the tasks of the next two sections, and they are
+genuinely different procedures.
+
+Recognising which description you have also tells you how to answer "is $\mathbf{v}$ in the
+subspace?":
+
+- For an **explicit** description, set up and solve a linear system — there is usually no shortcut.
+- For an **implicit** description, evaluate the defining condition: one substitution, no system to
+  solve.
+- Either way the verdict concerns one *particular* vector, not a description of the whole subspace.
+
+### 1.6.5 Basis for a Subspace
+
+A subspace almost always contains infinitely many vectors, so listing its members is hopeless. The
+way to work with one is to find a small, finite generating set — and the smallest possible spanning
+set is exactly one containing no redundant vectors, which is to say a linearly independent spanning
+set. That is a basis.
 
 > [!info] Definition: Basis for a Subspace
-> A ***basis*** for a subspace $H$ of $\mathbb{R}^n$ is a linearly independent set of vectors in $H$
-> that spans $H$.
+> A **basis** for a subspace $H$ of $\mathbb{R}^n$ is a linearly independent set of vectors in $H$ that spans $H$.
 >
 > **Breakdown:**
-> - $H$: the subspace described; $\mathcal{B} = \{\mathbf{b}_1, \dots, \mathbf{b}_p\}$: an ordered
->   candidate set of vectors in $H$.
-> - **Independent:** $c_1\mathbf{b}_1 + \dots + c_p\mathbf{b}_p = \mathbf{0}$ forces all $c_i = 0$ —
->   no redundant vector. **Spans:** every vector of $H$ is a combination of the $\mathbf{b}_i$ — no
->   missing direction.
+> - $H$ : A subspace of $\mathbb{R}^n$.
+> - $\mathcal{B} = \{\mathbf{b}_1, \mathbf{b}_2, \dots, \mathbf{b}_p\}$ : An ordered set of vectors in $H$.
+> - **Linearly independent** : $c_1\mathbf{b}_1 + c_2\mathbf{b}_2 + \dots + c_p\mathbf{b}_p = \mathbf{0}$ holds only when $c_1 = c_2 = \dots = c_p = 0$.
+> - **Spanning set** : Every vector in $H$ can be written as a linear combination of $\{\mathbf{b}_1, \dots, \mathbf{b}_p\}$, so $\text{Span}\{\mathbf{b}_1, \dots, \mathbf{b}_p\} = H$.
 
-Why insist on both halves of the definition? Because each half delivers one thing you need, and
-neither is enough alone. Independence makes the description *efficient*: if a vector could be
-removed while the set still spanned $H$, the basis would be carrying dead weight. Spanning makes
-the description *complete*: nothing in $H$ is left out. Together they make the description *unique*,
-and this is the property that turns a basis into a coordinate system. Suppose $\mathbf{w}$ is
-written in two ways as a combination of a basis,
-$\mathbf{w} = c_1\mathbf{b}_1 + \dots + c_p\mathbf{b}_p = d_1\mathbf{b}_1 + \dots + d_p\mathbf{b}_p$
-; subtracting gives $(c_1 - d_1)\mathbf{b}_1 + \dots + (c_p - d_p)\mathbf{b}_p = \mathbf{0}$, and
-independence forces every $c_i - d_i = 0$. So the *coordinates* of $\mathbf{w}$ relative to the
-basis are unique — exactly as the coordinates of a point in the plane are unique once an origin and
-two axes are chosen. Two different bases of the same subspace may look nothing alike, but they must
-contain the same number of vectors, and that common number is what the course will call the
-dimension of the subspace.
+The two conditions rule out opposite failures, and this is worth spelling out because students often
+check only one:
 
-A useful way to think about the word "smallest": if a spanning set contains a redundant vector
-$\mathbf{v}$, then every combination that uses $\mathbf{v}$ can be rewritten without it, because
-$\mathbf{v}$ is itself a combination of the others — so deleting $\mathbf{v}$ leaves the span
-unchanged. A basis is what remains after every such deletion has been made: the cheapest list that
-still spans, with no information duplicated.
+- **Spanning alone** permits redundancy. You may have far more vectors than necessary — three
+  vectors spanning a plane, for instance.
+- **Independence alone** permits incompleteness. Your vectors may be independent but fail to reach
+  every part of $H$ — $2$ independent vectors inside a $3$-dimensional subspace do not span it.
 
-Verifying a candidate basis is mechanical, and it always uses the same two checks. For spanning,
-take a general vector of the space — or of the subspace, if the candidate is meant to span a proper
-subspace — and try to solve for the coefficients; success with an arbitrary right-hand side means
-the set spans. For independence, set the general combination equal to $\mathbf{0}$ and solve for the
-coefficients; the only solution must be the trivial one. In clean cases both checks are a single row
-reduction of the matrix whose columns are the candidates: $n$ pivots means a basis for
-$\mathbb{R}^n$, fewer means the set is dependent, and a failed row for the general vector means the
-span is too small. The two failures are independent, and each has a distinct symptom: a redundant
-vector breaks independence, a missing direction breaks spanning.
+A basis is the unique size at which both conditions hold simultaneously: few enough to be
+independent, many enough to span. That size is the **dimension** of $H$, and every basis of $H$ has
+exactly that many vectors. The basis itself is not unique — infinitely many different bases exist
+for any nonzero subspace — but its *size* is an invariant of the subspace.
 
-> [!abstract] A Basis Is a Coordinate System
-> Think of the standard basis as the default address system of the space:
-> $\begin{bmatrix} 3 \\ 7 \end{bmatrix}$ is "three steps along $\mathbf{e}_1$, seven along
-> $\mathbf{e}_2$ ". A different basis is a different address system for the same points — the
-> vectors do not move, the addresses change — and the uniqueness argument above guarantees that
-> every vector has exactly one address once a basis is fixed.
+The columns of any invertible $n \times n$ matrix form a basis for all of $\mathbb{R}^n$, since by
+the IMT they are linearly independent (statement (e)) and span $\mathbb{R}^n$ (statement (h)). The
+primary example is the set of columns of $I_n$, written $\mathbf{e}_1, \mathbf{e}_2, \dots, \mathbf{e}_n$:
 
-The columns of any invertible $n \times n$ matrix form a basis for all of $\mathbb{R}^n$, because
-by the Invertible Matrix Theorem (statements (e) and (h)) those columns are linearly independent and
-they span $\mathbb{R}^n$; see [[#Classification of Square Matrices]] . The reference example is the
-set of columns of the $n \times n$ identity matrix $I_n$, denoted
-$\mathbf{e}_1, \mathbf{e}_2, \dots, \mathbf{e}_n$:
+$$\mathbf{e}_1 = \begin{bmatrix} 1 \\ 0 \\ \vdots \\ 0 \end{bmatrix}, \quad \mathbf{e}_2 = \begin{bmatrix} 0 \\ 1 \\ \vdots \\ 0 \end{bmatrix}, \quad \dots, \quad \mathbf{e}_n = \begin{bmatrix} 0 \\ 0 \\ \vdots \\ 1 \end{bmatrix}$$
 
-$$\mathbf{e}_1 = \begin{bmatrix} 1 \\ 0 \\ \vdots \\ 0 \end{bmatrix}, \qquad \mathbf{e}_2 = \begin{bmatrix} 0 \\ 1 \\ \vdots \\ 0 \end{bmatrix}, \qquad \dots, \qquad \mathbf{e}_n = \begin{bmatrix} 0 \\ 0 \\ \vdots \\ 1 \end{bmatrix}.$$
+> [!info] Breakdown: The Standard Basis Vectors
+> - $\mathbf{e}_i$ : The $i$-th standard basis vector — the $i$-th column of $I_n$.
+> - The single $1$ : Sits in entry $i$; that position is the only thing distinguishing $\mathbf{e}_i$ from the others.
+> - The zeros : Fill every remaining entry, so the vectors point along the coordinate axes.
+> - $\vdots$ : The pattern continues down the column; $\mathbf{e}_n$ carries its $1$ in the last entry.
 
-> [!info] Definition: Standard Basis
-> The ***standard basis*** for $\mathbb{R}^n$ is the set
-> $\{\mathbf{e}_1, \mathbf{e}_2, \dots, \mathbf{e}_n\}$ of columns of the identity matrix $I_n$.
+The set $\{\mathbf{e}_1, \mathbf{e}_2, \dots, \mathbf{e}_n\}$ is called the **standard basis** for
+$\mathbb{R}^n$.
+
+![[Pasted image 20260929121905.png]]
+
+_Figure 1.10: The standard basis for $\mathbb{R}^3$ — the three unit vectors $\mathbf{e}_1, \mathbf{e}_2, \mathbf{e}_3$ along the coordinate axes._
+
+Two conventions make bases easier to work with:
+
+- **Order matters.** A basis is technically an ordered list, because coordinates are read off in the
+  order of the basis vectors.
+- **Counting shortcuts the check.** Inside a subspace $H$ of dimension $p$, any $p$ linearly
+  independent vectors automatically span $H$, and any $p$ vectors spanning $H$ are automatically
+  independent.
+
+> [!example] Columns of an Invertible Matrix Form a Basis
+> Show that the columns of $A = \begin{bmatrix} 1 & 3 \\ 2 & 7 \end{bmatrix}$ form a basis for $\mathbb{R}^2$.
 >
-> **Breakdown:**
-> - $\mathbf{e}_i$: a $1$ in position $i$, zeros elsewhere. They are independent and they span
->   $\mathbb{R}^n$, since $\mathbf{x} = x_1\mathbf{e}_1 + \dots + x_n\mathbf{e}_n$.
-> - The entries of a vector are already its coordinates here; every other basis re-addresses the
->   same space.
+> **Solution:**
+> Compute $\det A = 1 \cdot 7 - 3 \cdot 2 = 1 \neq 0$, so $A$ is invertible. By the IMT, statement (e) gives linear independence of the columns and statement (h) gives that they span $\mathbb{R}^2$. Both basis conditions hold, so the columns $\begin{bmatrix} 1 \\ 2 \end{bmatrix}$ and $\begin{bmatrix} 3 \\ 7 \end{bmatrix}$ form a basis for $\mathbb{R}^2$.
+>
+> **Check:** $A \sim \begin{bmatrix} 1 & 3 \\ 0 & 1 \end{bmatrix} \sim I_2$, confirming $2$ pivot positions and hence invertibility ✓
 
-Every other basis is a change of coordinate system, and the examples below show one in each of the
-two subspaces that matter most, the null space and the column space.
+> [!warning] A Spanning Set Is Not Automatically a Basis
+> Having a spanning set is only half the requirement. The $3$ vectors $\begin{bmatrix} 1 \\ 0 \end{bmatrix}, \begin{bmatrix} 0 \\ 1 \end{bmatrix}, \begin{bmatrix} 1 \\ 1 \end{bmatrix}$ span $\mathbb{R}^2$ but do not form a basis, because they are linearly dependent — the third is the sum of the first two. Always verify independence before declaring a basis, and check that the number of vectors matches the expected dimension.
 
-> [!example] A Non-Standard Basis of $\mathbb{R}^2$
-> Show that
-> $\mathcal{B} = \left\{\begin{bmatrix} 1 \\ 1 \end{bmatrix}, \begin{bmatrix} 1 \\ -1 \end{bmatrix}\right\}$
-> is a basis for $\mathbb{R}^2$.
-> **Independence:** suppose
-> $c_1\begin{bmatrix} 1 \\ 1 \end{bmatrix} + c_2\begin{bmatrix} 1 \\ -1 \end{bmatrix} = \begin{bmatrix} 0 \\ 0 \end{bmatrix}$
-> . This unpacks into $c_1 + c_2 = 0$ and $c_1 - c_2 = 0$; adding the two equations gives
-> $2c_1 = 0$ and subtracting them gives $2c_2 = 0$, so $c_1 = c_2 = 0$ ✓.
-> **Spanning:** given any $\begin{bmatrix} x \\ y \end{bmatrix}$ in $\mathbb{R}^2$, take
-> $c_1 = \frac{x+y}{2}$ and $c_2 = \frac{x-y}{2}$. Then
-> $c_1\begin{bmatrix} 1 \\ 1 \end{bmatrix} + c_2\begin{bmatrix} 1 \\ -1 \end{bmatrix} = \begin{bmatrix} \frac{x+y}{2} + \frac{x-y}{2} \\ \frac{x+y}{2} - \frac{x-y}{2} \end{bmatrix} = \begin{bmatrix} x \\ y \end{bmatrix}$
-> ✓, so the pair spans $\mathbb{R}^2$. For instance,
-> $\begin{bmatrix} 3 \\ 7 \end{bmatrix} = 5\begin{bmatrix} 1 \\ 1 \end{bmatrix} - 2\begin{bmatrix} 1 \\ -1 \end{bmatrix}$
-> ✓.
-> Both halves of the definition hold, so $\mathcal{B}$ is a basis. Note how different the
-> coordinates look in the two bases: the same vector $\begin{bmatrix} 3 \\ 7 \end{bmatrix}$ has
-> entries $(3,7)$ relative to the standard basis and coordinates $(5,-2)$ relative to $\mathcal{B}$
-> , and the uniqueness argument above guarantees that these coordinates are the only ones that work.
+### 1.6.6 Finding a Basis for the Null Space
 
-### Finding a Basis for the Null Space
+For $\text{Nul } A$ the description is implicit — a condition rather than a generating rule — so the
+route to a basis is to make it explicit. Solve $A\mathbf{x} = \mathbf{0}$ and write the solution set
+in parametric vector form; the vectors appearing in that parametric form are then a basis.
 
-Writing the solution set of a homogeneous linear system in parametric vector form systematically
-produces a basis for $\text{Nul } A$; no new theory is needed, because the homogeneous system is
-already the definition of the null space. The method runs in three steps. First, row reduce the
-augmented matrix $\begin{bmatrix} A & \mathbf{0} \end{bmatrix}$ and identify the pivot columns and
-the free variables: a basic variable is one whose column contains a pivot, and a free variable is
-one whose column does not. Second, express each basic variable in terms of the free variables.
-Third, write the general solution as a linear combination of fixed vectors, one per free variable —
-the coefficients being exactly the free variables. The vectors produced by the third step span the
-null space by construction, since every solution is one of their combinations by the previous step.
-They are also independent for a visible reason: each of them carries a $1$ in the position of its
-own free variable and a $0$ in the positions of the others, so a combination can vanish only if
-every coefficient vanishes. Spanning plus independence is a basis, which is why the algorithm never
-needs a separate verification step — though a substitution check is always worth doing anyway, since
-it costs one multiplication per vector.
+The reason this works is worth understanding rather than memorising. The parametric vector form
+expresses every solution as a combination of a fixed list of vectors, so those vectors **span** the
+solution set by construction. They are **linearly independent** because of the free-variable
+bookkeeping: each basis vector carries a $1$ in the coordinate of its own free variable and $0$ in
+the coordinates of the other free variables. Setting a combination equal to $\mathbf{0}$ therefore
+forces each free-variable coefficient to be $0$, one coordinate at a time.
+
+The procedure is always the same:
+
+1. Row-reduce $\begin{bmatrix} A & \mathbf{0} \end{bmatrix}$ to RREF.
+2. Identify the pivot columns; every remaining variable is free.
+3. Solve for each basic variable in terms of the free variables.
+4. Write the general solution $\mathbf{x}$ in parametric vector form.
+5. Read off the vectors multiplying each free variable — they form the basis.
 
 > [!example] Constructing a Basis for $\text{Nul } A$
 > Find a basis for the null space of
-> $$A = \begin{bmatrix} -3 & 6 & -1 & 1 & -7 \\ 1 & -2 & 2 & 3 & -1 \\ 2 & -4 & 5 & 8 & -4 \end{bmatrix}.$$
-> **Solution:** Row reduce the augmented matrix $\begin{bmatrix} A & \mathbf{0} \end{bmatrix}$ to
-> reduced echelon form:
-> $$\begin{bmatrix} A & \mathbf{0} \end{bmatrix} \sim \begin{bmatrix} 1 & -2 & 0 & -1 & 3 & 0 \\ 0 & 0 & 1 & 2 & -2 & 0 \\ 0 & 0 & 0 & 0 & 0 & 0 \end{bmatrix},$$
-> so the pivots are in columns 1 and 3: $x_1$ and $x_3$ are basic variables while $x_2, x_4, x_5$
-> are free. Expressing the basic variables in terms of the free ones gives $x_1 = 2x_2 + x_4 - 3x_5$
-> and $x_3 = -2x_4 + 2x_5$, so the general solution in parametric vector form is
-> $$\mathbf{x} = \begin{bmatrix} x_1 \\ x_2 \\ x_3 \\ x_4 \\ x_5 \end{bmatrix} = \begin{bmatrix} 2x_2 + x_4 - 3x_5 \\ x_2 \\ -2x_4 + 2x_5 \\ x_4 \\ x_5 \end{bmatrix} = x_2\begin{bmatrix} 2 \\ 1 \\ 0 \\ 0 \\ 0 \end{bmatrix} + x_4\begin{bmatrix} 1 \\ 0 \\ -2 \\ 1 \\ 0 \end{bmatrix} + x_5\begin{bmatrix} -3 \\ 0 \\ 2 \\ 0 \\ 1 \end{bmatrix} = x_2\mathbf{u} + x_4\mathbf{v} + x_5\mathbf{w}.$$
-> The vectors $\mathbf{u}, \mathbf{v}, \mathbf{w}$ span $\text{Nul } A$, and they are linearly
-> independent: a combination $x_2\mathbf{u} + x_4\mathbf{v} + x_5\mathbf{w} = \mathbf{0}$ forces
-> $x_2 = 0$, $x_4 = 0$ and $x_5 = 0$, as you can read directly from entries 2, 4 and 5 of the
-> combination. Therefore $\{\mathbf{u}, \mathbf{v}, \mathbf{w}\}$ is a basis for $\text{Nul } A$,
-> and substitution confirms that each basis vector really is annihilated by $A$:
-> $A\mathbf{u} = \mathbf{0}$ ✓, $A\mathbf{v} = \mathbf{0}$ ✓ and $A\mathbf{w} = \mathbf{0}$ ✓.
+> $$A = \begin{bmatrix} -3 & 6 & -1 & 1 & -7 \\ 1 & -2 & 2 & 3 & -1 \\ 2 & -4 & 5 & 8 & -4 \end{bmatrix}$$
+>
+> **Solution:**
+> Row-reduce the augmented matrix $\begin{bmatrix} A & \mathbf{0} \end{bmatrix}$ to reduced row echelon form (RREF):
+> $$\begin{bmatrix} A & \mathbf{0} \end{bmatrix} \sim \begin{bmatrix} 1 & -2 & 0 & -1 & 3 & 0 \\ 0 & 0 & 1 & 2 & -2 & 0 \\ 0 & 0 & 0 & 0 & 0 & 0 \end{bmatrix}$$
+> The pivot columns are 1 and 3, so the basic variables are $x_1$ and $x_3$, and the free variables are $x_2, x_4, x_5$. Express the basic variables in terms of the free ones:
+> $$\begin{aligned} x_1 &= 2x_2 + x_4 - 3x_5 \\ x_3 &= -2x_4 + 2x_5 \end{aligned}$$
+> Write the general solution in parametric vector form:
+> $$\mathbf{x} = \begin{bmatrix} x_1 \\ x_2 \\ x_3 \\ x_4 \\ x_5 \end{bmatrix} = \begin{bmatrix} 2x_2 + x_4 - 3x_5 \\ x_2 \\ -2x_4 + 2x_5 \\ x_4 \\ x_5 \end{bmatrix} = x_2 \begin{bmatrix} 2 \\ 1 \\ 0 \\ 0 \\ 0 \end{bmatrix} + x_4 \begin{bmatrix} 1 \\ 0 \\ -2 \\ 1 \\ 0 \end{bmatrix} + x_5 \begin{bmatrix} -3 \\ 0 \\ 2 \\ 0 \\ 1 \end{bmatrix} = x_2 \mathbf{u} + x_4 \mathbf{v} + x_5 \mathbf{w}$$
+> The vectors $\mathbf{u}, \mathbf{v}, \mathbf{w}$ span $\text{Nul } A$ by construction. They are linearly independent because $x_2\mathbf{u} + x_4\mathbf{v} + x_5\mathbf{w} = \mathbf{0}$ forces $x_2 = x_4 = x_5 = 0$, read directly off entries $2$, $4$ and $5$ of the sum. Therefore $\{\mathbf{u}, \mathbf{v}, \mathbf{w}\}$ is a basis for $\text{Nul } A$.
+>
+> **Check:** $A\mathbf{u} = \begin{bmatrix} -6 + 6 \\ 2 - 2 \\ 4 - 4 \end{bmatrix} = \mathbf{0}$, $A\mathbf{v} = \begin{bmatrix} -3 - 1 + 2 \\ 1 - 2 + 1 \\ 2 - 2 + 8 - 8 \end{bmatrix} = \mathbf{0}$ and $A\mathbf{w} = \begin{bmatrix} 9 + 7 - 7 \\ -3 + 3 \\ -6 - 8 + 8 \end{bmatrix} = \mathbf{0}$, so all $3$ vectors lie in $\text{Nul } A$ ✓
 
-### Finding a Basis for the Column Space
+Two observations generalise from this example, and both are worth carrying forward:
 
-The column space is defined by all $n$ columns of $A$, but most of those columns are usually
-redundant, and the pivot columns are the ones that are not. The reason is the single most useful
-fact in the section: linear dependence relations among the columns of $A$ are defined by solutions
-of $A\mathbf{x} = \mathbf{0}$, because the equation
-$x_1\mathbf{a}_1 + x_2\mathbf{a}_2 + \dots + x_n\mathbf{a}_n = \mathbf{0}$ is literally a statement
-about how the columns depend on one another. Elementary row operations do not change the solution
-set of a system, so row reduction *preserves* those dependence relations exactly. When $A$ is row
-reduced to an echelon form $B$, three observations follow:
+- **The number of basis vectors equals the number of free variables.** Here there are three free
+variables and the basis has $3$ vectors, so $\dim \text{Nul } A = 3$. In general $\dim \text{Nul } A = n - \text{rank } A$; for this matrix $n = 5$ and $\text{rank } A = 2$, giving $3$.
+- **The basis is never unique.** A different choice of free variables, or a different sequence of
+  row operations leading to a different but equivalent RREF, produces a different basis for the same
+  subspace. Any of them is correct; there is no single canonical basis for $\text{Nul } A$.
 
-- the pivot columns of $B$ are linearly independent;
-- every non-pivot column of $B$ is a linear combination of the preceding pivot columns;
-- and the corresponding columns of the *original* matrix $A$ satisfy exactly the same linear
-  combinations, and the same independence relations.
+### 1.6.7 Finding a Basis for the Column Space
 
-The first two bullets describe $B$; the third bullet is the bridge back to $A$. To see why the
-bridge holds, it helps to watch what a row operation does rather than what it produces. An
-elementary row operation is an instruction for building new rows out of old ones, and applying it to
-the augmented matrix produces a system whose equations are combinations of the original equations.
-Any combination of equations that vanishes in the reduced system vanishes in the original system,
-because the reduced equations are themselves combinations of the originals — and vice versa, since
-row operations are reversible. A relation $x_1\mathbf{a}_1 + \dots + x_n\mathbf{a}_n = \mathbf{0}$
-is exactly a list of $m$ vanishing combinations, one per row, so the set of relation vectors
-$\mathbf{x}$ is preserved untouched by the reduction, and with it every dependence and independence
-statement about the columns.
+For $\text{Col } A$ the situation is reversed. You already hold an explicit spanning set — the
+columns of $A$ themselves — so the only task is discarding the redundant ones. The tool for
+identifying them is the same one used throughout: linear dependence relations among the columns of
+$A$ are exactly the solutions of $A\mathbf{x} = \mathbf{0}$, and elementary row operations do not
+change that solution set. Row reduction therefore preserves the linear dependence relations among
+the columns *exactly*.
 
-That is also why the pivot positions, and only the pivot positions, may be read off from $B$: they
-tell you which columns are the independent ones, and the remaining columns are then forced to be
-combinations of them. The theorem that records this is the book's Theorem 13 of §2.8.
+The procedure mirrors the null-space one, but with a twist at the final step:
 
-Before turning to the theorem, here is that routine in the form you will actually execute it. Row
-reduce $A$ — not the augmented matrix, since a right-hand side plays no role in a basis question for
-$\text{Col } A$. Mark the columns of the echelon form that contain pivots. Then look up the columns
-of the *original* matrix $A$ in exactly those positions; those are the vectors you keep. The
-relation counts you read off the echelon form are a free cross-check: they confirm that the columns
-of $A$ satisfy exactly the dependencies you carried back.
+1. Row-reduce $A$ to an echelon form $B$.
+2. Identify the pivot columns of $B$.
+3. Translate those positions back to the **original** matrix $A$.
+4. Take those columns of $A$, in their original order, as the basis.
+5. Sanity-check: the number of vectors must equal $\text{rank } A$.
 
-Why are the pivot columns the independent ones? Because of the staircase shape of the echelon form.
-Reading the echelon form from left to right, the first pivot column cannot be a combination of
-anything to its left, since there is nothing there; and each later pivot column has a nonzero entry
-in a row where all earlier pivot columns have zeros, so it cannot be built from its predecessors no
-matter which coefficients are allowed. The staircase therefore forces exactly one conclusion: the
-independent set of columns is precisely the set of pivot columns. That is also why the *number* of
-pivot columns is a property of the matrix and not of the row reduction you happened to perform — two
-different reductions of the same matrix must report the same count, because they are describing the
-same subspace.
+This is a subtle and frequently misunderstood point. Row operations change the columns themselves,
+often drastically, but they leave the *relations between* the columns untouched. That is precisely
+what makes the following procedure valid: reduce $A$ to an echelon form $B$, use $B$ to read off
+which columns are redundant, then go back to $A$ and keep the corresponding columns.
 
-> [!summary] Theorem 4: Basis for the Column Space
+If $A$ is row-reduced to an echelon form $B$:
+
+- Columns of $B$ containing pivot positions are linearly independent.
+- Non-pivot columns of $B$ are linear combinations of the preceding pivot columns, with coefficients
+  read straight off the entries of $B$.
+- The corresponding columns of the original matrix $A$ satisfy exactly the same linear combinations
+  and the same independence relations.
+
+The sentence to remember is short: **row operations preserve the dependence relations, not the
+columns.**
+
+> [!summary] Theorem 5: Basis for the Column Space (Lay, Theorem 13)
 > The pivot columns of a matrix $A$ form a basis for the column space $\text{Col } A$.
 >
 > **Breakdown:**
-> - $A$: an $m \times n$ matrix; **pivot columns:** the columns of $A$ whose positions match the
->   pivot columns of an echelon form of $A$; $\text{Col } A \subseteq \mathbb{R}^m$: the span of
->   all $n$ columns, of which only the pivot columns are needed.
+> - $A$ : An $m \times n$ matrix.
+> - **Pivot columns** : The columns of $A$ corresponding to the columns containing leading entries (pivots) in an echelon form of $A$.
+> - $\text{Col } A$ : The subspace of $\mathbb{R}^m$ spanned by the columns of $A$.
 >
 > **Proof:**
-> The pivot columns of the reduced echelon form $B$ are independent — each is a standard basis
-> vector $\mathbf{e}_1, \mathbf{e}_2, \dots$ of an identity matrix — and every non-pivot column of
-> $B$ is a unique combination of them. Row reduction preserves the solution set of
-> $A\mathbf{x} = \mathbf{0}$, so the columns of $A$ satisfy exactly the same dependence relations
-> as those of $B$: the pivot columns of $A$ are independent, and every non-pivot column of $A$ is a
-> combination of them, hence redundant. They therefore span $\text{Col } A$ and are independent, so
-> they are a basis.
+> Let $B$ be the RREF of $A$. The pivot columns of $B$ are linearly independent because they are exactly standard basis vectors $\mathbf{e}_1, \mathbf{e}_2, \dots$, padded with zero rows. Every non-pivot column of $B$ is a unique linear combination of these pivot columns, with coefficients read directly from the entries of $B$.
+>
+> Since row reduction preserves the solution set of $A\mathbf{x} = \mathbf{0}$, the columns of $A$ satisfy the same linear dependence relationships as the columns of $B$. Therefore:
+> 1. The pivot columns of $A$ are linearly independent.
+> 2. Every non-pivot column of $A$ is a linear combination of the pivot columns, making it redundant for generating $\text{Col } A$.
+>
+> Hence the pivot columns of $A$ span $\text{Col } A$ and are linearly independent — a basis for $\text{Col } A$.
 
 > [!example] Determining a Basis for $\text{Col } A$
 > Find a basis for the column space of
-> $$A = \begin{bmatrix} \mathbf{a}_1 & \mathbf{a}_2 & \mathbf{a}_3 & \mathbf{a}_4 & \mathbf{a}_5 \end{bmatrix} = \begin{bmatrix} 1 & 3 & 3 & 2 & -9 \\ -2 & -2 & 2 & -8 & 2 \\ 2 & 3 & 0 & 7 & 1 \\ 3 & 4 & -1 & 11 & -8 \end{bmatrix}.$$
-> **Solution:** Row reduce $A$ to its reduced echelon form $B$:
-> $$B = \begin{bmatrix} \mathbf{b}_1 & \mathbf{b}_2 & \mathbf{b}_3 & \mathbf{b}_4 & \mathbf{b}_5 \end{bmatrix} = \begin{bmatrix} 1 & 0 & -3 & 5 & 0 \\ 0 & 1 & 2 & -1 & 0 \\ 0 & 0 & 0 & 0 & 1 \\ 0 & 0 & 0 & 0 & 0 \end{bmatrix}.$$
-> 1. Identify the pivot columns: in $B$, the pivots sit in columns 1, 2 and 5.
-> 2. Read the dependencies off $B$ and carry them back to $A$:
-> $$\mathbf{b}_3 = -3\mathbf{b}_1 + 2\mathbf{b}_2 \quad \Longrightarrow \quad \mathbf{a}_3 = -3\mathbf{a}_1 + 2\mathbf{a}_2, \qquad \mathbf{b}_4 = 5\mathbf{b}_1 - \mathbf{b}_2 \quad \Longrightarrow \quad \mathbf{a}_4 = 5\mathbf{a}_1 - \mathbf{a}_2.$$
-> 3. Select the corresponding columns of the original matrix: columns 3 and 4 are redundant, so the
->    pivot columns of $A$ form the basis:
-> $$\text{Basis for } \text{Col } A = \left\{ \begin{bmatrix} 1 \\ -2 \\ 2 \\ 3 \end{bmatrix}, \begin{bmatrix} 3 \\ -2 \\ 3 \\ 4 \end{bmatrix}, \begin{bmatrix} -9 \\ 2 \\ 1 \\ -8 \end{bmatrix} \right\}.$$
-> The carried-back relations can be checked directly in $A$:
-> $-3\mathbf{a}_1 + 2\mathbf{a}_2 = (-3 + 6,\; 6 - 4,\; -6 + 6,\; -9 - 2) = (3, 2, 0, -1) = \mathbf{a}_3$
-> ✓, and
-> $5\mathbf{a}_1 - \mathbf{a}_2 = (5 - 3,\; -10 + 2,\; 10 - 3,\; 15 - 4) = (2, -8, 7, 11) = \mathbf{a}_4$
-> ✓. The three basis vectors are independent because each carries a pivot position in $B$, so none
-> of them is a combination of the other two.
+> $$A = \begin{bmatrix} \mathbf{a}_1 & \mathbf{a}_2 & \mathbf{a}_3 & \mathbf{a}_4 & \mathbf{a}_5 \end{bmatrix} = \begin{bmatrix} 1 & 3 & 3 & 2 & -9 \\ -2 & -2 & 2 & -8 & 2 \\ 2 & 3 & 0 & 7 & 1 \\ 3 & 4 & 1 & 11 & -8 \end{bmatrix}$$
+>
+> **Solution:**
+> Row-reduce $A$ to RREF $B$:
+> $$B = \begin{bmatrix} \mathbf{b}_1 & \mathbf{b}_2 & \mathbf{b}_3 & \mathbf{b}_4 & \mathbf{b}_5 \end{bmatrix} = \begin{bmatrix} 1 & 0 & 0 & 5 & 0 \\ 0 & 1 & 0 & -1 & 0 \\ 0 & 0 & 1 & 0 & 0 \\ 0 & 0 & 0 & 0 & 1 \end{bmatrix}$$
+> 1. **Identify the pivot columns:** the pivots of $B$ sit in columns $1$, $2$, $3$ and $5$, so $\text{rank } A = 4$.
+> 2. **Read off the dependence relations:** column $4$ is the only non-pivot column, and
+>    $$\mathbf{b}_4 = 5\mathbf{b}_1 - \mathbf{b}_2 + 0\mathbf{b}_3 \implies \mathbf{a}_4 = 5\mathbf{a}_1 - \mathbf{a}_2$$
+> 3. **Select the corresponding columns of the original matrix:** column $4$ is redundant, so the pivot columns $\{\mathbf{a}_1, \mathbf{a}_2, \mathbf{a}_3, \mathbf{a}_5\}$ form a basis for $\text{Col } A$:
+>    $$\text{Basis for } \text{Col } A = \left\{ \begin{bmatrix} 1 \\ -2 \\ 2 \\ 3 \end{bmatrix}, \begin{bmatrix} 3 \\ -2 \\ 3 \\ 4 \end{bmatrix}, \begin{bmatrix} 3 \\ 2 \\ 0 \\ 1 \end{bmatrix}, \begin{bmatrix} -9 \\ 2 \\ 1 \\ -8 \end{bmatrix} \right\}$$
+>
+> Since the basis has $4$ vectors in $\mathbb{R}^4$, in fact $\text{Col } A = \mathbb{R}^4$: every $\mathbf{b}$ in $\mathbb{R}^4$ is reachable, so $A\mathbf{x} = \mathbf{b}$ is consistent for every $\mathbf{b}$.
+>
+> **Check:** $5\mathbf{a}_1 - \mathbf{a}_2 = 5\begin{bmatrix} 1 \\ -2 \\ 2 \\ 3 \end{bmatrix} - \begin{bmatrix} 3 \\ -2 \\ 3 \\ 4 \end{bmatrix} = \begin{bmatrix} 5 - 3 \\ -10 + 2 \\ 10 - 3 \\ 15 - 4 \end{bmatrix} = \begin{bmatrix} 2 \\ -8 \\ 7 \\ 11 \end{bmatrix} = \mathbf{a}_4$, confirming the dependence relation ✓
 
-> [!warning] Correction: One entry of the matrix in the example above
-> The source note-set printed the $(4,3)$ entry of $A$ as $1$, i.e.
-> $\mathbf{a}_3 = \begin{bmatrix} 3 \\ 2 \\ 0 \\ 1 \end{bmatrix}$. With that entry the example is
-> inconsistent: the reduced echelon form of the printed matrix is
-> $\begin{bmatrix} 1 & 0 & 0 & 5 & 0 \\ 0 & 1 & 0 & -1 & 0 \\ 0 & 0 & 1 & 0 & 0 \\ 0 & 0 & 0 & 0 & 1 \end{bmatrix}$
-> , with pivots in columns 1, 2, 3, 5 — contradicting the pivot columns 1, 2, 5 used throughout.
-> Changing the entry to $-1$, as displayed, makes every line consistent.
+> [!warning] Correction: Echelon Form and Basis in the Column Space Example
+> The source note-set gave the RREF as $B = \begin{bmatrix} 1 & 0 & -3 & 5 & 0 \\ 0 & 1 & 2 & -1 & 0 \\ 0 & 0 & 0 & 0 & 1 \\ 0 & 0 & 0 & 0 & 0 \end{bmatrix}$, with pivots in columns $1$, 2, 5 and basis $\{\mathbf{a}_1, \mathbf{a}_2, \mathbf{a}_5\}$. That $B$ is **not** row-equivalent to the matrix as printed: it has rank $3$ while the printed $A$ has rank $4$, and the printed relation $\mathbf{a}_3 = -3\mathbf{a}_1 + 2\mathbf{a}_2$ fails in the fourth entry, since $-3 \cdot 3 + 2 \cdot 4 = -1 \neq 1$.
+>
+> The likely cause is a transcription slip in one entry. With $\mathbf{a}_3 = \begin{bmatrix} 3 \\ 2 \\ 0 \\ -1 \end{bmatrix}$ — that is, $-1$ rather than $1$ in row $4$, column $3$, the value used in the textbook — the matrix does reduce to the printed $B$, the pivots are columns $1$, $2$ and $5$, and $\{\mathbf{a}_1, \mathbf{a}_2, \mathbf{a}_5\}$ with $\dim \text{Col } A = 3$ is exactly right. Check which version your lecture used before relying on these numbers.
 
-> [!warning] Use the Original Columns for a Basis of $\text{Col } A$
-> Always build the basis for $\text{Col } A$ from the pivot columns of the **original matrix $A$ **,
-> never from the columns of the echelon form $B$. Row operations preserve the *relations* among
-> columns but change the columns themselves, so the column space is generally not preserved. In the
-> example above every column of $B$ has a zero in the bottom row, so those vectors cannot span any
-> vector of $\mathbb{R}^4$ with a nonzero fourth entry — and they need not belong to $\text{Col } A$
-> at all. The echelon form is only a map of *which* columns to keep.
-
-### Where the Two Halves Meet
-
-It is worth collecting, in one place, the translations that connect the matrix statements of Section
-2.1 with the subspace language of Section 2.2. They are all the same three translations, and once
-they are visible, the Invertible Matrix Theorem reads as a theorem about subspaces that happens to
-be phrased in algebra.
-
-The first translation concerns the null space. For any matrix, $\text{Nul } A = \{\mathbf{0}\}$ is
-the same as saying that $A\mathbf{x} = \mathbf{0}$ has only the trivial solution, which is statement
-(d); for a square matrix this is also the statement that the columns are linearly independent,
-statement (e), and that the transformation is one-to-one, statement (f). So "the matrix loses
-nothing" can be tested either by failing to find a nonzero solution or by counting pivots, and the
-two tests always agree.
-
-The second translation concerns the column space. For an $m \times n$ matrix,
-$\text{Col } A = \mathbb{R}^m$ is the same as saying that the columns span the output space, and for
-a square matrix this is statement (h); the equivalent statement (g) says every equation
-$A\mathbf{x} = \mathbf{b}$ is solvable, and statement (i) says the transformation is onto. So "the
-matrix reaches everything" can be tested by comparing the span with the whole space or by checking
-that no row of the echelon form is a row of zeros.
-
-The third translation is about bases and combines the first two. The columns of a square matrix $A$
-form a basis for $\mathbb{R}^n$ exactly when they are independent and span, that is, exactly when
-(e) and (h) both hold — and by the Invertible Matrix Theorem, that is exactly when $A$ is
-invertible. This is why the basis notion appeared so naturally among the columns of invertible
-matrices earlier in this note: invertibility is the condition that makes the columns of a matrix —
-the very columns that generate the column space — into a coordinate system for the entire space.
-
-> [!important] Invertibility Is Exactly a Basis Condition
-> For a square matrix, three statements from three different chapters are one statement:
-> $\text{Nul } A = \{\mathbf{0}\}$, $\text{Col } A = \mathbb{R}^n$, and the columns of $A$ form a
-> basis for $\mathbb{R}^n$ — each is the IMT in geometric language, and one row reduction checks all
-> three.
-
-The dictionary also runs the other way, and that direction is what makes the geometric statements
-earn their keep. Given a subspace claim — "these vectors fill the whole space", "this set collapses
-to a line" — translate it into a statement about a matrix and then use the algebra: independence and
-spanning are tests you can perform mechanically, and a single count of pivots evaluates both at
-once. The geometry tells you what to ask; the matrix arithmetic tells you the answer.
-
-For revision, the highest-yield habit is to translate deliberately in both directions rather than
-memorizing the halves separately. Take any statement of the IMT and ask what it says about
-$\text{Nul } A$ and $\text{Col } A$; take any subspace statement and ask which matrix fact it
-encodes. Two translations are worth doing by hand: a $2 \times 2$ matrix with a single pivot column,
-whose null space is a line and whose column space is a line, and a $3 \times 3$ matrix with three
-pivot columns, whose null space is $\{\mathbf{0}\}$ and whose column space fills $\mathbb{R}^3$.
-Between those extremes sits every exam question on this material, and the row reduction that yields
-the pivot count is also the evidence for every statement you might want to quote.
-
-Taken together, the three translations explain the two algorithms of this module as well. For a
-singular or rectangular matrix, the null space records the collapse and the pivot columns record the
-reach, so one row reduction produces both a basis for the null space and the positions of a basis
-for the column space. One computation, two subspaces — that is the practical summary of Sections 2.1
-and 2.2 taken together, and it is the reason the two halves of module B2 K1 are studied in this
-order.
+> [!warning] Use Original Columns for a $\text{Col } A$ Basis
+> Always build the basis for $\text{Col } A$ from the pivot columns of the **original matrix $A$**, never from the columns of its echelon form $B$.
+>
+> Row operations change the column space drastically, even though they preserve dependence relations. In the textbook variant of the example above — the one whose echelon form has a bottom row of zeros — every column of that echelon form has a zero in its fourth entry, so those vectors cannot span anything in $\mathbb{R}^4$ with a nonzero fourth component, and in general they do not even belong to $\text{Col } A$. Use an echelon form only to *identify* which pivot positions to take, then copy those columns from the original $A$ unchanged.
 
 ---
 
 > [!summary] Summary
-> **Section 2.1 — Characterizations of Invertible Matrices.** The Invertible Matrix Theorem (Theorem
-> 1) collects twelve equivalent conditions on a square matrix — from invertibility, pivot counts and
-> the null space, through spanning, one-to-one and onto, to one-sided inverses and the transpose —
-> so a single one decides all the others. Two sharpenings follow: solution is unique when it exists,
-> and one-sided inverses of square matrices are two-sided. The theorem splits the square matrices
-> into invertible (nonsingular) and singular, each negation of a statement diagnosing singularity.
-> For transformations, $T$ is invertible exactly when its standard matrix is, with
-> $T^{-1}(\mathbf{x}) = A^{-1}\mathbf{x}$ (Theorem 2). Numerically, ill-conditioned matrices are
-> invertible but nearly singular, and the condition number ($1$ for $I$, large when
-> ill-conditioned, $\infty$ when singular) measures the danger.
-> **Section 2.2 — Subspaces of $\mathbb{R}^n$.** A subspace contains $\mathbf{0}$ and is closed
-> under addition and scalar multiplication — a flat object through the origin — and every span is a
-> subspace; the extremes are $\{\mathbf{0}\}$ and $\mathbb{R}^n$. Each matrix supplies two
-> subspaces, described in opposite styles: the column space $\text{Col } A$ — the span of its
-> columns in $\mathbb{R}^m$, and the set of reachable right-hand sides — and the null space
-> $\text{Nul } A$, the solutions of $A\mathbf{x} = \mathbf{0}$ in $\mathbb{R}^n$, a subspace by
-> Theorem 3. In practice both are handled through bases, with the standard basis as reference.
-> Parametric vector form gives a basis for $\text{Nul } A$; the pivot columns of the original
-> matrix — never of the echelon form — give a basis for $\text{Col } A$ by Theorem 4. The halves
-> meet in three translations: a trivial null space, a full column space, and a basis of columns each
-> say exactly that $A$ is invertible.
+> - **1.1 The Invertible Matrix Theorem** — For a square $n \times n$ matrix $A$, $12$ statements are equivalent: invertibility, row equivalence to $I_n$, $n$ pivot positions, trivial null equation, independent columns, one-to-one transformation, solvability for every $\mathbf{b}$, spanning columns, onto transformation, existence of a left inverse, existence of a right inverse, and invertibility of $A^T$. The proof runs a circular chain $(a) \to (j) \to (d) \to (c) \to (b) \to (a)$ and hooks the remaining statements onto it. One row reduction answers $12$ questions, and the statements group into families of existence and uniqueness that coincide only because $A$ is square.
+> - **1.2 Key Implications and Properties** — An invertible matrix gives a *unique* solution for every $\mathbf{b}$, because there are no free variables; and for square matrices a one-sided inverse is automatically two-sided, so $AB = I$ forces $B = A^{-1}$ and $A = B^{-1}$ (Theorem 2). Both facts depend essentially on squareness.
+> - **1.3 Classification of Square Matrices** — The IMT partitions $n \times n$ matrices into invertible (all $12$ statements true) and singular (all $12$ false), with no middle case; negating any statement gives the full profile of the singular case. Counting pivots is the practical test, and the theorem cannot be applied to rectangular matrices at all.
+> - **1.4 Invertible Linear Transformations** — $T: \mathbb{R}^n \to \mathbb{R}^n$ is invertible when a two-sided reverse map $S$ exists, and by Theorem 3 this happens exactly when the standard matrix $A$ is invertible, with $T^{-1}(\mathbf{x}) = A^{-1}\mathbf{x}$. Consequently a one-to-one transformation on $\mathbb{R}^n$ is automatically onto — again, only because the matrix is square.
+> - **1.5 Numerical Notes** — Ill-conditioned matrices blur the exact picture: roundoff can hide genuine pivots or manufacture spurious ones. The condition number ($1$ for $I$, large for ill-conditioned, infinite for singular) is the reliable diagnostic, not a near-zero determinant.
+> - **1.6 Subspaces of $\mathbb{R}^n$** — A subspace is a subset of $\mathbb{R}^n$ containing $\mathbf{0}$ and closed under addition and scalar multiplication, and geometrically it must pass through the origin. Every span is a subspace; lines and planes through the origin are the low-dimensional cases, and $\{\mathbf{0}\}$ and $\mathbb{R}^n$ are the two extremes. A matrix carries two subspaces: $\text{Col } A \subseteq \mathbb{R}^m$, defined explicitly by the columns and equal to the set of $\mathbf{b}$ for which $A\mathbf{x} = \mathbf{b}$ is consistent, and $\text{Nul } A \subseteq \mathbb{R}^n$, defined implicitly by $A\mathbf{x} = \mathbf{0}$ and a subspace by Theorem 4 (the non-homogeneous solution set is only a translate of it). A basis is an independent spanning set whose size is the dimension; bases for $\text{Nul } A$ come from parametric vector form and number $n - \text{rank } A$, while bases for $\text{Col } A$ are the pivot columns of the *original* matrix (Theorem 5), never of its echelon form.
