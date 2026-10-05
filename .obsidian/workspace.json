@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CCT/CCT3/Algo/K5 - Dynamic programming  & Greedy algorithms..md",
+                "file": "CCT/CCT3/Lin. Alg/B2 - K2 - Baser for underrum og vektorrum samt determinanter.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "K5 - Dynamic programming  & Greedy algorithms."
+              "title": "B2 - K2 - Baser for underrum og vektorrum samt determinanter"
             }
           }
         ]
@@ -187,19 +187,29 @@
   },
   "active": "242d7093086f3a3a",
   "lastOpenFiles": [
-    "CCT/CCT3/Algo/K4 - Various Sorting Algorithms.md",
+    "CCT/CCT3/Lin. Alg/Originals/B2 - K2 - Baser for underrum og vektorrum samt determinanter.md",
+    "CCT/CCT3/Lin. Alg/B2 - K2 - Baser for underrum og vektorrum samt determinanter.md",
+    "CCT/CCT3/Lin. Alg/Unconfirmed 136058.crdownload",
+    "CCT/!Formatting & Syntax/Post-Processing - Secondary Prompts - 1.1.md",
+    "CCT/!Formatting & Syntax/Note Generation - Agent Mode - 2.1.4.md",
+    "CCT/CCT3/Lin. Alg/Pictures/B2 - K2 - Baser for underrum og vektorrum samt determinanter",
+    "CCT/CCT3/Lin. Alg/Pictures/B2 - K2 - Baser for underrum og vektorrum samt determinanter/Pasted image 20261005200107.png",
+    "CCT/CCT3/Lin. Alg/Originals/B2 - K1 - Karakterisering af invertible marticer og underrum..md",
+    "CCT/!Formatting & Syntax/Partial-Note Generation - First Pass - 1.0.0.md",
+    "CCT/CCT3/Lin. Alg/Originals/B2 - K2 - 1.md",
+    "CCT/CCT3/Algo/Originals/K1 - Foundations of algorithm analysis and design.md",
+    "CCT/CCT3/Algo/K2 - Growth of functions, asymptotic notations, and relative asymptotic performance.md",
+    "CCT/CCT3/Algo/K3 - analysis and design of divide and conquer algorithms..md",
     "CCT/CCT3/Algo/K5 - Dynamic programming  & Greedy algorithms..md",
+    "CCT/CCT3/Algo/K4 - Various Sorting Algorithms.md",
     "CCT/CCT3/Algo/Originals/K5 - Dynamic programming  & Greedy algorithms.md",
     "CCT/CCT3/Algo/Originals/K4 - Various Sorting Algorithms.md",
     "CCT/CCT3/Algo/Originals/K3 - analysis and design of divide and conquer algorithms..md",
     "CCT/CCT3/Algo/Originals/K2 - Growth of functions, asymptotic notations, and relative asymptotic performance.md",
-    "CCT/CCT3/Algo/Originals/K1 - Foundations of algorithm analysis and design.md",
     "CCT/CCT3/Algo/K1 - Foundations of algorithm analysis and design.md",
-    "CCT/!Formatting & Syntax/Post-Processing - Secondary Prompts - 1.1.md",
     "CCT/CCT3/Algo/Unconfirmed 787124.crdownload",
     "CCT/CCT3/Algo/Pictures/K5 - Dynamic programming  & Greedy algorithms/Pasted image 20260930202124.png",
     "CCT/CCT3/Algo/Pictures/K5 - Dynamic programming  & Greedy algorithms",
-    "CCT/!Formatting & Syntax/Note Generation - Agent Mode - 2.1.4.md",
     "CCT/CCT3/Algo/Pictures/K5 - Dynamic programming  & Greedy algorithms/Pasted image 20260930204505.png",
     "CCT/CCT3/Algo/Pictures/K5 - Dynamic programming  & Greedy algorithms/Pasted image 20260930204208.png",
     "CCT/CCT3/Algo/Pictures/K5 - Dynamic programming  & Greedy algorithms/Pasted image 20260930203851.png",
@@ -209,8 +219,6 @@
     "CCT/CCT3/Algo/Pictures/K5 - Dynamic programming  & Greedy algorithms/Pasted image 20260930202145.png",
     "Divide-and-Conquer.md",
     "Amortized Analysis.md",
-    "CCT/!Formatting & Syntax/Partial-Note Generation - First Pass - 1.0.0.md",
-    "CCT/CCT3/Lin. Alg/Originals/B2 - K2 -.md",
     "CCT/CCT3/Lin. Alg/Lin. Alg. - Template.md",
     "CCT/CCT3/Lin. Alg/B1 - K1 - Lineære ligningssystemer , deres (in)konsistens og løsningsmetoder..md",
     "CCT/CCT3/Lin. Alg/B1 - K2 -Linearkombinationer.md",
@@ -218,20 +226,12 @@
     "Untitled.md",
     "CCT/CCT3/Lin. Alg/B2 - K1 - Karakterisering af invertible marticer og underrum..md",
     "CCT/CCT3/Lin. Alg/Unconfirmed 903718.crdownload",
-    "CCT/CCT3/Lin. Alg/Originals/B2 - K1 - Karakterisering af invertible marticer og underrum..md",
     "CCT/CCT3/Lin. Alg/Pictures/B2 - K1 - Karakterisering af invertible marticer og underrum/Pasted image 20260929121336.png",
     "CCT/CCT3/Lin. Alg/Pictures/B2 - K1 - Karakterisering af invertible marticer og underrum",
-    "CCT/CCT3/Lin. Alg/Pictures/B2 - K1 - Karakterisering af invertible marticer og underrum/Pasted image 20260929121905.png",
     "CCT/!Formatting & Syntax/Note Generation - Agent Mode - 2.1.3.md",
     "CCT/!Formatting & Syntax/Unconfirmed 700553.crdownload",
     "CCT/CCT3/Lin. Alg/Unconfirmed 871456.crdownload",
-    "CCT/!Formatting & Syntax/Note Generation - Agent Mode - 2.1.2.md",
     "CCT/!Formatting & Syntax/Unconfirmed 944629.crdownload",
-    "CCT/!Formatting & Syntax/Mathematical Symbols in Discrete Mathematics.md",
-    "CCT/!Formatting & Syntax/Unconfirmed 274447.crdownload",
-    "CCT/CCT3/Lin. Alg/B1 - K4 - Matrixoperationer, -multiplikation, inverse matricer.md",
-    "CCT/CCT3/Lin. Alg/Originals/B1 - K4 - Matrixoperationer, -multiplikation, inverse matricer.md",
-    "CCT/CCT3/Algo/Unconfirmed 127880.crdownload",
-    "CCT/CCT3/Algo/Unconfirmed 937364.crdownload"
+    "CCT/!Formatting & Syntax/Unconfirmed 274447.crdownload"
   ]
 }
