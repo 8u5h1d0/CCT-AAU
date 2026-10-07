@@ -73,18 +73,6 @@ Created: 05-10-2026
 
 _Table 1.1: Quick-reference table of every symbol, operator, abbreviation, and convention used in this note._
 
-This note has two halves that turn out to be two views of the same idea.
-The first half studies **bases**: once a basis is chosen for a subspace, every vector in that subspace gets a unique coordinate vector, and the subspace starts to behave exactly like $\mathbb{R}^p$.
-Counting the vectors in a basis gives the **dimension**, counting pivot columns gives the **rank**, and the Rank Theorem ties the two counts together.
-The second half studies the **determinant**, a single number attached to a square matrix that answers an invertibility question (is $\det A$ zero?) and a geometric one (by what factor does the matrix stretch area or volume?).
-Both halves ask the same underlying question: how much independent information does a set of vectors, or a matrix, really carry?
-
-The theorems below are numbered sequentially through the note, because a single note covering two book chapters cannot keep two independent theorem counters without becoming confusing.
-Where the material follows the textbook, the book's own number is given in parentheses: the Rank Theorem is Theorem 1 *(book: Theorem 14)*, the Basis Theorem is Theorem 2 *(book: Theorem 15)*, and the determinant theorems of the book's Sections 3.1–3.2 are Theorems 4–9 *(book: Theorems 1–6)*.
-A reader who meets a reference to "book Theorem 3" in older notes should read it as **Theorem 6** here, the row-operation theorem.
-
----
-
 ## 1.1 Coordinate Systems
 
 A coordinate system provides a way to uniquely identify vectors within a subspace.

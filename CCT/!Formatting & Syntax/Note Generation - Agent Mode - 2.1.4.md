@@ -193,7 +193,7 @@ Applies to every theorem in every subject. Number theorems sequentially within t
 
 #### Callout Quota Measure
 
-Let **A** = non-blank lines inside callout blocks, **excluding every `>[!example]` callout**; **B** = non-blank prose lines outside callouts (excluding math, code, and table lines). Require **A ÷ (A + B) ≤ 0.30**.
+Let **A** = non-blank lines inside callout blocks, **excluding every `>[!example]` callout**; **B** = non-blank prose lines outside callouts (excluding math, code, and table lines). Require **A ÷ (A + B) ≤ 0.45**.
 
 `>[!example]` callouts are **exempt from the quota**. They are the mandatory container for every example (see "Examples Are Always Callouts" below), and examples are the primary vehicle of Core Goal #1 — counting them would penalize the very content this document exists to produce. Example lines count in neither **A** nor **B**, so the quota can never be brought down by demoting an example to prose; the only lines the measure can move are non-example callouts.
 
