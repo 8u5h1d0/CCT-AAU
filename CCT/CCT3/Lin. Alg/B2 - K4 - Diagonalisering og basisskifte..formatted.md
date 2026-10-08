@@ -537,6 +537,7 @@ This generality is not decoration: differential equations are solved by finding 
 Abstract vectors spaces are the price of admission for seeing those two applications as one idea.
 
 Nothing in this section requires you to unlearn matrices: the matrices reappear, but now as *representations* of transformations that may act on polynomials or on signals, and the basis becomes something you choose rather than something given.
+
 The payoff is the same as before, one level up — a transformation that looks messy in one basis can be diagonal in another, and the passage between the two bases is itself a matrix multiplication.
 The order of business mirrors the earlier sections: first the definition for abstract spaces, then the machinery that turns a transformation into a matrix ($[T]_\mathcal{B}$), then the diagonal case for transformations of $\mathbb{R}^n$, and finally what similarity means when diagonalization is impossible.
 Each step replaces a statement about vectors with a statement about their coordinates, so the linear algebra you already know keeps applying.
@@ -546,7 +547,6 @@ Each step replaces a statement about vectors with a statement about their coordi
 
 Diagonalization is therefore less a property of a matrix than a property of the transformation, and the matrix $P$ is a translation dictionary between two languages.
 This is the sense in which $A = PDP^{-1}$ and "$D$ is the $\mathcal{B}$-matrix for $T$" are the same statement, and the bridge between them is the subject of this section.
-
 ### Eigenvectors of Linear Transformations
 
 Linear transformations can act on various vector spaces, such as function spaces, spaces of polynomials $\mathbb{P}_n$, or discrete-time signal spaces $\mathbb{S}$.

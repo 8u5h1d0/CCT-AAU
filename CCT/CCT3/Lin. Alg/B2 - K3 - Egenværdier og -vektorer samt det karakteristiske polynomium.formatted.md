@@ -133,11 +133,13 @@ That practical payoff is what waits at the end of this chapter.
 
 ## 5.1 Eigenvectors and Eigenvalues
 
-Although a transformation $x \mapsto Ax$ may move vectors in many directions, there are often special vectors on which the action of $A$ is very simple — $A$ merely "stretches" or "dilates" them without changing their direction.
+Although a transformation $x \mapsto Ax$ may move vectors in many directions, there are often special vectors on which the action of $A$ is very simple — $A$ merely "stretches" or "dilates" them without changing their direction, similar to a scalar of the vector.
+
 Geometrically, an eigenvector is a vector that stays on its own line through the origin when $A$ is applied: it may be stretched, compressed, or reversed, but it is never knocked sideways.
 The eigenvalue records _how much_ scaling happens along that line.
 A factor of $2$ doubles the length, a factor of $1/2$ halves it, a factor of $1$ leaves the vector completely fixed, and a negative factor reverses direction as well as scaling.
 Most vectors are _not_ eigenvectors — applying $A$ to them produces a vector pointing in a genuinely new direction.
+
 A good mental picture is to think of eigenvectors as the hidden skeleton of the transformation: the few directions that the map respects, around which all other motion is organized.
 Later in the course this skeleton becomes the main computational tool, when matrices are rewritten in coordinates aligned with their eigenvectors (diagonalization).
 Two questions organize everything that follows.
@@ -156,7 +158,8 @@ Section 5.1 settles the first question and the easy half of the second (eigenvec
 > $$Av = \begin{bmatrix} 3 & -2 \\ 1 & 0 \end{bmatrix}\begin{bmatrix} 2 \\ 1 \end{bmatrix} = \begin{bmatrix} 6 - 2 \\ 2 + 0 \end{bmatrix} = \begin{bmatrix} 4 \\ 2 \end{bmatrix} = 2\begin{bmatrix} 2 \\ 1 \end{bmatrix} = 2v \checkmark$$
 > So $A$ merely stretches $v$ by a factor of $2$ without changing its direction: $v$ is an eigenvector with eigenvalue $\lambda = 2$.
 
-> [!warning] Correction: the source note-set gave $A = \begin{bmatrix} 3 & 2 \\ 1 & 0 \end{bmatrix}$ in this example while claiming $Av = 2v$. That matrix gives $Av = \begin{bmatrix} 8 \\ 2 \end{bmatrix}$, which is not a scalar multiple of $v = \begin{bmatrix} 2 \\ 1 \end{bmatrix}$ (and $Au = \begin{bmatrix} 5 \\ 1 \end{bmatrix}$, not a multiple of $u$ either), so neither vector would be an eigenvector — contradicting both the claim and Figure 5.2. The entry that makes everything consistent is $-2$: with $A = \begin{bmatrix} 3 & -2 \\ 1 & 0 \end{bmatrix}$ the eigenvalues are $1$ and $2$, and $Au = u$, $Av = 2v$ as computed above (both verified by direct multiplication ✓).
+> [!warning]- Correction: 
+> the source note-set gave $A = \begin{bmatrix} 3 & 2 \\ 1 & 0 \end{bmatrix}$ in this example while claiming $Av = 2v$. That matrix gives $Av = \begin{bmatrix} 8 \\ 2 \end{bmatrix}$, which is not a scalar multiple of $v = \begin{bmatrix} 2 \\ 1 \end{bmatrix}$ (and $Au = \begin{bmatrix} 5 \\ 1 \end{bmatrix}$, not a multiple of $u$ either), so neither vector would be an eigenvector — contradicting both the claim and Figure 5.2. The entry that makes everything consistent is $-2$: with $A = \begin{bmatrix} 3 & -2 \\ 1 & 0 \end{bmatrix}$ the eigenvalues are $1$ and $2$, and $Au = u$, $Av = 2v$ as computed above (both verified by direct multiplication ✓).
 
 ![[Pasted image 20261006210938.png]]
 
