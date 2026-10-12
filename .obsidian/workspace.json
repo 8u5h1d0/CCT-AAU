@@ -13,7 +13,6 @@
             "state": {
               "type": "markdown",
               "state": {
-<<<<<<< Updated upstream
                 "file": "CCT/CCT3/Lin. Alg/B2 - K3 - Egenværdier og -vektorer samt det karakteristiske polynomium.formatted.md",
                 "mode": "preview",
                 "source": false
@@ -28,15 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CCT/CCT3/Lin. Alg/B2 - K4 - Diagonalisering og basisskifte..formatted.md",
-=======
-                "file": "CCT/!Formatting & Syntax/Post-Processing - Secondary Prompts - 1.1.md",
->>>>>>> Stashed changes
+                "file": "CCT/!Formatting & Syntax/Note Generation - Agent Mode - 2.1.4.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Post-Processing - Secondary Prompts - 1.1"
+              "title": "Note Generation - Agent Mode - 2.1.4"
             }
           }
         ],
@@ -99,8 +95,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "e1c86dfdf6765e14",
@@ -207,40 +202,38 @@
   },
   "active": "7ae3be99df98356a",
   "lastOpenFiles": [
-    "CCT/CCT3/Indl. Sys/K4 - the timing subsystem.formatted.md",
-    "CCT/CCT3/Indl. Sys/Unconfirmed 700661.crdownload",
-    "CCT/CCT3/Indl. Sys/Originals/K4 - the timing subsystem.md",
-    "CCT/CCT3/Indl. Sys/Pictures/K4 - the timing subsystem/Pasted image 20261011185846.png",
-    "CCT/CCT3/Indl. Sys/Pictures/K4 - the timing subsystem",
-    "CCT/CCT3/Indl. Sys/Pictures/K4 - the timing subsystem/Pasted image 20261011185837.png",
-    "CCT/CCT3/Indl. Sys/Pictures/K4 - the timing subsystem/Pasted image 20261011185813.png",
-    "CCT/CCT3/Indl. Sys/Pictures/K4 - the timing subsystem/Pasted image 20261011185759.png",
-    "CCT/CCT3/Indl. Sys/Pictures/K4 - the timing subsystem/Pasted image 20261011185733.png",
-    "CCT/CCT3/Indl. Sys/Pictures/K4 - the timing subsystem/Pasted image 20261011185552.png",
-    "CCT/CCT3/Indl. Sys/Pictures/K4 - the timing subsystem/Pasted image 20261011185538.png",
-    "CCT/CCT3/Indl. Sys/Pictures/K4 - the timing subsystem/Pasted image 20261011185457.png",
-    "CCT/CCT3/Indl. Sys/Pictures/K4 - the timing subsystem/Pasted image 20261011184607.png",
-    "CCT/CCT3/Indl. Sys/Pictures/K4 - the timing subsystem/Pasted image 20261011184247.png",
-    "CCT/CCT3/Indl. Sys/K3 - Sensors, Signal Conversion (ADC-DAC), and Interrupt-Driven IO.md",
-    "CCT/!Formatting & Syntax/Note Generation - Agent Mode - 2.1.4.md",
-    "CCT/!Formatting & Syntax/Partial-Note Generation - First Pass - 1.0.0.md",
-    "CCT/CCT3/Indl. Sys/K2 - Microcontroller Systems & Processor IO Fundamentals.md",
+    "CCT/CCT3/Indl. Sys/Slides Notes/figures/RBB Fig 1.9 Testing a bit with AND.png",
+    "CCT/CCT3/Indl. Sys/Slides Notes/figures/RBB Fig 1.8 XOR twice puts the bit back.png",
+    "CCT/CCT3/Indl. Sys/Slides Notes/figures/RBB Fig 1.7 Toggling one bit with XOR.png",
+    "CCT/CCT3/Indl. Sys/Slides Notes/figures/RBB Fig 1.6 Clearing one bit with AND and inverted mask.png",
+    "CCT/CCT3/Indl. Sys/Slides Notes/figures/RBB Fig 1.5 Setting one bit with OR.png",
+    "CCT/CCT3/Indl. Sys/Slides Notes/figures/RBB Fig 1.4 Writing the whole register at once.png",
+    "CCT/CCT3/Indl. Sys/Slides Notes/figures/RBB Fig 1.3 Bitwise OR collects several 1s into one mask.png",
+    "CCT/CCT3/Indl. Sys/Slides Notes/figures/RBB Fig 1.2 A mask - 1 moved to the bits place.png",
+    "CCT/CCT3/Indl. Sys/Slides Notes/figures/RBB Fig 1.18 What the compiler makes of it.png",
+    "CCT/CCT3/Indl. Sys/Slides Notes/figures/RBB Fig 1.16 Every way to write a register.png",
+    "CCT/CCT3/Indl. Sys/Slides Notes/figures/RBB Fig 1.14 Assembling the 10-bit result.png",
+    "CCT/CCT3/Indl. Sys/Slides Notes/figures",
+    "CCT/CCT3/Indl. Sys/Slides Notes/CCT3_DC3_26_Registers_Bit_by_Bit (slides and notes).formatted.md",
+    "CCT/CCT3/Indl. Sys/Slides Notes/CCT3_DC3_26_M4_Timers_Watchdog_PWM.formatted.md",
+    "CCT/CCT3/Indl. Sys/Slides Notes",
+    "CCT/CCT3/Indl. Sys/New folder",
     "CCT/CCT3/Lin. Alg/B2 - K4 - Diagonalisering og basisskifte..formatted.md",
-<<<<<<< Updated upstream
+    "CCT/CCT3/Lin. Alg/How To/Subspaces, Bases, Dimension, Rank, and Coordinates.md",
+    "CCT/CCT3/Lin. Alg/How To/Eigenvalues, Eigenvectors, and Eigenbases.md",
+    "CCT/CCT3/Lin. Alg/How To/Diagonalization and Change of Basis.md",
+    "CCT/CCT3/Lin. Alg/How To/Determining Linear (In)dependence.md",
+    "CCT/CCT3/Lin. Alg/How To/Calculating the Inverse Matrix A^-1.md",
+    "CCT/CCT3/Lin. Alg/How To",
+    "CCT/CCT3/Indl. Sys/Pictures/K4 - the timing subsystem",
+    "CCT/CCT3/Indl. Sys/Originals/K4 - the timing subsystem.md",
+    "CCT/CCT3/Indl. Sys/K4 - the timing subsystem.formatted.md",
+    "CCT/!Formatting & Syntax/Math How-To Guide - Instruction Set.md",
+    "CCT/CCT3/Lin. Alg/B2 - K3 - Egenværdier og -vektorer samt det karakteristiske polynomium.formatted.md",
     "CCT/!Formatting & Syntax/Mathematical Symbols in Discrete Mathematics.md",
     "CCT/!Formatting & Syntax/LaTex - Formatting and Syntax.md",
     "CCT/CCT3/Lin. Alg/B2 - K2 - Baser for underrum og vektorrum samt determinanter.md",
-    "CCT/CCT3/Lin. Alg/Pictures/B2 - K4 - Diagonalisering og basisskifte/Pasted image 20261006211602.png",
-    "CCT/CCT3/Lin. Alg/Pictures/B2 - K4 - Diagonalisering og basisskifte/Pasted image 20261006211526.png",
-    "CCT/CCT3/Lin. Alg/Pictures/B2 - K4 - Diagonalisering og basisskifte/Pasted image 20261006211511.png",
-    "CCT/CCT3/Lin. Alg/Pictures/B2 - K4 - Diagonalisering og basisskifte/Pasted image 20261006211449.png",
-    "CCT/CCT3/Lin. Alg/Pictures/B2 - K4 - Diagonalisering og basisskifte/Pasted image 20261006211424.png",
-    "CCT/CCT3/Lin. Alg/Pictures/B2 - K4 - Diagonalisering og basisskifte/Pasted image 20261006211405.png",
-    "CCT/CCT3/Lin. Alg/Pictures/B2 - K4 - Diagonalisering og basisskifte/Pasted image 20261006211333.png",
     "CCT/CCT3/Lin. Alg/Pictures/B2 - K4 - Diagonalisering og basisskifte",
-    "CCT/CCT3/Lin. Alg/Pictures/B2 - K3 - Egenværdier og -vektorer samt det karakteristiske polynomium/Pasted image 20261006211112.png",
-    "CCT/CCT3/Lin. Alg/Pictures/B2 - K3 - Egenværdier og -vektorer samt det karakteristiske polynomium/Pasted image 20261006211057.png",
-    "CCT/CCT3/Lin. Alg/Pictures/B2 - K3 - Egenværdier og -vektorer samt det karakteristiske polynomium/Pasted image 20261006211003.png",
     "CCT/CCT3/Lin. Alg/Pictures/B2 - K3 - Egenværdier og -vektorer samt det karakteristiske polynomium",
     "CCT/CCT3/Lin. Alg/Originals/B2 - K4 - Diagonalisering og basisskifte..md",
     "CCT/CCT3/Lin. Alg/Originals/B2 - K3 - Egenværdier og -vektorer samt det karakteristiske polynomium.md",
@@ -254,51 +247,6 @@
     "CCT/CCT3/Lin. Alg/Pictures/B2 - K2 - Baser for underrum og vektorrum samt determinanter",
     "CCT/CCT3/Lin. Alg/Originals/B2 - K1 - Karakterisering af invertible marticer og underrum..md",
     "CCT/!Formatting & Syntax/Partial-Note Generation - First Pass - 1.0.0.md",
-    "CCT/CCT3/Lin. Alg/Originals/B2 - K2 - 1.md",
-    "CCT/CCT3/Algo/Originals/K1 - Foundations of algorithm analysis and design.md",
-    "CCT/CCT3/Algo/K2 - Growth of functions, asymptotic notations, and relative asymptotic performance.md",
-    "CCT/CCT3/Algo/K3 - analysis and design of divide and conquer algorithms..md",
-    "CCT/CCT3/Algo/K5 - Dynamic programming  & Greedy algorithms..md",
-    "CCT/CCT3/Algo/K4 - Various Sorting Algorithms.md",
-    "CCT/CCT3/Algo/Originals/K5 - Dynamic programming  & Greedy algorithms.md",
-    "CCT/CCT3/Algo/Originals/K4 - Various Sorting Algorithms.md",
-    "CCT/CCT3/Algo/Originals/K3 - analysis and design of divide and conquer algorithms..md",
-    "CCT/CCT3/Algo/Originals/K2 - Growth of functions, asymptotic notations, and relative asymptotic performance.md",
-    "CCT/CCT3/Algo/K1 - Foundations of algorithm analysis and design.md",
-    "CCT/CCT3/Algo/Unconfirmed 787124.crdownload",
-    "CCT/CCT3/Algo/Pictures/K5 - Dynamic programming  & Greedy algorithms",
-    "CCT/CCT3/Lin. Alg/Unconfirmed 903718.crdownload",
-    "CCT/CCT3/Lin. Alg/Pictures/B2 - K1 - Karakterisering af invertible marticer og underrum",
-    "CCT/!Formatting & Syntax/Unconfirmed 700553.crdownload",
-    "CCT/CCT3/Lin. Alg/Unconfirmed 871456.crdownload"
-=======
-    "CCT/CCT3/Lin. Alg/B2 - K1 - Karakterisering af invertible marticer og underrum..md",
-    "CCT/CCT3/Lin. Alg/B2 - K2 - Baser for underrum og vektorrum samt determinanter.md",
-    "CCT/CCT3/Lin. Alg/How To/Diagonalization and Change of Basis.md",
-    "CCT/CCT3/Lin. Alg/How To/Unconfirmed 723293.crdownload",
-    "CCT/CCT3/Lin. Alg/How To/Subspaces, Bases, Dimension, Rank, and Coordinates.md",
-    "CCT/CCT3/Lin. Alg/How To/Unconfirmed 924930.crdownload",
-    "CCT/CCT3/Lin. Alg/How To/Eigenvalues, Eigenvectors, and Eigenbases.md",
-    "CCT/CCT3/Lin. Alg/How To/Unconfirmed 468306.crdownload",
-    "CCT/CCT3/Lin. Alg/How To/Determining Linear (In)dependence.md",
-    "CCT/CCT3/Lin. Alg/How To/Calculating the Inverse Matrix A^-1.md",
-    "CCT/CCT3/Lin. Alg/How To/Unconfirmed 956843.crdownload",
-    "CCT/CCT3/Lin. Alg/B2 - K3 - Egenværdier og -vektorer samt det karakteristiske polynomium.formatted.md",
-    "CCT/CCT3/Lin. Alg/B1 - K4 - Matrixoperationer, -multiplikation, inverse matricer.md",
-    "CCT/CCT3/Lin. Alg/How To/Unconfirmed 964226.crdownload",
-    "CCT/CCT3/Lin. Alg/B1 - K3 - Lineær (u)afhængighed & transformaioner.md",
-    "CCT/CCT3/Lin. Alg/How To",
-    "CCT/!Formatting & Syntax/Math How-To Guide - Instruction Set.md",
-    "CCT/!Formatting & Syntax/Unconfirmed 487870.crdownload",
-    "CCT/CCT3/Lin. Alg/B1 - K1 - Lineære ligningssystemer , deres (in)konsistens og løsningsmetoder..md",
-    "CCT/!Formatting & Syntax/Post-Processing - Secondary Prompts - 1.1.md",
-    "CCT/CCT3/Lin. Alg/Unconfirmed 271909.crdownload",
-    "CCT/CCT3/Lin. Alg/Originals/B2 - K4 - Diagonalisering og basisskifte..md",
-    "CCT/CCT3/Lin. Alg/Originals/B2 - K3 - Egenværdier og -vektorer samt det karakteristiske polynomium.md",
-    "CCT/CCT3/Lin. Alg/Originals/B2 - K2 - Baser for underrum og vektorrum samt determinanter.md",
-    "CCT/CCT3/Lin. Alg/Lin. Alg. - Template.md",
-    "CCT/!Formatting & Syntax/learning-media-research-agent.md",
-    "CCT/!Formatting & Syntax/Note Generation - Text Mode - 2.0.2.md"
->>>>>>> Stashed changes
+    "CCT/CCT3/Algo/Unconfirmed 787124.crdownload"
   ]
 }
