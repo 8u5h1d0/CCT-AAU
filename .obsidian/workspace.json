@@ -8,35 +8,20 @@
         "type": "tabs",
         "children": [
           {
-            "id": "242d7093086f3a3a",
+            "id": "4835b27bfc29dd4f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CCT/CCT3/Lin. Alg/B2 - K3 - Egenværdier og -vektorer samt det karakteristiske polynomium.formatted.md",
-                "mode": "preview",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "B2 - K3 - Egenværdier og -vektorer samt det karakteristiske polynomium.formatted"
-            }
-          },
-          {
-            "id": "7ae3be99df98356a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "CCT/!Formatting & Syntax/Note Generation - Agent Mode - 2.1.4.md",
+                "file": "CCT/CCT3/Indl. Sys/K5 - Communication Subsystem.formatted.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Note Generation - Agent Mode - 2.1.4"
+              "title": "K5 - Communication Subsystem.formatted"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -95,7 +80,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "e1c86dfdf6765e14",
@@ -200,19 +186,29 @@
       "bases:Create new base": false
     }
   },
-  "active": "7ae3be99df98356a",
+  "active": "4835b27bfc29dd4f",
   "lastOpenFiles": [
-    "CCT/CCT3/Indl. Sys/Slides Notes/figures/RBB Fig 1.9 Testing a bit with AND.png",
-    "CCT/CCT3/Indl. Sys/Slides Notes/figures/RBB Fig 1.8 XOR twice puts the bit back.png",
-    "CCT/CCT3/Indl. Sys/Slides Notes/figures/RBB Fig 1.7 Toggling one bit with XOR.png",
-    "CCT/CCT3/Indl. Sys/Slides Notes/figures/RBB Fig 1.6 Clearing one bit with AND and inverted mask.png",
-    "CCT/CCT3/Indl. Sys/Slides Notes/figures/RBB Fig 1.5 Setting one bit with OR.png",
-    "CCT/CCT3/Indl. Sys/Slides Notes/figures/RBB Fig 1.4 Writing the whole register at once.png",
-    "CCT/CCT3/Indl. Sys/Slides Notes/figures/RBB Fig 1.3 Bitwise OR collects several 1s into one mask.png",
-    "CCT/CCT3/Indl. Sys/Slides Notes/figures/RBB Fig 1.2 A mask - 1 moved to the bits place.png",
-    "CCT/CCT3/Indl. Sys/Slides Notes/figures/RBB Fig 1.18 What the compiler makes of it.png",
-    "CCT/CCT3/Indl. Sys/Slides Notes/figures/RBB Fig 1.16 Every way to write a register.png",
-    "CCT/CCT3/Indl. Sys/Slides Notes/figures/RBB Fig 1.14 Assembling the 10-bit result.png",
+    "CCT/!Formatting & Syntax/Post-Processing - Secondary Prompts - 1.1.md",
+    "CCT/CCT3/Indl. Sys/K5 - Communication Subsystem.formatted.md",
+    "CCT/CCT3/Indl. Sys/Unconfirmed 572783.crdownload",
+    "CCT/CCT3/Indl. Sys/Originals/K5 - Communication Subsystem.md",
+    "CCT/CCT3/Indl. Sys/Pictures/K5 - Communication Subsystem/Pasted image 20261015161701.png",
+    "CCT/CCT3/Indl. Sys/Pictures/K5 - Communication Subsystem",
+    "CCT/CCT3/Indl. Sys/Pictures/K5 - Communication Subsystem/Pasted image 20261015161641.png",
+    "CCT/CCT3/Indl. Sys/Pictures/K5 - Communication Subsystem/Pasted image 20261015161458.png",
+    "CCT/CCT3/Indl. Sys/Pictures/K5 - Communication Subsystem/Pasted image 20261015161440.png",
+    "CCT/CCT3/Indl. Sys/Pictures/K5 - Communication Subsystem/Pasted image 20261015161319.png",
+    "CCT/CCT3/Indl. Sys/Pictures/K5 - Communication Subsystem/Pasted image 20261015161250.png",
+    "CCT/CCT3/Indl. Sys/Pictures/K5 - Communication Subsystem/Pasted image 20261015161231.png",
+    "CCT/CCT3/Indl. Sys/Pictures/K5 - Communication Subsystem/Pasted image 20261015160903.png",
+    "CCT/CCT3/Indl. Sys/Pictures/K5 - Communication Subsystem/Pasted image 20261015160722.png",
+    "CCT/CCT3/Indl. Sys/Pictures/K5 - Communication Subsystem/Pasted image 20261015155030.png",
+    "Parallel communication.md",
+    "CCT/CCT3/Lin. Alg/B2 - K3 - Egenværdier og -vektorer samt det karakteristiske polynomium.formatted.md",
+    "CCT/CCT3/Indl. Sys/K4 - the timing subsystem.formatted.md",
+    "CCT/CCT3/Indl. Sys/InS - Template.md",
+    "CCT/!Formatting & Syntax/Partial-Note Generation - First Pass - 1.0.0.md",
+    "CCT/!Formatting & Syntax/Note Generation - Agent Mode - 2.1.4.md",
     "CCT/CCT3/Indl. Sys/Slides Notes/figures",
     "CCT/CCT3/Indl. Sys/Slides Notes/CCT3_DC3_26_Registers_Bit_by_Bit (slides and notes).formatted.md",
     "CCT/CCT3/Indl. Sys/Slides Notes/CCT3_DC3_26_M4_Timers_Watchdog_PWM.formatted.md",
@@ -227,9 +223,7 @@
     "CCT/CCT3/Lin. Alg/How To",
     "CCT/CCT3/Indl. Sys/Pictures/K4 - the timing subsystem",
     "CCT/CCT3/Indl. Sys/Originals/K4 - the timing subsystem.md",
-    "CCT/CCT3/Indl. Sys/K4 - the timing subsystem.formatted.md",
     "CCT/!Formatting & Syntax/Math How-To Guide - Instruction Set.md",
-    "CCT/CCT3/Lin. Alg/B2 - K3 - Egenværdier og -vektorer samt det karakteristiske polynomium.formatted.md",
     "CCT/!Formatting & Syntax/Mathematical Symbols in Discrete Mathematics.md",
     "CCT/!Formatting & Syntax/LaTex - Formatting and Syntax.md",
     "CCT/CCT3/Lin. Alg/B2 - K2 - Baser for underrum og vektorrum samt determinanter.md",
@@ -239,14 +233,6 @@
     "CCT/CCT3/Lin. Alg/Originals/B2 - K3 - Egenværdier og -vektorer samt det karakteristiske polynomium.md",
     "CCT/!Formatting & Syntax/learning-media-research-agent.md",
     "CCT/CCT3/Lin. Alg/B2 - K3 - Egenværdier og -vektorer samt det karakteristiske polynomium..md",
-    "CCT/CCT3/Lin. Alg/B2 - K1 - Karakterisering af invertible marticer og underrum..md",
-    "CCT/CCT3/Lin. Alg/Originals/B2 - K2 - Baser for underrum og vektorrum samt determinanter.md",
-    "CCT/CCT3/Lin. Alg/Unconfirmed 136058.crdownload",
-    "CCT/!Formatting & Syntax/Post-Processing - Secondary Prompts - 1.1.md",
-    "CCT/!Formatting & Syntax/Note Generation - Agent Mode - 2.1.4.md",
-    "CCT/CCT3/Lin. Alg/Pictures/B2 - K2 - Baser for underrum og vektorrum samt determinanter",
-    "CCT/CCT3/Lin. Alg/Originals/B2 - K1 - Karakterisering af invertible marticer og underrum..md",
-    "CCT/!Formatting & Syntax/Partial-Note Generation - First Pass - 1.0.0.md",
-    "CCT/CCT3/Algo/Unconfirmed 787124.crdownload"
+    "CCT/CCT3/Lin. Alg/Unconfirmed 136058.crdownload"
   ]
 }
