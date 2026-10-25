@@ -13,15 +13,30 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CCT/CCT3/Indl. Sys/K5 - Communication Subsystem.formatted.md",
+                "file": "CCT/CCT3/Indl. Sys/K6 - RTOS Implementation.formatted.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "K5 - Communication Subsystem.formatted"
+              "title": "K6 - RTOS Implementation.formatted"
+            }
+          },
+          {
+            "id": "b0d2e1893bedc916",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "CCT/CCT3/Indl. Sys/K7 - RTOS Expanded.formatted.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "K7 - RTOS Expanded.formatted"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -186,53 +201,53 @@
       "bases:Create new base": false
     }
   },
-  "active": "4835b27bfc29dd4f",
+  "active": "b0d2e1893bedc916",
   "lastOpenFiles": [
+    "CCT/CCT3/Indl. Sys/K6 - RTOS Implementation.formatted.md",
+    "CCT/CCT3/Indl. Sys/K7 - RTOS Expanded.formatted.md",
     "CCT/!Formatting & Syntax/Post-Processing - Secondary Prompts - 1.1.md",
+    "CCT/CCT3/Indl. Sys/Unconfirmed 184657.crdownload",
     "CCT/CCT3/Indl. Sys/K5 - Communication Subsystem.formatted.md",
-    "CCT/CCT3/Indl. Sys/Unconfirmed 572783.crdownload",
+    "CCT/CCT3/Indl. Sys/Originals/K7 - RTOS Expanded.md",
+    "CCT/CCT3/Indl. Sys/Unconfirmed 110792.crdownload",
+    "CCT/CCT3/Indl. Sys/Originals/K6 - RTOS Implementation.md",
+    "CCT/CCT3/Indl. Sys/Pictures/K6 - RTOS Implementation/Pasted image 20261025113448.png",
+    "CCT/CCT3/Indl. Sys/Pictures/K6 - RTOS Implementation",
+    "CCT/CCT3/Indl. Sys/Pictures/K6 - RTOS Implementation/Pasted image 20261025113433.png",
+    "CCT/CCT3/Indl. Sys/Pictures/K6 - RTOS Implementation/Pasted image 20261025113413.png",
+    "CCT/CCT3/Indl. Sys/Pictures/K6 - RTOS Implementation/Pasted image 20261025113349.png",
+    "CCT/CCT3/Indl. Sys/Pictures/K6 - RTOS Implementation/Pasted image 20261025113320.png",
+    "CCT/CCT3/Indl. Sys/Pictures/K6 - RTOS Implementation/Pasted image 20261025113250.png",
+    "CCT/CCT3/Indl. Sys/Pictures/K6 - RTOS Implementation/Pasted image 20261025113104.png",
+    "CCT/CCT3/Indl. Sys/Pictures/K6 - RTOS Implementation/Pasted image 20261025113052.png",
+    "CCT/CCT3/Indl. Sys/Pictures/K6 - RTOS Implementation/Pasted image 20261025113030.png",
+    "CCT/CCT3/Indl. Sys/Pictures/K6 - RTOS Implementation/Pasted image 20261025112954.png",
+    "CCT/CCT3/Indl. Sys/InS - Template.md",
     "CCT/CCT3/Indl. Sys/Originals/K5 - Communication Subsystem.md",
-    "CCT/CCT3/Indl. Sys/Pictures/K5 - Communication Subsystem/Pasted image 20261015161701.png",
+    "CCT/CCT3/Indl. Sys/Pictures/K7 - RTOS Expanded",
+    "CCT/CCT3/Algo/Originals/K6 - Data Structures.md",
+    "CCT/CCT3/Algo/K6 - Data Structures.formatted.md",
+    "CCT/CCT3/Algo/Unconfirmed 710852.crdownload",
+    "CCT/CCT3/Indl. Sys/Originals/K6 - operating system implementation.md",
+    "CCT/CCT3/Algo/Unconfirmed 247194.crdownload",
+    "CCT/CCT3/Indl. Sys/Pictures/K6 - operating system implementation",
+    "CCT/!Formatting & Syntax/Partial-Note Generation - First Pass - 1.0.0.md",
+    "CCT/CCT3/Algo/Originals/K1 - Foundations of algorithm analysis and design.md",
+    "CCT/CCT3/Algo/Pictures/K6 - Data Structures",
+    "CCT/CCT3/Algo/Algo - Template.md",
+    "CCT/CCT3/Algo/K4 - Various Sorting Algorithms.md",
+    "CCT/CCT3/Algo/Originals/K4 - Various Sorting Algorithms.md",
+    "CCT/CCT3/Indl. Sys/Unconfirmed 572783.crdownload",
     "CCT/CCT3/Indl. Sys/Pictures/K5 - Communication Subsystem",
-    "CCT/CCT3/Indl. Sys/Pictures/K5 - Communication Subsystem/Pasted image 20261015161641.png",
-    "CCT/CCT3/Indl. Sys/Pictures/K5 - Communication Subsystem/Pasted image 20261015161458.png",
-    "CCT/CCT3/Indl. Sys/Pictures/K5 - Communication Subsystem/Pasted image 20261015161440.png",
-    "CCT/CCT3/Indl. Sys/Pictures/K5 - Communication Subsystem/Pasted image 20261015161319.png",
-    "CCT/CCT3/Indl. Sys/Pictures/K5 - Communication Subsystem/Pasted image 20261015161250.png",
-    "CCT/CCT3/Indl. Sys/Pictures/K5 - Communication Subsystem/Pasted image 20261015161231.png",
-    "CCT/CCT3/Indl. Sys/Pictures/K5 - Communication Subsystem/Pasted image 20261015160903.png",
-    "CCT/CCT3/Indl. Sys/Pictures/K5 - Communication Subsystem/Pasted image 20261015160722.png",
-    "CCT/CCT3/Indl. Sys/Pictures/K5 - Communication Subsystem/Pasted image 20261015155030.png",
     "Parallel communication.md",
     "CCT/CCT3/Lin. Alg/B2 - K3 - Egenværdier og -vektorer samt det karakteristiske polynomium.formatted.md",
     "CCT/CCT3/Indl. Sys/K4 - the timing subsystem.formatted.md",
-    "CCT/CCT3/Indl. Sys/InS - Template.md",
-    "CCT/!Formatting & Syntax/Partial-Note Generation - First Pass - 1.0.0.md",
     "CCT/!Formatting & Syntax/Note Generation - Agent Mode - 2.1.4.md",
-    "CCT/CCT3/Indl. Sys/Slides Notes/figures",
     "CCT/CCT3/Indl. Sys/Slides Notes/CCT3_DC3_26_Registers_Bit_by_Bit (slides and notes).formatted.md",
     "CCT/CCT3/Indl. Sys/Slides Notes/CCT3_DC3_26_M4_Timers_Watchdog_PWM.formatted.md",
-    "CCT/CCT3/Indl. Sys/Slides Notes",
-    "CCT/CCT3/Indl. Sys/New folder",
     "CCT/CCT3/Lin. Alg/B2 - K4 - Diagonalisering og basisskifte..formatted.md",
     "CCT/CCT3/Lin. Alg/How To/Subspaces, Bases, Dimension, Rank, and Coordinates.md",
     "CCT/CCT3/Lin. Alg/How To/Eigenvalues, Eigenvectors, and Eigenbases.md",
-    "CCT/CCT3/Lin. Alg/How To/Diagonalization and Change of Basis.md",
-    "CCT/CCT3/Lin. Alg/How To/Determining Linear (In)dependence.md",
-    "CCT/CCT3/Lin. Alg/How To/Calculating the Inverse Matrix A^-1.md",
-    "CCT/CCT3/Lin. Alg/How To",
-    "CCT/CCT3/Indl. Sys/Pictures/K4 - the timing subsystem",
-    "CCT/CCT3/Indl. Sys/Originals/K4 - the timing subsystem.md",
-    "CCT/!Formatting & Syntax/Math How-To Guide - Instruction Set.md",
-    "CCT/!Formatting & Syntax/Mathematical Symbols in Discrete Mathematics.md",
-    "CCT/!Formatting & Syntax/LaTex - Formatting and Syntax.md",
-    "CCT/CCT3/Lin. Alg/B2 - K2 - Baser for underrum og vektorrum samt determinanter.md",
-    "CCT/CCT3/Lin. Alg/Pictures/B2 - K4 - Diagonalisering og basisskifte",
-    "CCT/CCT3/Lin. Alg/Pictures/B2 - K3 - Egenværdier og -vektorer samt det karakteristiske polynomium",
-    "CCT/CCT3/Lin. Alg/Originals/B2 - K4 - Diagonalisering og basisskifte..md",
-    "CCT/CCT3/Lin. Alg/Originals/B2 - K3 - Egenværdier og -vektorer samt det karakteristiske polynomium.md",
-    "CCT/!Formatting & Syntax/learning-media-research-agent.md",
-    "CCT/CCT3/Lin. Alg/B2 - K3 - Egenværdier og -vektorer samt det karakteristiske polynomium..md",
-    "CCT/CCT3/Lin. Alg/Unconfirmed 136058.crdownload"
+    "CCT/CCT3/Lin. Alg/How To/Diagonalization and Change of Basis.md"
   ]
 }
