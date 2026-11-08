@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CCT/!Formatting & Syntax/Post-Processing - Secondary Prompts - 1.1.md",
+                "file": "CCT/CCT3/Algo/K7 - Binary Search Trees (BST) & Augmenting Data Structures.formatted.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Post-Processing - Secondary Prompts - 1.1"
+              "title": "K7 - Binary Search Trees (BST) & Augmenting Data Structures.formatted"
             }
           }
         ]
@@ -80,8 +80,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "e1c86dfdf6765e14",
@@ -188,22 +187,37 @@
   },
   "active": "4835b27bfc29dd4f",
   "lastOpenFiles": [
+    "CCT/CCT3/Algo/Algo - Template.md",
+    "CCT/CCT3/Algo/K7 - Binary Search Trees (BST) & Augmenting Data Structures.formatted.md",
+    "CCT/CCT3/K7 - Binary Search Trees (BST) & Augmenting Data Structures.formatted.md",
+    "CCT/CCT3/Lin. Alg/K7 - Binary Search Trees (BST) & Augmenting Data Structures.formatted.md",
+    "CCT/CCT3/Lin. Alg/Unconfirmed 452465.crdownload",
+    "CCT/!Formatting & Syntax/Post-Processing - Secondary Prompts - 1.1.md",
+    "CCT/!Formatting & Syntax/Note Generation - Agent Mode - 2.1.4.md",
+    "CCT/CCT3/Algo/Pictures/K7 - Binary Search Trees (BST) & Augmenting Data Structures/Pasted image 20261108231508.png",
+    "CCT/CCT3/Algo/Originals/K7 - Binary Search Trees (BST) & Augmenting Data Structures.md",
+    "CCT/CCT3/Algo/Pictures/K7 - Binary Search Trees (BST) & Augmenting Data Structures",
+    "CCT/!Formatting & Syntax/Partial-Note Generation - First Pass - 1.0.0.md",
+    "CCT/CCT3/Algo/Pictures/K7 - Binary Search Trees (BST) & Augmenting Data Structures/Pasted image 20261108231445.png",
+    "CCT/CCT3/Algo/Pictures/K7 - Binary Search Trees (BST) & Augmenting Data Structures/Pasted image 20261108231431.png",
+    "CCT/CCT3/Algo/Pictures/K7 - Binary Search Trees (BST) & Augmenting Data Structures/Pasted image 20261108220918.png",
+    "CCT/CCT3/Algo/Pictures/K7 - Binary Search Trees (BST) & Augmenting Data Structures/Pasted image 20261108215915.png",
+    "CCT/CCT3/Algo/Pictures/K7 - Binary Search Trees (BST) & Augmenting Data Structures/Pasted image 20261108213743.png",
+    "CCT/CCT3/Algo/Pictures/K7 - Binary Search Trees (BST) & Augmenting Data Structures/Pasted image 20261108213713.png",
+    "CCT/CCT3/Algo/Pictures/K7 - Binary Search Trees (BST) & Augmenting Data Structures/Pasted image 20261108205059.png",
+    "CCT/CCT3/Algo/Pictures/K7 - Binary Search Trees (BST) & Augmenting Data Structures/Pasted image 20261108205042.png",
+    "CCT/CCT3/Algo/Pictures/K7 - Binary Search Trees (BST) & Augmenting Data Structures/Pasted image 20261108204938.png",
+    "CCT/CCT3/Algo/K6 - Data Structures.formatted.md",
+    "CCT/CCT3/Lin. Alg/B4 - K2 - Projections & The Gram-Schmidt Process.formatted.md",
+    "CCT/CCT3/Lin. Alg/Unconfirmed 355621.crdownload",
+    "CCT/CCT3/Lin. Alg/Originals/B4 - K2 - Projections & The Gram-Schmidt Process.md",
+    "CCT/CCT3/Lin. Alg/Pictures/B4 - K2 - Projections & The Gram-Schmidt Process",
+    "CCT/CCT3/Lin. Alg/Lin. Alg. - Template.md",
     "CCT/CCT3/Lin. Alg/B4 - K1 - Orthogonality and Least Squares.formatted.md",
+    "CCT/CCT3/Algo/Originals/K6 - Data Structures.md",
     "CCT/CCT3/Lin. Alg/Unconfirmed 567650.crdownload",
     "CCT/CCT3/Lin. Alg/Originals/B4 - K1 - Orthogonality and Least Squares.md",
-    "CCT/CCT3/Lin. Alg/Pictures/B4 - K1 - Orthogonality and Least Squares/Pasted image 20261101155348.png",
     "CCT/CCT3/Lin. Alg/Pictures/B4 - K1 - Orthogonality and Least Squares",
-    "CCT/CCT3/Lin. Alg/Pictures/B4 - K1 - Orthogonality and Least Squares/Pasted image 20261101155319.png",
-    "CCT/CCT3/Lin. Alg/Pictures/B4 - K1 - Orthogonality and Least Squares/Pasted image 20261101155250.png",
-    "CCT/CCT3/Lin. Alg/Pictures/B4 - K1 - Orthogonality and Least Squares/Pasted image 20261101155230.png",
-    "CCT/CCT3/Lin. Alg/Pictures/B4 - K1 - Orthogonality and Least Squares/Pasted image 20261101155201.png",
-    "CCT/CCT3/Lin. Alg/Pictures/B4 - K1 - Orthogonality and Least Squares/Pasted image 20261101155133.png",
-    "CCT/CCT3/Lin. Alg/Pictures/B4 - K1 - Orthogonality and Least Squares/Pasted image 20261101155114.png",
-    "CCT/CCT3/Lin. Alg/Pictures/B4 - K1 - Orthogonality and Least Squares/Pasted image 20261101155041.png",
-    "CCT/CCT3/Lin. Alg/Pictures/B4 - K1 - Orthogonality and Least Squares/Pasted image 20261101155000.png",
-    "CCT/CCT3/Lin. Alg/Pictures/B4 - K1 - Orthogonality and Least Squares/Pasted image 20261101154940.png",
-    "CCT/!Formatting & Syntax/Partial-Note Generation - First Pass - 1.0.0.md",
-    "CCT/!Formatting & Syntax/Post-Processing - Secondary Prompts - 1.1.md",
     "CCT/CCT3/Indl. Sys/K7 - RTOS Expanded.formatted.md",
     "CCT/CCT3/Indl. Sys/K6 - RTOS Implementation.formatted.md",
     "CCT/CCT3/Indl. Sys/Unconfirmed 184657.crdownload",
@@ -215,24 +229,9 @@
     "CCT/CCT3/Indl. Sys/InS - Template.md",
     "CCT/CCT3/Indl. Sys/Originals/K5 - Communication Subsystem.md",
     "CCT/CCT3/Indl. Sys/Pictures/K7 - RTOS Expanded",
-    "CCT/CCT3/Algo/Originals/K6 - Data Structures.md",
-    "CCT/CCT3/Algo/K6 - Data Structures.formatted.md",
-    "CCT/CCT3/Algo/Unconfirmed 710852.crdownload",
     "CCT/CCT3/Indl. Sys/Originals/K6 - operating system implementation.md",
-    "CCT/CCT3/Algo/Unconfirmed 247194.crdownload",
-    "CCT/CCT3/Indl. Sys/Pictures/K6 - operating system implementation",
     "CCT/CCT3/Algo/Originals/K1 - Foundations of algorithm analysis and design.md",
-    "CCT/CCT3/Algo/Pictures/K6 - Data Structures",
-    "CCT/CCT3/Algo/Algo - Template.md",
     "CCT/CCT3/Algo/K4 - Various Sorting Algorithms.md",
-    "CCT/CCT3/Algo/Originals/K4 - Various Sorting Algorithms.md",
-    "Parallel communication.md",
-    "CCT/CCT3/Lin. Alg/B2 - K3 - Egenværdier og -vektorer samt det karakteristiske polynomium.formatted.md",
-    "CCT/CCT3/Indl. Sys/K4 - the timing subsystem.formatted.md",
-    "CCT/!Formatting & Syntax/Note Generation - Agent Mode - 2.1.4.md",
-    "CCT/CCT3/Indl. Sys/Slides Notes/CCT3_DC3_26_Registers_Bit_by_Bit (slides and notes).formatted.md",
-    "CCT/CCT3/Indl. Sys/Slides Notes/CCT3_DC3_26_M4_Timers_Watchdog_PWM.formatted.md",
-    "CCT/CCT3/Lin. Alg/B2 - K4 - Diagonalisering og basisskifte..formatted.md",
-    "CCT/CCT3/Lin. Alg/How To/Subspaces, Bases, Dimension, Rank, and Coordinates.md"
+    "CCT/CCT3/Algo/Originals/K4 - Various Sorting Algorithms.md"
   ]
 }
